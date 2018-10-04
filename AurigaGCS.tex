@@ -119,9 +119,11 @@ methods: numerical -- galaxies: formation -- galaxies: star clusters: general.
     \item ``colour bimodality, blue and red clusters \citep[e.g.][]{1985ApJ...293..424Z, 1999AJ....118.1526G, 2001AJ....121.2974L, 2006ApJ...639...95P}
     \item ``blue metal-poor (with distribution peaking at [Fe/H] $\approx -1.5$ for the Milky Way), no sign of rotation as a population (..) more metal-rich (peak at [Fe/H] $\approx -0.5$ in the Milky  Way) more spatially concentrated and rotating with the galaxy.'' \citep{1996AJ....112.1487H}
 \end{itemize}
+ 
+ 
 
 
-\todo[inline]{Paragraph: ``Bimodality suggests two formation mechanisms''}
+\todo[inline]{Paragraph: ``Bimodality suggests two formation mechanisms''. In-situ vs. Accreted}
 \begin{itemize}
     \item ``Blue clusters from in early Universe in galaxies that merge later. In (wet) merger process starbursts generate red population \cite{1992ApJ...384...50A, 1987nngp.proc...18S}''
     \item ``\citet{1997AJ....113.1652F} propose instead that blue globulars form when the protogalaxy itself collapses, in a metal-poor and turbulence media. The red population would form later, once the galactic disc has settled. The formation of globular clusters would then be a multiphase process, with the first phase being interrupted possibly by cosmic reionization \citep{2002MNRAS.333..383B}.''
@@ -138,8 +140,17 @@ Deason et al. 2013; Ruchti et al. 2014, 2015).
 \item ``\citet{1998ApJ...501..554C} argue that red clusters form in situ while the blue ones are accreted, either via merging satellite galaxies, or by tidal capture of the clusters themselves \citep[see also][]{2013ApJ...762...39T}.''
 \end{itemize}
 
+\todo[inline]{Paragraph: scientific motivation}
+\begin{itemize}
+    \item The star formation model implemented in the Auriga simulations is capable of producing a suite/population of realistic Milky Way-like galaxies at redshift zero.
+    \item (However) State of the art simulations still face numerical restrictions that requires a subgrid approach to star formation and feedback because individual stars (and their evolution) cannot yet be accounted for. Star formation thus occurs in a heuristic/probabilistic fashion for gas cells that fulfill some star formation criterion. The star particles enrich the gas with metals and energy, both according to pre-defined/pre-calculated yields for specific feedback processes (supernova type I and II, strong stellar winds of asymptotic giant branch stars, ). In addition, black holes are seeded in eligible haloes to account for feedback associated with an active galactic nucleus.
+    \item The end-result of the star formation model is the production of simulated Milky Way-like galaxies. Therefore the question naturally arises whether or not the Auriga simulations are also capable of faithfully producing a globular cluster population as observed in the Milky Way.
+    \item Globular cluster formation in cosmological zoom simulations is very interesting for two reasons. First of all, extragalactic observations typically show the integrated properties of globular clusters rather than that of the individual stars within the clusters. Moreover, the typical mass scale of globular clusters is comparable to the numerical (mass) resolution of cosmological zoom simulations. The detailed small scale physics that is at play for real world globular clusters appears in observations as the combined effect of the $10^{3-6}$ M\Sun, compared to a mass resolution of $10^{3-5}$ M\Sun for the Auriga simulations. Globular clusters can therefore serve as an ultimate test to the star formation model that is implemented in the numerical simulations. Secondly, cosmological zoom simulations provide an accurate recording of the full and detailed merger history of the simulated galaxy. This is important because theoretical paradigms for globular cluster formation in the literature know two distinct classes of GCs that are separated by their exact formation sites: an in-situ versus an accreted population. Cosmological zoom simulations are uniquely allow for an investigation into globular cluster formation with particular focus on the in-situ and accreted populations.
+\end{itemize}
 
-\todo[inline]{Work of other groups}
+
+
+\todo[inline]{Paragraph: previous work / work of other groups}
 \begin{itemize}
 \item Origin of the Milky Way globular clusters \citep{2017MNRAS.465.3622R}
 \item GCs in FIRE \citep{2018MNRAS.474.4232K}
@@ -156,14 +167,18 @@ Deason et al. 2013; Ruchti et al. 2014, 2015).
 \item GCs in MW outer region \citep{2017arXiv170804542P}
 \end{itemize}
 
-\section{Methodology and definitions}
-\label{sec:methods}
-\subsection{The Auriga Simulations}
+
+\todo[inline]{Paper outline}
+We summarise the relevant characteristics of the Auriga simulations in section~\ref{sec:auriga}, followed by a summary of the observations of the Milky Way (MW) globular cluster system (GCS) in section~\ref{sec:observations} that we use to compare our simulations to in section~\ref{sec:results}. We discuss our findings in section~\ref{sec:discussion} to come to our conclusions in section~\ref{sec:conclusions}.
+
+
+\section{The Auriga simulations}
 \label{sec:auriga}
 We use the Auriga \citep[][hereafter G17]{2017MNRAS.467..179G} simulations, a suite of high-resolution cosmological zoom simulations ran with a galaxy formation model that produces realistic Milky Way-like galaxies at redshift $z=0$. The simulations are performed with \textsc{arepo} \citep{2010MNRAS.401..791S, 2016MNRAS.455.1134P} that solves the magnetohydrodynamical equations on a moving mesh. See G17 for further details; here we briefly summarise the relevant properties.
 \todo[inline]{Paragraph: Auriga boilerplate, paraphrased}
 
 \todo[inline]{What is the star formation density threshold?}
+``The gas is assumed to be star-forming and thermally unstable for densities higher than a threshold density that we derive from the parameters of the two gas phases and the desired star formation time-scale to be $n = 0.13 \text{cm}^{−3}$.'' - \citep{2017MNRAS.467..179G}
 
 
 \subsection{Definition of stellar halo}
@@ -175,44 +190,108 @@ We use the Auriga \citep[][hereafter G17]{2017MNRAS.467..179G} simulations, a su
 
 
 
-\section{Comparison with observations}
+\section{The Milky Way globular cluster system}
 \label{sec:observations}
 
-\begin{figure*}
-    \includegraphics[width=\textwidth]{{Au4-24_GCS_250_10}.pdf}
-    \caption{TODO: combine upper left and mid left panel, remove upper right panel,
-             remove lower panels (because mid right panel already shows the 
-             relevant info). The point of this figure is to compare metallicity 
-             distribution and radial distribution}
-    \label{fig:FeH_Rcs_MWvsAu424_1D}
-\end{figure*}
+\subsection{Harris catalogue}
+\label{sec:harris}
+\citet[][2010 edition]{1996AJ....112.1487H} provides the most up-to-date and comprehensive catalog of the MW GCS that contains properties of 157 globular clusters. The catalogue is believed to be roughly 90\% complete.
+
+\subsection{Age estimates}
+\label{sec:vandenberg}
+\citet{2013ApJ...775..134V} measured [Fe/H] and obtained age-estimates for 55 globular clusters in the MW GCS.
 
 
-\begin{figure*}
-    \includegraphics[width=\textwidth]{{Au4-24_FeH_vs_Rgc}.pdf}
-    \caption{Comparison of [Fe/H] and galactocentric radius of the Milky Way GCS
-             (red dots) with the star particles in Au4-24. TODO: only show the
-             panel on the right-hand side. TODO: include details of exactly which
-             star particles are shown. TODO: generate the same figure but color-coded
-             by mass?}
-    \label{fig:FeH_Rcs_MWvsAu424_2D}
-\end{figure*}
+\section{Results}
+\label{sec:results}
+\subsection{Metallicity distribution}
+\label{sec:metallicity}
+Can the Auriga simulations produce star particles of $>10$~Gyr (GC candidates) with a metallicity distribution that is consistent with the MW GCS?
 
 
-\begin{figure*}
-    \includegraphics[width=\columnwidth]{vandenBergh2013.png}
-    \includegraphics[width=\columnwidth]{{Au4-24_Renaud2017_figure8}.png}
-    \caption{TODO: add observed age-FeH data points \citep{2013ApJ...775..134V}
-             to simulation plot, investigate starbursts by making pictures of
-             these events, check if the observed data set shows a representative
-             sample of the MW GCS, fix overlapping axes labels}
-    \label{fig:bla}
-\end{figure*}
-\begin{figure}
-    \includegraphics[width=\columnwidth]{{Au4-24_Renaud2017_figure6}.png}
-    \caption{}
-    \label{fig:bla}
-\end{figure}
+
+\subsection{Spatial distribution}
+\label{sec:spatial}
+Is the spatial distribution of the GC candidates in the Auriga simulations consistent with the MW GCS?
+
+
+
+\subsection{Age-metallicity distribution}
+\label{sec:agemetallicity}
+What age-metallicity distribution is produced by star formation events in the Auriga simulations?
+
+
+
+\subsection{Mass budget} 
+\label{sec:mass}
+Does the star formation model implemented in the Auriga simulations produce sufficient mass in star particles with properties that are consistent with the MW GCS?
+
+What efficiencies could we afford if we would take into account the combined mass loss effect of converting from star particles to bound star clusters and globular cluster disruption?
+
+How does the total stellar mass in $R_\textbf{GC}$-[Fe/H] bins compare to the MW GCS?
+
+
+
+\subsection{Formation history} 
+\label{sec:history}
+Can we identify particular star formation events that generate GC candidates with the correct age, metallicity, and radial properties as expected or the MW GCS?
+
+Can we distinguish between particles that have formed in-situ and those that have been accreted? Can we identify specific features in the age-metallicity plane, or in the $R_\textbf{GC}$-[Fe/H] plane, that result from one of both populations? How does this connect to proposed mechanisms for globular cluster formation in the literature?
+
+
+
+
+\subsection{Scatter for different Auriga haloes} 
+\label{sec:convergence}
+Are the properties of the Auriga globular cluster candidates converged for runs with different initial conditions but at the same resolution level? How much scatter do we observe in the properties of the globular cluster candidates across the full suite of Auriga haloes?
+
+
+
+\subsection{Numerical convergence} 
+\label{sec:convergence}
+Are the properties of the Auriga globular cluster candidates converged for runs with the same initial conditions but at different resolution levels? 
+
+
+
+
+
+
+
+% \begin{figure*}
+%     \includegraphics[width=\textwidth]{{Au4-24_GCS_250_10}.pdf}
+%     \caption{TODO: combine upper left and mid left panel, remove upper right panel,
+%              remove lower panels (because mid right panel already shows the 
+%              relevant info). The point of this figure is to compare metallicity 
+%              distribution and radial distribution}
+%     \label{fig:FeH_Rcs_MWvsAu424_1D}
+% \end{figure*}
+% 
+% 
+% \begin{figure*}
+%     \includegraphics[width=\textwidth]{{Au4-24_FeH_vs_Rgc}.pdf}
+%     \caption{Comparison of [Fe/H] and galactocentric radius of the Milky Way GCS
+%              (red dots) with the star particles in Au4-24. TODO: only show the
+%              panel on the right-hand side. TODO: include details of exactly which
+%              star particles are shown. TODO: generate the same figure but color-coded
+%              by mass?}
+%     \label{fig:FeH_Rcs_MWvsAu424_2D}
+% \end{figure*}
+% 
+% 
+% \begin{figure*}
+%     \includegraphics[width=\columnwidth]{vandenBergh2013.png}
+%     \includegraphics[width=\columnwidth]{{Au4-24_Renaud2017_figure8}.png}
+%     \caption{TODO: add observed age-FeH data points \citep{2013ApJ...775..134V}
+%              to simulation plot, investigate starbursts by making pictures of
+%              these events, check if the observed data set shows a representative
+%              sample of the MW GCS, fix overlapping axes labels}
+%     \label{fig:bla}
+% \end{figure*}
+% \begin{figure}
+%     \includegraphics[width=\columnwidth]{{Au4-24_Renaud2017_figure6}.png}
+%     \caption{}
+%     \label{fig:bla}
+% \end{figure}
 
 
 
@@ -224,7 +303,7 @@ We use the Auriga \citep[][hereafter G17]{2017MNRAS.467..179G} simulations, a su
 
 
 \section{Summary and conclusions}
-\label{sec:summary}
+\label{sec:conclusions}
 
 
 \section*{Acknowledgements}
