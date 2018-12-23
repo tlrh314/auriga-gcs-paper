@@ -68,12 +68,21 @@
 
 % The list of authors, and the short list which is used in the headers.
 % If you need two or more lines of authors, add an extra line using \newauthor
-\author[T. L. R. Halbesma et al.]{
-Timo L. R. Halbesma,$^{1}$\thanks{E-mail: Halbesma@MPA-Garching.MPG.DE}
-Simon D. M. White,$^{1}$
-\\
-% List of institutions
-$^{1}$Max-Planck-Institut f\"ur Astrophysik, Postfach 1317, D-85741 Garching, Germany\\
+\author[T. L. R. Halbesma et al.]{\parbox[t]{\textwidth}{
+    Timo L. R. Halbesma$^{1}$\thanks{E-mail: Halbesma@MPA-Garching.MPG.DE},
+    Wilma Trick$^{1}$,
+    Robert J. J. Grand$^{1}$, 
+    Volker Springel$^{1}$, 
+    Facundo A. G\'{o}mez$^{2,3}$, 
+    Federico Marinacci$^{4,5}$,
+    R\"{u}diger Pakmor$^{1}$, 
+    Simon D. M. White$^{1}$
+} \vspace{10pt} \\
+$^{1}$ Max-Planck-Institut f\"ur Astrophysik, Postfach 1317, D-85741 Garching, Germany \\
+$^{2}$ Instituto de Investigaci\'{o}n Multidisciplinar en Ciencia yTecnolog\'{i}a, Universidad de La Serena, Ra\'{u}l Bitr\'{a}n 1305, La Serena, Chile \\
+$^{3}$ Departamento de F\'{i}sica y Astronom\'{i}a, Universidad de La Serena, Av. Juan Cisternas 1200 N, La Serena, Chile \\
+$^{4}$ Department of Physics, Kavli Institute for Astrophysics and Space Research, MIT, Cambridge, MA 02139, USA \\
+$^{5}$ Harvard-Smithsonian Center for Astrophysics, 60 Garden Street, Cambridge, MA 02138, USA \\
 }
 
 % These dates will be filled out by the publisher
@@ -92,13 +101,14 @@ $^{1}$Max-Planck-Institut f\"ur Astrophysik, Postfach 1317, D-85741 Garching, Ge
 \begin{abstract}
 We investigate whether the galaxy formation model used for the Auriga simulations 
 can produce a realistic globular cluster population at redshift zero. We compare
-properties of the simulated star particles in selected Auriga haloes with
+properties of the simulated star particles in the Auriga haloes with
 catalogues of observations of the Milky Way globular cluster population available
 in the literature. We find that the Auriga simulations produce sufficient mass
 at radii and metallicities that are typical for the MW GCS, although we observe
 a varying mass-excess for the different $R_{\text{GC}}$-[Fe/H] bins. This implies
 different values for the combined product of the bound cluster formation efficiency
-and the globular cluster disruption rate.
+and the globular cluster disruption rate. We investigate wether these differences
+could result from formation insitu vs. accreted star particles. We find ...
 \end{abstract}
 
 % Select between one and six entries from the list of approved keywords.
@@ -113,8 +123,16 @@ methods: numerical -- galaxies: formation -- galaxies: star clusters: general.
 
 \section{Introduction}
 \todo[inline]{Paragraph: General introduction of GCs}
+
+\citet{2005MNRAS.364..367D}: ``The radial profile of the stellar halo and metal-poor globular
+clusters of the Milky Way suggest that these components formed in rare early peaks above $2.5 \sigma$ at redshift above 10. ''
+
+\citet{2017MNRAS.465.3622R}: ``GCs among oldest astrophysical objects. GCs form in the early Universe in highest density peaks \citep[e.g.][]{2005MNRAS.364..367D, 2009ApJ...706L.192B}''
+
+
+
+
 \begin{itemize}
-    \item ``GCs among oldest astrophysical objects. GCs form in the early Universe in highest density peaks \citep[e.g.][]{2005MNRAS.364..367D, 2009ApJ...706L.192B}''
     \item ``Hence, they witness most of the formation and evolution processes of galaxies, and can be used to probe them'' \citep{2006ARA&A..44..193B}
     \item ``colour bimodality, blue and red clusters \citep[e.g.][]{1985ApJ...293..424Z, 1999AJ....118.1526G, 2001AJ....121.2974L, 2006ApJ...639...95P}
     \item ``blue metal-poor (with distribution peaking at [Fe/H] $\approx -1.5$ for the Milky Way), no sign of rotation as a population (..) more metal-rich (peak at [Fe/H] $\approx -0.5$ in the Milky  Way) more spatially concentrated and rotating with the galaxy.'' \citep{1996AJ....112.1487H}
@@ -140,6 +158,9 @@ Deason et al. 2013; Ruchti et al. 2014, 2015).
 \item ``\citet{1998ApJ...501..554C} argue that red clusters form in situ while the blue ones are accreted, either via merging satellite galaxies, or by tidal capture of the clusters themselves \citep[see also][]{2013ApJ...762...39T}.''
 \end{itemize}
 
+
+Dark Matter - GC connection
+
 \todo[inline]{Paragraph: scientific motivation}
 \begin{itemize}
     \item The star formation model implemented in the Auriga simulations is capable of producing a suite/population of realistic Milky Way-like galaxies at redshift zero.
@@ -151,6 +172,7 @@ Deason et al. 2013; Ruchti et al. 2014, 2015).
 
 
 \todo[inline]{Paragraph: previous work / work of other groups}
+This goes before the GC formation mechanism paragraph.
 \begin{itemize}
 \item Origin of the Milky Way globular clusters \citep{2017MNRAS.465.3622R}
 \item GCs in FIRE \citep{2018MNRAS.474.4232K}
@@ -165,6 +187,20 @@ Deason et al. 2013; Ruchti et al. 2014, 2015).
 \item GC formation in cold filaments \citep{2018ApJ...861..148M}
 \item GC formation in high-redshift dwarf galaxies \citep{2018MNRAS.477..480Z}
 \item GCs in MW outer region \citep{2017arXiv170804542P}
+\item Impact of the Cutoff of the Cluster Initial Mass Function \citep{2018arXiv181001888C}
+\item Metallicity gradients in the globular cluster systems of early-type galaxies: in situ and accreted components \citep{2018MNRAS.479.4760F}
+\item Globular clusters in M31, Local Group, and external galaxies \citep{2016IAUS..317..120L}
+\item Globular Clusters Formed within Dark Halos I: present-day abundance, distribution and kinematics \citep{2019MNRAS.482..219C}
+\item The mass of the Milky Way from satellite dynamics \citep{2018arXiv180810456C}
+\item Globular cluster formation and evolution in the context of cosmological galaxy assembly: open questions \citep{2018RSPSA.47470616F}
+\item The kinematics of globular clusters systems in the outer halos of the Aquarius simulations \citep{2016A&A...592A..55V}
+\item Star Cluster Formation in Cosmological Simulations \citep{2017ApJ...834...69L, 2018ApJ...861..107L, 2018arXiv181011036L}
+\item A systematic analysis of star cluster disruption by tidal shocks -- I. Controlled N-body simulations and a new theoretical model \citep{2018arXiv181200014W}
+\item Spatial mixing of binary stars in multiple-population globular clusters \citep{2018MNRAS.tmp.3147H}
+\item Star Clusters Across Cosmic Time \citep{2018arXiv181201615K}
+\item Kinematics of Subclusters in Star Cluster Complexes: Imprint of their Parental Molecular Clouds \citep{2018arXiv181201858F}
+\item Investigating the population of Galactic star formation regions and star clusters within a Wide-Fast-Deep Coverage of the Galactic Plane  \citep{2018arXiv181203025P}
+% TODO: last checked arXiv Dec 15, 2018
 \end{itemize}
 
 
@@ -177,9 +213,32 @@ We summarise the relevant characteristics of the Auriga simulations in section~\
 We use the Auriga \citep[][hereafter G17]{2017MNRAS.467..179G} simulations, a suite of high-resolution cosmological zoom simulations ran with a galaxy formation model that produces realistic Milky Way-like galaxies at redshift $z=0$. The simulations are performed with \textsc{arepo} \citep{2010MNRAS.401..791S, 2016MNRAS.455.1134P} that solves the magnetohydrodynamical equations on a moving mesh. See G17 for further details; here we briefly summarise the relevant properties.
 \todo[inline]{Paragraph: Auriga boilerplate, paraphrased}
 
-\todo[inline]{What is the star formation density threshold?}
-``The gas is assumed to be star-forming and thermally unstable for densities higher than a threshold density that we derive from the parameters of the two gas phases and the desired star formation time-scale to be $n = 0.13 \text{cm}^{−3}$.'' - \citep{2017MNRAS.467..179G}
+``The simulations include a comprehensive model for galaxy formation physics which includes important baryonic processes, such as
 
+primordial and metal-line cooling \citep{2013MNRAS.436.3031V};
+
+a sub-grid model for the interstellar medium that utilises an equation of state representing a two-phase medium in pressure equilibrium \citep{2003MNRAS.339..289S}
+u
+a model for the star formation and stellar feedback that includes a phenomenological wind model \citep{2014MNRAS.437.1750M, 2017MNRAS.467..179G}
+
+and metal enrichment from SNII, SNIa and AGB stars \citep{2013MNRAS.436.3031V}
+
+black hole formation and active galactic nucleus feedback (\citep{2005MNRAS.361..776S, 2014MNRAS.437.1750M, 2017MNRAS.467..179G}
+
+a spatially uniform, time-varying UV background after reionization at redshift six \citep{2009ApJ...703.1416F, 2013MNRAS.436.3031V}
+
+and magnetic fields \citep{2013MNRAS.432..176P, 2014ApJ...783L..20P}
+
+The model was specifically developed for the \textsc{arepo} code and was calibrated to reproduce several observational results such as the stellar mass to halo mass relation, galaxy luminosity functions and the history of the cosmic star formation rate density.
+''
+
+
+\todo[inline]{What is the star formation density threshold?}
+``The gas is assumed to be star-forming and thermally unstable for densities higher than a threshold density that we derive from the parameters of the two gas phases and the desired star formation time-scale to be $n = 0.13 \text{cm}^{-3}$.'' - \citep{2017MNRAS.467..179G}
+
+
+\todo[inline]
+``The diversity in morphological properties of these simulated galaxies reflects the stochasticity inherent to the process of galaxy formation and evolution \citep[e.g.][]{2005ApJ...635..931B, 2010MNRAS.406..744C, 2010ApJ...708.1398T}.''
 
 \subsection{Definition of stellar halo}
 \todo[inline]{Possibly also relevant here. See \citet{2018arXiv180407798M}.}
@@ -190,7 +249,8 @@ We use the Auriga \citep[][hereafter G17]{2017MNRAS.467..179G} simulations, a su
 
 
 
-\section{The Milky Way globular cluster system}
+\section{Relevant observational data for Local Group spirals}
+The Milky Way + M31 globular cluster system
 \label{sec:observations}
 
 \subsection{Harris catalogue}
@@ -202,17 +262,71 @@ We use the Auriga \citep[][hereafter G17]{2017MNRAS.467..179G} simulations, a su
 \citet{2013ApJ...775..134V} measured [Fe/H] and obtained age-estimates for 55 globular clusters in the MW GCS.
 
 
+How is this particular sample selected? What biases does this introduce?
+Is this sample drawn from the same underlying distribution as the Harris sample (plot distributions of FeH, compare mean/std, do t-test)
+
+\subsection{M31}
+\todo[inline]{Get big dataset of M31 GCS}
+\label{sec:m31}
+\citep{2011AJ....141...61C}
+\citep{2014MNRAS.442.2165H, 2014MNRAS.442.2929V}
+
+
+
+
 \section{Results}
 \label{sec:results}
+\citet{2013ApJ...775..134V} presents age measurements of 55 GCs in the MW. The
+mean age of GCs in the MW is $11.9$~Gyr with a dispersion of $0.8$~Gyr. 
+Therefore we select all star particles in the Auriga simulations that are older 
+than $10$~Gyr. Henceforth we will refer the this subset of star particles as the 
+`GC candidates'. Our approach is similar to the one taken by \citep{2017MNRAS.465.3622R},
+where we know we are oversampling the real GC population with the contribution
+of field stars in our subset. This will be further addressed in the discussion.
+
 \subsection{Metallicity distribution}
 \label{sec:metallicity}
+
 Can the Auriga simulations produce star particles of $>10$~Gyr (GC candidates) with a metallicity distribution that is consistent with the MW GCS?
+
+Fig.~\ref{fig:FeH}
+
+Split into insitu / accreted
+
+
+Conclusion: too many metal-rich star particles.
+
+
+\begin{figure*}
+    \includegraphics[width=\columnwidth]{{logMFeH_OldStars}.png}
+    \includegraphics[width=\columnwidth]{{logMFeH}.png}
+\end{figure*}
+\begin{figure*}
+    \includegraphics[width=\columnwidth]{{logMFeH_OldInsitu}.png}
+    \includegraphics[width=\columnwidth]{{logMFeH_OldAccreted}.png}
+    \caption{Caption}
+    \label{fig:FeH}
+\end{figure*}
 
 
 
 \subsection{Spatial distribution}
 \label{sec:spatial}
 Is the spatial distribution of the GC candidates in the Auriga simulations consistent with the MW GCS?
+
+
+Look into Pandromeda survey? Star counts, very wide angle survey
+
+\begin{figure*}
+    \includegraphics[width=\columnwidth]{{logMRgc_OldStars}.png}
+    \includegraphics[width=\columnwidth]{{logMRgc}.png}
+\end{figure*}
+\begin{figure*}
+    \includegraphics[width=\columnwidth]{{logMRgc_OldInsitu}.png}
+    \includegraphics[width=\columnwidth]{{logMRgc_OldAccreted}.png}
+    \caption{Caption}
+    \label{fig:Rgc}
+\end{figure*}
 
 
 
@@ -239,6 +353,9 @@ Can we identify particular star formation events that generate GC candidates wit
 Can we distinguish between particles that have formed in-situ and those that have been accreted? Can we identify specific features in the age-metallicity plane, or in the $R_\textbf{GC}$-[Fe/H] plane, that result from one of both populations? How does this connect to proposed mechanisms for globular cluster formation in the literature?
 
 
+Orbits: are the pericentres different? Look at velocity + specific angular momentum distribution in the different FeH/Rgc bins as proxy for the pericenter
+
+
 
 
 \subsection{Scatter for different Auriga haloes} 
@@ -247,10 +364,24 @@ Are the properties of the Auriga globular cluster candidates converged for runs 
 
 
 
-\subsection{Numerical convergence} 
+\subsection{Numerical convergence (possibly in appendix)} 
 \label{sec:convergence}
 Are the properties of the Auriga globular cluster candidates converged for runs with the same initial conditions but at different resolution levels? 
 
+\begin{figure*}
+    \includegraphics[width=0.31\textwidth]{{logMFeH_Au6}.png}
+    \includegraphics[width=0.31\textwidth]{{logMFeH_Au16}.png}
+    \includegraphics[width=0.31\textwidth]{{logMFeH_Au24}.png}
+    \caption{Caption}
+    \label{fig:FeH_l345}
+\end{figure*}
+\begin{figure*}
+    \includegraphics[width=0.31\textwidth]{{logMRgc_Au6}.png}
+    \includegraphics[width=0.31\textwidth]{{logMRgc_Au16}.png}
+    \includegraphics[width=0.31\textwidth]{{logMRgc_Au24}.png}
+    \caption{Caption}
+    \label{fig:Rgc_l345}
+\end{figure*}
 
 
 

@@ -1,0 +1,253 @@
+\documentclass[12pt, a4paper]{article} 
+
+\usepackage[english]{babel}
+% Here the text area, the left margin and the top margin are set. 
+% The right and bottom margins are automatically computed to fit the page. 
+\usepackage{geometry}
+\geometry{
+    a4paper,  % 210 x 297 mm
+    total={170mm,257mm},
+    left=20mm,  % 210 - 170 = 40, so right margin will also be 20mm ?
+    top=15mm,   % 297 - 257 = 40, so bottom margin will be 25mm ?
+}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{hyperref}
+\hypersetup{pdfborder=0 0 0, colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue}
+\usepackage{todonotes}
+\usepackage{enumerate}
+\usepackage{afterpage}    % Hack to remove page number from one specific page
+\usepackage{transparent}  % Use transparent image to move float to right of two-col figure
+
+\usepackage{natbib}
+\usepackage{aas_macros}
+\citestyle{aa}
+\bibpunct{(}{)}{;}{a}{,}{,}
+
+\graphicspath{{../img/}}   % Set image path
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\renewcommand*{\thesection}{4.\arabic{section}}
+\setcounter{section}{-1}
+
+\makeatletter
+\renewcommand{\fnum@figure}{Fig. \thefigure}
+\makeatother
+
+\begin{document}
+\part*{Sec. 4 \quad Results}
+\textbf{Question.} Is the star formation model implemented for the Auriga simulations 
+capable of producing a population of star particles that is consistent with the
+observed properties of the Milky Way (MW) globular cluster system (GCS)? 
+\begin{itemize}
+    \item What data do we have available for MW and M31? \\ 
+        \null\qquad $\rightarrow$ Sec.~\ref{sec:data} on p.~\pageref{sec:data}
+    \item Does Auriga's star formation model produce sufficient star particles 
+        with the right age and metallicity ([Fe/H]) to be consistent with the
+        MW GCS? \\ 
+        \null\qquad $\rightarrow$ Sec.~\ref{sec:FeH} on p.~\pageref{sec:FeH}
+    \item Does Auriga's star formation model produce sufficient star particles
+        with the right age and radial distribution to be consistent with the
+        MW GCS? \\ 
+        \null\qquad $\rightarrow$ Sec.~\ref{sec:Rgc} on p.~\pageref{sec:Rgc}
+    \item Does Auriga's star formation model produce sufficient star particles
+        with the right age, metallicity ([Fe/H]) and radial distribution to be
+        consistent with the MW GCS? \\ 
+        \null\qquad $\rightarrow$ Sec.~\ref{sec:FeH-Rgc} on p.~\pageref{sec:FeH-Rgc}
+\end{itemize}
+\textbf{Question.} What does the picture look like when broaden the scope to 
+consider spirals in the Local Group (i.e. including Andromeda/M31)? \\
+
+\noindent \textbf{Assumption I.} All star particles in the Auriga simulations with age
+$> 10$~Gyr are globular cluster candidates. \\
+
+\textbf{Justification} 
+\begin{enumerate}[i)]
+    {\setlength\itemindent{25pt} \item 
+        \citet{2013ApJ...775..134V} measured [Fe/H] of 55 globular clusters in
+        the MW and obtained age-estimates. The mean age of the MW GCS is 11.9~Gyr 
+        with a dispersion of 0.9~Gyr. Furthermore, only one of the 55 GC 
+        age-estimates is below 10~Gyr.
+    }
+    {\setlength\itemindent{25pt} \item 
+        \citet{2017MNRAS.465.3622R} performed one simulation of a MW-like galaxy 
+        (down to z=0.5, T$_{\rm lookback}\approx$~5~Gyr) and performs the entire
+        analysis using a subset of star particles with ages $>10$~Gyr that is 
+        referred to as `globular cluster candidates'.
+    }
+\end{enumerate}
+
+\textbf{Weaknesses}
+\begin{enumerate}[i)]
+    {\setlength\itemindent{25pt} \item 
+        \citet{2018MNRAS.475.4309P} show that star clusters do not simply follow 
+        the same distribution as the field stars. In our approach we don't just 
+        oversample the `real' population of globular clusters (by ignoring/excluding
+        dynamical evolution), but the retrieved distributions of old star particles in 
+        the simulations may not even faithfully represent the `true' distribution of 
+        globulars.
+    }
+    {\setlength\itemindent{25pt} \item 
+        \citet{2011AJ....141...61C} measured [Fe/H] of 87 globular clusters
+        in M31 and obtained age-estimates. The mean age is 10.8~Gyr with a 
+        dispersion of 2.3~Gyr. Furthermore, 27 GCs have age-estimates below 10~Gyr,
+        with a minimum age-estimate of 4.8~Gyr. Perhaps an age cut of 6~Gyr 
+        would would be more appropriate for M31, see Fig.~\ref{fig:MW-M31-age}.
+    }
+\end{enumerate}
+
+\afterpage{%
+\section{Available data for the Milky Way and Andromeda}
+\label{sec:data}
+\thispagestyle{empty}
+\begin{figure*}[h!]
+    \includegraphics[width=0.5\textwidth]{{MW_M31_Age_HistogramMassWeighted}.png}
+    \includegraphics[width=0.49\textwidth]{{MW_M31_FeH_HistogramMassWeighted}.png}
+    \caption{
+        \emph{Left:} Mass-weighted age distribution of 55 GCs in the MW 
+        \citep[data from][]{2013ApJ...775..134V} and 87 GCs 
+        in M31 \citep[data from][]{2011AJ....141...61C}.
+        \emph{Right:} Mass-weighted [Fe/H] distribution of 151 GCs in the MW 
+        \citep[data from][2010 ed.]{1996AJ....112.1487H} and 314 GCs in M31.
+        \label{fig:MW-M31-ageFeH}
+    }
+
+    \includegraphics[width=0.49\textwidth]{{MW_M31_Rgc_HistogramMassWeighted}.png}
+    \includegraphics[width=0.53\textwidth]
+        {{MW_M31_RgcFeH_HistogramMassWeighted_Harris1996ed2010data}.png}
+    \caption{
+        \emph{Left:} Mass-weighted R$_{\rm GC}$ distribution of 156 GCs in the MW.
+        \emph{Right:} Mass-weighted [Fe/H]-R$_{\rm GC}$ distribution of
+        151 GCs in the MW \citep[data from][2010 ed.]{1996AJ....112.1487H}, which
+        is 98.19 \% of the total MW GCS mass.
+        \label{fig:MW-M31-Rgc-FeHRgc}
+    }
+
+    \transparent{0.0}\includegraphics[width=0.49\textwidth]
+        {{MW_M31_Rgc_HistogramMassWeighted}.png}
+    \transparent{1.0}\includegraphics[width=0.53\textwidth]
+        {{MW_M31_RgcFeH_HistogramMassWeighted_VandenBerg2013data}.png}
+    \caption{
+        Mass-weighted [Fe/H]-R$_{\rm GC}$ distribution of
+        55 GCs in the Milky Way \citep[data from][]{2013ApJ...775..134V}, which
+        is 43.27\% of the total MW GCS mass.
+        \label{fig:MW-M31-FeHRgc2}
+    }
+\end{figure*}
+\clearpage
+}
+\newpage
+
+\afterpage{%
+\newgeometry{
+    a4paper,  % 210 x 297 mm
+    total={170mm,257mm},
+    left=20mm,  % 210 - 170 = 40, so right margin will also be 20mm ?
+    top=5mm,   % 297 - 257 = 40, so bottom margin will be 25mm ?
+}
+\begin{table}[ht!]
+    \centering
+    \caption{
+        The [Fe/H]-R$_{\rm GC}$ plot is generated using 
+        \textsc{scipy.stats.binned\_statistic\_2d}. This table shows a manual 
+        calculation of Msum and Ngc in each bin for debug purposes, just to check
+        that \textsc{scipy}'s built-in method is used correctly. 
+        Data from \citet[][2010 ed.]{1996AJ....112.1487H}.
+        \label{tab:MW-FeH-Rgc}
+    }
+    \begin{tabular}{rrrrrrc}
+        \hline
+        xmin   & xmax   & ymin   & ymax   & Ngc    & Msum   & log$_{10}$(Msun) \\
+        \hline
+        1      & 3      & -2.5   & -1.5   & 7      & 1.7e+06 & 6.24       \\
+        1      & 3      & -1.5   & -1.0   & 12     & 1.9e+06 & 6.27       \\
+        1      & 3      & -1.0   & -0.5   & 9      & 7.7e+05 & 5.89       \\
+        1      & 3      & -0.5   & -0.3   & 4      & 1.0e+06 & 6.02       \\
+        1      & 3      & -0.3   & 0      & 2      & 3.2e+05 & 5.51       \\
+        \hline
+        3      & 8      & -2.5   & -1.5   & 16     & 4.6e+06 & 6.66       \\
+        3      & 8      & -1.5   & -1.0   & 12     & 2.4e+06 & 6.37       \\
+        3      & 8      & -1.0   & -0.5   & 10     & 2.5e+06 & 6.39       \\
+        3      & 8      & -0.5   & -0.3   & 6      & 1.9e+06 & 6.29       \\
+        3      & 8      & -0.3   & 0      & 1      & 3.0e+04 & 4.48       \\
+        \hline
+        8      & 15     & -2.5   & -1.5   & 11     & 3.0e+06 & 6.47       \\
+        8      & 15     & -1.5   & -1.0   & 6      & 1.9e+06 & 6.27       \\
+        8      & 15     & -1.0   & -0.5   & 1      & 6.5e+03 & 3.81       \\
+        8      & 15     & -0.5   & -0.3   & 1      & 8.5e+04 & 4.93       \\
+        8      & 15     & -0.3   & 0      & 0      & 0.0e+00 & -inf       \\
+        \hline
+        15     & 30     & -2.5   & -1.5   & 16     & 2.1e+06 & 6.31       \\
+        15     & 30     & -1.5   & -1.0   & 6      & 2.2e+06 & 6.34       \\
+        15     & 30     & -1.0   & -0.5   & 2      & 1.0e+04 & 4.02       \\
+        15     & 30     & -0.5   & -0.3   & 1      & 1.5e+04 & 4.17       \\
+        15     & 30     & -0.3   & 0      & 0      & 0.0e+00 & -inf       \\
+        \hline
+        30     & 125    & -2.5   & -1.5   & 6      & 1.1e+06 & 6.04       \\
+        30     & 125    & -1.5   & -1.0   & 4      & 3.1e+05 & 5.49       \\
+        30     & 125    & -1.0   & -0.5   & 1      & 1.4e+03 & 3.15       \\
+        30     & 125    & -0.5   & -0.3   & 0      & 0.0e+00 & -inf       \\
+        30     & 125    & -0.3   & 0      & 0      & 0.0e+00 & -inf       \\
+        \hline
+        \multicolumn{7}{c}{Data from \citet[][55 GCs]{2013ApJ...775..134V}} \\
+        \hline
+        1      & 3      & -2.5   & -1.5   & 3      & 5.5e+05 & 5.74       \\
+        1      & 3      & -1.5   & -1.0   & 2      & 2.2e+05 & 5.35       \\
+        1      & 3      & -1.0   & -0.5   & 2      & 2.3e+05 & 5.37       \\
+        1      & 3      & -0.5   & -0.3   & 2      & 2.6e+05 & 5.42       \\
+        1      & 3      & -0.3   & 0      & 0      & 0.0e+00 & -inf       \\
+        \hline
+        3      & 8      & -2.5   & -1.5   & 9      & 1.7e+06 & 6.22       \\
+        3      & 8      & -1.5   & -1.0   & 5      & 9.1e+05 & 5.96       \\
+        3      & 8      & -1.0   & -0.5   & 4      & 9.6e+05 & 5.98       \\
+        3      & 8      & -0.5   & -0.3   & 1      & 1.1e+05 & 5.04       \\
+        3      & 8      & -0.3   & 0      & 1      & 1.9e+05 & 5.29       \\
+        \hline
+        8      & 15     & -2.5   & -1.5   & 10     & 3.0e+06 & 6.48       \\
+        8      & 15     & -1.5   & -1.0   & 4      & 1.3e+06 & 6.13       \\
+        8      & 15     & -1.0   & -0.5   & 0      & 0.0e+00 & -inf       \\
+        8      & 15     & -0.5   & -0.3   & 0      & 0.0e+00 & -inf       \\
+        8      & 15     & -0.3   & 0      & 0      & 0.0e+00 & -inf       \\
+        \hline
+        15     & 30     & -2.5   & -1.5   & 6      & 6.8e+05 & 5.83       \\
+        15     & 30     & -1.5   & -1.0   & 3      & 1.9e+06 & 6.29       \\
+        15     & 30     & -1.0   & -0.5   & 1      & 8.9e+03 & 3.95       \\
+        15     & 30     & -0.5   & -0.3   & 0      & 0.0e+00 & -inf       \\
+        15     & 30     & -0.3   & 0      & 0      & 0.0e+00 & -inf       \\
+        \hline
+        30     & 125    & -2.5   & -1.5   & 0      & 0.0e+00 & -inf       \\
+        30     & 125    & -1.5   & -1.0   & 0      & 0.0e+00 & -inf       \\
+        30     & 125    & -1.0   & -0.5   & 0      & 0.0e+00 & -inf       \\
+        30     & 125    & -0.5   & -0.3   & 0      & 0.0e+00 & -inf       \\
+        30     & 125    & -0.3   & 0      & 0      & 0.0e+00 & -inf       \\
+        \hline
+    \end{tabular}
+\end{table}
+\clearpage
+\restoregeometry
+}
+\clearpage
+
+\section{Distribution of metallicity [Fe/H]}
+\label{sec:FeH}
+
+
+\section{Distribution of Galactocentric radii R$_{\rm GC}$}
+\label{sec:Rgc}
+
+
+\section{Distribution of [Fe/H]-R$_{\rm GC}$}
+\label{sec:FeH-Rgc}
+
+
+
+
+
+\newpage
+\bibliographystyle{../mnras}
+\bibliography{../AurigaGCS} 
+
+
+\end{document}

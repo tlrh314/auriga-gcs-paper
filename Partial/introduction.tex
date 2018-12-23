@@ -1,0 +1,161 @@
+\documentclass[a4paper,fleqn,usenatbib]{mnras}
+\usepackage{newtxtext,newtxmath}
+\usepackage[T1]{fontenc}
+\usepackage{ae,aecompl}
+\usepackage{graphicx} 
+\usepackage{amsmath} 
+\usepackage{amssymb}
+\graphicspath{{img/}} 
+\newcommand{\Sun}[0]{\ensuremath{_{\odot}}}
+\renewcommand{\deg}{\ensuremath{^{\circ}}}
+
+\usepackage[most]{tcolorbox} 
+\definecolor{block-gray}{gray}{0.95}
+\newtcolorbox{zitat}[2][]{%
+    colback=block-gray,
+    grow to right by=-10mm,
+    grow to left by=-10mm, 
+    boxrule=0pt,
+    boxsep=0pt,
+    breakable,
+    enhanced jigsaw,
+    borderline west={4pt}{0pt}{gray},
+    title={#2\par},
+    colbacktitle={block-gray},
+    coltitle={black},
+    fonttitle={\large\bfseries},
+    attach title to upper={},
+    #1,
+}
+
+\title[Auriga GCS]{The Globular Cluster System of the Auriga Simulations}
+
+\author[T. L. R. Halbesma et al.]{\parbox[t]{\textwidth}{
+    Timo L. R. Halbesma$^{1}$\thanks{E-mail: Halbesma@MPA-Garching.MPG.DE},
+    Wilma Trick$^{1}$,
+    Robert J. J. Grand$^{1}$, 
+    Volker Springel$^{1}$, 
+    Facundo A. G\'{o}mez$^{2,3}$, 
+    Federico Marinacci$^{4,5}$,
+    R\"{u}diger Pakmor$^{1}$, 
+    Simon D. M. White$^{1}$
+} \vspace{10pt} \\
+$^{1}$ Max-Planck-Institut f\"ur Astrophysik, Postfach 1317, D-85741 Garching, Germany \\
+$^{2}$ Instituto de Investigaci\'{o}n Multidisciplinar en Ciencia yTecnolog\'{i}a, Universidad de La Serena, Ra\'{u}l Bitr\'{a}n 1305, La Serena, Chile \\
+$^{3}$ Departamento de F\'{i}sica y Astronom\'{i}a, Universidad de La Serena, Av. Juan Cisternas 1200 N, La Serena, Chile \\
+$^{4}$ Department of Physics, Kavli Institute for Astrophysics and Space Research, MIT, Cambridge, MA 02139, USA \\
+$^{5}$ Harvard-Smithsonian Center for Astrophysics, 60 Garden Street, Cambridge, MA 02138, USA \\
+}
+
+% These dates will be filled out by the publisher
+\date{Accepted XXX. Received YYY; in original form ZZZ}
+
+% Enter the current year, for the copyright statements etc.
+\pubyear{2019}
+
+% Don't change these lines
+\begin{document}
+\label{firstpage}
+\pagerange{\pageref{firstpage}--\pageref{lastpage}}
+\maketitle
+
+% Abstract of the paper
+\begin{abstract}
+We investigate whether the galaxy formation model used for the Auriga simulations 
+can produce a realistic globular cluster population at redshift zero. We compare
+properties of the simulated star particles in the Auriga haloes with
+catalogues of observations of the Milky Way globular cluster population available
+in the literature. We find that the Auriga simulations produce sufficient mass
+at radii and metallicities that are typical for the MW GCS, although we observe
+a varying mass-excess for the different $R_{\text{GC}}$-[Fe/H] bins. This implies
+different values for the combined product of the bound cluster formation efficiency
+and the globular cluster disruption rate. We investigate wether these differences
+could result from formation insitu vs. accreted star particles. We find ...
+\end{abstract}
+
+% Select between one and six entries from the list of approved keywords.
+% Don't make up new ones.
+\begin{keywords}
+methods: numerical -- galaxies: formation -- galaxies: star clusters: general.
+\end{keywords}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%% BODY OF PAPER %%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+
+\subsection{GC form under special circumstances in high-z Universe}
+\begin{zitat}{\citet{2017MNRAS.465.3622R}}
+GCs are among the oldest astrophysical objects. They form in the early Universe in
+highest density peaks \citep[e.g.][]{2005MNRAS.364..367D, 2009ApJ...706L.192B}
+\end{zitat}
+
+\begin{zitat}{\citet{2005MNRAS.364..367D}}
+The radial profile of the stellar halo and metal-poor globular
+clusters of the Milky Way suggest that these components formed in rare
+early peaks above $2.5 \sigma$ at redshift above 10.
+\end{zitat}
+
+
+\begin{zitat}{\citet{2005MNRAS.364..367D}}
+The  clustering  properties  of  metal-poor  globular  clusters  contain
+clues on their formation sites and the epoch when star formation
+was suppressed by feedback processes (e.g. reionization, supernova-
+driven winds) in low-mass haloes. In the Milky Way metal-poor
+globular clusters follow the same radial profile as halo stars, suggesting
+within the framework of our model a common origin within
+early $2.5\sigma$ peak progenitors at $z\approx12$. Observations of the
+distribution of globular clusters within present-day haloes of different
+masses could provide information on feedback effects as a function
+of environment (Moore et al. 2005). The suppression of globular
+cluster formation at some early epoch may also explain the bimodality 
+observed in cluster metallicities (e.g. Strader et al. 2005). The
+widely  used  assumption  that  globular  cluster  formation  is  a  fair
+tracer of star formation, combined with the suppression of the formation  
+of  metal-poor  globulars  after  reionization,  imply  that  the
+amount of high-$\sigma$ material in a halo is proportional to the number of
+metal-poor globular clusters. From the results in Section 3.4 it follows 
+then that a simple universal reionization epoch would lead to a
+constant abundance of metal-poor globular clusters per virial mass.
+Deviations from this simplest case may provide information about
+the local reionization epoch, and whether regions with more (less)
+metal-poor globulars per virial mass were reionized later (earlier)
+(see Moore et al. 2005).
+\end{zitat}
+
+\subsection{YMC and GC formation governed by same physics; differences 
+due to nearly a Hubble time of evolution}
+``The widely  used  assumption  that  globular  cluster  formation  is  a  fair
+tracer of star formation'' $\rightarrow$ disputed?!
+
+
+\subsection{Understand GC formation \& evolution $\rightarrow$ 
+understand MW formation \& evolution}
+This seems to shift the problem from `why care about GC formation and evolution'
+to `why care about MW formation and evolution'. People seems to accept this
+form of what-about-ism / diversion of focus. Actually, this is expansion of focus
+so probably people accept this as the bigger picture that we're all after.
+
+\begin{zitat}{\citet{2017MNRAS.465.3622R}}
+Hence, they witness most of the formation and evolution processes of galaxies, and can be used to probe them \citep{2006ARA&A..44..193B}
+\end{zitat}
+
+\subsection{Colour bimodality}
+\begin{zitat}{\citet{2017MNRAS.465.3622R}}
+colour bimodality, blue and red clusters \citep[e.g.][]{1985ApJ...293..424Z, 1999AJ....118.1526G, 2001AJ....121.2974L, 2006ApJ...639...95P}
+\end{zitat}
+
+\begin{zitat}{\citet{2017MNRAS.465.3622R}}
+blue metal-poor (with distribution peaking at [Fe/H] $\approx -1.5$ for the Milky Way), no sign of rotation as a population (..) more metal-rich (peak at [Fe/H] $\approx -0.5$ in the Milky  Way) more spatially concentrated and rotating with the galaxy. \citep{1996AJ....112.1487H}
+\end{zitat}
+
+
+
+
+
+\bibliographystyle{mnras}
+\bibliography{AurigaGCS} % if your bibtex file is called example.bib
+
+
+\end{document}
