@@ -1,11 +1,11 @@
-\documentclass[12pt, a4paper]{article} 
+\documentclass[12pt, a4paper]{article}
 
 \usepackage[english]{babel}
-% Here the text area, the left margin and the top margin are set. 
-% The right and bottom margins are automatically computed to fit the page. 
+% Here the text area, the left margin and the top margin are set.
+% The right and bottom margins are automatically computed to fit the page.
 \usepackage{geometry}
 \geometry{
-    a4paper,  % 210 x 297 mm
+    a4paper,    % 210 x 297 mm
     total={170mm,257mm},
     left=20mm,  % 210 - 170 = 40, so right margin will also be 20mm ?
     top=15mm,   % 297 - 257 = 40, so bottom margin will be 25mm ?
@@ -38,62 +38,62 @@
 
 \begin{document}
 \part*{Sec. 4 \quad Results}
-\textbf{Question.} Is the star formation model implemented for the Auriga simulations 
+\textbf{Question.} Is the star formation model implemented for the Auriga simulations
 capable of producing a population of star particles that is consistent with the
-observed properties of the Milky Way (MW) globular cluster system (GCS)? 
+observed properties of the Milky Way (MW) globular cluster system (GCS)?
 \begin{itemize}
-    \item What data do we have available for MW and M31? \\ 
+    \item What data do we have available for MW and M31? \\
         \null\qquad $\rightarrow$ Sec.~\ref{sec:data} on p.~\pageref{sec:data}
-    \item Does Auriga's star formation model produce sufficient star particles 
+    \item Does Auriga's star formation model produce sufficient star particles
         with the right age and metallicity ([Fe/H]) to be consistent with the
-        MW GCS? \\ 
+        MW GCS? \\
         \null\qquad $\rightarrow$ Sec.~\ref{sec:FeH} on p.~\pageref{sec:FeH}
     \item Does Auriga's star formation model produce sufficient star particles
         with the right age and radial distribution to be consistent with the
-        MW GCS? \\ 
+        MW GCS? \\
         \null\qquad $\rightarrow$ Sec.~\ref{sec:Rgc} on p.~\pageref{sec:Rgc}
     \item Does Auriga's star formation model produce sufficient star particles
         with the right age, metallicity ([Fe/H]) and radial distribution to be
-        consistent with the MW GCS? \\ 
+        consistent with the MW GCS? \\
         \null\qquad $\rightarrow$ Sec.~\ref{sec:FeH-Rgc} on p.~\pageref{sec:FeH-Rgc}
 \end{itemize}
-\textbf{Question.} What does the picture look like when broaden the scope to 
+\textbf{Question.} What does the picture look like when broaden the scope to
 consider spirals in the Local Group (i.e. including Andromeda/M31)? \\
 
 \noindent \textbf{Assumption I.} All star particles in the Auriga simulations with age
 $> 10$~Gyr are globular cluster candidates. \\
 
-\textbf{Justification} 
+\textbf{Justification}
 \begin{enumerate}[i)]
-    {\setlength\itemindent{25pt} \item 
+    {\setlength\itemindent{25pt} \item
         \citet{2013ApJ...775..134V} measured [Fe/H] of 55 globular clusters in
-        the MW and obtained age-estimates. The mean age of the MW GCS is 11.9~Gyr 
-        with a dispersion of 0.9~Gyr. Furthermore, only one of the 55 GC 
+        the MW and obtained age-estimates. The mean age of the MW GCS is 11.9~Gyr
+        with a dispersion of 0.9~Gyr. Furthermore, only one of the 55 GC
         age-estimates is below 10~Gyr.
     }
-    {\setlength\itemindent{25pt} \item 
-        \citet{2017MNRAS.465.3622R} performed one simulation of a MW-like galaxy 
+    {\setlength\itemindent{25pt} \item
+        \citet{2017MNRAS.465.3622R} performed one simulation of a MW-like galaxy
         (down to z=0.5, T$_{\rm lookback}\approx$~5~Gyr) and performs the entire
-        analysis using a subset of star particles with ages $>10$~Gyr that is 
+        analysis using a subset of star particles with ages $>10$~Gyr that is
         referred to as `globular cluster candidates'.
     }
 \end{enumerate}
 
 \textbf{Weaknesses}
 \begin{enumerate}[i)]
-    {\setlength\itemindent{25pt} \item 
-        \citet{2018MNRAS.475.4309P} show that star clusters do not simply follow 
-        the same distribution as the field stars. In our approach we don't just 
+    {\setlength\itemindent{25pt} \item
+        \citet{2018MNRAS.475.4309P} show that star clusters do not simply follow
+        the same distribution as the field stars. In our approach we don't just
         oversample the `real' population of globular clusters (by ignoring/excluding
-        dynamical evolution), but the retrieved distributions of old star particles in 
-        the simulations may not even faithfully represent the `true' distribution of 
+        dynamical evolution), but the retrieved distributions of old star particles in
+        the simulations may not even faithfully represent the `true' distribution of
         globulars.
     }
-    {\setlength\itemindent{25pt} \item 
+    {\setlength\itemindent{25pt} \item
         \citet{2011AJ....141...61C} measured [Fe/H] of 87 globular clusters
-        in M31 and obtained age-estimates. The mean age is 10.8~Gyr with a 
+        in M31 and obtained age-estimates. The mean age is 10.8~Gyr with a
         dispersion of 2.3~Gyr. Furthermore, 27 GCs have age-estimates below 10~Gyr,
-        with a minimum age-estimate of 4.8~Gyr. Perhaps an age cut of 6~Gyr 
+        with a minimum age-estimate of 4.8~Gyr. Perhaps an age cut of 6~Gyr
         would would be more appropriate for M31, see Fig.~\ref{fig:MW-M31-age}.
     }
 \end{enumerate}
@@ -106,10 +106,10 @@ $> 10$~Gyr are globular cluster candidates. \\
     \includegraphics[width=0.5\textwidth]{{MW_M31_Age_HistogramMassWeighted}.png}
     \includegraphics[width=0.49\textwidth]{{MW_M31_FeH_HistogramMassWeighted}.png}
     \caption{
-        \emph{Left:} Mass-weighted age distribution of 55 GCs in the MW 
-        \citep[data from][]{2013ApJ...775..134V} and 87 GCs 
+        \emph{Left:} Mass-weighted age distribution of 55 GCs in the MW
+        \citep[data from][]{2013ApJ...775..134V} and 87 GCs
         in M31 \citep[data from][]{2011AJ....141...61C}.
-        \emph{Right:} Mass-weighted [Fe/H] distribution of 151 GCs in the MW 
+        \emph{Right:} Mass-weighted [Fe/H] distribution of 151 GCs in the MW
         \citep[data from][2010 ed.]{1996AJ....112.1487H} and 314 GCs in M31.
         \label{fig:MW-M31-ageFeH}
     }
@@ -150,10 +150,10 @@ $> 10$~Gyr are globular cluster candidates. \\
 \begin{table}[ht!]
     \centering
     \caption{
-        The [Fe/H]-R$_{\rm GC}$ plot is generated using 
-        \textsc{scipy.stats.binned\_statistic\_2d}. This table shows a manual 
+        The [Fe/H]-R$_{\rm GC}$ plot is generated using
+        \textsc{scipy.stats.binned\_statistic\_2d}. This table shows a manual
         calculation of Msum and Ngc in each bin for debug purposes, just to check
-        that \textsc{scipy}'s built-in method is used correctly. 
+        that \textsc{scipy}'s built-in method is used correctly.
         Data from \citet[][2010 ed.]{1996AJ....112.1487H}.
         \label{tab:MW-FeH-Rgc}
     }
@@ -162,19 +162,19 @@ $> 10$~Gyr are globular cluster candidates. \\
         xmin   & xmax   & ymin   & ymax   & Ngc    & Msum   & log$_{10}$(Msun) \\
         \hline
         1      & 3      & -2.5   & -1.5   & 7      & 1.7e+06 & 6.24       \\
-        1      & 3      & -1.5   & -1.0   & 12     & 1.9e+06 & 6.27       \\
-        1      & 3      & -1.0   & -0.5   & 9      & 7.7e+05 & 5.89       \\
+        1      & 3      & -1.5   & -1.0   & 15     & 1.9e+06 & 6.28       \\
+        1      & 3      & -1.0   & -0.5   & 10     & 8.2e+05 & 5.91       \\
         1      & 3      & -0.5   & -0.3   & 4      & 1.0e+06 & 6.02       \\
         1      & 3      & -0.3   & 0      & 2      & 3.2e+05 & 5.51       \\
         \hline
         3      & 8      & -2.5   & -1.5   & 16     & 4.6e+06 & 6.66       \\
-        3      & 8      & -1.5   & -1.0   & 12     & 2.4e+06 & 6.37       \\
-        3      & 8      & -1.0   & -0.5   & 10     & 2.5e+06 & 6.39       \\
-        3      & 8      & -0.5   & -0.3   & 6      & 1.9e+06 & 6.29       \\
+        3      & 8      & -1.5   & -1.0   & 15     & 2.8e+06 & 6.44       \\
+        3      & 8      & -1.0   & -0.5   & 11     & 2.8e+06 & 6.44       \\
+        3      & 8      & -0.5   & -0.3   & 7      & 1.9e+06 & 6.29       \\
         3      & 8      & -0.3   & 0      & 1      & 3.0e+04 & 4.48       \\
         \hline
         8      & 15     & -2.5   & -1.5   & 11     & 3.0e+06 & 6.47       \\
-        8      & 15     & -1.5   & -1.0   & 6      & 1.9e+06 & 6.27       \\
+        8      & 15     & -1.5   & -1.0   & 7      & 2.4e+06 & 6.38       \\
         8      & 15     & -1.0   & -0.5   & 1      & 6.5e+03 & 3.81       \\
         8      & 15     & -0.5   & -0.3   & 1      & 8.5e+04 & 4.93       \\
         8      & 15     & -0.3   & 0      & 0      & 0.0e+00 & -inf       \\
@@ -193,6 +193,8 @@ $> 10$~Gyr are globular cluster candidates. \\
         \hline
         \multicolumn{7}{c}{Data from \citet[][55 GCs]{2013ApJ...775..134V}} \\
         \hline
+        xmin   & xmax   & ymin   & ymax   & Ngc    & Msum   & log$_{10}$(Msun) \\
+        \hline
         1      & 3      & -2.5   & -1.5   & 3      & 5.5e+05 & 5.74       \\
         1      & 3      & -1.5   & -1.0   & 2      & 2.2e+05 & 5.35       \\
         1      & 3      & -1.0   & -0.5   & 2      & 2.3e+05 & 5.37       \\
@@ -200,13 +202,13 @@ $> 10$~Gyr are globular cluster candidates. \\
         1      & 3      & -0.3   & 0      & 0      & 0.0e+00 & -inf       \\
         \hline
         3      & 8      & -2.5   & -1.5   & 9      & 1.7e+06 & 6.22       \\
-        3      & 8      & -1.5   & -1.0   & 5      & 9.1e+05 & 5.96       \\
+        3      & 8      & -1.5   & -1.0   & 6      & 1.1e+06 & 6.03       \\
         3      & 8      & -1.0   & -0.5   & 4      & 9.6e+05 & 5.98       \\
         3      & 8      & -0.5   & -0.3   & 1      & 1.1e+05 & 5.04       \\
         3      & 8      & -0.3   & 0      & 1      & 1.9e+05 & 5.29       \\
         \hline
         8      & 15     & -2.5   & -1.5   & 10     & 3.0e+06 & 6.48       \\
-        8      & 15     & -1.5   & -1.0   & 4      & 1.3e+06 & 6.13       \\
+        8      & 15     & -1.5   & -1.0   & 5      & 1.9e+06 & 6.27       \\
         8      & 15     & -1.0   & -0.5   & 0      & 0.0e+00 & -inf       \\
         8      & 15     & -0.5   & -0.3   & 0      & 0.0e+00 & -inf       \\
         8      & 15     & -0.3   & 0      & 0      & 0.0e+00 & -inf       \\
@@ -230,8 +232,99 @@ $> 10$~Gyr are globular cluster candidates. \\
 }
 \clearpage
 
+\afterpage{%
 \section{Distribution of metallicity [Fe/H]}
 \label{sec:FeH}
+\thispagestyle{empty}
+\begin{figure*}[h!]
+    \includegraphics[width=0.49\textwidth]{{logMFeH_OldStars_plot-all}.png}
+    \includegraphics[width=0.49\textwidth]{{logMFeH_OldStars_normalization_fit0}.png}
+    \caption{
+        \scriptsize \emph{Left:} Mass-weighted [Fe/H]-R$_{\rm GC}$ distribution of 
+        all Auriga haloes (level 3, 4 and 5).
+        \emph{Right:} There seems to be a trent of constant mass increase with
+        increasing metallicity in the range -3 to -1, and roughly 1 order of 
+        magnitude scatter in mass normalization. We use linear regression to 
+        obtain log$_{10}$(mass normalization) (i.e. we fit $a\cdot(x+3) + b$)
+        \label{fig:todo1}
+    }
+
+    \includegraphics[width=0.49\textwidth]{{logMFeH_OldStars_normalization_fit1}.png}
+    \includegraphics[width=0.49\textwidth]{{logMFeH_OldStars_normalization_fit3}.png}
+    \caption{
+        \scriptsize \emph{Left:} Scatter plot of log$_{10}$(mass normalization)
+        [i.e. $b$ obtained above] against the virial mass M$_{200,c}$ of the 
+        Auriga haloes. We use linear regression to see whether there is a 
+        correlation, and find $a_2 = 0.00388$, $b_2 = 6.597$. Colours indicate 
+        resolution: L3 red, L4 green, and L5 blue.
+        \emph{Right:} Same `data', but MCMC fit. Red dotted line shows 
+        `central' x value; yellow region 1$\sigma$ interval; blue dashed lines 
+        intrinsic scatter. Fake Error bars (1\% of the obtained values).
+        \label{fig:todo2}
+    }
+
+    { \centering
+    \includegraphics[width=0.4\textwidth]{{logMFeH_OldStars_normalization_fit2}.png}
+    \caption{
+        \scriptsize TODO: corner plot of the MCMC. Conclusion: there is a positive 
+        correlation of the normalization of old stellar mass with the virial
+        mass $M_{200,c}.$
+        \label{fig:todo3}
+    }
+    }
+\end{figure*}
+\clearpage
+}
+\clearpage
+
+\begin{figure*}[h!]
+    \includegraphics[width=0.49\textwidth]{{logMFeH_OldStars_plot-errorbar}.png}
+    \includegraphics[width=0.49\textwidth]{{logMFeH_OldStars_plot-hist2d}.png}
+    \caption{
+        % Au3-6, 16, 21, 23, 24, 27; Au4-1-30; Au5-6, 9 16 24
+        \emph{Left:} Mean value of all 40 simulations in orange.
+        \emph{Right:} Colorbar shows the number of simulations that fall in
+        (arbitrary) bins in y-direction.
+        \label{fig:todo4}
+    }
+
+    \includegraphics[width=0.49\textwidth]
+        {{logMFeH_OldAccreted_plot-hist2d-with-mean}.png}
+    \includegraphics[width=0.49\textwidth]
+        {{logMFeH_OldInsitu_plot-hist2d-with-mean}.png}
+    \caption{
+        \emph{Left:} Mass-weighted [Fe/H] distribution of 
+        \textbf{Old accreted} (age $>$~10~Gyr) star particles.
+        Solid orange line shows the mean of all old star particles in all Auriga
+        simulation. The dotted orange line shows the mean of all star particles
+        in all Auriga simulations (i.e. not enforcing an age cut).
+        \emph{Right:} Mass-weighted [Fe/H] distribution of \textbf{Old insitu} 
+        (age $>$~10~Gyr) star particles. 
+        \emph{Both / Conclusion:} The metallicity range $-3 <$ [Fe/H] $< -1$ is
+        only populated star particles older than ten Gyr; [Fe/H] $> -1$ is dominated
+        by star particles younger than 10~Gyr (two orders of magnitude difference). 
+        Furthermore, the old accreted star particles contribute most significantly 
+        to the range $-3 <$ [Fe/H] $< -1$, and the contribution of the old insitu
+        star particles at these metallicities declines steeper with declining
+        metallicity than the old accreted population. The old insitu population
+        provides the dominant contribution of the old population for 
+        [Fe/H] $> -1$.
+        \label{fig:todo5}
+    }
+\end{figure*}
+\clearpage
+
+\begin{figure*}[h!]
+    \includegraphics[width=\textwidth]{{logMFeH}.png}
+    \caption{
+        This figure summarises above findings. TODO: write caption for 
+        paper.
+        \label{fig:todo6}
+    }
+\end{figure*}
+
+
+\clearpage
 
 
 \section{Distribution of Galactocentric radii R$_{\rm GC}$}
@@ -241,13 +334,8 @@ $> 10$~Gyr are globular cluster candidates. \\
 \section{Distribution of [Fe/H]-R$_{\rm GC}$}
 \label{sec:FeH-Rgc}
 
-
-
-
-
-\newpage
 \bibliographystyle{../mnras}
-\bibliography{../AurigaGCS} 
+\bibliography{../AurigaGCS}
 
 
 \end{document}
