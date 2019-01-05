@@ -240,7 +240,7 @@ $> 10$~Gyr are globular cluster candidates. \\
     \includegraphics[width=0.49\textwidth]{{logMFeH_OldStars_plot-all}.png}
     \includegraphics[width=0.49\textwidth]{{logMFeH_OldStars_normalization_fit0}.png}
     \caption{
-        \scriptsize \emph{Left:} Mass-weighted [Fe/H]-R$_{\rm GC}$ distribution of 
+        \scriptsize \emph{Left:} Mass-weighted [Fe/H] distribution of 
         all Auriga haloes (level 3, 4 and 5).
         \emph{Right:} There seems to be a trent of constant mass increase with
         increasing metallicity in the range -3 to -1, and roughly 1 order of 
@@ -256,7 +256,7 @@ $> 10$~Gyr are globular cluster candidates. \\
         [i.e. $b$ obtained above] against the virial mass M$_{200,c}$ of the 
         Auriga haloes. We use linear regression to see whether there is a 
         correlation, and find $a_2 = 0.00388$, $b_2 = 6.597$. Colours indicate 
-        resolution: L3 red, L4 green, and L5 blue.
+        resolution: L3 green, L4 orange, and L5 blue.
         \emph{Right:} Same `data', but MCMC fit. Red dotted line shows 
         `central' x value; yellow region 1$\sigma$ interval; blue dashed lines 
         intrinsic scatter. Fake Error bars (1\% of the obtained values).
@@ -334,11 +334,52 @@ $> 10$~Gyr are globular cluster candidates. \\
 \end{figure*}
 \clearpage
 
-
 \afterpage{%
 \section{Distribution of Galactocentric radii R$_{\rm GC}$}
+\label{sec:FeH}
+% \thispagestyle{empty}
+\begin{figure*}[h!]
+    \includegraphics[width=0.49\textwidth]{{logMRgc_OldStars_plot-all-trim}.png}
+    \includegraphics[width=0.49\textwidth]{{logMRgc_OldStars_normalization_fit0-trim}.png}
+    \caption{
+        \scriptsize \emph{Left:} Mass-weighted R$_{\rm GC}$ distribution of 
+        all Auriga haloes (level 3, 4 and 5).
+        \emph{Right:} We use linear regression to obtain log$_{10}$(mass
+        normalization) in the domain 0-100 kpc (i.e. we fit $ax+b$ with $a=0$)
+        \label{fig:todo1}
+    }
+
+    \includegraphics[width=0.49\textwidth]{{logMRgc_OldStars_normalization_fit1}.png}
+    \includegraphics[width=0.49\textwidth]{{logMRgc_OldStars_normalization_fit3}.png}
+    \caption{
+        \scriptsize \emph{Left:} Scatter plot of log$_{10}$(mass normalization)
+        [i.e. $b$ obtained above] against the virial mass M$_{200,c}$ of the 
+        Auriga haloes. We use linear regression to see whether there is a 
+        correlation, and find $a_2 = 0.005$, $b_2 = 8.716$. Colours indicate 
+        resolution: L3 green, L4 orange, and L5 blue.
+        \emph{Right:} Same `data', but MCMC fit. Red dotted line shows 
+        `central' x value; yellow region 1$\sigma$ interval; blue dashed lines 
+        intrinsic scatter. Fake Error bars (1\% of the obtained values).
+        \label{fig:todo2}
+    }
+
+    { \centering
+    \includegraphics[width=0.4\textwidth]{{logMRgc_OldStars_normalization_fit2}.png}
+    \caption{
+        \scriptsize TODO: corner plot of the MCMC. Conclusion: there is a positive 
+        correlation of the normalization of old stellar mass with the virial
+        mass $M_{200,c}.$
+        \label{fig:todo3}
+    }
+    }
+\end{figure*}
+\clearpage
+}
+\clearpage
+
+\afterpage{%
 \label{sec:Rgc}
-\thispagestyle{empty}
+% \thispagestyle{empty}
 \begin{figure*}[h!]
     \includegraphics[width=0.49\textwidth]{{logMRgc_OldStars_plot-all-trim}.png}
     \includegraphics[width=0.49\textwidth]{{logMRgc_OldStars_plot-errorbar-trim}.png}
@@ -383,8 +424,115 @@ $> 10$~Gyr are globular cluster candidates. \\
 \clearpage
 
 
+\afterpage{%
 \section{Distribution of [Fe/H]-R$_{\rm GC}$}
 \label{sec:FeH-Rgc}
+
+% \thispagestyle{empty}
+\begin{figure*}[h!]
+    { \centering
+    \includegraphics[width=0.49\textwidth]
+        {{MW_M31_RgcFeH_HistogramMassWeighted_Harris1996ed2010data}.png}
+    \caption{
+        Repetition of Fig.~\ref{fig:MW-M31-Rgc-FeHRgc} (right) for (convenient)
+        comparison. Note that the limits on the color bar are different for the 
+        observations and the mean of all simulations below.
+        \label{fig:todo1}
+    }
+    }
+
+    \includegraphics[width=0.49\textwidth]
+        {{Au-all_RgcFeH_HistogramMassWeighted_istars_mean}.png}
+    \includegraphics[width=0.49\textwidth]
+        {{Au-all_RgcFeH_HistogramMassWeighted_iold_mean}.png}
+    \caption{
+        \emph{Left:} Mass-weighted R$_{\rm GC}$-[Fe/H] distribution of 
+        all Auriga haloes (level 3, 4 and 5). Here we consider all stars
+        in all simulations and color-code the \textbf{mean value} 
+        (of 40 Auriga haloes)
+        \emph{Right:} Same figure, but for old ($>$~10~Gyr) stars.
+        \label{fig:todo2}
+    }
+
+    \includegraphics[width=0.49\textwidth]
+        {{Au-all_RgcFeH_HistogramMassWeighted_insitu-old_mean}.png}
+    \includegraphics[width=0.49\textwidth]
+        {{Au-all_RgcFeH_HistogramMassWeighted_accreted-old_mean}.png}
+    \caption{
+        \emph{Left:} Same figure, but for old insitu stars.
+        \emph{Right:} Same figure, but for old accreted stars.
+        \label{fig:todo2}
+    }
+
+\end{figure*}
+\clearpage
+}
+\clearpage
+
+\afterpage{%
+\begin{figure*}[h!]
+    \includegraphics[width=0.49\textwidth]
+        {{Au-all_RgcFeH_HistogramMassWeighted_istars_std}.png}
+    \includegraphics[width=0.49\textwidth]
+        {{Au-all_RgcFeH_HistogramMassWeighted_iold_std}.png}
+    \caption{
+        \emph{Left:} Mass-weighted R$_{\rm GC}$-[Fe/H] distribution of 
+        all Auriga haloes (level 3, 4 and 5). Here we consider all stars
+        in all simulations and color-code the \textbf{standard deviation} 
+        (of 40 Auriga haloes)
+        \emph{Right:} Same figure, but for old ($>$~10~Gyr) stars.
+        \label{fig:todo2}
+    }
+
+    \includegraphics[width=0.49\textwidth]
+        {{Au-all_RgcFeH_HistogramMassWeighted_insitu-old_std}.png}
+    \includegraphics[width=0.49\textwidth]
+        {{Au-all_RgcFeH_HistogramMassWeighted_accreted-old_std}.png}
+    \caption{
+        \emph{Left:} Same figure, but for old insitu stars.
+        \emph{Right:} Same figure, but for old accreted stars.
+        \label{fig:todo2}
+    }
+
+    \includegraphics[width=0.32\textwidth]
+        {{Au3-23_RgcFeH_HistogramMassWeighted_iold_16bins_comparison}.png}
+    \includegraphics[width=0.32\textwidth]
+        {{Au3-23_RgcFeH_HistogramMassWeighted_insitu-old_16bins_comparison}.png}
+    \includegraphics[width=0.32\textwidth]
+        {{Au3-23_RgcFeH_HistogramMassWeighted_accreted-old_16bins_comparison}.png}
+    \caption{
+        Lazy comparison to check whether there is more (total) mass in the simulated
+        star particles than in the MW GCS. Green means yes; red means no. We
+        check this for all fourty haloes individually to answer the question
+        whether the star formation model implemented in the Auriga simulations
+        can produce 'stars in the right place'.
+        \emph{Left:} Au3-23, old stars.
+        \emph{Mid:} Au3-23: old insitu stars.
+        \emph{Right:} Au3-23: old accreted stars.
+        \label{fig:todo2}
+    }
+
+\end{figure*}
+\clearpage
+}
+\clearpage
+
+
+\appendix
+\section{MCMC}
+Bayesian  code  as  described  in  and  distributed  by \citet{2012A&A...547A.117A}
+and used in \citet{2014A&A...568A..23A} for analysing the determination 
+of the evolution of the richness-mass scaling. Code used is \textsc{jags} 
+\citep{plummer2003jags}, and the Python wrapper \textsc{pyjags}, and
+for laziness \textsc{corner} \citep{corner} for visual inspection.
+
+Text could be something like the following.
+Blabla ``we adopt this Bayesian approach.'', and blabla
+``We assume weak priors on slope, intercept, and intrinsic scatter and solve for 
+all variables at once. We used a computationally inexpensive 10 thousand long 
+Markov chain Monte Carlo, discarding the initial 3 thousand elements used for 
+burn-in. By running multiple chains, we checked that convergence is already 
+achieved with short chains.''
 
 \bibliographystyle{../mnras}
 \bibliography{../AurigaGCS}
