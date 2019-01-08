@@ -255,11 +255,11 @@ The Milky Way + M31 globular cluster system
 
 \subsection{Harris catalogue}
 \label{sec:harris}
-\citet[][2010 edition]{1996AJ....112.1487H} provides the most up-to-date and comprehensive catalog of the MW GCS that contains properties of 157 globular clusters. The catalogue is believed to be roughly 90\% complete.
+\citet[][2010 edition, H96]{1996AJ....112.1487H} provides the most up-to-date and comprehensive catalog of the MW GCS that contains properties of 157 globular clusters. The catalogue is believed to be roughly 90\% complete.
 
 \subsection{Age estimates}
 \label{sec:vandenberg}
-\citet{2013ApJ...775..134V} measured [Fe/H] and obtained age-estimates for 55 globular clusters in the MW GCS.
+\citet[][V13]{2013ApJ...775..134V} measured [Fe/H] and obtained age-estimates for 55 globular clusters in the MW GCS.
 
 
 How is this particular sample selected? What biases does this introduce?
@@ -268,7 +268,7 @@ Is this sample drawn from the same underlying distribution as the Harris sample 
 \subsection{M31}
 \todo[inline]{Get big dataset of M31 GCS}
 \label{sec:m31}
-\citep{2011AJ....141...61C}
+\citep[][C11]{2011AJ....141...61C}
 \citep{2014MNRAS.442.2165H, 2014MNRAS.442.2929V}
 
 
@@ -276,13 +276,11 @@ Is this sample drawn from the same underlying distribution as the Harris sample 
 
 \section{Results}
 \label{sec:results}
-\citet{2013ApJ...775..134V} presents age measurements of 55 GCs in the MW. The
-mean age of GCs in the MW is $11.9$~Gyr with a dispersion of $0.8$~Gyr. 
-Therefore we select all star particles in the Auriga simulations that are older 
-than $10$~Gyr. Henceforth we will refer the this subset of star particles as the 
-`GC candidates'. Our approach is similar to the one taken by \citep{2017MNRAS.465.3622R},
-where we know we are oversampling the real GC population with the contribution
-of field stars in our subset. This will be further addressed in the discussion.
+\citet{2013ApJ...775..134V} presents observations of 55 GCs in the MW with age-estimates
+where the mean value is $11.9\pm0.1$~Gyr with a dispersion of $0.8$~Gyr. Therefore we
+investigate the subset of star particles in the Auriga simulations that formed before a
+lookback time of $10$~Gyr. Henceforth we will refer the this subset of star particles as
+`GC candidates'. 
 
 \subsection{Metallicity distribution}
 \label{sec:metallicity}
@@ -431,6 +429,21 @@ Are the properties of the Auriga globular cluster candidates converged for runs 
 
 \section{Discussion}
 \label{sec:discussion}
+
+We investigate all star particles in the Auriga simulations that are older than 10~Gyr,
+an approach equal to the method of \citep{2017MNRAS.465.3622R}. This approach does not
+take the bound cluster fraction \citep[e.g.][]{2012MNRAS.426.3008K} into account. This
+means that our sub set, which is based on selection by age, comprises both stars in the
+field as well as globular clusters. We compare the total mass in the simulations in 
+metallicity ([Fe/H]), galactocentric radius $r_{\text{gc}}$, and [Fe/H]-$r_{\text{gal}}$ 
+bins to the total mass in the MW GCS (using the H96 data set). The mass excess in the
+simulations gives a maximum mass loss `budget' for the product of cluster formation 
+efficiency and dynamical evolution. We find fractions that vary with metallicity,
+radius and metallicity-and-radius.
+
+\todo{
+``The fraction of all star formation that occurs in bound stellar clusters (the cluster formation efficiency, hereafter CFE) follows by integration of these local clustering and survival properties over the full density spectrum of the ISM, and hence is set by galaxy-scale physics. We derive the CFE as a function of observable galaxy properties, and find that it increases with the gas surface density'' \citep{2012MNRAS.426.3008K}
+}
 
 
 \section{Summary and conclusions}

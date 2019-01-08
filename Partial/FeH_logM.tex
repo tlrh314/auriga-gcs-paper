@@ -118,8 +118,8 @@ $> 10$~Gyr are globular cluster candidates. \\
     \includegraphics[width=0.53\textwidth]
         {{MW_M31_RgcFeH_HistogramMassWeighted_Harris1996ed2010data}.png}
     \caption{
-        \emph{Left:} Mass-weighted R$_{\rm GC}$ distribution of 156 GCs in the MW.
-        \emph{Right:} Mass-weighted [Fe/H]-R$_{\rm GC}$ distribution of
+        \emph{Left:} Mass-weighted r$_{\text{gc}}$ distribution of 156 GCs in the MW.
+        \emph{Right:} Mass-weighted [Fe/H]-r$_{\text{gc}}$ distribution of
         151 GCs in the MW \citep[data from][2010 ed.]{1996AJ....112.1487H}, which
         is 98.19 \% of the total MW GCS mass.
         \label{fig:MW-M31-Rgc-FeHRgc}
@@ -130,7 +130,7 @@ $> 10$~Gyr are globular cluster candidates. \\
     \transparent{1.0}\includegraphics[width=0.53\textwidth]
         {{MW_M31_RgcFeH_HistogramMassWeighted_VandenBerg2013data}.png}
     \caption{
-        Mass-weighted [Fe/H]-R$_{\rm GC}$ distribution of
+        Mass-weighted [Fe/H]-r$_{\text{gc}}$ distribution of
         55 GCs in the Milky Way \citep[data from][]{2013ApJ...775..134V}, which
         is 43.27\% of the total MW GCS mass.
         \label{fig:MW-M31-FeHRgc2}
@@ -335,14 +335,14 @@ $> 10$~Gyr are globular cluster candidates. \\
 \clearpage
 
 \afterpage{%
-\section{Distribution of Galactocentric radii R$_{\rm GC}$}
+\section{Distribution of Galactocentric radii r$_{\text{gc}}$}
 \label{sec:FeH}
 % \thispagestyle{empty}
 \begin{figure*}[h!]
     \includegraphics[width=0.49\textwidth]{{logMRgc_OldStars_plot-all-trim}.png}
     \includegraphics[width=0.49\textwidth]{{logMRgc_OldStars_normalization_fit0-trim}.png}
     \caption{
-        \scriptsize \emph{Left:} Mass-weighted R$_{\rm GC}$ distribution of 
+        \scriptsize \emph{Left:} Mass-weighted r$_{\text{gc}}$ distribution of 
         all Auriga haloes (level 3, 4 and 5).
         \emph{Right:} We use linear regression to obtain log$_{10}$(mass
         normalization) in the domain 0-100 kpc (i.e. we fit $ax+b$ with $a=0$)
@@ -384,7 +384,7 @@ $> 10$~Gyr are globular cluster candidates. \\
     \includegraphics[width=0.49\textwidth]{{logMRgc_OldStars_plot-all-trim}.png}
     \includegraphics[width=0.49\textwidth]{{logMRgc_OldStars_plot-errorbar-trim}.png}
     \caption{
-        \emph{Left:} Mass-weighted R$_{\rm GC}$ distribution of 
+        \emph{Left:} Mass-weighted r$_{\text{gc}}$ distribution of 
         all Auriga haloes (level 3, 4 and 5).
         \emph{Right:} 
         \label{fig:todo7}
@@ -425,7 +425,7 @@ $> 10$~Gyr are globular cluster candidates. \\
 
 
 \afterpage{%
-\section{Distribution of [Fe/H]-R$_{\rm GC}$}
+\section{Distribution of [Fe/H]-r$_{\text{gc}}$}
 \label{sec:FeH-Rgc}
 
 % \thispagestyle{empty}
@@ -446,7 +446,7 @@ $> 10$~Gyr are globular cluster candidates. \\
     \includegraphics[width=0.49\textwidth]
         {{Au-all_RgcFeH_HistogramMassWeighted_iold_mean}.png}
     \caption{
-        \emph{Left:} Mass-weighted R$_{\rm GC}$-[Fe/H] distribution of 
+        \emph{Left:} Mass-weighted [Fe/H]-r$_{\text{gc}}$ distribution of 
         all Auriga haloes (level 3, 4 and 5). Here we consider all stars
         in all simulations and color-code the \textbf{mean value} 
         (of 40 Auriga haloes)
@@ -476,7 +476,7 @@ $> 10$~Gyr are globular cluster candidates. \\
     \includegraphics[width=0.49\textwidth]
         {{Au-all_RgcFeH_HistogramMassWeighted_iold_std}.png}
     \caption{
-        \emph{Left:} Mass-weighted R$_{\rm GC}$-[Fe/H] distribution of 
+        \emph{Left:} Mass-weighted [Fe/H]-r$_{\text{gc}}$ distribution of 
         all Auriga haloes (level 3, 4 and 5). Here we consider all stars
         in all simulations and color-code the \textbf{standard deviation} 
         (of 40 Auriga haloes)
@@ -516,6 +516,84 @@ $> 10$~Gyr are globular cluster candidates. \\
 \clearpage
 }
 \clearpage
+
+\afterpage{%
+\subsection{Distribution of [Fe/H]-r$_{\text{gc}}$: more bins / higher resolution}
+\label{sec:FeH-Rgc-4096}
+\begin{figure*}[h!]
+    \includegraphics[width=0.49\textwidth]
+        {{Au-all_RgcFeH_HistogramMassWeighted_istars_4096bins_mean}.png}
+    \includegraphics[width=0.49\textwidth]
+        {{Au-all_RgcFeH_HistogramMassWeighted_iold_4096bins_mean}.png}
+    \caption{
+        \emph{Left:} Mass-weighted [Fe/H]-r$_{\text{gc}}$ distribution of 
+        all Auriga haloes (level 3, 4 and 5). Here we consider all stars
+        in all simulations and color-code the \textbf{standard deviation} 
+        (of 40 Auriga haloes). Difference here is that we `crancked up' the
+        resolution, because we can and it's awesome. Note that the range is
+        somewhat larger. Observational bin edges are indicated by horizontal and
+        vertical lines for convenience.
+        \emph{Right:} Same figure, but for old ($>$~10~Gyr) stars.
+        The red line shows a linear fit to the metallicity-radius relation, 
+        weighted by mass. The best-fit parameters are indicated in the lower
+        left corner.
+        \label{fig:todo2}
+    }
+
+    \includegraphics[width=0.49\textwidth]
+        {{Au-all_RgcFeH_HistogramMassWeighted_insitu-old_4096bins_mean}.png}
+    \includegraphics[width=0.49\textwidth]
+        {{Au-all_RgcFeH_HistogramMassWeighted_accreted-old_4096bins_mean}.png}
+    \caption{
+        \emph{Left:} Same figure, but for old insitu stars.
+        \emph{Right:} Same figure, but for old accreted stars.
+        Our linear fit shows the slope of the metallicity profile ($a$), as well
+        as the zero crossing point at r$_{\text{gc}}$=1kpc. ($b$). We note that
+        the $b$ is $0.49$~dex lower for old star particles than for all star 
+        particles. The radial profile of the old \textbf{accreted} star particles
+        is 0.18 dex lower than that of the old \textbf{insitu} star particles.
+        The gradient $a$ of -0.48 and -0.37 is slightly higher than the findings
+        of Harris 1998 Fig.8 p.235, who reports 
+        $\Delta$[Fe/H]~/~$\Delta$log~R$_{\text{gc}}$~=~-0.30 for 
+        R$_{\text{gc}} \lesssim$~10~kpc.
+        \label{fig:todo2}
+    }
+\end{figure*}
+\clearpage
+}
+\clearpage
+
+\afterpage{%
+\begin{figure*}[h!]
+    \includegraphics[width=0.49\textwidth]
+        {{Au-all_RgcFeH_HistogramMassWeighted_istars_4096bins_std}.png}
+    \includegraphics[width=0.49\textwidth]
+        {{Au-all_RgcFeH_HistogramMassWeighted_iold_4096bins_std}.png}
+    \caption{
+        \emph{Left:} Mass-weighted [Fe/H]-r$_{\text{gc}}$ distribution of 
+        all Auriga haloes (level 3, 4 and 5). Here we consider all stars
+        in all simulations and color-code the \textbf{standard deviation} 
+        (of 40 Auriga haloes). 
+        \emph{Right:} Same figure, but for old ($>$~10~Gyr) stars.
+        \label{fig:todo2}
+    }
+
+    \includegraphics[width=0.49\textwidth]
+        {{Au-all_RgcFeH_HistogramMassWeighted_insitu-old_4096bins_std}.png}
+    \includegraphics[width=0.49\textwidth]
+        {{Au-all_RgcFeH_HistogramMassWeighted_accreted-old_4096bins_std}.png}
+    \caption{
+        \emph{Left:} Same figure, but for old insitu stars.
+        \emph{Right:} Same figure, but for old accreted stars.
+        \label{fig:todo2}
+    }
+\end{figure*}
+\clearpage
+}
+\clearpage
+
+\section{Properties of birth haloes of the accreted population}
+\label{sec:accreted-birth-haloes}
 
 
 \appendix
