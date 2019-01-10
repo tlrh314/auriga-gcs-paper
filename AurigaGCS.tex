@@ -70,6 +70,7 @@
 % If you need two or more lines of authors, add an extra line using \newauthor
 \author[T. L. R. Halbesma et al.]{\parbox[t]{\textwidth}{
     Timo L. R. Halbesma$^{1}$\thanks{E-mail: Halbesma@MPA-Garching.MPG.DE},
+    Philipp Busch$^{1}$,
     Wilma Trick$^{1}$,
     Robert J. J. Grand$^{1}$, 
     Volker Springel$^{1}$, 
@@ -463,7 +464,9 @@ bla. Conclusion: too many metal-rich star particles.
 Is the spatial distribution of the GC candidates in the Auriga simulations consistent with the MW GCS?
 
 
-Look into Pandromeda survey? Star counts, very wide angle survey
+\todo[inline]{
+Look into Pandromeda survey. Star counts, very wide angle survey
+}
 
 \begin{figure}
     \includegraphics[width=\columnwidth]{{logMRgc_noStepsMid-trim}.png}
@@ -478,19 +481,31 @@ Look into Pandromeda survey? Star counts, very wide angle survey
 \subsection{Radius-metallicity distribution}
 \label{sec:RgcFeH}
 What age-metallicity distribution is produced by star formation events in the Auriga simulations?
+?
+\begin{figure}
+    \includegraphics[width=0.49\textwidth]
+        {{Au-all_RgcFeH_HistogramMassWeighted_iold_mean}.png}
+    \caption{
+        Mass-weighted [Fe/H]-r$_{\text{gc}}$ distribution of all Auriga haloes 
+        (level 3, 4 and 5). Here we consider the old ($>$~10~Gyr) stars in all 
+        simulations and color-code the \textbf{mean value} (of 40 Auriga haloes)
+        \label{fig:Au-RgcFeH}
+    }
+\end{figure}
 
 
 \begin{figure}
     \includegraphics[width=\columnwidth]
         {{logMRgcFeH_accreted-insitu-notitle}.png}
     \caption{
-        OMG what a beautiful plot.
+        OMG what a beautiful plot - now only need 1$\sigma$ interval around both
+        relations, and need to know exactly what model I fit...
         \label{fig:todo2}
     }
 \end{figure}
 
 
-\section{Properties of birth haloes of the accreted population}
+\subsection{Properties of birth haloes of the accreted population}
 \label{sec:birth-properties-of-accreted-gc-candidates}
 
 
