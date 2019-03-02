@@ -180,7 +180,7 @@ methods: numerical -- galaxies: formation -- galaxies: star clusters: general.
 \item Investigating the population of Galactic star formation regions and star clusters within a Wide-Fast-Deep Coverage of the Galactic Plane  \citep{2018arXiv181203025P}
 \item Globular cluster number density profiles using \textit{Gaia} DR2 \citep{2019arXiv190108072D}
 \item Clustering Clusters: unsupervised learning on GC observations (of log $M$,
-    log \sigma_0, log $R_e$ , [Fe/H], log $|Z|$) to determine number of groups
+    log $\sigma_0$, log $R_e$ , [Fe/H], log $|Z|$) to determine number of groups
     $k=2$ (disk/halo) or $k=3$ (disk/inner-halo/outer-halo): the optimal number
     of groups given the data is $k=3$. \citep{2019arXiv190105354P}.
 \item There is a well-known hypothesis that Open Stars Clusters (OSCs) could form as a result
@@ -188,7 +188,10 @@ methods: numerical -- galaxies: formation -- galaxies: star clusters: general.
     this claim for two particular OSC-GC pairs, and does seem consistent
     with this scenario for six OSC-GC pairs \citep{2019arXiv190106481B}. (Note
     that GC crossing the disk could also trigger formation of multiple OSCs!)
-% TODO: last checked arXiv Feb 13, 2019
+\item DM halo mass can be inferred from number of globular cluster in galaxy 
+    \citep{2019arXiv190100900B}
+\item GCs in M31 outer halo \citep{2019arXiv190111229W}
+% TODO: last checked arXiv Mar 2, 2019
 \end{itemize}
  
  
@@ -240,11 +243,12 @@ in section~\ref{sec:conclusions}.
 \section{The Auriga simulations}
 \label{sec:auriga}
 We use the Auriga simulations \citep[][hereafter G17]{2017MNRAS.467..179G}, a 
-suite of high-resolution cosmological zoom simulations ran with a galaxy
-formation model that produces realistic Milky Way-like galaxies at redshift
-$z=0$. The simulations are performed with the state-of-the art code \textsc{arepo}
-\citep{2010MNRAS.401..791S, 2016MNRAS.455.1134P} that solves the 
-magnetohydrodynamical equations on a moving mesh.
+suite of high-resolution cosmological zoom simulations of Milky Way-mass 
+selected initial conditions. The simulations are performed with the 
+state-of-the art code \textsc{arepo} \citep{2010MNRAS.401..791S,
+2016MNRAS.455.1134P}, that solves the magnetohydrodynamical equations on a 
+moving mesh, and an elaborate galaxy formation model that produces realistic 
+spiral galaxies at redshift $z=0$. 
 
 The interstellar medium is modelled using a sub-grid approach which implements
 the physical processes most relevant to galaxy formation and evolution. 
@@ -252,9 +256,9 @@ This model was tailored to the \textsc{arepo} code and calibrated to reproduce
 key observables of galaxies, such as the history of the cosmic star formation rate 
 density, the stellar mass to halo mass relation, and galaxy luminosity functions.
 
-The sub-grid includes primordial and metal-line cooling with self-shielding corrections.
-Reionization is completed at redshift six by a time-varying spatially uniform UV 
-background \citep{2009ApJ...703.1416F, 2013MNRAS.436.3031V}
+The sub-grid includes primordial and metal-line cooling with self-shielding 
+corrections. Reionization is completed at redshift six by a time-varying 
+spatially uniform UV background \citep{2009ApJ...703.1416F, 2013MNRAS.436.3031V}
 The interstellar medium is described by an equation of state for a two-phase medium
 in pressure equilibrium \citep{2003MNRAS.339..289S} with stochastic star formation
 in thermally unstable gas with a density threshold of $n = 0.13 \text{cm}^{-3}$,
@@ -269,8 +273,9 @@ See G17 for further details of the numerical setup as well as the galaxy formati
 model.
 
 \todo[inline]{
-TODO: paraphrase ``The diversity in morphological properties of these simulated galaxies reflects
-the stochasticity inherent to the process of galaxy formation and evolution 
+TODO: paraphrase ``The diversity in morphological properties of these simulated 
+galaxies reflects the stochasticity inherent to the process of galaxy formation 
+and evolution 
 \citep[e.g.][]{2005ApJ...635..931B, 2010MNRAS.406..744C, 2010ApJ...708.1398T}.''
 }
 
@@ -279,45 +284,49 @@ the stochasticity inherent to the process of galaxy formation and evolution
 accretion and merging history'' \citet{2018arXiv180407798M}
 }
 
-% \subsection{Definition of stellar halo}
-% \todo[inline]{Possibly also relevant here. See \citet{2018arXiv180407798M}.}
-% 
-% 
-% \subsection{Definition of accreted and in-situ component}
-% \todo[inline]{Possibly also relevant here. See \citet{2018arXiv180407798M}.}
-
-
 
 \section{Relevant observational data}
 \label{sec:observations}
-The galaxy formation model implemented for the Auriga simulations produces
-realistic spiral galaxies at redshift zero. Therefore we aim to compare the
-simulations to the globular cluster systems of the spiral galaxies in the 
-Local Group (i.e. the Milky Way and Andromeda galaxy, M31). Here we summarise 
-the relevant data available in the literature.
+We summarise relevant observations of the globular cluster system of the Milky 
+Way in Sec.~\ref{sec:milkyway}, and of Andromeda (M31) in Sec.~\ref{sec:andromeda}.
+In the remainder of the paper we compare observed (integrated) globular cluster
+properties to the Auriga simulations.
 
-\subsection{Milky Way: Harris catalogue}
-\label{sec:harris}
-\citet[][2010 edition; hereafter H96]{1996AJ....112.1487H} provides a fairly
-up-to-date catalogue of the Milky Way globular cluster system containing the
-properties of 157 globular clusters. An additional 59 GCs have since been 
-discovered, 2 of which by \citet{2018ApJ...863L..38R}. The authors also provide 
-a comprehensive list of references to other discovery papers, and they predict 
-that the Milky Way GCS contains an additional 30 undiscovered GCs that are 
-obscured by the Galactic disk. Recently, \citet{2019arXiv190108574C} announced
-the discovery of three new GCs, totalling to the MW GCS to 218. This would make
-the Harris catalogue roughly 65\% complete. However, we do not use the properties 
-of the more recently discovered GCs in our analysis.
+\subsection{Milky Way}
+\label{sec:milkyway}
+\citet[][2010 edition; hereafter H96e10]{1996AJ....112.1487H} provides a
+catalogue of the Milky Way globular cluster system that contains properties of 
+157 GCs. The authors initially estimated the size of the MW GCS to be 180~$\pm$~10,
+thus, their catalogue to be $\sim$85\% complete. However, an additional 59 GCs 
+have since been discovered by various authors. The total confirmed number of GCs 
+in the MW adds up to 216 with new estimates now anticipating an additional thirty 
+GCs yet to be discovered \citep[e.g.][and references therein]{2018ApJ...863L..38R}.
 
-The relevant data fields that we use from H96 are the metallicity [Fe/H],
-galactocentric radius $R_{\text{GC}}$, and absolute magnitude in the V-band 
-$M_V$. We use the latter to calculate mass-estimates by assuming $M_{V,\odot}=4.83$
-and a mass to light ratio $M/L_V = 1.7$~M/L$_{\odot}$, the mean for MW clusters
-\citep{2005ApJS..161..304M}.
+\citet{2019AJ....157...12B} communicate the latest efforts to aggregate all
+available data, presented in their CatClu catalog. Amongst 10978 star clusters 
+and alike objects in the Milky Way, the catalog contains 200 GCs and 94 GC 
+candidates. Unfortunately a machine readable version of the catalog is unavailable
+at this point in time. Therefore we utilise the H96e10 dataset nonetheless, but
+we caution that the Harris catalogue is now believed to be (only) 53-72\% complete. 
 
-\todo[inline]{Parse McLaughlin \& van der Marel data and calculate the mean $M/L_V$
-\url{http://vizier.cfa.harvard.edu/viz-bin/VizieR-3?-source=J/ApJS/161/304/clusters}}
+The relevant data fields that we use from H96e10 are the metallicity [Fe/H], the
+Galactic distance components $X$, $Y$, and $Z$ (in kpc)\footnote{In a Sun-centered 
+coordinate system where $X$ points toward Galactic center, $Y$ in direction of 
+Galactic rotation, and $Z$ toward the North Galactic Pole. We calculate the 
+galactocentric radius $R_{\text{GC}}=\sqrt{(X-R_\odot)^2 + Y^2 + Z^2}$, 
+assuming $R_\odot=8$~kpc.}, and absolute 
+magnitude in the V-band $M_V$. We use the latter to calculate mass-estimates by 
+assuming $M_{V,\odot}=4.83$ and a mass to light ratio $M/L_V = 1.7$~M/L$_{\odot}$, 
+the mean for MW clusters \citep{2005ApJS..161..304M}.
 
+\subsubsection*{Age estimates}
+We supplement H96e10 with age-estimates from isochrone fits to stars
+near the main-sequence turnoff in 55 GCs \citep[][hereafter V13]{2013ApJ...775..134V}.
+The mean value of the age-estimates in this data set is $11.9 \pm 0.1$~Gyr and 
+the dispersion is 0.9~Gyr. Furthermore, only one of the 55 GC age-estimates is
+below 10~Gyr. 
+
+\subsubsection*{Distribution of mass in metallicity-radial bins}
 In Fig.~\ref{fig:MW-FeHRgc} we show the two-dimensional mass-weighted 
 metallicity-radial distribution of the MW GCS. In Sec.~\ref{sec:FeHRgc} 
 we investigate whether the star formation model implemented in the Auriga 
@@ -334,25 +343,12 @@ simulations can produce sufficient total mass in GC candidates in the same bins.
     }
 \end{figure}
 
-\subsection{Milky Way: VandenBerg catalogue}
-\label{sec:vandenberg}
-\citet[][hereafter V13]{2013ApJ...775..134V} used photometric data to obtain 
-[Fe/H] measurements and age-estimates for 55 globular clusters in the Milky Way.
-The mean value of the age-estimates in this data set is $11.9 \pm 0.1$~Gyr and 
-the dispersion is 0.9~Gyr. Furthermore, only one of the 55 GC age-estimates is
-below 10~Gyr. Therefore we define GC candidates in the Auriga simulations as
-all star particles older than 10~Gyr in Sec.~\ref{sec:results}.
+\subsection{Andromeda}
+\label{sec:andromeda}
+The revised bologna catalogue \citep[][and references therein]{2004A&A...416..917G} 
+is the result compiling integrated properties of M31's GCS,
 
 
-\todo[inline]{
-How is this particular sample selected? What biases does this introduce?
-Is this sample drawn from the same underlying distribution as the Harris sample 
-(plot distributions of FeH, compare mean/std, do t-test)
-}
-
-
-\subsection{Andromeda: Caldwell catalogue}
-\label{sec:m31}
 \citet[][, hereafter C11]{2011AJ....141...61C} studied globular clusters in the
 Andromeda (M31) galaxy. The relevant fields in this data set are the age, 
 metallicities, and absolute visual magnitude.
@@ -404,15 +400,18 @@ $(\alpha_1, \delta_1) = (0^{\text{h}}42^{\text{m}}44.3^{\text{s}},
 
 \section{Results}
 \label{sec:results}
-Through out the analysis we use six sub sets of star particles: \emph{all stars}, 
-and \emph{old stars} (age $>10$~Gyr, GC candidates hereafter). Both sub sets are
-further split up in (old) star particles that have formed \emph{in-situ} 
-(bound to the most-massive halo/subhalo in the first snapshot that the star 
-particle was recorded), and (old) \emph{accreted} star particles (i.e. those that 
-have formed ex-situ and are bound to the most-massive halo/subhalo at $z=0$). 
-We use an age threshold of 10~Gyr for GC candidates because the mean 
-age-estimate of the $55$ MW GCs in V13 is $11.9\pm0.1$~Gyr with a dispersion of 
-$0.8$~Gyr, and only one observed GC lies outside this range.
+We define GC candidates in the Auriga simulations as all star particles older 
+than $10$~Gyr. The mean age-estimate of the $55$ MW GCs in V13 is $11.9\pm0.1$~Gyr
+with a dispersion of $0.8$~Gyr, and the age-estimate for only one observed GC is 
+smaller than $10$~Gyr.
+
+Through out the analysis we use six sub sets of star particles: 
+\emph{all stars}, and \emph{old stars} (age $>10$~Gyr, GC candidates hereafter). 
+Both sub sets are further split up in (old) star particles that have formed 
+\emph{in-situ} (bound to the most-massive halo/subhalo in the first snapshot that 
+the star particle was recorded), and (old) \emph{accreted} star particles (i.e. 
+those that have formed ex-situ and are bound to the most-massive halo/subhalo
+at $z=0$). 
 
 In Sec.~\ref{sec:metallicity} we investigate the metallicity distribution of the
 GC candidates, in Sec.~\ref{sec:radial} we show the distribution of galactocentric
@@ -514,6 +513,11 @@ confidence level.
 
 \subsection{Radial distribution}
 \label{sec:radial}
+
+
+Somewhat arbitrarily, I will take the region $r_p > 3$ kpc (containing 75 clusters) as the fiducial Mikly Way sample. If we were to view the Mikly Way at the same inclination angle to the disk as we see M31, this cutoff in projected distance would correspond roughly to the inner distance limits in the M31 halo sample.
+
+
 Is the spatial distribution of the GC candidates in the Auriga simulations consistent with the MW GCS?
 
 
@@ -635,7 +639,7 @@ take the bound cluster fraction \citep[e.g.][]{2012MNRAS.426.3008K} into account
 means that our sub set, which is based on selection by age, comprises both stars in the
 field as well as globular clusters. We compare the total mass in the simulations in 
 metallicity ([Fe/H]), galactocentric radius $R_{\text{GC}}$, and [Fe/H]-$R_{\text{GC}}$ 
-bins to the total mass in the MW GCS (using the H96 data set). The mass excess in the
+bins to the total mass in the MW GCS (using the H96e10 data set). The mass excess in the
 simulations gives a maximum mass loss `budget' for the product of cluster formation 
 efficiency and dynamical evolution. We find fractions that vary with metallicity,
 radius and metallicity-and-radius.
@@ -643,6 +647,10 @@ radius and metallicity-and-radius.
 \todo[inline]{
 ``The fraction of all star formation that occurs in bound stellar clusters (the cluster formation efficiency, hereafter CFE) follows by integration of these local clustering and survival properties over the full density spectrum of the ISM, and hence is set by galaxy-scale physics. We derive the CFE as a function of observable galaxy properties, and find that it increases with the gas surface density'' \citep{2012MNRAS.426.3008K}
 }
+
+\subsection{Age cut}
+Although the age distribution of M31 Perhaps an age cut of 6~Gyr would would be more 
+appropriate for M31, see Fig.~\ref{fig:MW-M31-age}.
 
 
 \section{Summary and conclusions}
