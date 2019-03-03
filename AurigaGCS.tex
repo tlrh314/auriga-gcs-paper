@@ -302,7 +302,7 @@ have since been discovered by various authors. The total confirmed number of GCs
 in the MW adds up to 216 with new estimates now anticipating an additional thirty 
 GCs yet to be discovered \citep[e.g.][and references therein]{2018ApJ...863L..38R}.
 
-\citet{2019AJ....157...12B} communicate the latest efforts to aggregate all
+\citet{2019AJ....157...12B} communicate the latest efforts to aggregate the
 available data, presented in their CatClu catalog. Amongst 10978 star clusters 
 and alike objects in the Milky Way, the catalog contains 200 GCs and 94 GC 
 candidates. Unfortunately a machine readable version of the catalog is unavailable
@@ -311,10 +311,10 @@ we caution that the Harris catalogue is now believed to be (only) 53-72\% comple
 
 The relevant data fields that we use from H96e10 are the metallicity [Fe/H], the
 Galactic distance components $X$, $Y$, and $Z$ (in kpc)\footnote{In a Sun-centered 
-coordinate system where $X$ points toward Galactic center, $Y$ in direction of 
+coordinate system: $X$ points toward Galactic center, $Y$ in direction of 
 Galactic rotation, and $Z$ toward the North Galactic Pole. We calculate the 
 galactocentric radius $R_{\text{GC}}=\sqrt{(X-R_\odot)^2 + Y^2 + Z^2}$, 
-assuming $R_\odot=8$~kpc.}, and absolute 
+assuming the solar radius $R_\odot=8$~kpc.}, and absolute 
 magnitude in the V-band $M_V$. We use the latter to calculate mass-estimates by 
 assuming $M_{V,\odot}=4.83$ and a mass to light ratio $M/L_V = 1.7$~M/L$_{\odot}$, 
 the mean for MW clusters \citep{2005ApJS..161..304M}.
@@ -326,7 +326,7 @@ The mean value of the age-estimates in this data set is $11.9 \pm 0.1$~Gyr and
 the dispersion is 0.9~Gyr. Furthermore, only one of the 55 GC age-estimates is
 below 10~Gyr. 
 
-\subsubsection*{Distribution of mass in metallicity-radial bins}
+\subsubsection*{Distribution of total GC mass in metallicity-radial bins}
 In Fig.~\ref{fig:MW-FeHRgc} we show the two-dimensional mass-weighted 
 metallicity-radial distribution of the MW GCS. In Sec.~\ref{sec:FeHRgc} 
 we investigate whether the star formation model implemented in the Auriga 
@@ -345,18 +345,34 @@ simulations can produce sufficient total mass in GC candidates in the same bins.
 
 \subsection{Andromeda}
 \label{sec:andromeda}
-The revised bologna catalogue \citep[][and references therein]{2004A&A...416..917G} 
-is the result compiling integrated properties of M31's GCS,
+The fifth revision of the revised bologna catalogue (RBC~5, last updated 
+August, 2012) is the latest edition of three decades of systematically 
+collecting integrated properties of the globular cluster system of the 
+Andromeda galaxy \citep[][and references therein]{2004A&A...416..917G}. One
+contribution to RBC~5 is the work by \citet[][hereafter C11]{2011AJ....141...61C}. 
+C11 delivers a uniform set of spectroscopic observations $316$ out of the 
+$339$ GCs in the inner $1^\circ.6 (\sim 21)$~kpc, calibrated using the Milky 
+Way GCS. 
 
+Globular clusters in the outer halo of M31, up to projected radii 
+$R_{\text{proj}}\sim150$~kpc, are observed in the Pan-Andromeda Archaeological 
+Survey \citep[PAndAS, ][hereafter H14]{2014MNRAS.442.2165H}, see also
+\citet{2014MNRAS.442.2929V, 2019MNRAS.484.1756M}. H14 presents the
+discovery of 59 new GCs and publishes updates to RBC~5. The work of H14 is
+incorporated in the latest version\footnote{dated 23 Sep 2015; retrieved
+from \url{https://www.cfa.harvard.edu/oir/eg/m31clusters/M31_Hectospec.html}} 
+of the C11 dataset. It seems that the 2015 edition of C11 is the most recent 
+aggregated dataset M31's GCS and we will therefore use this troughout the 
+remainder of this work.
 
-\citet[][, hereafter C11]{2011AJ....141...61C} studied globular clusters in the
-Andromeda (M31) galaxy. The relevant fields in this data set are the age, 
-metallicities, and absolute visual magnitude.
+The relevant fields in the C11 dataset are the age, metallicities, and 
+absolute visual magnitude.
 \todo[inline]{
 TODO: paraphrase ``For M31 GC masses we combine the catalogues of Caldwell et al. (2011, using the 
 given masses) and Huxor et al. (2014, again assuming $M/L_V = 1.7$~M/L$_{\odot}$, 
 e.g. Strader, Caldwell \& Seth 2011).''
 }
+
 For M31 we find an age distribution with a mean value of 10.8$\pm 10.8$~Gyr and a 
 dispersion of 2.3~Gyr. Furthermore, 27 GCs have age-estimates below 10~Gyr, and
 the minimum age is 4.8~Gyr. 
@@ -371,26 +387,14 @@ the minimum age is 4.8~Gyr.
     }
 \end{figure}
 
-\todo[inline]{
-TODO: paraphrase ``Furthermore, we supplement observational data of globular
-clusters in M31 with \citet{2014MNRAS.442.2165H, 2014MNRAS.442.2929V}'', and
-parse these data sets.
-}
 
 
-This text sits here just for debug purposes, just for now. We calculate the 
-projected and `inferred' galactocentric radius from the observed coordinates.
 \begin{align}
-    \cos \theta & = \sin \delta_1 \sin \delta_2 +
-        \cos \delta_1 \cos \delta_2 \cos \left( \alpha_1 - \alpha_2 \right),
 \end{align}
 where $(\alpha_1, \delta_1)$ are the right ascension and declination (in degrees,
-converted to radians) of the centroid of M31 and $(\alpha_2, \delta_2)$ are the
-observed coordinates of the globular cluster. The angle on the sky is converted
-to a physical distance in kpc using the small angle approximation, i.e. 
-$r_{\text{projected}} = \theta \cdot D_{\text{M31}}$. We adopt the values 
-$(\alpha_1, \delta_1) = (0^{\text{h}}42^{\text{m}}44.3^{\text{s}}, 
-+41^{\circ}16'9")$ (TODO: reference), and  $D_{\text{M31}} = 778$~kpc 
+We adopt the values 
+$(\alpha_0, \delta_0) = (0^{\text{h}}42^{\text{m}}44.3^{\text{s}}, 
++41^{\circ}16'9")$\footnote{See \url{https://ned.ipac.caltech.edu/}} , and  $D_{\text{M31}} = 778$~kpc 
 (TODO: reference).
 
 % TODO: Deprojection, assuming all GCs lie in the plane of the sky, inclination 
