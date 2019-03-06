@@ -336,11 +336,15 @@ simulations can produce sufficient total mass in GC candidates in the same bins.
 
 \begin{figure}
     \includegraphics[width=\columnwidth]
-        {{MW_M31_RgcFeH_HistogramMassWeighted_Harris1996ed2010data}.png}
+        {{MW_RgcFeH_HistogramMassWeighted_Harris1996ed2010data}.png}
+    \includegraphics[width=\columnwidth]
+        {{M31_RgcFeH_HistogramMassWeighted_CaldwellRomanowsky2016data}.png}
     \caption{
-        Mass-weighted r$_{\text{gc}}$-[Fe/H] distribution of
+        \emph{Top}: Mass-weighted r$_{\text{gc}}$-[Fe/H] distribution of
         151 GCs in the MW \citep[data from][2010 ed.]{1996AJ....112.1487H}, which
         is 98.19 \% of the total MW GCS mass in the Harris catalog.
+        \emph{Bottom}: Same for M31, showing 366 GCs and 88.38 \% of the total 
+        mass in CR16 \citep[data from][]{2016ApJ...824...42C}.
         \label{fig:MW-FeHRgc}
     }
 \end{figure}
@@ -531,24 +535,32 @@ confidence level.
 \subsection{Radial distribution}
 \label{sec:radial}
 
-
-Somewhat arbitrarily, I will take the region $r_p > 3$ kpc (containing 75 clusters) as the fiducial Mikly Way sample. If we were to view the Mikly Way at the same inclination angle to the disk as we see M31, this cutoff in projected distance would correspond roughly to the inner distance limits in the M31 halo sample.
-
-
-Is the spatial distribution of the GC candidates in the Auriga simulations consistent with the MW GCS?
-
 \begin{figure}
-    \includegraphics[width=\columnwidth]{{logMR2dgc_withRatios-trim}.png}
+    \includegraphics[width=\columnwidth]{{logMRgc_withRatios-trim}.png}
     \caption{
-        Mass-weighted distribution of (two-dimensional) galactocentric radii at 
-        which star particles in the Auriga simulations are found. For Andromeda 
-        we show the projected galactocentric radius, assuming its center is located
-        at $(0^{\text{h}}42^{\text{m}}44.3^{\text{s}}, +41^{\circ}16'9")$ at a 
-        distance of 778 kpc.
+        Mass-weighted radial distribution of star particles in the Auriga 
+        simulations. We show the median value of all Auriga haloes for all
+        stars (orange dotted) and globular cluster candidates (i.e. stars with 
+        age $>$~10~Gyr; orange solid). The latter sub set is further split up
+        between stars that formed in-situ (blue solid), and those that were accreted
+        (red solid). Shaded regions indicate the $1\sigma$ interval. The MW (M31)
+        GCS is shown in purple (magenta). The middle (bottom) panel shows the
+        ratio of the simulated mass to the mass in the MW (M31) GCS.
         \label{fig:Rgc}
     }
 \end{figure}
 
+
+\todo[inline]{
+    Harris: `Somewhat arbitrarily, I will take the region $r_p > 3$ kpc 
+    (containing 75 clusters) as the fiducial Milky Way sample. If we were to
+    view the Milky Way at the same inclination angle to the disk as we see 
+    M31, this cutoff in projected distance would correspond roughly to the 
+    inner distance limits in the M31 halo sample.'
+}
+
+
+Is the spatial distribution of the GC candidates in the Auriga simulations consistent with the MW GCS?
 
 \subsection{Metallicity-radial distribution}
 \label{sec:FeHRgc}
