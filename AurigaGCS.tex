@@ -345,7 +345,7 @@ collissionless particles $\epsilon$~=~[$738, 369, 184$]~pc.
 % }
 
 
-\section{Relevant observational data}
+\section{Observational data}
 \label{sec:observations}
 We summarise relevant observations of the globular cluster system of the Milky 
 Way in Sec.~\ref{sec:milkyway}, and of Andromeda (M31) in Sec.~\ref{sec:andromeda}.
@@ -378,34 +378,12 @@ magnitude in the V-band $M_V$. We use the latter to calculate mass-estimates by
 assuming $M_{V,\odot}=4.83$ and a mass to light ratio $M/L_V = 1.7$~M/L$_{\odot}$, 
 the mean for MW clusters \citep{2005ApJS..161..304M}.
 
-\subsubsection*{Age estimates}
+\subsubsection{Age estimates}
 We supplement H96e10 with age-estimates from isochrone fits to stars
 near the main-sequence turnoff in 55 GCs \citep[][hereafter V13]{2013ApJ...775..134V}.
 The mean value of the age-estimates in this data set is $11.9 \pm 0.1$~Gyr and 
 the dispersion is $0.8$~Gyr. Furthermore, only one of the 55 GC age-estimates is
 below $10$~Gyr. 
-
-\subsubsection*{Distribution of total GC mass in metallicity-radial bins}
-In Figure~\ref{fig:MW-FeHRgc} we show the two-dimensional mass-weighted 
-metallicity-radial distribution of the MW GCS. In Sec.~\ref{sec:FeHRgc} 
-we investigate whether the star formation model implemented in the Auriga 
-simulations can produce sufficient total mass in GC candidates in the same bins.
-
-\begin{figure}
-    \includegraphics[width=\columnwidth]
-        {{MW_RgcFeH_HistogramMassWeighted_Harris1996ed2010data}.png}
-    \includegraphics[width=\columnwidth]
-        {{M31_RgcFeH_HistogramMassWeighted_CaldwellRomanowsky2016data}.png}
-    \caption{
-        \emph{Top}: Mass-weighted R$_{\text{GC}}$-[Fe/H] distribution of
-        151 GCs in the MW \citep[data from][2010 ed.]{1996AJ....112.1487H}, which
-        is 98.19 \% of the total MW GCS mass in the Harris catalog.
-        \emph{Bottom}: Same for M31, showing 366 GCs and 88.38 \% of the total 
-        mass in CR16 \citep[data from][]{2016ApJ...824...42C}. Note that the
-        range of the colourmap differs in both figures.
-        \label{fig:MW-FeHRgc}
-    }
-\end{figure}
 
 \subsection{Andromeda}
 \label{sec:andromeda}
@@ -429,7 +407,7 @@ of the C11 dataset, further revised by CR16. It seems that CR16 is the most
 recent aggregated dataset of M31's GCS that contains properties of interest
 for our study as it contains GCs in the inner region and in the outer halo. The 
 relevant fields in the CR16 dataset that we use are the age, metallicity, and the 
-mass-estimate\footnote{The authors assumed $M/L_V = 2$ (independent of [Fe/H])}.
+mass-estimate\footnote{The authors assumed $M/L_V = 2$ independent of [Fe/H]}.
 
 % \todo[inline]{
 % ``For M31 GC masses we combine the catalogues of Caldwell et al. (2011, using the 
@@ -437,7 +415,7 @@ mass-estimate\footnote{The authors assumed $M/L_V = 2$ (independent of [Fe/H])}.
 % e.g. Strader, Caldwell \& Seth 2011).''
 % }
 
-\subsubsection*{Age estimates}
+\subsubsection{Age estimates}
 For M31 we find an age distribution with a mean value of 11.0$\pm 0.2$~Gyr and a 
 dispersion of $2.2$~Gyr. Furthermore, $24$ GCs have age-estimates below $10$~Gyr, and
 the minimum age is $4.8$~Gyr. 
@@ -456,26 +434,39 @@ Figure~\ref{fig:MW-M31-age}.
     }
 \end{figure}
 
-\subsubsection*{Calculation of galactocentric radius}
-The projected galacocentric radius $R_{\text{proj}}$ is calculated following
-\citet[][Sec.~4.1, eq.~4]{2019arXiv190111229W}. Specifically,
-\begin{align}
-    X &= A \sin{(\text{PA})} + B \cos{(\text{PA})} \nonumber \quad \text{and} \\
-    Y &= - A \cos{(\text{PA})} + B \sin{(\text{PA})} \text{,}
-\end{align}
-where $A = \sin{(\alpha - \alpha_0)} \cos{\delta}$ and
-$B = \sin\delta \cos\delta_0 - \cos{(\alpha - \alpha_0)} \cos\delta \sin\delta_0$
-for the right ascension $\alpha$ (hourangle) and declination $\delta$ (degree) 
-of the GCs. For the central position of M31 we take the preferred position 
-from the NASA Extragalactic Database\footnote{\url{https://ned.ipac.caltech.edu/}}
-entry of M31: $(\alpha_0, \, \delta_0) = 
-(0^{\text{h}}42^{\text{m}}44.35^{\text{s}}, \, +41^{\circ}16'08.63")$.
-The projected galactocentrid radius is calculated as $R_\text{proj} = 
-\sqrt{X^2 + Y^2}$ (for $X$ and $Y$ in arcsec), and using the small angle 
-approximation with a distance of $D_{\text{M31}} = 778$~kpc to convert to kpc.
-TODO: McConnachie et al. 2005; Conn  et  al. 2012. Finally, we convert the 
-projected distance ($R_{\text{proj}}$) to an `average deprojected distance` 
-via the relationship $R_{\text{GC}} = R_{\text{proj}} \times (4/\pi)$.
+\subsection{Total GC mass in metallicity-radial space}
+\label{sec:observations_FeHRgc}
+We show the two-dimensional mass-weighted metallicity-radial distribution of the 
+MW (M31) GCS in the top (bottom) panel of Figure~\ref{fig:observations_FeHRgc}. Both
+quantities are readily available in H96e10, but the galactocentric radius
+of GCs in M31 is not available in CR16. Therefore we follow 
+\citet[][Sec.~4.1]{2019arXiv190111229W} to calculate the projected radius 
+$R_{\text{proj}}$ from the observed positions, adopting M31's central position
+from the NASA Extragalactic Database\footnote{\url{https://ned.ipac.caltech.edu/}} 
+$(\alpha_0, \, \delta_0) = 
+(0^{\text{h}}42^{\text{m}}44.35^{\text{s}}, \, +41^{\circ}16'08.63")$ 
+and distance $D_{\text{M31}} = 778$~kpc (McConnachie et al. 2005; Conn  et  al. 2012).
+We calculate $R_{\text{GC}}$ as `average deprojected distance`
+$R_{\text{GC}} = R_{\text{proj}} \times (4/\pi)$.
+We compare these observations to the Auriga simulations later on in 
+Section~\ref{sec:discussion_FeHRgc},
+
+\begin{figure}
+    \includegraphics[width=\columnwidth]
+        {{MW_RgcFeH_HistogramMassWeighted_Harris1996ed2010data}.png}
+    \includegraphics[width=\columnwidth]
+        {{M31_RgcFeH_HistogramMassWeighted_CaldwellRomanowsky2016data}.png}
+    \caption{
+        \emph{Top}: Mass-weighted R$_{\text{GC}}$-[Fe/H] distribution of
+        151 GCs in the MW \citep[data from][2010 ed.]{1996AJ....112.1487H}, which
+        is 98.19 \% of the total MW GCS mass in the Harris catalog.
+        \emph{Bottom}: Same for M31, showing 366 GCs and 88.38 \% of the total 
+        mass in CR16 \citep[data from][]{2016ApJ...824...42C}. Note that the
+        range of the colourmap differs in both figures.
+        \label{fig:observations_FeHRgc}
+    }
+\end{figure}
+
 
 \section{Results}
 \label{sec:results}
@@ -491,12 +482,12 @@ that the particle was recorded), and the \emph{old accreted} star particles
 at $z=0$). In addition, we include \emph{all stars} (no selection criterion) to 
 examine the result of (not) applying an age cut to our selection functions.
 
-We consider the metallicity distribution in Sec.~\ref{sec:metallicity} 
-the distribution of galactocentric radii in Sec.~\ref{sec:radial}, and the
+We consider the metallicity distribution in Sec.~\ref{sec:results_FeH} 
+the distribution of galactocentric radii in Sec.~\ref{sec:results_Rgc}, and the
 combination of both in Sec.~\ref{sec:FeHRgc}.
 
 \subsection{Metallicity distribution}
-\label{sec:metallicity}
+\label{sec:results_FeH}
 We investigate whether the star formation model implemented in the Auriga 
 simulations is capable of i) producing a metallicity distribution that is 
 consistent with the GCS observed in the MW (M31), and ii) generating sufficient 
@@ -505,18 +496,41 @@ mass over the domain of the observations.
 \begin{figure}
     \includegraphics[width=\columnwidth]{{FeH_mu_sigma}.png}
     \caption{
+        Mean and standard deviation of the metallicity distribution of star
+        particles in our Auriga subsets compared to the MW (M31) GCS shown in
+        purple (magenta). The black solid (open) dot shows values of the 
+        metal-rich (metal-poor) component of the MW GCS as quoted by
+        \citep[][p. 38]{1998gcs..book.....A}.
         \label{fig:FeH_mu_sigma}
     }
 \end{figure}
 
+Figure~\ref{fig:FeH_mu_sigma} shows the mean and standard deviation of the
+[Fe/H] distribution of star particles in the Auriga simulations. The mean
+metallicity of old star particles lies in the range $-1.0$ to $-0.5$ and the
+dispersion increases with decreasing metallicity. For comparison, the mean
+of all star particles populates the range $-0.25$ to $0$ with a near-constant
+dispersion a bit above $0.5$. Old accreted stars in the Auriga haloes reach
+mean metallicities between $-1.5$ and $-1.0$, which is considerably lower than 
+the old- and old insitu populations. Most Auriga L4 haloes have old insitu 
+populations with mean metallicities around $-0.5$. The old accreted populations 
+follow the trent of increasing dispersion with decreasing mean metallicity, but 
+notably the old insitu populations all have a constant dispersion of roughly
+$0.45$. We show the values calculated using all MW (M31) GCs in purple (magenta),
+and literature values of the metal-rich (metal-poor) component of the MW GCS
+as black solid (open) dots.
 
-Figure~\ref{fig:FeH} shows a mass-weighted metallicity distribution of the
-Auriga L4 median
-for \emph{all stars} (orange dotted), \emph{old stars / GC candidates} 
+Figure~\ref{fig:FeH} shows the mass-weighted metallicity distribution of the
+Auriga L4 haloes. Lines show the median value and the shaded regions indicate 
+the $1\sigma$ interval (i.e. scatter between runs with different initial 
+conditions which thus have unique merger histories). We notice once more that
+the peak metallicity shifts from $0$ to $-0.5$ for old stars (orange solid)
+compared to all stars (orange dotted).
 (orange solid), \emph{old in-situ} stars (blue solid), and \emph{old accreted} stars
-(red solid). The shaded regions indicate the $1\sigma$ interval around the median 
-(i.e. the scatter between runs with different initial conditions and merger
-histories). The MW (M31) GCS is shown in purple (magenta). We use the 
+(red solid). 
+of \emph{all stars} (orange dotted), 
+
+The MW (M31) GCS is shown in purple (magenta). We use the 
 same bin sizes for the simulations as for the observations, explicitly shown for
 the observed profiles.
 
@@ -557,16 +571,6 @@ this increase only in the range [Fe/H]$>$-0.5 (although not for the \emph{old
 accreted} component.
 
 
-Furthermore we test the null hypothesis that the metallicity distribution of the
-MW (M31) GCS and the \emph{old}, \emph{old insitu}, and \emph{old accreted} star 
-particles in the Auriga simulations are drawn from the same underlying 
-distribution. We calculate the two-sample Kolmogorov-Smirnov test statistic for
-all thirty Auriga level 4 haloes and reject the null hypothesis for every halo, 
-for every sub set of star particles at least at the 99.99\% confidence level.
-In addition, the null hypothesis that the metallicity distributions of the MW 
-and M31 GCS are drawn from the same distribution is rejected at the 99.99997\%
-confidence level.
-
 % We notice a scatter\footnote{Here scatter means the width of the 1$\sigma$ interval.
 % The difference between the minimum and maximum values is $0.9$~dex.} in mass 
 % normalization of $0.3$ dex between the different Auriga galaxies. We investigate 
@@ -598,7 +602,7 @@ confidence level.
 % \end{figure}
 
 \subsection{Radial distribution}
-\label{sec:radial}
+\label{sec:results_Rgc}
 
 \begin{figure}
     \includegraphics[width=\columnwidth]{{Rgc_mu_sigma}.png}
@@ -632,12 +636,6 @@ confidence level.
 }
 
 
-Is the spatial distribution of the GC candidates in the Auriga simulations consistent with the MW GCS?
-
-\subsection{Metallicity-radial distribution}
-\label{sec:FeHRgc}
-What age-metallicity distribution is produced by star formation events in the Auriga simulations?
-?
 \begin{figure}
     \includegraphics[width=0.49\textwidth]
         {{Au-all_RgcFeH_HistogramMassWeighted_iold_mean}.png}
@@ -649,6 +647,8 @@ What age-metallicity distribution is produced by star formation events in the Au
     }
 \end{figure}
 
+\subsection{Total mass in metallicity-radial space}
+\label{sec:results_FeHRgc}
 \begin{figure}
     \includegraphics[width=0.49\textwidth]
         {{Au-all_RgcFeH_HistogramMassWeighted_iold_36bins_mean-trim}.png}
@@ -659,20 +659,56 @@ What age-metallicity distribution is produced by star formation events in the Au
 \end{figure}
 
 
-
-\subsection{Metallicity-radial distribution: higher resolution}
-\todo[inline]{Do we even want this?}
-\label{sec:FeHRgc-morebins}
-\begin{figure}
-    \includegraphics[width=\columnwidth]
-        {{logMRgcFeH_accreted-insitu-notitle}.png}
-    \caption{
-        TODO: add 1$\sigma$ interval around both relations, and flip x and y.
-        \label{fig:todo2}
-    }
-\end{figure}
+\section{Discussion}
+\label{sec:discussion}
+\subsection{Metallicity distribution}
+\label{sec:discussion_FeH}
+\citet[][p. 234]{1998gcs..book.....A} and \citet[][p. 38]{Harris2001} describe
+the bimodal [Fe/H] distribution of the MW GCS. The latter fits a double
+Gaussian that peaks at [Fe/H] = $-1.59$ (metal-poor) and $-0.51$ (metal-rich)
+with dispersions of $0.34$ and $0.23$. T
+KMM mixture-modeling
 
 
+Furthermore we test the null hypothesis that the metallicity distribution of the
+MW (M31) GCS and the \emph{old}, \emph{old insitu}, and \emph{old accreted} star 
+particles in the Auriga simulations are drawn from the same underlying 
+distribution. We calculate the two-sample Kolmogorov-Smirnov test statistic for
+all thirty Auriga level 4 haloes and reject the null hypothesis for every halo, 
+for every sub set of star particles at least at the 99.99\% confidence level.
+In addition, the null hypothesis that the metallicity distributions of the MW 
+and M31 GCS are drawn from the same distribution is rejected at the 99.99997\%
+confidence level.
+
+
+\subsection{Radial distribution}
+\label{sec:discussion_Rgc}
+
+\subsection{Metallicity-radial space}
+\label{sec:discussion_FeHRgc}
+See Figure~\ref{fig:observations_FeHRgc} in Section~\ref{sec:observations_FeHRgc}.
+
+
+\todo[inline]{
+``The fraction of all star formation that occurs in bound stellar clusters (the cluster formation efficiency, hereafter CFE) follows by integration of these local clustering and survival properties over the full density spectrum of the ISM, and hence is set by galaxy-scale physics. We derive the CFE as a function of observable galaxy properties, and find that it increases with the gas surface density'' \citep{2012MNRAS.426.3008K}
+}
+
+\subsection{Age cut}
+Although the age distribution of M31 Perhaps an age cut of 6~Gyr would would be more 
+appropriate for M31, see Figure~\ref{fig:MW-M31-age}.
+
+
+\todo[inline]{
+\citet{2016ApJ...824...42C} writes:
+``there are two broad, well-established differences:
+(1) the M31 GC system is more populous than the MW system, by a factor of
+$\sim$2-3, and (2) it does not exhibit the same obvious bimodality in
+metallicity \citep{2000AJ....119..727B, 2009A&A...508.1285G, 2011AJ....141...61C, 
+2013A&A...549A..60C}. Both of these aspects may be reflections of dramatic 
+differences discovered in these galaxies stellar halos, where the M31 halo 
+appears much more metal-enriched, with massive substructures suggesting a more 
+active satellite accretion history \citep[e.g.][]{2009Natur.461...66M}''
+}
 
 \subsection{From star particles to globular clusters}
 \label{sec:star-to-gc}
@@ -701,65 +737,6 @@ we show the efficiencies that we find when we compare the simulations to the
 globular cluster systems of the Milky Way as well as that of Andromeda (M31).
 
 
-
-\subsection{Properties of birth haloes of the accreted population}
-\label{sec:birth-properties-of-accreted-gc-candidates}
-
-Auriga galaxy /w 5 Myr snapshots.
-
-
-
-\subsection{Age-metallicity distribution}
-\label{sec:agemetallicity}
-What age-metallicity distribution is produced by star formation events in the Auriga simulations?
-
-
-\subsection{Formation history} 
-\label{sec:history}
-Can we identify particular star formation events that generate GC candidates with the correct age, metallicity, and radial properties as expected or the MW GCS?
-
-Can we distinguish between particles that have formed in-situ and those that have been accreted? Can we identify specific features in the age-metallicity plane, or in the $R_\textbf{GC}$-[Fe/H] plane, that result from one of both populations? How does this connect to proposed mechanisms for globular cluster formation in the literature?
-
-
-Orbits: are the pericentres different? Look at velocity + specific angular momentum distribution in the different FeH/Rgc bins as proxy for the pericenter
-
-
-
-
-\section{Discussion}
-\label{sec:discussion}
-
-We investigate all star particles in the Auriga simulations that are older than 10~Gyr,
-an approach equal to the method of \citep{2017MNRAS.465.3622R}. This approach does not
-take the bound cluster fraction \citep[e.g.][]{2012MNRAS.426.3008K} into account. This
-means that our sub set, which is based on selection by age, comprises both stars in the
-field as well as globular clusters. We compare the total mass in the simulations in 
-metallicity ([Fe/H]), galactocentric radius $R_{\text{GC}}$, and [Fe/H]-$R_{\text{GC}}$ 
-bins to the total mass in the MW GCS (using the H96e10 data set). The mass excess in the
-simulations gives a maximum mass loss `budget' for the product of cluster formation 
-efficiency and dynamical evolution. We find fractions that vary with metallicity,
-radius and metallicity-and-radius.
-
-\todo[inline]{
-``The fraction of all star formation that occurs in bound stellar clusters (the cluster formation efficiency, hereafter CFE) follows by integration of these local clustering and survival properties over the full density spectrum of the ISM, and hence is set by galaxy-scale physics. We derive the CFE as a function of observable galaxy properties, and find that it increases with the gas surface density'' \citep{2012MNRAS.426.3008K}
-}
-
-\subsection{Age cut}
-Although the age distribution of M31 Perhaps an age cut of 6~Gyr would would be more 
-appropriate for M31, see Figure~\ref{fig:MW-M31-age}.
-
-
-\todo[inline]{
-\citet{2016ApJ...824...42C} writes:
-``there are two broad, well-established differences:
-(1) the M31 GC system is more populous than the MW system, by a factor of
-$\sim$2-3, and (2) it does not exhibit the same obvious bimodality in
-metallicity \citep{2000AJ....119..727B, 2009A&A...508.1285G, 2011AJ....141...61C, 
-2013A&A...549A..60C}. Both of these aspects may be reflections of dramatic 
-differences discovered in these galaxies stellar halos, where the M31 halo 
-appears much more metal-enriched, with massive substructures suggesting a more 
-active satellite accretion history \citep[e.g.][]{2009Natur.461...66M}''
-}
 
 
 \section{Summary and conclusions}
