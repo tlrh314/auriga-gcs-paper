@@ -325,17 +325,24 @@ Finally, the simulations follow the evolution of a magnetic field of $10^{-14}$
 See G17 for further details of the numerical setup as well as the galaxy formation
 model.
 
-\todo[inline]{
-TODO: paraphrase ``The diversity in morphological properties of these simulated 
-galaxies reflects the stochasticity inherent to the process of galaxy formation 
-and evolution 
-\citep[e.g.][]{2005ApJ...635..931B, 2010MNRAS.406..744C, 2010ApJ...708.1398T}.''
-}
+The Auriga suite has a fiducial resolution level L4, accompanied by the lower 
+(higher) level L5 (L3) that is available for selected initial condition runs.
+The baryonic mass resolution in order of increasing level is $m_b$~=~[$4 \times 10^5$,
+$5 \times 10^4$, $6 \times 10^3$]~M\Sun \, with gravitational softening of 
+collissionless particles $\epsilon$~=~[$738, 369, 184$]~pc.
 
-\todo[inline]{Paragraph about Auriga's stellar haloes.
-``The Auriga Stellar Haloes: Connecting stellar population properties with
-accretion and merging history'' \citet{2018arXiv180407798M}
-}
+
+% \todo[inline]{
+% TODO: paraphrase ``The diversity in morphological properties of these simulated 
+% galaxies reflects the stochasticity inherent to the process of galaxy formation 
+% and evolution 
+% \citep[e.g.][]{2005ApJ...635..931B, 2010MNRAS.406..744C, 2010ApJ...708.1398T}.''
+% }
+% 
+% \todo[inline]{Paragraph about Auriga's stellar haloes.
+% ``The Auriga Stellar Haloes: Connecting stellar population properties with
+% accretion and merging history'' \citet{2018arXiv180407798M}
+% }
 
 
 \section{Relevant observational data}
@@ -390,11 +397,12 @@ simulations can produce sufficient total mass in GC candidates in the same bins.
     \includegraphics[width=\columnwidth]
         {{M31_RgcFeH_HistogramMassWeighted_CaldwellRomanowsky2016data}.png}
     \caption{
-        \emph{Top}: Mass-weighted r$_{\text{gc}}$-[Fe/H] distribution of
+        \emph{Top}: Mass-weighted R$_{\text{GC}}$-[Fe/H] distribution of
         151 GCs in the MW \citep[data from][2010 ed.]{1996AJ....112.1487H}, which
         is 98.19 \% of the total MW GCS mass in the Harris catalog.
         \emph{Bottom}: Same for M31, showing 366 GCs and 88.38 \% of the total 
-        mass in CR16 \citep[data from][]{2016ApJ...824...42C}.
+        mass in CR16 \citep[data from][]{2016ApJ...824...42C}. Note that the
+        range of the colourmap differs in both figures.
         \label{fig:MW-FeHRgc}
     }
 \end{figure}
@@ -492,18 +500,7 @@ combination of both in Sec.~\ref{sec:FeHRgc}.
 We investigate whether the star formation model implemented in the Auriga 
 simulations is capable of i) producing a metallicity distribution that is 
 consistent with the GCS observed in the MW (M31), and ii) generating sufficient 
-mass over the full domain of the observations.
-
-
-In Figure~\ref{fig:FeH} we show a mass-weighted metallicity 
-distribution where the lines show the median value of all thirty Auriga level 4 
-haloes for \emph{all stars} (orange dotted), \emph{old stars / GC candidates} 
-(orange solid), \emph{old in-situ} stars (blue solid), and \emph{old accreted} stars
-(red solid). The shaded regions indicate the $1\sigma$ interval around the median 
-(i.e. the scatter between runs with different initial conditions and merger
-histories). The MW (M31) GCS is shown in purple (magenta). We use the 
-same bin sizes for the simulations as for the observations, explicitly shown for
-the observed profiles.
+mass over the domain of the observations.
 
 \begin{figure}
     \includegraphics[width=\columnwidth]{{FeH_mu_sigma}.png}
@@ -511,6 +508,18 @@ the observed profiles.
         \label{fig:FeH_mu_sigma}
     }
 \end{figure}
+
+
+Figure~\ref{fig:FeH} shows a mass-weighted metallicity distribution of the
+Auriga L4 median
+for \emph{all stars} (orange dotted), \emph{old stars / GC candidates} 
+(orange solid), \emph{old in-situ} stars (blue solid), and \emph{old accreted} stars
+(red solid). The shaded regions indicate the $1\sigma$ interval around the median 
+(i.e. the scatter between runs with different initial conditions and merger
+histories). The MW (M31) GCS is shown in purple (magenta). We use the 
+same bin sizes for the simulations as for the observations, explicitly shown for
+the observed profiles.
+
 
 \begin{figure}
     \includegraphics[width=\columnwidth]{{logMFeH_withRatios-trim}.png}
