@@ -151,37 +151,63 @@ those that are located further away within the Virgo Supercluster.
 
 The natal gas regions in which globular clusters form inherit key characteristics 
 from their parent (proto-)galaxies. GC populations, in turn, will therefore retain 
-a record of these properties and offer a unique insight into the detailed chemical 
+a record of these properties and offer unique insight into the detailed chemical 
 and dynamical evolution history of their host galaxies. In theory, this information 
 should be readily available and easily observable in the low redshift Universe, given 
 that GCs survive nearly a Hubble time of evolution within the violent galactic 
-environments they live in. However, a prerequisite to infer galactic histories
-from observations of GC systems is to understand the subtleties of the GC formation
-and evolution itself.
+environments they live in. However, these long and complex evolution histories
+themselves imposes their imprints onto the GCs observables. Thus, a prerequisite to 
+infer galactic histories from studies of GC systems is to understand the 
+subtleties of the GC formation and evolution itself.
 
-Several formation scenerarios are consistent with the observations of globular 
-cluster populations. One important constraint comes from bimodality in the 
-colour distribution, which is indicative of a bimodality in the underlying 
-metallicity distribution of GC systems. For example, GCs in the MW are typically
-split up in a metal-rich (red) and metal-poor (blue) subpopulation divided at
-[Fe/H]~$=-1$ \citep[e.g.][]{Harris2001}, although slightly different values can
-also be found in the literature. The two subpopulations are believed to be
-associated to the galactic disk, respectively the stellar halo
-\citep[e.g.][]{1985ApJ...293..424Z}. The latter is supported by observed similarities
-between the spatial distribution and chemical signature of the `blue' GCs show
-and stars in the stellar halo \citep{2008A&ARv..15..145H}. Moreover, relative
-age-estimates indicate that the metal-poor subpopulation may be $1.5$~Gyr younger
-than the metal-rich counterpart \citep{2005AJ....130..116D}.
+The literature offers several formation scenerarios that are consistent with the 
+data. One important constraint comes from bimodality in the colour distribution, 
+which is indicative of a bimodality in the underlying metallicity distribution 
+of GC systems. For example, GCs in the MW are typically split up in a metal-rich 
+(red) and metal-poor (blue) subpopulation divided at [Fe/H]~$=-1$ 
+\citep[e.g.][]{Harris2001}. These two subpopulations could be associated to the 
+galactic disk, respectively to the stellar halo \citep[e.g.][]{1985ApJ...293..424Z}. 
+The latter is supported by observed similarities between the spatial distribution
+and chemical signature of the `blue' GCs and the Galactic stellar halo 
+\citep{2008A&ARv..15..145H}. Moreover, relative age-estimates indicate that the 
+metal-poor subpopulation may be $1.5$~Gyr younger than the metal-rich counterpart 
+\citep{2005AJ....130..116D}, providing futher support that the GC population indeed
+consists of two distinct classes.
 
-\citet{2006ARA&A..44..193B} for a review of extragalactic GCs and galaxy
-formation. The authors argue that the observed metal-rich and metal-poor
+People postulate that the frequent mergers that occur during hierarchical build-up 
+of galaxies naturally produce (sub)populations of GCs from enriched gas on tight 
+orbits, if the mass ratios and gas fractions of the mergers are sufficiently high.
 
-In a recent study Chiou et al. speculate that GCs may form in supersonically
+Boylan-Kolchin: the blue population could form in high density regions along the 
+cosmic filament before or during the collapse of the proto-galaxy itself.
+This formation scenario would explain the presence of the oldest GCs with 
+primordial metallicities in the (outer) haloes of galaxies as the GCs are
+accreted over time. Moreover, the tidal fields experienced by GCs at (outer) halo
+orbits is significantly lower than by GCs in the inner galaxy, thus such GCs
+are expected to be long-lived.
+
+In a recent study, Chiou et al. speculate that GCs may form in supersonically
 induced gasseous objects at high redshifts. These objects are free of dark matter 
 and populate a mass range consistent with the typical mass scale of GCs. 
 Interestingly, the authors find present-day absolute visual magnitude and 
 characteristic scales consistent with GCs in the Local group, based on a 
 rudimentary star formation model.
+
+An alternative paradigm is that GC formation does not rely on special conditions
+at high redshifts. Rather, the same physics that governs the formation of young 
+massive clusters (YMCs) in the Local Group can be applied to the high redshift
+Universe. The observed differences between YMCs and GCs, in this scenario, arise
+naturally as the result intrinsic GC evolution within galactic tidal fields over
+a Hubble time. This interesting hypothesis is tested numerically by the E-MOSAICS
+people.
+
+
+\citet{2006ARA&A..44..193B} for a review of extragalactic GCs and galaxy
+formation. 
+
+
+
+
 
 % \begin{itemize}
 %     \item \citet{2005MNRAS.364..367D}: ``The radial profile of the stellar halo
@@ -485,58 +511,72 @@ Sec.~\ref{sec:discussion_FeHRgc},
 \section{Results}
 \label{sec:results}
 We define GC candidates in the Auriga simulations as all star particles older
-than $10$~Gyr based on the MW GCS age distribution (Figure~\ref{fig:MW-M31-age}),
-and following \citet{2017MNRAS.465.3622R}.
+than $10$~Gyr based on the age distribution of the MW GCS (Figure~\ref{fig:MW-M31-age}),
+and following the analysis of \citet{2017MNRAS.465.3622R}.
 
-Trough out the analysis we mainly use three subsets of star particles, the
-\emph{old stars} (age $>10$~Gyr, or GC candidates), the \emph{old insitu} stars
-(defined as those bound to the most-massive halo/subhalo in the first snapshot
-that the particle was recorded), and the \emph{old accreted} star particles
-(i.e. those that have formed ex-situ and are bound to the most-massive halo/subhalo
-at $z=0$). In addition, we include \emph{all stars} (no selection criterion) to
-examine the result of (not) applying an age cut to our selection functions.
-
-We consider the metallicity distribution in Sec.~\ref{sec:results_FeH}
-the distribution of galactocentric radii in Sec.~\ref{sec:results_Rgc}, and the
-combination of both in Sec.~\ref{sec:results_FeHRgc}.
+Trough out our analysis we compare the distributions of three subsets of star 
+particles: \emph{old stars} (age $>10$~Gyr, or GC candidates), \emph{old insitu} 
+stars (defined as those bound to the most-massive halo/subhalo in the first
+snapshot that the particle was recorded), and \emph{old accreted} star particles 
+(those that have formed ex-situ and are bound to the most-massive halo/subhalo
+at $z=0$). For comparison we also include the results for \emph{all stars} (when
+no additional selection criterion is applied to the star particles). We consider 
+the metallicity distribution in Sec.~\ref{sec:results_FeH}, the distribution of 
+galactocentric radii in Sec.~\ref{sec:results_Rgc}, and the combination of both 
+in Sec.~\ref{sec:results_FeHRgc}.
 
 
 \subsection{Metallicity distribution}
 \label{sec:results_FeH}
-We investigate whether the star formation model implemented in the Auriga
-simulations is capable of i) producing a metallicity distribution that is
-consistent with the GCS observed in the MW (M31), and ii) generating sufficient
-mass over the domain of the observations.
-
+We investigate whether the star formation model implemented in Auriga produces 
+metallicity distributions consistent with the MW (M31) GC system, and whether 
+the subgrid generates sufficient total mass to account for the bound cluster 
+formation efficiency and evolutionary mass loss.
 
 \begin{figure}
     \includegraphics[width=\columnwidth]{{FeH_mu_sigma}.png}
     \caption{
-        Mean and standard deviation of the metallicity distribution of star
-        particles in each of the thirty Auriga L4 haloes. Orange dots show 
-        the subset of old star particles, and blue (red) dots show the old 
-        insitu (accreted) component. These Auriga subsets can be compared to 
-        the MW (M31) GCS shown in purple (magenta), and to the metal-rich 
-        (metal-poor) component of the MW GCS indicated by the black solid (open) 
-        dots \citep[values from][p. 38]{1998gcs..book.....A}.
+        First vs second central moment of the Auriga L4 metallicity distributions.
+        Each dot represents one simulation for a given colour. The orange (blue) 
+        [red] dots shows the values calculated using the old (old insitu) 
+        [old accreted] star particles. Orange triangles indicate that all stars 
+        were used. The purple (magenta) cross denotes our calculation using all 
+        MW (M31) observations (i.e. asuming a unimodal distribution). The black 
+        solid (open) dots indicate the literature values of a bimodal Gaussian 
+        fit to the data \citep[values from][p. 38]{1998gcs..book.....A},
+        showing the the metal-rich (metal-poor) component of the MW.
         \label{fig:FeH_mu_sigma}
     }
 \end{figure}
 Figure~\ref{fig:FeH_mu_sigma} shows the mean and standard deviation of the
-[Fe/H] distribution of star particles in all Auriga L4 simulations. The mean
-metallicity of old star particles lies in the range $-1.0$ to $-0.5$ and the
-dispersion increases with decreasing metallicity. For comparison, the mean
-of all star particles populates the range $-0.25$ to $0$ with a near-constant
-dispersion a bit above $0.5$. Old accreted stars in the Auriga haloes reach
-mean metallicities between $-1.5$ and $-1.0$, which is considerably lower than
-the old- and old insitu populations. Most Auriga L4 haloes have old insitu
-populations with mean metallicities around $-0.5$. The old accreted populations
-follow the trent of increasing dispersion with decreasing mean metallicity, but
-notably the old insitu populations all have a constant dispersion of roughly
-$0.45$. We show the values calculated using all MW (M31) GCs in purple (magenta),
-and literature values of the metal-rich (metal-poor) component of the MW GCS
-as black solid (open) dots. We further discuss our comparison between the
-simulations and the observations in Sec.~\ref{sec:discussion_FeH}
+[Fe/H] distribution of star particles in the Auriga L4 simulations. One dot 
+of a given colour shows one particular simulation (thirty in total). The 
+orange (blue) [red] dots represent the distributions of old (old insitu) 
+[old accreted] star particles, and orange triangles indicate that all stars
+were used. The mean metallicities of all GC candidates (orange dots) lie in the 
+range $-0.95$ to $-0.4$, which is lower than when we include all star particles 
+(orange triangles, centred around $\mu \sim 0$). Furthermore we find that the 
+distributions of the accreted (insitu) GC candidates shift to slightly lower 
+(higher) values and seem to be roughly centred around $\mu \sim -0.5$ ($-0.8$)
+We find this trent that the distribution is more metal-poor (metal-rich)
+when splitting the GC candidates into accreted (insitu) populations for the
+majority of the Auriga simulations. The only exceptions are Au4-1 where this 
+trent is reversed, and Au4-7 where all three (sub)populations have $\mu \sim -0.82$
+
+The purple (magenta) cross shows the values calculated using all MW (M31) GC
+observations (i.e. assuming a unimodal distribution). The black solid (open) dots
+mark the literature values of a bimodal Gaussian fit to the MW data, indicating
+the metal-rich (metal-poor) subpopulation. Overall we find that the Auriga 
+simulations produce (sub)populations of GC candidates that are more metal-rich 
+than the MW and M31 GC systems. The only exception is Au4-1 with $\mu \approx -1.51$
+and $\sigma \approx 0.54$, close to the mean of the blue/metal-poor population
+of the MW GCS. However, the insitu GC candidates in Au4-1 consists 30 times
+less star particles than any of the other (sub)population. Finally, we find that
+the populations of GC candidates that have formed insitu have mean values that 
+are similar the that of the red/metal-rich subpopulation of Milky Way GCs.
+
+(sub)populations of GC candidates in the Auriga simulations has a metallicity
+distribution with sufficiently low 
 
 
 \begin{figure}
