@@ -501,10 +501,10 @@ simulations later on in Sec.~\ref{sec:results_FeHRgc}.
     \caption{
         \emph{Top}: Mass-weighted $R_{\text{GC}}$-[Fe/H] distribution of
         151 GCs in the MW \citep[data from][2010 ed.]{1996AJ....112.1487H}, which
-        is 98.19 \% of the total MW GCS mass in the Harris catalog.
-        \emph{Bottom}: Same for M31, showing 366 GCs and 88.38 \% of the total
-        mass in CR16 \citep[data from][]{2016ApJ...824...42C}. Note that the
-        range of the colourmap differs in both figures.
+        is 98.6 (92.2) \% of the total mass (clusters) of the MW GCS in the Harris 
+        catalog. \emph{Bottom}: Same for M31, showing 366 GCs and 88.4 (83.9) \% 
+        of the total mass (clusters) in CR16 \citep[data from][]{2016ApJ...824...42C}. 
+        Note that the range of the colourmap differs in both figures.
         \label{fig:observations_FeHRgc}
     }
 \end{figure}
@@ -681,7 +681,7 @@ radial distribution of star particles in all Auriga L4 simulations. We notice
 that the old insitu populations are much more centrally distributed, whereas
 the old accreted component has a larger radial extent. Moreover, the dispersion
 increases with increasing mean value of the radial distribution as may be expected
-for a quantity that cannot have negative values. 
+for a non-negative quantity.
 
 \begin{figure}
     \includegraphics[width=\columnwidth]{{logMRgc_withRatios-trim}.png}
@@ -721,26 +721,34 @@ Figure~\ref{fig:Au-FeHRgc} which can be compared to
 Figure~\ref{fig:observations_FeHRgc}). Finally, we divide these value by the total 
 mass in the MW (M31) GCS to obtain the median mass excess produced by the star 
 formation model implemented in the Auriga simulations. See the top (bottom) panel
-of Figure~\ref{fig:Au-FeHRgc} for mass excess with respect to the MW (M31) GCS.
+of Figure~\ref{fig:Au-FeHRgc-ratio} for mass excess with respect to the MW (M31) GCS.
 
 \begin{figure}
     \includegraphics[width=0.49\textwidth]
-        {{Au-all_RgcFeH_HistogramMassWeighted_iold_36bins_mean}.png}
+        {{Au4-median_RgcFeH_HistogramMassWeighted_iold-trim}.png}
     \caption{
-        Mass-weighted [Fe/H]-$R_{\text{GC}}$ distribution of all Auriga haloes
-        (level 3, 4 and 5). Here we consider the old ($>$~10~Gyr) stars in all
-        simulations and color-code the \textbf{mean value} (of 40 Auriga haloes)
+        Mass-weighted [Fe/H]-$R_{\text{GC}}$ distribution of all thirty Auriga 
+        L4 haloes. Here we consider only the GC candidates (age $>$~10~Gyr) stars
+        in and color-code by the \textbf{median} (values also shown in each bin). 
+        The numbers in parenthesis show how many star particles fall within the
+        bin. Note that the range of the colourmap again differs (for improved
+        contrast within the plot).
         \label{fig:Au-FeHRgc}
     }
 \end{figure}
 
 \begin{figure}
     \includegraphics[width=0.49\textwidth]
-        {{Au-all_RgcFeH_HistogramMassWeighted_MW_iold_36bins_mean}.png}
+        {{Au4-median_RgcFeH_HistogramMassWeighted_MW_iold-trim}.png}
     \includegraphics[width=0.49\textwidth]
-        {{Au-all_RgcFeH_HistogramMassWeighted_M31_iold_36bins_mean}.png}
+        {{Au4-median_RgcFeH_HistogramMassWeighted_M31_iold-trim}.png}
     \caption{
-        Caption
+        The top (bottom) panel shows the logarithm of the ratio of simulated mass
+        to mass in the MW (M31) GCS, i.e. the logarithm of the mass excess. The 
+        color-coded values are also shown in each bin. Note that the three bins 
+        in the upper right corner are left blank because the observations have
+        zero mass there, and that the numbers indicate how much (median) mass is 
+        produced by the simulations in those bins.
         \label{fig:Au-FeHRgc-ratio}
     }
 \end{figure}
@@ -913,11 +921,11 @@ Figure~\ref{fig:logMRgcFeH_res}
     \includegraphics[width=0.31\textwidth]{{logMFeH_Au6}.png}
     \includegraphics[width=0.31\textwidth]{{logMFeH_Au16}.png}
     \includegraphics[width=0.31\textwidth]{{logMFeH_Au24}.png}
-    \caption{Same as Figure~\ref{fig:FeH}, but here the colours indicate resolution
-        level: L3 green, L4 orange, and L5 blue. \emph{Left:} Auriga halo 6.
-        \emph{Mid:} Auriga halo 16. \emph{Right:} Auriga halo 24. For all three
-        haloes we find marginal increases in the mass normalization with increasing
-        resolution level.
+    \caption{Similar to Figure~\ref{fig:FeH}, but showing one individual Auriga
+        halo, where colours indicate the resolution level: L3 green, L4 orange, 
+        and L5 blue. \emph{Left:} Auriga halo 6. \emph{Mid:} Auriga halo 16.
+        \emph{Right:} Auriga halo 24. For all three haloes we find marginal 
+        increases in the mass normalization with increasing resolution level.
         \label{fig:logMFeH_res}
     }
 
@@ -926,11 +934,11 @@ Figure~\ref{fig:logMRgcFeH_res}
     \includegraphics[width=0.31\textwidth]{{logMRgc_Au6}.png}
     \includegraphics[width=0.31\textwidth]{{logMRgc_Au16}.png}
     \includegraphics[width=0.31\textwidth]{{logMRgc_Au24}.png}
-    \caption{Same as Figure~\ref{fig:Rgc}, but here the colours indicate resolution
-        level: L3 green, L4 orange, and L5 blue. \emph{Left:} Auriga halo 6.
-        \emph{Mid:} Auriga halo 16. \emph{Right:} Auriga halo 24. For all three
-        haloes we find marginal increases in the mass normalization with increasing
-        resolution level.
+    \caption{Similar to Figure~\ref{fig:Rgc}, but showing one individual Auriga 
+        halo, where colours indicate the resolution level: L3 green, L4 orange, 
+        and L5 blue. \emph{Left:} Auriga halo 6. \emph{Mid:} Auriga halo 16. 
+        \emph{Right:} Auriga halo 24. For all three haloes we find marginal 
+        increases in the mass normalization with increasing resolution level.
         \label{fig:logMRgc_res}
     }
 
