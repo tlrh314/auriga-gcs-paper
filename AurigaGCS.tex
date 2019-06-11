@@ -136,277 +136,62 @@ methods: numerical -- galaxies: formation -- galaxies: star clusters: general.
 %%%%%%%%%%%%%%%%% BODY OF PAPER %%%%%%%%%%%%%%%%%%
 
 \section{Introduction}
-Globular clusters (GC)s are omnipresent, bright (with ${<}M^0_V{>} = -7.1 \pm 0.4$
-that is nearly independent of the host galaxy size and environment,
-\citealt{1991ARA&A..29..543H}), old ($\gtrsim$10~Gyr, \citealt{2005A&A...439..997P,
-2005AJ....130.1315S, 2009ApJ...694.1498M, 2013ApJ...775..134V}), and amongst the
-simplest stellar configurations in the Universe. The typical luminosity gives
-a characteristic mass of $1.4\cdot 10^5$~M\Sun \, (assuming a mass to light ratio
-$M/L_V \simeq 2$), and GCs have typical half-mass radii $r_h$ of a few parsec.
-GCs within the Milky Way can thus be studied in great detail (at the level of 
-individual stars), whereas integrated quantities can be explored with reasonable 
-certainty for GCs within - and even beyond \citep[e.g.][]{1991ARA&A..29..543H} -
-the Local Group. 
+Globular clusters (GC)s are old, bright, ubiquitous, and various properties of
+GC systems show correlations with their host galaxies. GC systems are believed to
+retain information about the galactic (gas) conditions at times of formation,
+thus, could offer unique insight into the chemodynamical evolution of their 
+parent galaxies, if the formation and evolution of GCs- and GC systems themselves 
+is adequately understood. However, despite decades of research (the extensive 
+literature on GCs is summarised in several books and review articles, e.g.~\citealt{
+1991ARA&A..29..543H, Harris2001, 2004Natur.427...31W, 2006ARA&A..44..193B, 
+2012A&ARv..20...50G, 2014CQGra..31x4006K, 2018RSPSA.47470616F}), consensus on an 
+exhaustive picture of the formation of GCs is yet to be reached.
 
-The extensive literature on GCs is summarised in several 
-books and review articles \citep[e.g.][]{1991ARA&A..29..543H, Harris2001, 2004Natur.427...31W, 
-2006ARA&A..44..193B, 2012A&ARv..20...50G, 2014CQGra..31x4006K, 2018RSPSA.47470616F},
-and recent analyses of the Gaia data shed new light on the chemical- and structural 
-properties, and on the phase-space distribution of the MW GC system \citep[e.g.][]{
-2018A&A...616A..12G, 2018ApJ...859L..13B, 2019A&A...621A..56P, 2019MNRAS.484.2832V}.
-A clear picture of the formation GC systems has yet to emerge, despite decades 
-of studies and the tremendous advances the last couple of years. It is clear, 
-however, that a fundamental understanding of GC formation and evolution promises 
-exciting insight into the detailed histories of their host galaxies due to their
-old ages and several correlations between GC systems and their parent galaxies.
+The literature offers a wealth of formation scenarios. \citet{1968ApJ...154..891P}
+and \citet{1984ApJ...277..470P} argue that GCs form as the earliest bound
+structures in the Universe (i.e. prior to formation of the main galaxy), 
+noting that the Jeans length and mass shortly after recombination is consistent
+with typical GC masses and sizes. Alternative models suggest that GCs form during
+formation of proto-galaxies, for example as a result of thermal instabilities
+in hot gas-rich haloes \citep{1985ApJ...298...18F}, or triggered by other mechanisms
+such as shock compression or cloud-cloud colissions \citep[e.g.][]{
+1980glcl.conf..301G, 1992ApJ...400..265M, 1996ASPC...92..241L, 1994ApJ...429..177H,
+2001ApJ...560..592C}.
 
-% There are several correlations between globular cluster systems and their
-% host galaxy. For example, the total mass of globular cluster systems
-% correlates with the halo mass \citep[e.g.][]{2010MNRAS.406.1967G}, the
-% the total number of GCs increases linearly with increasing virial mass
-% \citep[e.g.][]{2019arXiv190100900B}, and THIRD EXAMPLE.
+Yet another hypothesis is that star cluster formation is triggered by (major) 
+gas-rich galaxy mergers \citep{1987nngp.proc...18S, 1992ApJ...384...50A},
+which is naturally expected within the framework of hierarchical assembly. One
+testable prediction of this scenario is the formation of young clusters in
+interacting and merging galaxies, which has been observed and show remarkable
+similarities with globulars in the Milky Way \citep[e.g.][]{1995AJ....109..960W, 
+1996AJ....112..416H, 1999AJ....118..752Z, 1999AJ....118.1551W}. Moreover, models
+that test this hypothesis yield GC populations consistent with various 
+observables \citep[e.g.][]{2010ApJ...718.1266M, 2018MNRAS.480.2343C}, and
+the recent numerical simulation of an isolated dwarf-dwarf merger executed at 
+very high resolution (baryonic mass $m_b \sim$~4M\Sun; softening $\epsilon = 0.1$) 
+produce promising star clusters that could be globular progenitors \citep{2019arXiv190509840L}.
 
-The literature offers a wealth of formation channels, most of which can be broadly
-classified as ex situ, or as in situ scenarios. In the former picture, GCs form
-in smaller, more metal-poor progenitors that are accreted in subsequent mergers,
-as can naturally be expected in the framework of hierarchical galaxy formation
-\citep[e.g.][]{1978ApJ...225..357S, 1984ApJ...277..470P}, and Rosenblatt et al. 1988;
-Cen 2001; Bromm \& Clarke 2002; Diemand et al. 2005; Moore et al. 2006; Boley et al. 2009;
-Griffen et al. 2010; Trenti et al. 2015; Kimm et al. 2016; Ricotti et al. 2016;
-Boylan-Kolchin 2017; Creasey et al. 2019. As for in situ scenarios,
-\citet{1985ApJ...298...18F} propose that thermal instabilities in the collapsing
-proto-galaxy may lead to GC formation, \citet{1992ApJ...384...50A, 2010ApJ...718.1266M,
-2018MNRAS.480.2343C} suggest that GC formation is triggered by (major) gas-rich
-galaxy-galaxy mergers and/or interactions, and \citet{2005ApJ...623..650K} envision
-GCs to form in the cores of supergiant molecular clouds located within gaseous disks
-of (high-redshift) galaxies.
-
-Another broad distinction between formation mechanisms are models that rely on
-special conditions in the early Universe, or those that test the hypothesis that
-GC formation at high redshift is governed by the same physical processes of young
-massive clusters \citep[see][for a review]{2010ARA&A..48..431P} in the Local
-Universe, where differences arise as the result of nearly a Hubble time of
-(dynamical) evolution. This (latter) scenario is extensively tested in the recent
-E-MOSAICS project \citep{2018MNRAS.475.4309P, 2019MNRAS.486.3134K}, which
-comprises a suite of cosmological zoom simulations of MW-like galaxies. As for
-the former category, \citet{2017Ap&SS.362..183R} investigate what fraction of
-(multiple) stellar populations ends up in bound star clusters after their
-formation in gravitationally unstable expanding supershells, which arise from
-hypernova explosions of massive pop. III stars. \citet{2019arXiv190408941C}
-speculate in a recent study that GCs may form in supersonically induced gasseous
-objects at high redshifts, and \citet{2019arXiv190508951M} propose that high speed
-collisions leave cooling gas without their DM subhaloes which could form GC
-populations that can reproduce the observed $N_{\text{GC}}-M_{\text{vir}}$
-correlation \citep[e.g.][]{2019arXiv190100900B} with bimodal metallicity
-distributions and ages consistent with observations.
-
-\citep{2019arXiv190505199C}
-``The  mean  and  dispersion  of  GC system MDFs have also been found to scale 
-with the mass of the host galaxy over a large range in galaxy mass (Peng et al.
-2006). Qualitatively, many galaxies have clearly multi-modal MDF (e.g., Gebhardt
-\& Kissler-Patig 1999; Peng et al. 2006; Brodie \&  Strader  2006;  Brodie  et  
-al.  2012),  but  the  most massive galaxies typically show broad, single-peaked 
-distributions (Harris et al. 2014, 2016, 2017a)''
+More recent modelling efforts combine various aspects from the aforementioned
+formation channels \citep[e.g.][]{2000ApJ...533..869C, 2002ApJ...567..853C, 2002MNRAS.333..383B,
+2003egcs.conf..224G}
 
 
-
-One important constraint on plausible formation mechanisms comes from observed
-bimodality in the colour distribution of most galaxies, believed to be indicative
-of bimodality in the underlying metallicity distribution of GC systems. GCs in
-the MW can indeed be split up into a metal-rich (red), and a metal-poor (blue)
-(sub)population. The former group is associated to the galactic disk because it
-is a flattened, rotating population found at radii smaller than solar. The latter,
-on the other hand, is more radially extended, more populated (with three times
-more blue than red GCs), and may be $\leq 1.5$~Gyr older \citep{2005AJ....130..116D}.
-The exact dividing metallicity slightly differs between authors, e.g.
-[Fe/H]~$=-0.8$ \citep[according to][]{1985ApJ...293..424Z}, or
-[Fe/H]~$=-1.0$ \citep[according to][]{Harris2001}, and may also differ between
-galaxies \citep[e.g.][]{1985ApJ...293..424Z, 1999AJ....118.1526G, 2001AJ....121.2974L,
-2006ApJ...639...95P}. In contrast, it has long been debated whether the Andromeda
-GCS metallicity distribution is uni- bi- or multimodal, and \citet{2016ApJ...824...42C}
-argue that the data favours three groups (split at [Fe/H] $= -0.4$ and $-1.5$)
-after more accurate age-measurements improved classification of star clusters
-as globular (or otherwise). Moreover, the Andromeda GCS has $2-3$ times as many
-GCs at large radii, believed to be indicative of a more rich merger history.
-
-
-The latter is supported by observed similarities between the spatial distribution
-and chemical signature of the `blue' GCs and the Galactic stellar halo
-\citep{2008A&ARv..15..145H}. Moreover, relative age-estimates indicate that the
-metal-poor subpopulation may be $1.5$~Gyr younger than the metal-rich counterpart
-\citep{2005AJ....130..116D}, providing further support that the GC population indeed
-consists of two distinct classes.
-
-People postulate that the frequent mergers that occur during hierarchical build-up
-of galaxies naturally produce (sub)populations of GCs from enriched gas on tight
-orbits, if the mass ratios and gas fractions of the mergers are sufficiently high.
-
-Boylan-Kolchin: the blue population could form in high density regions along the
-cosmic filament before or during the collapse of the proto-galaxy itself.
-This formation scenario would explain the presence of the oldest GCs with
-primordial metallicities in the (outer) haloes of galaxies as the GCs are
-accreted over time. Moreover, the tidal fields experienced by GCs at (outer) halo
-orbits is significantly lower than by GCs in the inner galaxy, thus such GCs
-are expected to be long-lived.
-
-
-An alternative paradigm is that GC formation does not rely on special conditions
-at high redshifts. Rather, the same physics that governs the formation of young
-massive clusters (YMCs) in the Local Group can be applied to the high redshift
-Universe. The observed differences between YMCs and GCs, in this scenario, arise
-naturally as the result intrinsic GC evolution within galactic tidal fields over
-a Hubble time. This interesting hypothesis is tested numerically by the E-MOSAICS
-people.
-
-
-\citet{2010MNRAS.404.1203F} collected age-metallicity observations from the
-literature and found one track with constant age of 12.8~Gyr, and one track
-with branches towards younger ages. These branches are dominated by GCs associated
-with the Sagittarius, Canis Major and other accreted dwarf galaxies, ultimately
-indicating that 27-47 GCs (about one 25\% of the MW GCS) have been accreted
-from six to eight dwarf galaxies. \citet{2019MNRAS.486.3134K, 2019MNRAS.486.3180K}
-show that GC simulated age-metallicity space of the E-MOSAICS suite indeed allows
-for a reconstruction of the merger history of the Milky Way-like galaxies, and
-conclude that 40\% of the MW GCS has been accreted from galaxies with a stellar
-mass range of $2 \cdot 10^{7} - 2 \cdot 10^{9}$ M\Sun, and $6\pm1$ are core remnants
-of accreted dwarfs.
-
-
-
-% \begin{itemize}
-%     \item \citet{2005MNRAS.364..367D}: ``The radial profile of the stellar halo
-%     and metal-poor globular clusters of the Milky Way suggest that these components
-%     formed in rare early peaks above $2.5 \sigma$ at redshift above 10. ''
-%
-%     \item \citet{2017MNRAS.465.3622R}: ``GCs among oldest astrophysical objects.
-%     GCs form in the early Universe in highest density peaks
-%     \citep[e.g.][]{2005MNRAS.364..367D, 2009ApJ...706L.192B}''
-%
-%     \item ``Hence, they witness most of the formation and evolution processes
-%     of galaxies, and can be used to probe them'' \citep{2006ARA&A..44..193B}
-% \end{itemize}
-
-
-\begin{itemize}
-    \item Special conditions in early Universe?
-    \item Formation in collapsing proto-galaxies (in-situ-ish?)
-    \item Formation as a result of (wet) mergers?
-    \item Formation in satellites that are later accreted?
-    \item No special conditions at high z, but connection between low-z YMC-
-        and high-z GC-formation where differences could result from Hubble time
-        of evolution?
-    \item This means that in order to test formation models against observations,
-        one not only needs needs to model GC formation, but also include the full
-        evolution over their lifetime in a cosmological tidal field.
-\end{itemize}
-
-\todo[inline]{Paragraph: ingredients for numerical studies}
-\begin{itemize}
-    \item High resolution in the ISM
-    \item Full cosmological evolution
-\end{itemize}
-
-% \todo[inline]{Paragraph: scientific context / state of the field: briefly summarise
-%     previous work and references work of other groups}
-% \begin{itemize}
-% \item Origin of the Milky Way globular clusters \citep{2017MNRAS.465.3622R}
-% \item GCs in FIRE \citep{2018MNRAS.474.4232K}
-% \item EMOSAICS project \citep{2018MNRAS.475.4309P}
-% \item GC-DMhalo connection \citep{2017MNRAS.472.3120B}
-% \item Origin of GC bimodality? \citep{2018MNRAS.479..200F}
-% \item \textit{GAIA} DR2: GC kinematics \citep{2018A&A...616A..12G}
-% \item Dating GC Tidal Disruption \citep{2018ApJ...859L..13B}
-% \item GC in N-body simulation \citep{2018ApJ...861...69C}
-% \item (Role of GC mass evolution on stream properties \citep{2018MNRAS.474.2479B})
-% \item GC formation from dwarfs to giants \citep{2018MNRAS.480.2343C}
-% \item (GC contribution to EOR \citep{2018MNRAS.479..332B})
-% \item Early Universe supermassive star / GC formation \citep{2018MNRAS.478.2461G}
-% \item GC formation in cold filaments \citep{2018ApJ...861..148M}
-% \item GC formation in high-redshift dwarf galaxies \citep{2018MNRAS.477..480Z}
-% \item GCs in MW outer region \citep{2017arXiv170804542P}
-% \item Impact of the Cutoff of the Cluster Initial Mass Function \citep{2018arXiv181001888C}
-% \item Metallicity gradients in the globular cluster systems of early-type galaxies: in situ and accreted components \citep{2018MNRAS.479.4760F}
-% \item Globular clusters in M31, Local Group, and external galaxies \citep{2016IAUS..317..120L}
-% \item Globular Clusters Formed within Dark Halos I: present-day abundance, distribution and kinematics \citep{2019MNRAS.482..219C}
-% \item (The mass of the Milky Way from satellite dynamics \citep{2018arXiv180810456C})
-% \item Globular cluster formation and evolution in the context of cosmological galaxy assembly: open questions \citep{2018RSPSA.47470616F}
-% \item The kinematics of globular clusters systems in the outer halos of the Aquarius simulations \citep{2016A&A...592A..55V}
-% \item Star Cluster Formation in Cosmological Simulations \citep{2017ApJ...834...69L, 2018ApJ...861..107L, 2018arXiv181011036L}
-% \item (A systematic analysis of star cluster disruption by tidal shocks - I. Controlled N-body simulations and a new theoretical model \citep{2018arXiv181200014W})
-% \item Spatial mixing of binary stars in multiple-population globular clusters \citep{2018MNRAS.tmp.3147H}
-% \item Star Clusters Across Cosmic Time \citep{2018arXiv181201615K}
-% \item Kinematics of Subclusters in Star Cluster Complexes: Imprint of their Parental Molecular Clouds \citep{2018arXiv181201858F}
-% \item Investigating the population of Galactic star formation regions and star clusters within a Wide-Fast-Deep Coverage of the Galactic Plane  \citep{2018arXiv181203025P}
-% \item Globular cluster number density profiles using \textit{Gaia} DR2 \citep{2019arXiv190108072D}
-% \item Clustering Clusters: unsupervised learning on GC observations (of log $M$,
-%     log $\sigma_0$, log $R_e$ , [Fe/H], log $|Z|$) to determine number of groups
-%     $k=2$ (disk/halo) or $k=3$ (disk/inner-halo/outer-halo): the optimal number
-%     of groups given the data is $k=3$. \citep{2019arXiv190105354P}.
-% \item There is a well-known hypothesis that Open Stars Clusters (OSCs) could form as a result
-%     of GCs crossing the disk. New kinematical data does not support
-%     this claim for two particular OSC-GC pairs, and does seem consistent
-%     with this scenario for six OSC-GC pairs \citep{2019arXiv190106481B}. (Note
-%     that GC crossing the disk could also trigger formation of multiple OSCs!)
-% \item DM halo mass can be inferred from number of globular cluster in galaxy
-%     \citep{2019arXiv190100900B}
-% \item GCs in M31 outer halo \citep{2019arXiv190111229W}
-% % TODO: last checked arXiv Mar 2, 2019
-% \end{itemize}
-
-
-
-
-% \todo[inline]{Paragraph, narrowing open questions in GC research down to formation,
-%     possibly ``Bimodality suggests two formation mechanisms''. In-situ
-%     formation vs. accretion in hierarchical build-up of galaxies naturally produces
-%     two populations of globular cluster.}
-% \begin{itemize}
-%     \item ``colour bimodality, blue and red clusters \citep[e.g.][]{1985ApJ...293..424Z, 1999AJ....118.1526G, 2001AJ....121.2974L, 2006ApJ...639...95P}
-%     \item ``blue metal-poor (with distribution peaking at [Fe/H] $\approx -1.5$ for the Milky Way), no sign of rotation as a population (..) more metal-rich (peak at [Fe/H] $\approx -0.5$ in the Milky  Way) more spatially concentrated and rotating with the galaxy.'' \citep{1996AJ....112.1487H}
-%     \item ``Blue clusters from in early Universe in galaxies that merge later. In (wet) merger process starbursts generate red population \cite{1992ApJ...384...50A, 1987nngp.proc...18S}''
-%     \item ``\citet{1997AJ....113.1652F} propose instead that blue globulars form when the protogalaxy itself collapses, in a metal-poor and turbulence media. The red population would form later, once the galactic disc has settled. The formation of globular clusters would then be a multiphase process, with the first phase being interrupted possibly by cosmic reionization \citep{2002MNRAS.333..383B}.''
-%     \item ``\citet{2005ApJ...623..650K, 2014ApJ...796...10L} advocate
-% that major mergers are at the origin of both sub-populations: blue
-% clusters form during early mergers (z > 4) while the red ones appear
-% in mergers at lower redshifts (even after z = 1). Although, this
-% scenario, combined with star formation enhancement in mergers,
-% seems appropriate in dense galactic environment leading to the
-% assembly of massive elliptical galaxies, like in the Virgo Cluster
-% as tested by \citet{2014ApJ...796...10L}, it does not apply to Milky Way-
-% like systems where no recent major merger took place (Wyse 2001;
-% Deason et al. 2013; Ruchti et al. 2014, 2015).
-% \item ``\citet{1998ApJ...501..554C} argue that red clusters form in situ while the blue ones are accreted, either via merging satellite galaxies, or by tidal capture of the clusters themselves \citep[see also][]{2013ApJ...762...39T}.''
-% \end{itemize}
-
-
-
-\todo[inline]{Paragraph: narrow down to this work}
-The star formation model implemented in the Auriga simulations is capable of
-producing realistic Milky Way-like (spiral disk) galaxies at redshift zero. Therefore
-the question naturally arises whether or not the Auriga simulations also produce
-a subset of star particles (GC candidates) which is consistent with the GC system
-of the Milky Way and/or the Andromeda galaxy (M31). The typical mass scale of
-globular clusters is comparable to the numerical (mass) resolution of cosmological
-zoom simulations. The detailed physics of GC formation in the Universe appears in
-observations as the combined effect of the $10^{3-6}$ M\Sun, compared to a mass
-resolution of $10^{3-5}$ M\Sun in the Auriga simulations. Globular clusters can
-therefore serve as an ultimate test to the star formation model that is implemented
-in the numerical simulations. Moreover, cosmological zoom simulations provide a
-detailed (formation and merger) history of the simulated galaxies. This is
-important because theoretical paradigms for globular cluster formation in the
-literature know two distinct classes of GCs that are separated by their exact
-formation sites: an in situ versus an accreted population. Cosmological zoom
-simulations uniquely allow for an investigation into globular cluster formation
-with a particular focus on the properties of the in situ versus accreted subpopulations.
+Previous studies
+\citep{2005ApJ...623..650K}
+\citep{2016ApJ...831..204R}
+\citep{2017ApJ...834...69L}
+\citep{2017MNRAS.465.3622R}
+\citep{2018MNRAS.474.4232K}
+\citep{2018MNRAS.475.4309P,2019MNRAS.486.3134K}
 
 
 \todo[inline]{Paragraph: Paper outline}
 We summarise the relevant characteristics of the Auriga simulations in
 section~\ref{sec:auriga}, followed by a summary of the observations of the
-Milky Way (MW) globular cluster system (GCS) in section~\ref{sec:observations}
-that we use to compare our simulations to in section~\ref{sec:results}. We
-discuss our findings in section~\ref{sec:discussion} to come to our conclusions
-in section~\ref{sec:conclusions}.
+Milky Way (MW) and Andromeda globular cluster system (GCS) in
+section~\ref{sec:observations} that we use to compare our simulations to in
+section~\ref{sec:results}. We discuss our findings in section~\ref{sec:discussion}
+to come to our conclusions in section~\ref{sec:conclusions}.
 
 
 \section{The Auriga simulations}
@@ -970,16 +755,16 @@ disruption.
 
 
 \citep{2019MNRAS.486.5838R}
-``Out of the cluster formation models considered, the `no formation physics' model, 
-in which both the CFE and the ICMF are fixed throughout cosmic time, is 
-approximately equivalent to those studies  that  use  `particle-tagging' 
-techniques  to  identify  GCs  in cosmological simulations (e.g. Tonini 2013, 
+``Out of the cluster formation models considered, the `no formation physics' model,
+in which both the CFE and the ICMF are fixed throughout cosmic time, is
+approximately equivalent to those studies  that  use  `particle-tagging'
+techniques  to  identify  GCs  in cosmological simulations (e.g. Tonini 2013,
 Renaud et al. 2017). We find that this cluster formation model continues to form GCs
-at a vigorous rate until the present time, which implies it overproduces 
+at a vigorous rate until the present time, which implies it overproduces
 the total GC mass in the Milky Way by a factor
 5.5 relative to the mass formed in the fiducial model. Likewise, the continued
 formation  of  GCs  in  this  model  predicts  the  on-going  formation
-of massive (M $>10^5$ M\Sun) clusters with [Fe/H]< −0.5 should be observed in 
+of massive (M $>10^5$ M\Sun) clusters with [Fe/H]< −0.5 should be observed in
 Milky Way-mass galaxies at z=0. For these reasons, an environmentally independent
 cluster formation description is not compatible with observations.''
 
