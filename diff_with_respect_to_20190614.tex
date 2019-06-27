@@ -1,4 +1,7 @@
 % mnras_template.tex
+%DIF LATEXDIFF DIFFERENCE FILE
+%DIF DEL AurigaGCS_20190614.tex   Mon Jun 24 11:07:39 2019
+%DIF ADD AurigaGCS.tex            Mon Jun 24 11:49:16 2019
 %
 % LaTeX template for creating an MNRAS paper
 %
@@ -98,6 +101,26 @@ $^{5}$ Harvard-Smithsonian Center for Astrophysics, 60 Garden Street, Cambridge,
 \pubyear{2019}
 
 % Don't change these lines
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF UNDERLINE PREAMBLE %DIF PREAMBLE
+\RequirePackage[normalem]{ulem} %DIF PREAMBLE
+\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{{\protect\color{blue}\uwave{#1}}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{{\protect\color{red}\sout{#1}}}                      %DIF PREAMBLE
+%DIF SAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
+\providecommand{\DIFaddend}{} %DIF PREAMBLE
+\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
+\providecommand{\DIFdelend}{} %DIF PREAMBLE
+%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
+
 \begin{document}
 \label{firstpage}
 \pagerange{\pageref{firstpage}--\pageref{lastpage}}
@@ -225,20 +248,24 @@ simulations \citep{2010ApJ...718.1266M,2014ApJ...796...10L,2018MNRAS.480.2343C,
 
 In this work we use state of the art simulations that produce realistic spiral 
 galaxies at redshift zero for which several global properties are consistent with 
-the observations. The simulations yield realistic Milky Way analogues, and real
-galaxies host globular cluster systems. The question thus naturally arises whether 
-the star formation histories of the simulations (also) give rise to a GC system 
-similar to the Milky Way and/or Andromeda globular cluster systems. In particular, 
-we use the Auriga suite of cosmological zoom simulations 
-(\citealt{2017MNRAS.467..179G}, and described in Sec.~\ref{sec:auriga}) to
-investigate whether the star formation model implemented produces metallicity, 
+the observations. The simulations yield realistic Milky Way analogues, and \DIFdelbegin \DIFdel{such
+galaxies are known to }\DIFdelend \DIFaddbegin \DIFadd{real
+galaxies }\DIFaddend host globular cluster systems. The question thus naturally arises whether 
+the \DIFaddbegin \DIFadd{star formation histories of the }\DIFaddend simulations (also) \DIFdelbegin \DIFdel{yield a population of star particles that 
+is consistent with }\DIFdelend \DIFaddbegin \DIFadd{give rise to a GC system 
+similar to }\DIFaddend the Milky Way and/or Andromeda globular cluster systems. In particular, 
+we \DIFdelbegin \DIFdel{investigate }\DIFdelend \DIFaddbegin \DIFadd{use }\DIFaddend the Auriga suite of cosmological zoom simulations 
+(\citealt{2017MNRAS.467..179G}, and described in Sec.~\ref{sec:auriga}) \DIFdelbegin \DIFdel{because
+a study of its GC system could serve as an ultimate test of }\DIFdelend \DIFaddbegin \DIFadd{to
+investigate whether }\DIFaddend the star formation model \DIFdelbegin \DIFdel{. }\DIFdelend \DIFaddbegin \DIFadd{implemented produces metallicity, 
 radial, and metallicity-radial distributions that are consistent with the MW 
 and/or M31 GC systems, and whether the model produces enough stellar mass with
 the right properties to allow for formation efficiencies lower than unity and
 the expected (dynamical) mass loss over the cluster lifetime (not modelled 
 explicitly in this study). 
+}
 
-The plan of the paper is as follows. We summarise the relevant characteristics 
+\DIFaddend The plan of the paper is as follows. We summarise the relevant characteristics 
 of the Auriga simulations in section~\ref{sec:auriga}, followed by a summary of 
 the observations of the Milky Way (MW) and Andromeda globular cluster system (GCS)
 in section~\ref{sec:observations} that we use to compare our simulations to in
@@ -318,16 +345,33 @@ Pole. We calculate the galactocentric radius $R_{\text{GC}}=\sqrt{(X-R_\odot)^2
 + Y^2 + Z^2}$, assuming the solar radius $R_\odot=8$~kpc.}, and absolute
 magnitude in the V-band $M_V$. We use the latter to calculate mass-estimates by
 assuming $M_{V,\odot}=4.83$ and a mass to light ratio $M/L_V = 1.7$~M/L$_{\odot}$,
-the mean for MW clusters \citep{2005ApJS..161..304M}. We supplement the catalogue
+the mean for MW clusters \citep{2005ApJS..161..304M}. \DIFdelbegin %DIFDELCMD < 
+
+%DIFDELCMD < %%%
+%DIF <  \citet{2019AJ....157...12B} communicate the latest efforts to aggregate the
+%DIF <  available data, presented in their CatClu catalog. Amongst 10978 star clusters
+%DIF <  and alike objects in the Milky Way, the catalog contains 200 GCs and 94 GC
+%DIF <  candidates. The CatClu catalog contains reference papers, positions, distances,
+%DIF <  and total absolute V magnitude. Therefore we rely on the H96e10 dataset for all
+%DIF <  other quantities, but
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdelend We supplement the catalogue
 with age-estimates from isochrone fits to stars near the main-sequence turnoff 
 in 55 GCs \citep[][hereafter V13]{2013ApJ...775..134V}.
+\DIFdelbegin \DIFdel{The mean value of the age-estimates in this data set is $11.9 \pm 0.1$~Gyr and
+the dispersion is $0.8$~Gyr. Furthermore, only one of the 55 GC age-estimates is
+below $10$~Gyr.
+}\DIFdelend \DIFaddbegin 
 
-% \citet{2019AJ....157...12B} communicate the latest efforts to aggregate the
-% available data, presented in their CatClu catalog. Amongst 10978 star clusters
-% and alike objects in the Milky Way, the catalog contains 200 GCs and 94 GC
-% candidates. The CatClu catalog contains reference papers, positions, distances,
-% and total absolute V magnitude. Therefore we rely on the H96e10 dataset for all
-% other quantities, but
+%DIF >  \citet{2019AJ....157...12B} communicate the latest efforts to aggregate the
+%DIF >  available data, presented in their CatClu catalog. Amongst 10978 star clusters
+%DIF >  and alike objects in the Milky Way, the catalog contains 200 GCs and 94 GC
+%DIF >  candidates. The CatClu catalog contains reference papers, positions, distances,
+%DIF >  and total absolute V magnitude. Therefore we rely on the H96e10 dataset for all
+%DIF >  other quantities, but
+\DIFaddend 
 
 \subsection{Andromeda}
 \label{sec:andromeda}
@@ -353,16 +397,19 @@ for our study as it contains GCs in the inner region and in the outer halo. The
 relevant fields in the CR16 dataset that we use are the age, metallicity, and the
 mass-estimate\footnote{The authors assumed $M/L_V = 2$ independent of [Fe/H]}.
 
-\subsection{Age-estimates}
-Figure~\ref{fig:MW-M31-age} shows a histogram of the age-estimates of the $55$
+\DIFaddbegin \subsection{Age-estimates}
+\DIFadd{Figure~\ref{fig:MW-M31-age} shows a histogram of the age-estimates of the $55$
 MW GCs in V13 and $88$ GCs in M31 for which age-estimates are available in CR16.
 The mean age of the MW GCs in this data set is $11.9 \pm 0.1$~Gyr and the 
 dispersion is $0.8$~Gyr. Furthermore, only one of the 55 GC age-estimates is
-below $10$~Gyr. The M31 GCS has a mean age of $11.0 \pm 0.2$~Gyr with a dispersion 
+below $10$~Gyr. }\DIFaddend The M31 GCS has a mean age of $11.0 \pm 0.2$~Gyr with a dispersion 
 of $2.2$~Gyr, and $24$ GCs have age-estimates below $10$~Gyr with a minimum age 
-of $4.8$~Gyr. The Milky Way appears to host a globular cluster system that is
+of $4.8$~Gyr. \DIFdelbegin \DIFdel{We show a histogram of the age-estimates of the $55$ MW GCs in V13 and $88$ GCs
+in M31 for which age-estimates are available in CR16, see Figure~\ref{fig:MW-M31-age}.
+}\DIFdelend \DIFaddbegin \DIFadd{The Milky Way appears to host a globular cluster system that is
 somewhat older than the Andromeda galaxy, although we caution that both data 
 sets are incomplete and the age measurements have large uncertainties (of $1-2$~Gyr)
+}\DIFaddend 
 
 
 \begin{figure}
@@ -798,7 +845,7 @@ cluster formation description is not compatible with observations.''
 We investigate GC candidates in the Auriga simulations and draw the following
 conclusions.
 
-\begin{itemize}
+ \begin{itemize} 
     \item The star formation model implemented in the Auriga simulations produces
     metallicity distributions that are more metal-rich the Milky Way and M31
     globular cluster systems.
@@ -826,7 +873,7 @@ conclusions.
     \item The Auriga simulations are not consistent with the picture that all
     metal-rich GCs formed insitu and that all metal-poor GCs were accreted.
 
-\end{itemize}
+ \end{itemize} 
 
 
 \section*{Acknowledgements}
