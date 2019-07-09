@@ -1,7 +1,7 @@
 % mnras_template.tex
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL AurigaGCS_20190614.tex   Mon Jun 24 11:07:39 2019
-%DIF ADD AurigaGCS.tex            Mon Jun 24 11:49:16 2019
+%DIF ADD AurigaGCS.tex            Tue Jul  9 18:04:27 2019
 %
 % LaTeX template for creating an MNRAS paper
 %
@@ -480,9 +480,11 @@ in Sec.~\ref{sec:results_FeHRgc}.
 \subsection{Metallicity distribution}
 \label{sec:results_FeH}
 We investigate whether the star formation model implemented in Auriga produces
-metallicity distributions consistent with the MW (M31) GC system, and whether
+metallicity distributions consistent with the MW \DIFdelbegin \DIFdel{(}\DIFdelend \DIFaddbegin \DIFadd{and }\DIFaddend M31 \DIFdelbegin \DIFdel{) GC system}\DIFdelend \DIFaddbegin \DIFadd{GC systems}\DIFaddend , and whether
 the subgrid generates sufficient total mass at metallicities typical for the
-MW (M31) GCS.
+MW \DIFdelbegin \DIFdel{(}\DIFdelend \DIFaddbegin \DIFadd{and }\DIFaddend M31 \DIFdelbegin \DIFdel{) GCS}\DIFdelend \DIFaddbegin \DIFadd{GCS's. To visually inspect the former we show the normalized metallicity 
+distribution of three specific Auriga galaxies in Figure~\ref{fig:Au4-10and21_FeH}
+in comparison to the MW and M31 }[\DIFadd{Fe/H}] \DIFadd{distributions}\DIFaddend .
 
 \begin{figure*}
     \includegraphics[width=\columnwidth]{{Au4-10_FeH_cleaner-trim}.png}
@@ -497,30 +499,38 @@ MW (M31) GCS.
         \label{fig:Au4-10and21_FeH}
     }
 \end{figure*}
-Figure~\ref{fig:Au4-10and21_FeH} shows the normalized metallicity distribution
-of \mbox{Au4-10}\footnote{The nomenclature is `Au' for Auriga, followed by the
+\DIFdelbegin \DIFdel{Figure~\ref{fig:Au4-10and21_FeH} shows the normalized metallicity distribution
+of }\DIFdelend \DIFaddbegin \DIFadd{We select }\DIFaddend \mbox{Au4-10}\footnote{The nomenclature is `Au' for Auriga, followed by the
 resolution level (4) and halo number (10, indicating which set of initial
-conditions was used the run).}, \mbox{Au4-21}, and \mbox{Au4-4}, showing the GC
-candidates in green. The accreted GC candidates are shown in red, and the insitu 
-subpopulation in blue. The top panel of the left panel shows the MW (M31) GC 
-system in purple (magenta). We overplot a double Gaussian for the MW GCS (the 
-purple dashed lines), adopting literature values of the mean $\mu$ and standard
-deviation $\sigma$ of the metal-rich and metal-poor populations \citep[][p. 38]{Harris2001}.
+conditions was used the run).}, \mbox{Au4-21}, and \mbox{Au4-4} \DIFdelbegin \DIFdel{, showing the }\DIFdelend \DIFaddbegin \DIFadd{to show the
+distributions of three individual simulation runs that we consider representative
+for specific behaviour, and to highlight that different runs could give rise to 
+different distributions. We plot the age-selected }\DIFaddend GC candidates in green\DIFdelbegin \DIFdel{. The accreted GC candidates are shown }\DIFdelend \DIFaddbegin \DIFadd{, those
+that are accreted }\DIFaddend in red, and the insitu subpopulation in blue. The top 
+\DIFdelbegin \DIFdel{panel }\DIFdelend \DIFaddbegin \DIFadd{half }\DIFaddend of the left \DIFdelbegin \DIFdel{panel }\DIFdelend \DIFaddbegin \DIFadd{figure }\DIFaddend shows the MW (M31) GC system in purple (magenta)\DIFdelbegin \DIFdel{. We }\DIFdelend \DIFaddbegin \DIFadd{, where 
+we }\DIFaddend overplot a double Gaussian for the MW GCS (the purple dashed lines) \DIFdelbegin \DIFdel{, }\DIFdelend \DIFaddbegin \DIFadd{by 
+}\DIFaddend adopting literature values of the mean $\mu$ and standard deviation $\sigma$ of 
+the metal-rich and metal-poor \DIFdelbegin \DIFdel{populations }\DIFdelend \DIFaddbegin \DIFadd{subpopulations }\DIFaddend \citep[][p. 38]{Harris2001}.
 
-We find that the age cut, on average, lowers the mean metallicity from $0.0$ to $-0.5$.
-Furthermore, the old accreted stars generally have lower metallicities than the
-old insitu stars. The difference between the mean metallicity of the old insitu
-and old accreted stars for the majority of the simulations is ${\sim}0.3$ (e.g.
-\mbox{Au4-21}), and ${\sim}0.5$ dex for \mbox{Au4-10}, \mbox{Au4-16}, \mbox{Au4-17},
-\mbox{Au4-18} and \mbox{Au4-22}. This trend is only reversed for \mbox{Au4-1}
-and \mbox{Au4-4}, for which the old insitu population has a lower mean metallicity
-instead. For \mbox{Au4-1} we find $\mu = -1.51 \, ({-0.74})$ for the old insitu (accreted),
-but the former consists of only $1019$ particles ($1.3$\% of all GC candidates, and
-with a total mass of 5e7 M\Sun) thus we believe our classification of insitu is
+We find that the age cut, on average, lowers the mean metallicity from $0.0$ to
+\DIFdelbegin \DIFdel{$-0.5$}\DIFdelend \DIFaddbegin \DIFadd{$-0.6$}\DIFaddend . Furthermore, the old accreted stars generally have lower \DIFaddbegin \DIFadd{mean }\DIFaddend metallicities
+than the old insitu stars \DIFdelbegin \DIFdel{. The difference between the mean metallicity of the old insitu
+and old accreted stars }\DIFdelend \DIFaddbegin \DIFadd{with differences of roughly ${\sim}0.3$ }\DIFaddend for the majority 
+of the \DIFdelbegin \DIFdel{simulations is ${\sim}0.3$ (e.g. \mbox{Au4-21}), and }\DIFdelend \DIFaddbegin \DIFadd{simulation runs. This behaviour can be seen in \mbox{Au4-21}, while a 
+slightly larger difference of }\DIFaddend ${\sim}0.5$ dex \DIFdelbegin \DIFdel{for \mbox{Au4-10}}\DIFdelend \DIFaddbegin \DIFadd{is seen for \mbox{Au4-10} (as plotted)}\DIFaddend , 
+\mbox{Au4-16}, \mbox{Au4-17}, \mbox{Au4-18} and \mbox{Au4-22}. \DIFdelbegin \DIFdel{This trend 
+is only }\DIFdelend \DIFaddbegin \DIFadd{However, this trend 
+is }\DIFaddend reversed for \mbox{Au4-1} and \mbox{Au4-4} \DIFdelbegin \DIFdel{, }\DIFdelend for which the old insitu population 
+has a lower mean metallicity instead. \DIFdelbegin \DIFdel{For \mbox{Au4-1} }\DIFdelend \DIFaddbegin \DIFadd{We caution that \mbox{Au4-1} is undergoing
+a major merger at redshift zero and note that }\DIFaddend we find $\mu = -1.51 \, ({-0.74})$ 
+for the old insitu (accreted) \DIFdelbegin \DIFdel{,
+but }\DIFdelend \DIFaddbegin \DIFadd{although }\DIFaddend the former consists of only $1019$ 
+particles ($1.3$\% of all GC candidates, and with a total mass of 5e7 M\Sun)\DIFdelbegin \DIFdel{thus we believe our classification of insitu is
 flawed for this halo due to misclassification of the primary halo in the merger
-tree by subfind. For \mbox{Au4-4}, ${10.8}$\% of the GC candidates is classified
-as insitu (compared to insitu fractions of ${40-80}$\% for other haloes). Overall
-we find that the simulations produce (sub)populations of GC candidates that are
+tree by subfind}\DIFdelend . 
+For \mbox{Au4-4}, ${10.8}$\% of the GC candidates is classified as insitu (compared 
+to insitu fractions of ${40-80}$\% for other haloes). Overall we find that the 
+simulations produce (sub)populations of GC candidates that are
 more metal-rich than the MW and M31 GC systems. Moreover, none of the simulations
 has a population of GC candidates with a bimodal metallicity distribution
 (the green curves).
@@ -542,9 +552,32 @@ has a population of GC candidates with a bimodal metallicity distribution
 \end{figure}
 
 We show the mean metallicity and standard deviation of all thirty Auriga L4 haloes
-in Figure~\ref{fig:FeH_mu_sigma}. The green crosses are to be compared to the
-purple (magenta) cross, which shows the mean value of all MW (M31) GCs.
-We test the null hypothesis that MW (M31) and the GC candidates (all, insitu, and
+in Figure~\ref{fig:FeH_mu_sigma} \DIFaddbegin \DIFadd{to show the behaviour for the full set of Auriga
+galaxies}\DIFaddend . The green crosses are to be compared to the purple (magenta) cross, 
+which shows the mean value of all MW (M31) GCs. \DIFdelbegin \DIFdel{We }\DIFdelend \DIFaddbegin \DIFadd{In addition, we show the metal-rich 
+(metal-poor) population of the MW GCS using a solid (open) dot. We caution that
+these literature values result from individual Gaussian fits to sub sets of the 
+observational data cut at }[\DIFadd{Fe/H}]\DIFadd{~$= -1$. We do not include corresponding data 
+points calculated using such an artificial cut for the simulated star particles.
+Having said that, we do find it interesting that the mean metallicities of the 
+old insitu populations appear roughly consistent with that of the metal-rich 
+population of the MW although the simulations show larger dispersions. The latter 
+could simply be caused by the hard separation of the data into two groups, which 
+means the range is smaller and the resulting dispersion could be lower. With 
+regard to the M31 GCS, we are uncertain whether definitive consensus is reached
+concerning uni- bi- or trimodality in the }[\DIFadd{Fe/H}] \DIFadd{distribution, but CR16 argues 
+that the data, after removal of younger objects due to improved age classification, 
+hints at three populations separated at }[\DIFadd{Fe/H}]\DIFadd{~$>-0.4$ and }[\DIFadd{Fe/H}]\DIFadd{~$ < 1.5$. None 
+of the Auriga sub sets has a mean value that offers much hope that the simulated 
+distribution is consistent with the lowest metallicity group in the M31 GCS. This 
+is also true for the metal-poor population of the MW with a mean value of $-1.6$.
+The main take-away from this plot, again, is that all Auriga L4 galaxies have
+metallicity distributions with (much) larger mean values than what is observed
+for the MW and M31 GCS, and that we systematiclly find lower mean metallicities
+for the accreted GC candidates than for those that have formed in situ.
+}
+
+\DIFadd{Finally, we }\DIFaddend test the null hypothesis that MW (M31) and the GC candidates (all, insitu, and
 accreted) are drawn from the same underlying distribution by calculating the KS
 test statistic (i.e. six KS tests per simulation). We reject $H_0$ at the 100.00~\%
 confidence level for virtually all subsets of all simulations, both for MW and M31,
@@ -560,17 +593,22 @@ than the MW (M31) GCS. The main reasons that $H_0$ is rejected with such
 high confidence are under-production of old stars with [Fe/H]~$\leq$~-1.5,
 and over-production of stars with [Fe/H]$\geq$~-0.5.
 
-In addition, we show the metal-rich (metal-poor) population of the MW GCS using
+
+
+\DIFdelbegin \DIFdel{In addition, we show the metal-rich (metal-poor) population of the MW GCS using
 a solid (open) dot. The mean metallicities of the old insitu populations appear
 roughly consistent with that of the metal-rich population of the MW, but the
 simulations show larger dispersions. We are uncertain whether definitive consensus
-is reached concerning uni- or bimodality in the [Fe/H] distribution of M31, but
+is reached concerning uni- or bimodality in the }%DIFDELCMD < [%%%
+\DIFdel{Fe/H}%DIFDELCMD < ] %%%
+\DIFdel{distribution of M31, but
 CR16 argues that the data, after removal of younger objects due to improved age
 classification, hints at three populations. However, we do not show these (unknown)
 points for the M31 GCS.
+}%DIFDELCMD < 
 
-
-\begin{figure}
+%DIFDELCMD < %%%
+\DIFdelend \begin{figure}
     \includegraphics[width=\columnwidth]{{logMFeH_withRatios-trim}.png}
     \caption{
         Mass-weighted metallicity distribution of star particles in the Auriga
@@ -584,32 +622,34 @@ points for the M31 GCS.
         \label{fig:FeH}
     }
 \end{figure}
-We now turn to the total mass in GC candidates produced by the Auriga simulations.
-We show the median (coloured lines) for all thirty Auriga L4 haloes with the
-$1\sigma$ interval around it (shaded regions, which shows the scatter between
-runs that have different initial conditions, thus, have unique merger histories).
-We chose to aggregate the data to indicate a general trend that we find when the
-GC candidates are split up according to birth location, rather than selecting
-typical examples of individual (simulated) galaxies. Figure~\ref{fig:FeH} shows 
-the mass-weighted metallicity distribution of all Auriga L4 galaxies. Once again 
-we notice that the peak metallicity shifts down from $0$ to $-0.5$ for old stars
-(green solid) compared to all stars (green dotted), and we learn that the mass at 
-the peak lowers by roughly one dex. The mass budget of the old stars is dominated
-by the old insitu population (blue solid) below [Fe/H]~=~$-1$, and by the old accreted
-stars (red solid) above this value. We show the MW (M31) GCS in purple (magenta)
-and we show the ratio of the simulated to the observed profiles in the middle
-(bottom) panel. This mass excess can be thought of the `mass budget' that the
-Auriga GC candidates can `afford to lose' due to a combination of smaller than
-unity bound cluster formation efficiencies combined with a Hubble time of dynamical
-evolution, while still producing a GC system with sufficient mass to be consistent
-with the MW (M31) GCS. The cluster formation efficiency would have to linearly
-decrease with decreasing metallicity for Auriga GC candidates to produce a population
-of GC candidates that is consistent with the MW. For the GC candidates in M31
-we find a constant mass excess up to $-0.9$, above which the
-simulations produce a higher mass excess with increasing metallicity. If dynamical
-evolution is not expected to more efficiently disrupt GCs of higher metallicity,
-then we would find that the efficiency to form bound star clusters would have to
-decrease with increasing metallicity.
+We now turn to the \DIFaddbegin \DIFadd{second goal, which is to see whether sufficient }\DIFaddend total mass in 
+GC candidates produced by the Auriga simulations. \DIFaddbegin \DIFadd{To answer this question we plot
+a mass-weighted metallicity distribution in Figure~\ref{fig:FeH}. }\DIFaddend We show the 
+median (coloured lines) for all thirty Auriga L4 haloes with the $1\sigma$ 
+interval around it (shaded regions, which shows the scatter between runs that 
+have different initial conditions, thus, have unique merger histories). We chose 
+to aggregate the data to indicate \DIFdelbegin \DIFdel{a general trend }\DIFdelend \DIFaddbegin \DIFadd{general trends }\DIFaddend that we find when the GC candidates 
+are split up according to birth location, rather than selecting typical examples 
+of individual (simulated) galaxies. \DIFdelbegin \DIFdel{Figure~\ref{fig:FeH} shows 
+the mass-weighted metallicity distribution of all Auriga L4 galaxies. }\DIFdelend Once again we notice that the peak metallicity 
+shifts down from $0$ to \DIFdelbegin \DIFdel{$-0.5$ }\DIFdelend \DIFaddbegin \DIFadd{$-0.6$ }\DIFaddend for old stars (green solid) compared to all stars 
+(green dotted), and we learn that the mass at the peak lowers by roughly one dex. 
+The mass budget of the old stars is dominated by the old insitu population (blue 
+solid) below [Fe/H]~=~$-1$, and by the old accreted stars (red solid) above this 
+value. We show the MW (M31) GCS in purple (magenta) and we show the ratio of the 
+simulated to the observed profiles in the middle (bottom) panel. This mass excess 
+can be thought of the `mass budget' that the Auriga GC candidates can `afford to 
+lose' due to a combination of smaller than unity bound cluster formation 
+efficiencies combined with a Hubble time of dynamical evolution, while still 
+producing a GC system with sufficient mass to be consistent with the MW (M31) GCS. 
+The cluster formation efficiency would have to linearly decrease with decreasing 
+metallicity for Auriga GC candidates to produce a population of GC candidates 
+that is consistent with the MW. For the GC candidates in M31 we find a constant 
+mass excess up to $-0.9$, above which the simulations produce a higher mass excess 
+with increasing metallicity. If dynamical evolution is not expected to more 
+efficiently disrupt GCs of higher metallicity, then we would find that the 
+efficiency to form bound star clusters would have to decrease with increasing 
+metallicity.
 
 
 \subsection{Radial distribution}
