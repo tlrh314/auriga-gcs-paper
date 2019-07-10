@@ -326,8 +326,7 @@ in 55 GCs \citep[][hereafter V13]{2013ApJ...775..134V}.
 % available data, presented in their CatClu catalog. Amongst 10978 star clusters
 % and alike objects in the Milky Way, the catalog contains 200 GCs and 94 GC
 % candidates. The CatClu catalog contains reference papers, positions, distances,
-% and total absolute V magnitude. Therefore we rely on the H96e10 dataset for all
-% other quantities, but
+% and total absolute V magnitude. Therefore we rely on the H96e10 dataset.
 
 \subsection{Andromeda}
 \label{sec:andromeda}
@@ -368,8 +367,6 @@ type than the MW meaning that an older stellar population would naively be expec
 . However, we do caution that both data sets are incomplete and the age 
 measurements have large uncertainties (of $1-2$~Gyr). On the other hand, the 
 magnitude of the uncertainty is insufficient to explain the low-age tail in M31.
-
-
 
 \begin{figure}
     \includegraphics[width=\columnwidth]{{MW_M31_Age_Histogram-trim}.png}
@@ -581,13 +578,18 @@ shifts down from $0$ to $-0.6$ for old stars (green solid) compared to all stars
 (green dotted), and we learn that the mass at the peak lowers by roughly one dex. 
 The mass budget of the old stars is dominated by the old insitu population (blue 
 solid) below [Fe/H]~=~$-1$, and by the old accreted stars (red solid) above this 
-value. We show the MW (M31) GCS in purple (magenta) and we show the ratio of the 
-simulated to the observed profiles in the middle (bottom) panel. This mass excess 
-can be thought of the `mass budget' that the Auriga GC candidates can `afford to 
-lose' due to a combination of smaller than unity bound cluster formation 
-efficiencies combined with a Hubble time of dynamical evolution, while still 
-producing a GC system with sufficient mass to be consistent with the MW (M31) GCS. 
-The cluster formation efficiency would have to linearly decrease with decreasing 
+value. We show the MW (M31) GCS in purple (magenta) and notice that the difference 
+between the MW and M31 distributions is substantially larger than the scatter
+between different Auriga galaxies, particularly around [Fe/H]~$=-1$. In addition, 
+Andromeda does host (a hand full) GCs with [Fe/H]~$< -2.5$ as well as GCs with 
+[Fe/H]~$ > 0$ while the Milky Way does not.
+
+We show the ratio of the  simulated to the observed profiles in the middle (bottom) 
+panel. This mass excess can be thought of the `mass budget' that the Auriga GC 
+candidates can `afford to lose' due to a combination of smaller than unity bound
+cluster formation efficiencies combined with a Hubble time of dynamical evolution,
+while still producing sufficient mass at the right metallicities. In particular,
+the cluster formation efficiency would have to linearly decrease with decreasing 
 metallicity for Auriga GC candidates to produce a population of GC candidates 
 that is consistent with the MW. For the GC candidates in M31 we find a constant 
 mass excess up to $-0.9$, above which the simulations produce a higher mass excess 
@@ -609,12 +611,26 @@ metallicity.
         \label{fig:Rgc_mu_sigma}
     }
 \end{figure}
-Figure~\ref{fig:Rgc_mu_sigma} shows the mean and standard deviation of the
-radial distribution of star particles in all Auriga L4 simulations. We notice
-that the old insitu populations are much more centrally distributed, whereas
-the old accreted component has a larger radial extent. Moreover, the dispersion
-increases with increasing mean value of the radial distribution as may be expected
-for a non-negative quantity.
+We repeat the analysis of the previous subsection for the distribution of
+galactocentric radius instead of metallicity. We look for general trends present
+in all Auriga L4 galaxies. Figure~\ref{fig:Rgc_mu_sigma} shows the mean and 
+standard deviation of the radial distribution of star particles in all Auriga L4 
+simulations. We notice that the old insitu populations are more centrally 
+distributed, whereas the old accreted subsets have a larger radial extent. This 
+is not surprising because the classification of in situ requires star particles 
+to have formed within the virial radius, thus they could naturally be expected 
+to end up at small galactocentric radii. Accreted star particles, on the other 
+hand, have formed in another (sub)halo beyond the virial radius, thus, would 
+first have to migrate inwards in order to populate the innermost radii. Moreover, 
+we notice that the dispersion increases with increasing mean value of the radial 
+distribution as may be expected for a non-negative quantity. The purple (magenta)
+cross indicates the values for the MW (M31) GCS, which are to be compared to the
+green crosses. The MW GCS lies roughly within the range of values seen for the 
+radial distributions produced by the Auriga simulations, whereas the mean of M31
+is larger and closer to typical mean values of the accreted GC candidates in
+the Auriga simulations. The larger radial extend of the M31 GCS is generally
+believed to hint at a more accretion-dominated origin of the GCS, and may reflect
+a richer accretion history of the galaxy in comparison to the Milky Way.
 
 \begin{figure}
     \includegraphics[width=\columnwidth]{{logMRgc_withRatios-trim}.png}
@@ -639,9 +655,11 @@ candidates changes from those formed insitu to the accreted population around
 $10$~kpc. Again we show the mass excess of the simulations compared to the Milky
 Way and Andromeda GCS. We find a decreasing mass excess with increasing radius
 in the range $0.2$ to ${\sim}5$ kpc, followed by an increase attributed
-to the accreted subpopulation. We further investigate a breakdown of the total mass
-in Auriga GC candidates into bins of both metallicity and radius in the following
-section.
+to the accreted subpopulation. For the Milky Way we notice that significantly
+fewer GCs are found beyond $40$~kpc than for M31, and that accreted GC candidates
+contribute mostly to the Auriga GCS at these radii. We further investigate a 
+breakdown of the total mass in Auriga GC candidates into bins of both metallicity 
+and radius in the following section.
 
 \subsection{Total mass in metallicity-radial space}
 \label{sec:results_FeHRgc}
