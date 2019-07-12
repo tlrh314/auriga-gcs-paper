@@ -106,23 +106,30 @@ $^{5}$ Harvard-Smithsonian Center for Astrophysics, 60 Garden Street, Cambridge,
 % Abstract of the paper
 \begin{abstract}
 We investigate whether the galaxy formation model used for the Auriga simulations
-can produce a realistic globular cluster population at redshift zero. We compare
-properties of the simulated star particles in the Auriga haloes with catalogues
-of observations of the Milky Way and Andromeda globular cluster populations available
-in the literature. We find that the Auriga simulations do produce sufficient mass
-at radii and metallicities that are typical for the MW GCS, although we observe
-a varying mass-excess for the different $R_{\text{GC}}$-[Fe/H] bins. This implies
-different values for the combined product of the bound cluster formation efficiency
-and the globular cluster disruption rate. Furthermore we test whether any of the
-Auriga galaxies has a metallicity and radial distribution that is consistent with
-the MW (M31) GCS. For any one of the Auriga haloes we reject the null hypothesis that
-the observed and simulated metallicities of GCs (GC candidates) are drawn from 
-the same distribution at $\geq98.32$~\% confidence level, for the GCS of the 
-Milky Way as well as that of the Andromeda galaxy. The same holds true for the 
-distribution of galactocentric radius. Overall, the Auriga simulations produce 
+can produce a realistic globular cluster (GC) population at redshift zero. We
+compare properties of the simulated star particles in the Auriga haloes with
+catalogues of observations of the Milky Way (MW) and Andromeda (M31) globular
+cluster populations available in the literature. We find that the Auriga 
+simulations do produce sufficient mass at radii and metallicities that are 
+typical for the MW globular cluster system (GCS), although we observe a varying 
+mass-excess for different $R_{\text{GC}}$-[Fe/H] bins. This implies different 
+values for the combined product of the bound cluster formation efficiency and 
+the globular cluster disruption rate. Furthermore we test whether any of the 
+Auriga galaxies has a metallicity and radial distribution that is consistent with 
+the MW or M31 GCS. For any one of the Auriga haloes we reject the null hypothesis
+that the observed and simulated metallicities of GCs (GC candidates) are drawn
+from the same distribution at $\geq98.32$~\% confidence level, for the GCS of 
+the Milky Way as well as that of the Andromeda galaxy. The same holds true for 
+the distribution of galactocentric radius. Overall, the Auriga simulations produce 
 old star particles with higher metallicities than the MW and M31 GCS and at 
 larger radii. The formation efficiency would have to linearly decrease with 
-increasing metallicity for the Auriga GC candidates to be consistent with the MW GCS.
+increasing metallicity for the Auriga GC candidates to be consistent with the 
+MW GCS, if cluster disruption is equally efficient regardless of metallicity.
+In addition, the number of GCs relative to field stars would have to be smaller
+for higher metallicity star particles at large radii than for those with lower 
+metallicity at smaller radii, assuming GC disruption is more efficient in the
+inner regions of the Galaxy.
+
 \end{abstract}
 
 % Select between one and six entries from the list of approved keywords.
@@ -811,56 +818,19 @@ for example, be improved by selecting a number of globular clusters based on the
 $M_{vir}-N_{\text{GC}}$ correlation found by \citet{2019arXiv190100900B}, and 
 taking a virial mass below which none of the star particles is treated as GC candidate.
 
-% \todo[inline]{
-%     Harris: `Somewhat arbitrarily, I will take the region $r_p > 3$ kpc
-%     (containing 75 clusters) as the fiducial Milky Way sample. If we were to
-%     view the Milky Way at the same inclination angle to the disk as we see
-%     M31, this cutoff in projected distance would correspond roughly to the
-%     inner distance limits in the M31 halo sample.'
-% }
-
-\subsection{Star particles are not globular clusters}
-\label{sec:discussion_mass_excess}
-% A major improvement to our classification of star particles as GC candidates
-% could be made by explicitly taking into the formation efficiency of bound star
-% clusters \citep{2012MNRAS.426.3008K}, which depends on the local ISM properties
-% (density, pressure, sound speed). However, the only information available in
-% post-processing are the properties of the star particles recorded in the first
-% snapshot after formation. We could attempt to obtain the properties of the nearest
-% gas cell, but this would have to be limited to a very narrow time window between
-% the time of formation and the time of the snapshot because the star particle could
-% otherwise be in a completely different location than where it was born initially.
-% Moreover, even if the birth time and snapshot time would coincide, it would not
-% be obvious that the gas cell will yield the correct quantities as the formation
-% of the star itself alters the properties of the gas. We therefore did not further
-% attempt a more sophisticated modeling of the cluster formation efficiency in
-% post-processing.
-% 
-% Furthermore, we compare star particles to present-day globular clusters, thereby
-% ignoring the effects of (dynamical) disruption of globular clusters over nearly
-% a Hubble time. As shown by \citep{2018MNRAS.475.4309P}, a detailed model of the tidal
-% history of star clusters requires a temporal resolution of order mega year. For
-% the Auriga L4 simulations we have a total of 128 snapshots available over the
-% age of the Universe, thus, far too coarse temporal resolution for meaningful
-% calculations of tidal disruption along the orbit of our GC candidates. Therefore
-% we can only combine these two shortcomings of our analysis into the `mass excess',
-% which includes the cluster formation efficiency and consecutive globular cluster
-% disruption.
-
-\todo[inline]{Paraphrase the following}
-\citet{2019MNRAS.486.5838R}
-``Out of the cluster formation models considered, the `no formation physics' model,
-in which both the CFE and the ICMF are fixed throughout cosmic time, is
-approximately equivalent to those studies  that  use  `particle-tagging'
-techniques  to  identify  GCs  in cosmological simulations (e.g. Tonini 2013,
-Renaud et al. 2017). We find that this cluster formation model continues to form GCs
-at a vigorous rate until the present time, which implies it overproduces
-the total GC mass in the Milky Way by a factor
-5.5 relative to the mass formed in the fiducial model. Likewise, the continued
-formation  of  GCs  in  this  model  predicts  the  on-going  formation
-of massive (M $>10^5$ M\Sun) clusters with [Fe/H]$ <-0.5$ should be observed in
-Milky Way-mass galaxies at $z=0$. For these reasons, an environmentally independent
-cluster formation description is not compatible with observations.''
+% Copy-pasted from \citet{2019MNRAS.486.5838R}
+% ``Out of the cluster formation models considered, the `no formation physics' model,
+% in which both the CFE and the ICMF are fixed throughout cosmic time, is
+% approximately equivalent to those studies  that  use  `particle-tagging'
+% techniques  to  identify  GCs  in cosmological simulations (e.g. Tonini 2013,
+% Renaud et al. 2017). We find that this cluster formation model continues to form GCs
+% at a vigorous rate until the present time, which implies it overproduces
+% the total GC mass in the Milky Way by a factor
+% 5.5 relative to the mass formed in the fiducial model. Likewise, the continued
+% formation  of  GCs  in  this  model  predicts  the  on-going  formation
+% of massive (M $>10^5$ M\Sun) clusters with [Fe/H]$ <-0.5$ should be observed in
+% Milky Way-mass galaxies at $z=0$. For these reasons, an environmentally independent
+% cluster formation description is not compatible with observations.''
 
 
 

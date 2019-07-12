@@ -1,7 +1,7 @@
 % mnras_template.tex
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL AurigaGCS_20190614.tex   Mon Jun 24 11:07:39 2019
-%DIF ADD AurigaGCS.tex            Thu Jul 11 11:57:01 2019
+%DIF ADD AurigaGCS.tex            Fri Jul 12 16:09:28 2019
 %
 % LaTeX template for creating an MNRAS paper
 %
@@ -48,7 +48,11 @@
 \usepackage{amssymb}    % Extra maths symbols
 
 \usepackage{todonotes}
-\graphicspath{{img/}}   % Set image path
+%DIF 48c48
+%DIF < \graphicspath{{img/}}   % Set image path
+%DIF -------
+\graphicspath{{figures/}}   % Set figure path %DIF > 
+%DIF -------
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -112,6 +116,8 @@ $^{5}$ Harvard-Smithsonian Center for Astrophysics, 60 Garden Street, Cambridge,
 \providecommand{\DIFaddend}{} %DIF PREAMBLE
 \providecommand{\DIFdelbegin}{} %DIF PREAMBLE
 \providecommand{\DIFdelend}{} %DIF PREAMBLE
+\providecommand{\DIFmodbegin}{} %DIF PREAMBLE
+\providecommand{\DIFmodend}{} %DIF PREAMBLE
 %DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
 \providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
 \providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
@@ -119,6 +125,63 @@ $^{5}$ Harvard-Smithsonian Center for Astrophysics, 60 Garden Street, Cambridge,
 \providecommand{\DIFaddendFL}{} %DIF PREAMBLE
 \providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
 \providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+\newcommand{\DIFscaledelfig}{0.5}
+%DIF HIGHLIGHTGRAPHICS PREAMBLE %DIF PREAMBLE
+\RequirePackage{settobox} %DIF PREAMBLE
+\RequirePackage{letltxmacro} %DIF PREAMBLE
+\newsavebox{\DIFdelgraphicsbox} %DIF PREAMBLE
+\newlength{\DIFdelgraphicswidth} %DIF PREAMBLE
+\newlength{\DIFdelgraphicsheight} %DIF PREAMBLE
+% store original definition of \includegraphics %DIF PREAMBLE
+\LetLtxMacro{\DIFOincludegraphics}{\includegraphics} %DIF PREAMBLE
+\newcommand{\DIFaddincludegraphics}[2][]{{\color{blue}\fbox{\DIFOincludegraphics[#1]{#2}}}} %DIF PREAMBLE
+\newcommand{\DIFdelincludegraphics}[2][]{% %DIF PREAMBLE
+\sbox{\DIFdelgraphicsbox}{\DIFOincludegraphics[#1]{#2}}% %DIF PREAMBLE
+\settoboxwidth{\DIFdelgraphicswidth}{\DIFdelgraphicsbox} %DIF PREAMBLE
+\settoboxtotalheight{\DIFdelgraphicsheight}{\DIFdelgraphicsbox} %DIF PREAMBLE
+\scalebox{\DIFscaledelfig}{% %DIF PREAMBLE
+\parbox[b]{\DIFdelgraphicswidth}{\usebox{\DIFdelgraphicsbox}\\[-\baselineskip] \rule{\DIFdelgraphicswidth}{0em}}\llap{\resizebox{\DIFdelgraphicswidth}{\DIFdelgraphicsheight}{% %DIF PREAMBLE
+\setlength{\unitlength}{\DIFdelgraphicswidth}% %DIF PREAMBLE
+\begin{picture}(1,1)% %DIF PREAMBLE
+\thicklines\linethickness{2pt} %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,0){\framebox(1,1){}}}% %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,0){\line( 1,1){1}}}% %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,1){\line(1,-1){1}}}% %DIF PREAMBLE
+\end{picture}% %DIF PREAMBLE
+}\hspace*{3pt}}} %DIF PREAMBLE
+} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddbegin}{\DIFaddbegin} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddend}{\DIFaddend} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelbegin}{\DIFdelbegin} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelend}{\DIFdelend} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddbegin}{\DIFOaddbegin \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbegin}{\DIFOdelbegin \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddbeginFL}{\DIFaddbeginFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddendFL}{\DIFaddendFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelbeginFL}{\DIFdelbeginFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelendFL}{\DIFdelendFL} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddbeginFL}{\DIFOaddbeginFL \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbeginFL}{\DIFOdelbeginFL \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+%DIF LISTINGS PREAMBLE %DIF PREAMBLE
+\RequirePackage{listings} %DIF PREAMBLE
+\RequirePackage{color} %DIF PREAMBLE
+\lstdefinelanguage{DIFcode}{ %DIF PREAMBLE
+%DIF DIFCODE_UNDERLINE %DIF PREAMBLE
+  moredelim=[il][\color{red}\sout]{\%DIF\ <\ }, %DIF PREAMBLE
+  moredelim=[il][\color{blue}\uwave]{\%DIF\ >\ } %DIF PREAMBLE
+} %DIF PREAMBLE
+\lstdefinestyle{DIFverbatimstyle}{ %DIF PREAMBLE
+	language=DIFcode, %DIF PREAMBLE
+	basicstyle=\ttfamily, %DIF PREAMBLE
+	columns=fullflexible, %DIF PREAMBLE
+	keepspaces=true %DIF PREAMBLE
+} %DIF PREAMBLE
+\lstnewenvironment{DIFverbatim}{\lstset{style=DIFverbatimstyle}}{} %DIF PREAMBLE
+\lstnewenvironment{DIFverbatim*}{\lstset{style=DIFverbatimstyle,showspaces=true}}{} %DIF PREAMBLE
 %DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
 
 \begin{document}
@@ -129,24 +192,33 @@ $^{5}$ Harvard-Smithsonian Center for Astrophysics, 60 Garden Street, Cambridge,
 % Abstract of the paper
 \begin{abstract}
 We investigate whether the galaxy formation model used for the Auriga simulations
-can produce a realistic globular cluster population at redshift zero. We compare
-properties of the simulated star particles in the Auriga haloes with catalogues
-of observations of the Milky Way and Andromeda globular cluster populations available
-in the literature. We find that the Auriga simulations do produce sufficient mass
-at radii and metallicities that are typical for the MW GCS, although we observe
-a varying mass-excess for the different $R_{\text{GC}}$-[Fe/H] bins. This implies
-different values for the combined product of the bound cluster formation efficiency
-and the globular cluster disruption rate. Furthermore we test whether any of the
-Auriga galaxies has a metallicity and radial distribution that is consistent with
-the MW (M31) GCS. For any one of the Auriga haloes we reject the null hypothesis that
-the observed and simulated metallicities of GCs (GC candidates) are drawn from 
-the same distribution at $\geq98.32$~\% confidence level, for the GCS of the 
-Milky Way as well as that of the Andromeda galaxy. The same holds true for the 
-distribution of galactocentric radius. Overall, the Auriga simulations produce 
+can produce a realistic globular cluster \DIFaddbegin \DIFadd{(GC) }\DIFaddend population at redshift zero. We
+compare properties of the simulated star particles in the Auriga haloes with
+catalogues of observations of the Milky Way \DIFdelbegin \DIFdel{and Andromeda }\DIFdelend \DIFaddbegin \DIFadd{(MW) and Andromeda (M31) }\DIFaddend globular
+cluster populations available in the literature. We find that the Auriga 
+simulations do produce sufficient mass at radii and metallicities that are 
+typical for the MW \DIFdelbegin \DIFdel{GCS}\DIFdelend \DIFaddbegin \DIFadd{globular cluster system (GCS)}\DIFaddend , although we observe a varying 
+mass-excess for \DIFdelbegin \DIFdel{the }\DIFdelend different $R_{\text{GC}}$-[Fe/H] bins. This implies different 
+values for the combined product of the bound cluster formation efficiency and 
+the globular cluster disruption rate. Furthermore we test whether any of the 
+Auriga galaxies has a metallicity and radial distribution that is consistent with 
+the MW \DIFdelbegin \DIFdel{(}\DIFdelend \DIFaddbegin \DIFadd{or }\DIFaddend M31 \DIFdelbegin \DIFdel{) }\DIFdelend GCS. For any one of the Auriga haloes we reject the null hypothesis
+that the observed and simulated metallicities of GCs (GC candidates) are drawn
+from the same distribution at $\geq98.32$~\% confidence level, for the GCS of 
+the Milky Way as well as that of the Andromeda galaxy. The same holds true for 
+the distribution of galactocentric radius. Overall, the Auriga simulations produce 
 old star particles with higher metallicities than the MW and M31 GCS and at 
 larger radii. The formation efficiency would have to linearly decrease with 
-increasing metallicity for the Auriga GC candidates to be consistent with the MW GCS.
-\end{abstract}
+increasing metallicity for the Auriga GC candidates to be consistent with the 
+MW GCS\DIFdelbegin \DIFdel{.
+}\DIFdelend \DIFaddbegin \DIFadd{, if cluster disruption is equally efficient regardless of metallicity.
+In addition, the number of GCs relative to field stars would have to be smaller
+for higher metallicity star particles at large radii than for those with lower 
+metallicity at smaller radii, assuming GC disruption is more efficient in the
+inner regions of the Galaxy.
+}
+
+\DIFaddend \end{abstract}
 
 % Select between one and six entries from the list of approved keywords.
 % Don't make up new ones.
@@ -757,9 +829,8 @@ of Figure~\ref{fig:Au-FeHRgc-ratio} for mass excess with respect to the MW (M31)
         \label{fig:Au-FeHRgc}
     }
 \end{figure}
-\DIFaddbegin 
 
-\DIFadd{We notice in Figure~\ref{fig:Au-FeHRgc} that the Auriga simulations, on average,
+\DIFaddbegin \DIFadd{We notice in Figure~\ref{fig:Au-FeHRgc} that the Auriga simulations, on average,
 produce fewer GCs in the lowest metallicity bins ($-2.5$ to $-1.5$) than at higher 
 metallicities in the three innermost radial bins. In addition, Auriga produces 
 fewer high-metallicity GCs at large radii, similar to the MW and M31 GC systems. 
@@ -780,9 +851,9 @@ Figure~\ref{fig:Au-FeHRgc-ratio}) shows a less clear trent than for the Milky Wa
 Most bins show mass surplus factors of few tens, meaning that high formation 
 efficiencies would be required in addition to little disruption for the Auriga 
 simulations to yield a GC system consistent with that of the Andromeda galaxy.
-}\DIFaddend 
+}
 
-\begin{figure}
+\DIFaddend \begin{figure}
     \includegraphics[width=0.49\textwidth]
         {{Au4-median_RgcFeH_HistogramMassWeighted_MW_iold-trim}.png}
     \includegraphics[width=0.49\textwidth]
@@ -883,44 +954,50 @@ for example, be improved by selecting a number of globular clusters based on the
 $M_{vir}-N_{\text{GC}}$ correlation found by \citet{2019arXiv190100900B}, and 
 taking a virial mass below which none of the star particles is treated as GC candidate.
 
-% \todo[inline]{
-%     Harris: `Somewhat arbitrarily, I will take the region $r_p > 3$ kpc
-%     (containing 75 clusters) as the fiducial Milky Way sample. If we were to
-%     view the Milky Way at the same inclination angle to the disk as we see
-%     M31, this cutoff in projected distance would correspond roughly to the
-%     inner distance limits in the M31 halo sample.'
-% }
+%DIF <  \todo[inline]{
+%DIF <      Harris: `Somewhat arbitrarily, I will take the region $r_p > 3$ kpc
+%DIF <      (containing 75 clusters) as the fiducial Milky Way sample. If we were to
+%DIF <      view the Milky Way at the same inclination angle to the disk as we see
+%DIF <      M31, this cutoff in projected distance would correspond roughly to the
+%DIF <      inner distance limits in the M31 halo sample.'
+%DIF <  }
+\DIFdelbegin %DIFDELCMD < 
 
-\subsection{Star particles are not globular clusters}
-\label{sec:discussion_mass_excess}
-% A major improvement to our classification of star particles as GC candidates
-% could be made by explicitly taking into the formation efficiency of bound star
-% clusters \citep{2012MNRAS.426.3008K}, which depends on the local ISM properties
-% (density, pressure, sound speed). However, the only information available in
-% post-processing are the properties of the star particles recorded in the first
-% snapshot after formation. We could attempt to obtain the properties of the nearest
-% gas cell, but this would have to be limited to a very narrow time window between
-% the time of formation and the time of the snapshot because the star particle could
-% otherwise be in a completely different location than where it was born initially.
-% Moreover, even if the birth time and snapshot time would coincide, it would not
-% be obvious that the gas cell will yield the correct quantities as the formation
-% of the star itself alters the properties of the gas. We therefore did not further
-% attempt a more sophisticated modeling of the cluster formation efficiency in
-% post-processing.
-% 
-% Furthermore, we compare star particles to present-day globular clusters, thereby
-% ignoring the effects of (dynamical) disruption of globular clusters over nearly
-% a Hubble time. As shown by \citep{2018MNRAS.475.4309P}, a detailed model of the tidal
-% history of star clusters requires a temporal resolution of order mega year. For
-% the Auriga L4 simulations we have a total of 128 snapshots available over the
-% age of the Universe, thus, far too coarse temporal resolution for meaningful
-% calculations of tidal disruption along the orbit of our GC candidates. Therefore
-% we can only combine these two shortcomings of our analysis into the `mass excess',
-% which includes the cluster formation efficiency and consecutive globular cluster
-% disruption.
+%DIFDELCMD < \subsection{Star particles are not globular clusters}
+%DIFDELCMD < \label{sec:discussion_mass_excess}
+%DIFDELCMD < %%%
+%DIF <  A major improvement to our classification of star particles as GC candidates
+%DIF <  could be made by explicitly taking into the formation efficiency of bound star
+%DIF <  clusters \citep{2012MNRAS.426.3008K}, which depends on the local ISM properties
+%DIF <  (density, pressure, sound speed). However, the only information available in
+%DIF <  post-processing are the properties of the star particles recorded in the first
+%DIF <  snapshot after formation. We could attempt to obtain the properties of the nearest
+%DIF <  gas cell, but this would have to be limited to a very narrow time window between
+%DIF <  the time of formation and the time of the snapshot because the star particle could
+%DIF <  otherwise be in a completely different location than where it was born initially.
+%DIF <  Moreover, even if the birth time and snapshot time would coincide, it would not
+%DIF <  be obvious that the gas cell will yield the correct quantities as the formation
+%DIF <  of the star itself alters the properties of the gas. We therefore did not further
+%DIF <  attempt a more sophisticated modeling of the cluster formation efficiency in
+%DIF <  post-processing.
+%DIF <  
+%DIF <  Furthermore, we compare star particles to present-day globular clusters, thereby
+%DIF <  ignoring the effects of (dynamical) disruption of globular clusters over nearly
+%DIF <  a Hubble time. As shown by \citep{2018MNRAS.475.4309P}, a detailed model of the tidal
+%DIF <  history of star clusters requires a temporal resolution of order mega year. For
+%DIF <  the Auriga L4 simulations we have a total of 128 snapshots available over the
+%DIF <  age of the Universe, thus, far too coarse temporal resolution for meaningful
+%DIF <  calculations of tidal disruption along the orbit of our GC candidates. Therefore
+%DIF <  we can only combine these two shortcomings of our analysis into the `mass excess',
+%DIF <  which includes the cluster formation efficiency and consecutive globular cluster
+%DIF <  disruption.
+%DIFDELCMD < 
 
-\todo[inline]{Paraphrase the following}
+%DIFDELCMD < \todo[inline]{Paraphrase the following}
+%DIFDELCMD < %%%
+\DIFdel{\mbox{%DIFAUXCMD
 \citet{2019MNRAS.486.5838R}
+}\hspace{0pt}%DIFAUXCMD
 ``Out of the cluster formation models considered, the `no formation physics' model,
 in which both the CFE and the ICMF are fixed throughout cosmic time, is
 approximately equivalent to those studies  that  use  `particle-tagging'
@@ -930,9 +1007,25 @@ at a vigorous rate until the present time, which implies it overproduces
 the total GC mass in the Milky Way by a factor
 5.5 relative to the mass formed in the fiducial model. Likewise, the continued
 formation  of  GCs  in  this  model  predicts  the  on-going  formation
-of massive (M $>10^5$ M\Sun) clusters with [Fe/H]$ <-0.5$ should be observed in
+of massive (M $>10^5$ M}%DIFDELCMD < \Sun%%%
+\DIFdel{) clusters with }%DIFDELCMD < [%%%
+\DIFdel{Fe/H}%DIFDELCMD < ]%%%
+\DIFdel{$ <-0.5$ should be observed in
 Milky Way-mass galaxies at $z=0$. For these reasons, an environmentally independent
 cluster formation description is not compatible with observations.''
+}\DIFdelend %DIF >  Copy-pasted from \citet{2019MNRAS.486.5838R}
+%DIF >  ``Out of the cluster formation models considered, the `no formation physics' model,
+%DIF >  in which both the CFE and the ICMF are fixed throughout cosmic time, is
+%DIF >  approximately equivalent to those studies  that  use  `particle-tagging'
+%DIF >  techniques  to  identify  GCs  in cosmological simulations (e.g. Tonini 2013,
+%DIF >  Renaud et al. 2017). We find that this cluster formation model continues to form GCs
+%DIF >  at a vigorous rate until the present time, which implies it overproduces
+%DIF >  the total GC mass in the Milky Way by a factor
+%DIF >  5.5 relative to the mass formed in the fiducial model. Likewise, the continued
+%DIF >  formation  of  GCs  in  this  model  predicts  the  on-going  formation
+%DIF >  of massive (M $>10^5$ M\Sun) clusters with [Fe/H]$ <-0.5$ should be observed in
+%DIF >  Milky Way-mass galaxies at $z=0$. For these reasons, an environmentally independent
+%DIF >  cluster formation description is not compatible with observations.''
 
 
 
@@ -942,7 +1035,7 @@ cluster formation description is not compatible with observations.''
 We investigate GC candidates in the Auriga simulations and draw the following
 conclusions.
 
- \begin{itemize} 
+\begin{itemize}
     \item The star formation model implemented in the Auriga simulations produces
     metallicity distributions that are more metal-rich the Milky Way and M31
     globular cluster systems.
@@ -970,7 +1063,7 @@ conclusions.
     \item The Auriga simulations are not consistent with the picture that all
     metal-rich GCs formed insitu and that all metal-poor GCs were accreted.
 
- \end{itemize} 
+\end{itemize}
 
 
 \section*{Acknowledgements}
