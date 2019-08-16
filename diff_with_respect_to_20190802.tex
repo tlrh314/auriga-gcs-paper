@@ -1,7 +1,7 @@
 % mnras_template.tex
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL AurigaGCS_20190802.tex   Wed Aug 14 10:45:39 2019
-%DIF ADD AurigaGCS.tex            Wed Aug 14 11:08:38 2019
+%DIF ADD AurigaGCS.tex            Fri Aug 16 09:13:58 2019
 %
 % LaTeX template for creating an MNRAS paper
 %
@@ -190,7 +190,8 @@ catalogues of observations of the Milky Way (MW) and Andromeda (M31) globular
 cluster populations available in the literature. We find that the Auriga 
 simulations do produce sufficient mass at radii and metallicities that are 
 typical for the MW globular cluster system (GCS), although we observe a varying 
-mass-excess for different $R_{\text{GC}}$-[Fe/H] bins \DIFaddbegin \DIFadd{of simulated GC candidates
+mass-excess for different \DIFdelbegin \DIFdel{$R_{\text{GC}}$}\DIFdelend \DIFaddbegin \DIFadd{galactocentric radius-metallicity 
+($R_{\text{gal}}$}\DIFaddend -[Fe/H]\DIFdelbegin \DIFdel{bins}\DIFdelend \DIFaddbegin \DIFadd{) bins of simulated GC candidates
 relative to the observed mass in the MW and M31 GC systems}\DIFaddend . This implies different 
 values for the combined product of the bound cluster formation efficiency and 
 the globular cluster disruption rate. Furthermore we test whether any of the 
@@ -199,7 +200,7 @@ the MW or M31 GCS. For any one of the Auriga haloes we reject the null hypothesi
 that the observed and simulated metallicities of GCs (GC candidates) are drawn
 from the same distribution at $\geq98.32$~\% confidence level, for the GCS of 
 the Milky Way as well as that of the Andromeda galaxy. The same holds true for 
-the distribution of galactocentric radius. Overall, the Auriga simulations produce 
+the distribution of \DIFdelbegin \DIFdel{galactocentric radius}\DIFdelend \DIFaddbegin \DIFadd{$R_{\text{gal}}$ }\DIFaddend . Overall, the Auriga simulations produce 
 old star particles with higher metallicities than the MW and M31 GCS and at 
 larger radii. The formation efficiency would have to linearly decrease with 
 increasing metallicity for the Auriga GC candidates to be consistent with the 
@@ -400,8 +401,9 @@ We still use data from the Harris catalogue, but caution that it may (only) be
 are the metallicity [Fe/H], the Galactic distance components $X$, $Y$, and $Z$ (in
 kpc)\footnote{In a Sun-centered coordinate system: $X$ points toward Galactic
 center, $Y$ in direction of Galactic rotation, and $Z$ toward the North Galactic
-Pole. We calculate the galactocentric radius $R_{\text{GC}}=\sqrt{(X-R_\odot)^2
-+ Y^2 + Z^2}$, assuming the solar radius $R_\odot=8$~kpc.}, and absolute
+Pole. We calculate the galactocentric radius \DIFdelbegin \DIFdel{$R_{\text{GC}}=\sqrt{(X-R_\odot)^2
++ Y^2 + Z^2}$}\DIFdelend \DIFaddbegin \DIFadd{$R_{\text{gal}}=\sqrt{(X-R_\odot)^2
++ Y^2 + Z^2}$}\DIFaddend , assuming the solar radius $R_\odot=8$~kpc.}, and absolute
 magnitude in the V-band $M_V$. We use the latter to calculate mass-estimates by
 assuming $M_{V,\odot}=4.83$ and a mass to light ratio $M/L_V = 1.7$~M/L$_{\odot}$,
 the mean for MW clusters \citep{2005ApJS..161..304M}. We supplement the catalogue
@@ -466,8 +468,8 @@ central position from the NASA Extragalactic
 Database\footnote{\url{https://ned.ipac.caltech.edu/}} $(\alpha_0, \, \delta_0) =
 (0^{\text{h}}42^{\text{m}}44.35^{\text{s}}, \, +41^{\circ}16'08.63")$
 and distance $D_{\text{M31}} = 780$~kpc \citep{2005MNRAS.356..979M,2012ApJ...758...11C}.
-We calculate $R_{\text{GC}}$ as `average deprojected distance`
-$R_{\text{GC}} = R_{\text{proj}} \times (4/\pi)$. 
+We calculate \DIFdelbegin \DIFdel{$R_{\text{GC}}$ }\DIFdelend \DIFaddbegin \DIFadd{$R_{\text{gal}}$ }\DIFaddend as `average deprojected distance`
+\DIFdelbegin \DIFdel{$R_{\text{GC}} = R_{\text{proj}} \times (4/\pi)$}\DIFdelend \DIFaddbegin \DIFadd{$R_{\text{gal}} = R_{\text{proj}} \times (4/\pi)$}\DIFaddend . 
 
 The solid lines show the distributions using all available data (because the
 sky coordinates are known for each GC), while the subset for which age-estimates
@@ -477,7 +479,7 @@ available for the innermost ($<1$~kpc) GCs, nor for those beyond roughly twenty
 kpc (the halo GCs). We compare both distributions of the full data set (solid 
 lines) and find that the Milky Way has more GCs in the range $1-4$~kpc than M31
 (when accounting for the larger number of total GCs in M31). Interestingly, both
-distributions show a similar trend for $R_{\text{GC}} > 4$~kpc and host a 
+distributions show a similar trend for \DIFdelbegin \DIFdel{$R_{\text{GC}} > 4$}\DIFdelend \DIFaddbegin \DIFadd{$R_{\text{gal}} > 4$}\DIFaddend ~kpc and host a 
 subpopulation of halo GCs. However, both radial distributions are not 
 statistically consistent due to substantial differences at intermediate radii.
 
@@ -490,7 +492,7 @@ statistically consistent due to substantial differences at intermediate radii.
         in M31 \citep[data from][]{2016ApJ...824...42C}.
         \emph{Bottom:} Distribution of galactocentric radius in the MW and M31.
         The dotted lines show the subset of data that also have age measurements
-        (i.e. the same sample as used in the top panel).
+        (i.e. the same sample as \DIFdelbeginFL \DIFdelFL{used }\DIFdelendFL in the top panel).
         \label{fig:MW-M31-age-Rgc}
     }
 \end{figure}
@@ -501,7 +503,7 @@ MW (M31) GCS in the top (bottom) panel of Figure~\ref{fig:observations_FeHRgc}.
 The observations indicate that
 no GCs with high metallicities are to be expected at large radii (the three bins
 in the upper right corner, both for MW and M31), and relatively few GCs at large
-radii in general ($R_{\text{GC}} > 30$~kpc; right column: $11$ GCs or 7.3\% in
+radii in general (\DIFdelbegin \DIFdel{$R_{\text{GC}} > 30$}\DIFdelend \DIFaddbegin \DIFadd{$R_{\text{gal}} > 30$}\DIFaddend ~kpc; right column: $11$ GCs or 7.3\% in
 the MW and $17$ or 4.6\% in M31). Moreover, the M31 hosts more metal-rich 
 ([Fe/H]$ > -1$) GCs in each radial bin in comparison to the MW GCSs than what
 would be expected when accounting for the fact that Andromeda hosts a larger GC 
@@ -518,12 +520,16 @@ Sec.~\ref{sec:results_FeHRgc}.
     \includegraphics[width=\columnwidth]
         {{M31_RgcFeH_HistogramMassWeighted_CaldwellRomanowsky2016data}.png}
     \caption{
-        \emph{Top}: Mass-weighted $R_{\text{GC}}$-[Fe/H] distribution of
-        151 GCs in the MW \citep[data from][2010 ed.]{1996AJ....112.1487H}, which
-        is 98.6 (92.2) \% of the total mass (clusters) of the MW GCS in the Harris
-        catalog. \emph{Bottom}: Same for M31, showing 366 GCs and 88.4 (83.9) \%
-        of the total mass (clusters) in CR16 \citep[data from][]{2016ApJ...824...42C}.
-        Note that the range of the colourmap differs in both figures.
+        \emph{Top}: Mass-weighted \DIFdelbeginFL \DIFdelFL{$R_{\text{GC}}$}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{$R_{\text{gal}}$}\DIFaddendFL -[Fe/H] distribution of
+        151 GCs in the MW \citep[data from][2010 ed.]{1996AJ....112.1487H},
+        \DIFdelbeginFL \DIFdelFL{which
+        is 98.6 (92.2) \% of }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{color-coded by }\DIFaddendFL the \DIFdelbeginFL \DIFdelFL{total mass }\DIFdelendFL \DIFaddbeginFL \textbf{\DIFaddFL{median}} \DIFaddendFL (\DIFdelbeginFL \DIFdelFL{clusters}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{values also shown in each bin}\DIFaddendFL )\DIFdelbeginFL \DIFdelFL{of the MW GCS }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{. The 
+        numbers }\DIFaddendFL in \DIFaddbeginFL \DIFaddFL{parenthesis show how many star particles fall within }\DIFaddendFL the \DIFdelbeginFL \DIFdelFL{Harris
+        catalog}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{bin}\DIFaddendFL .
+        \emph{Bottom}: Same for M31, showing \DIFaddbeginFL \DIFaddFL{the }\DIFaddendFL 366 GCs \DIFdelbeginFL \DIFdelFL{and 88.4 (83.9) \%
+        of the total mass (clusters) }\DIFdelendFL in CR16 
+        \citep[data from][]{2016ApJ...824...42C}. Note that the range of the 
+        colourmap differs in both figures.
         \label{fig:observations_FeHRgc}
     }
 \end{figure}
@@ -724,7 +730,7 @@ metallicity.
 We repeat the analysis of the previous subsection for the distribution of
 galactocentric radius instead of metallicity. We look for general trends present
 in all Auriga L4 galaxies. Figure~\ref{fig:Rgc_mu_sigma} shows the mean and 
-standard deviation of $\log_{10}(R_{\text{GC}})$ of star particles in all Auriga
+standard deviation of \DIFdelbegin \DIFdel{$\log_{10}(R_{\text{GC}})$ }\DIFdelend \DIFaddbegin \DIFadd{$\log_{10}(R_{\text{gal}})$ }\DIFaddend of star particles in all Auriga
 L4 simulations. The purple (magenta) cross again shows the mean of the MW (M31)
 GCs (which are to be compared to the green crosses), but solid (open) dot now
 shows our calculation of the mean value of the metal-rich (metal-poor) population 
@@ -739,7 +745,7 @@ to have formed within the virial radius, thus they could naturally be expected
 to end up at small galactocentric radii. Accreted star particles, on the other 
 hand, have formed in another (sub)halo beyond the virial radius, thus, would 
 first have to migrate inwards in order to populate the innermost radii. Moreover,
-we find that the simulations have a wider dispersion in $\log(R_{\text{GC}}$ than
+we find that the simulations have a wider dispersion in \DIFdelbegin \DIFdel{$\log(R_{\text{GC}}$ }\DIFdelend \DIFaddbegin \DIFadd{$\log(R_{\text{gal}})$ }\DIFaddend than
 the MW GCS, while the dispersion of M31 seems to lie witin the range of dispersions
 found in the Auriga galaxies. Furthermore, the mean of the MW GCS lies roughly 
 within the range of values produced by the Auriga simulations, whereas the mean 
@@ -783,7 +789,7 @@ and radius in the following section.
 \label{sec:results_FeHRgc}
 
 We investigate whether the Auriga simulations still produce sufficient mass when
-the GC candidates are two-dimensionally binned in [Fe/H] and $R_\text{GC}$. First
+the GC candidates are two-dimensionally binned in [Fe/H] and \DIFdelbegin \DIFdel{$R_\text{GC}$}\DIFdelend \DIFaddbegin \DIFadd{$R_\text{gal}$}\DIFaddend . First
 we sum the total simulated mass in each bin (for an individual Auriga simulation),
 then we calculate the median over all thirty Auriga L4 haloes (in each bin, see
 Figure~\ref{fig:Au-FeHRgc} which can be compared to
@@ -796,7 +802,7 @@ of Figure~\ref{fig:Au-FeHRgc-ratio} for mass excess with respect to the MW (M31)
     \includegraphics[width=0.49\textwidth]
         {{Au4-median_RgcFeH_HistogramMassWeighted_iold-trim}.png}
     \caption{
-        Mass-weighted [Fe/H]-$R_{\text{GC}}$ distribution of all thirty Auriga
+        Mass-weighted [Fe/H]-\DIFdelbeginFL \DIFdelFL{$R_{\text{GC}}$ }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{$R_{\text{gal}}$ }\DIFaddendFL distribution of all thirty Auriga
         L4 haloes. Here we consider only the GC candidates (age $>$~10~Gyr) stars
         in and color-code by the \textbf{median} (values also shown in each bin).
         The numbers in parenthesis show how many star particles fall within the
@@ -931,7 +937,7 @@ the MW and M31 have fewer GCs at large radii. We expect tidal disruption to be
 less efficient at larger radii, thus, the formation efficiencies of the accreted 
 GC candidates would have to be lower. Our classification as GC candidates could, 
 for example, be improved by selecting a number of globular clusters based on the 
-$M_{vir}-N_{\text{GC}}$ correlation found by \citet{2019arXiv190100900B}, and 
+\DIFdelbegin \DIFdel{$M_{vir}-N_{\text{GC}}$ }\DIFdelend \DIFaddbegin \DIFadd{$M_{vir}-N_{\text{gal}}$ }\DIFaddend correlation found by \citet{2019arXiv190100900B}, and 
 taking a virial mass below which none of the star particles is treated as GC candidate.
 
 % Copy-pasted from \citet{2019MNRAS.486.5838R}
