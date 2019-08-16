@@ -1,7 +1,7 @@
 % mnras_template.tex
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL AurigaGCS_20190802.tex   Wed Aug 14 10:45:39 2019
-%DIF ADD AurigaGCS.tex            Fri Aug 16 09:13:58 2019
+%DIF ADD AurigaGCS.tex            Fri Aug 16 15:04:03 2019
 %
 % LaTeX template for creating an MNRAS paper
 %
@@ -517,7 +517,8 @@ Sec.~\ref{sec:results_FeHRgc}.
 \begin{figure}
     \includegraphics[width=\columnwidth]
         {{MW_RgcFeH_HistogramMassWeighted_Harris1996ed2010data}.png}
-    \includegraphics[width=\columnwidth]
+    \DIFaddbeginFL \centering \DIFaddFL{\textcolor{lightgray}{\rule[2mm]{\columnwidth}{0.05mm}}
+    }\DIFaddendFL \includegraphics[width=\columnwidth]
         {{M31_RgcFeH_HistogramMassWeighted_CaldwellRomanowsky2016data}.png}
     \caption{
         \emph{Top}: Mass-weighted \DIFdelbeginFL \DIFdelFL{$R_{\text{GC}}$}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{$R_{\text{gal}}$}\DIFaddendFL -[Fe/H] distribution of
@@ -562,20 +563,36 @@ MW and M31 GCS's. To visually inspect the former we show the normalized metallic
 distribution of three specific Auriga galaxies in Figure~\ref{fig:Au4-10and21_FeH}
 in comparison to the MW and M31 [Fe/H] distributions.
 
-\begin{figure*}
-    \includegraphics[width=\columnwidth]{{Au4-10_FeH_cleaner-trim}.png}
-    \includegraphics[width=\columnwidth]{{Au4-4_and_Au4_21_FeH-trim}.png}
-    \caption{
-        \emph{Left:} Metallicity distribution of Au4-10 (bottom panel). We show
-        the GG candicates in green. We split the GC candidates into two
-        subpopulations, those that have formed {\it in~situ} (blue), and those that have
-        been accreted (red). The dotted green line shows all star particles.
+\DIFdelbegin %DIFDELCMD < \begin{figure*}
+%DIFDELCMD <     \includegraphics[width=\columnwidth]{{Au4-10_FeH_cleaner-trim}.png}
+%DIFDELCMD <     \includegraphics[width=\columnwidth]{{Au4-4_and_Au4_21_FeH-trim}.png}
+%DIFDELCMD <     %%%
+\DIFdelendFL \DIFaddbeginFL \begin{figure}
+    \includegraphics[width=\columnwidth]{{FeH_obs_Au4-4_Au4-10_Au4-21}.png}
+    \DIFaddendFL \caption{
+        \DIFdelbeginFL \emph{\DIFdelFL{Left:}} %DIFAUXCMD
+\DIFdelendFL \DIFaddbeginFL \emph{\DIFaddFL{Top}}\DIFaddFL{: }\DIFaddendFL Metallicity distribution of \DIFdelbeginFL \DIFdelFL{Au4-10 }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{the MW and M31 GCS. The solid 
+        purple }\DIFaddendFL (\DIFdelbeginFL \DIFdelFL{bottom panel}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{magenta}\DIFaddendFL ) \DIFaddbeginFL \DIFaddFL{line shows the GC system of the MW (M31), and we 
+        indicate the mean value with an arrow at the bottom of the x-axis}\DIFaddendFL . We
+        \DIFaddbeginFL \DIFaddFL{overplot a double Gaussian for the MW GCS using purple dotted lines, taking
+        the mean and dispersion from \mbox{%DIFAUXCMD
+\citep{Harris2001}}\hspace{0pt}%DIFAUXCMD
+.
+        }\emph{\DIFaddFL{Other panels}}\DIFaddFL{: three selected Auriga haloes as indicated in the 
+        upper right corner. In each of these three panels we }\DIFaddendFL show the GG 
+        candicates in green\DIFaddbeginFL \DIFaddFL{, and use a green dotted line for all star particles}\DIFaddendFL . 
+        We split the GC candidates \DIFaddbeginFL \DIFaddFL{up }\DIFaddendFL into two subpopulations, those that have 
+        formed {\it in~situ} (blue), and those that have been accreted (red).
+        \DIFdelbeginFL \DIFdelFL{The dotted green line shows all star particles.
         The solid purple (magenta) line in the top panel shows the GC system
-        of the MW (M31). \emph{Right:} Au4-4 (bottom), and Au4-21 (top).
-        \label{fig:Au4-10and21_FeH}
+        of the MW (M31). }\emph{\DIFdelFL{Right:}} %DIFAUXCMD
+\DIFdelFL{Au4-4 (bottom), and Au4-21 (top).
+        }\DIFdelendFL \label{fig:Au4-10and21_FeH}
     }
-\end{figure*}
-We select \mbox{Au4-10}\footnote{The nomenclature is `Au' for Auriga, followed by the
+\DIFdelbeginFL %DIFDELCMD < \end{figure*}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \end{figure}
+\DIFaddend We select \mbox{Au4-10}\footnote{The nomenclature is `Au' for Auriga, followed by the
 resolution level (4) and halo number (10, indicating which set of initial
 conditions was used the run).}, \mbox{Au4-21}, and \mbox{Au4-4} to show the
 distributions of three individual simulation runs that we consider representative
