@@ -755,17 +755,19 @@ simulations to yield a GC system consistent with that of the Andromeda galaxy.
 
 \begin{figure}
     \includegraphics[width=0.49\textwidth]
-        {{Au4-median_RgcFeH_HistogramMassWeighted_MW_iold-trim}.png}
+        {{Au4-median_RgcFeH_HistogramMassWeighted_MW_iold_diverging-trim}.png}
     \centering \textcolor{lightgray}{\rule[2mm]{\columnwidth}{0.05mm}}
     \includegraphics[width=0.49\textwidth]
-        {{Au4-median_RgcFeH_HistogramMassWeighted_M31_iold-trim}.png}
+        {{Au4-median_RgcFeH_HistogramMassWeighted_M31_iold_diverging-trim}.png}
     \caption{
         The top (bottom) panel shows the logarithm of the ratio of simulated mass
-        to mass in the MW (M31) GCS, i.e. the logarithm of the mass ratio. The
-        number in each bin shows the color-coded value that is plotted, and the
-        (median) star particle count is given in parenthesis. Note that the three 
-        bins in the upper right corner are left blank because the observations
-        have zero mass there.
+        to mass in the MW (M31) GCS, i.e. the logarithm of the mass ratio, minus
+        the median value. This way red indicates regions of with a higher mass
+        excess than the median, conversely blue highlights bins with a lower than
+        median mass ratio. The number in each bin shows the color-coded value 
+        that is plotted, and the (median) star particle count is given in 
+        parenthesis. Note that the three bins in the upper right corner are white
+        because the observations have zero mass there.
         \label{fig:Au-FeHRgc-ratio}
     }
 \end{figure}

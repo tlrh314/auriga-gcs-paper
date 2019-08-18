@@ -1,7 +1,7 @@
 % mnras_template.tex
 %DIF LATEXDIFF DIFFERENCE FILE
-%DIF DEL AurigaGCS_20190802.tex   Wed Aug 14 10:45:39 2019
-%DIF ADD AurigaGCS.tex            Sun Aug 18 16:48:32 2019
+%DIF DEL AurigaGCS_20190802.tex   Sun Aug 18 18:21:19 2019
+%DIF ADD AurigaGCS.tex            Sun Aug 18 18:25:44 2019
 %
 % LaTeX template for creating an MNRAS paper
 %
@@ -572,7 +572,7 @@ in comparison to the MW and M31 [Fe/H] distributions.
     \DIFaddendFL \caption{
         \DIFdelbeginFL \emph{\DIFdelFL{Left:}} %DIFAUXCMD
 \DIFdelendFL \DIFaddbeginFL \emph{\DIFaddFL{Top}}\DIFaddFL{: }\DIFaddendFL Metallicity distribution of \DIFdelbeginFL \DIFdelFL{Au4-10 }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{the MW and M31 GCS. The solid 
-        purple }\DIFaddendFL (\DIFdelbeginFL \DIFdelFL{bottom panel}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{magenta}\DIFaddendFL ) \DIFaddbeginFL \DIFaddFL{line shows the GC system of the MW (M31), and we 
+        purple }\DIFaddendFL (\DIFdelbeginFL \DIFdelFL{bottom panel}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{magenta) line shows the GC system of the MW (M31}\DIFaddendFL )\DIFaddbeginFL \DIFaddFL{, and we 
         indicate the mean value with an arrow at the bottom of the x-axis}\DIFaddendFL . We
         \DIFaddbeginFL \DIFaddFL{overplot a double Gaussian for the MW GCS using purple dotted lines, taking
         the mean and dispersion from \mbox{%DIFAUXCMD
@@ -855,17 +855,19 @@ simulations to yield a GC system consistent with that of the Andromeda galaxy.
 
 \begin{figure}
     \includegraphics[width=0.49\textwidth]
-        {{Au4-median_RgcFeH_HistogramMassWeighted_MW_iold-trim}.png}
+        {{Au4-median_RgcFeH_HistogramMassWeighted_MW_iold_diverging-trim}.png}
     \DIFaddbeginFL \centering \DIFaddFL{\textcolor{lightgray}{\rule[2mm]{\columnwidth}{0.05mm}}
     }\DIFaddendFL \includegraphics[width=0.49\textwidth]
-        {{Au4-median_RgcFeH_HistogramMassWeighted_M31_iold-trim}.png}
+        {{Au4-median_RgcFeH_HistogramMassWeighted_M31_iold_diverging-trim}.png}
     \caption{
         The top (bottom) panel shows the logarithm of the ratio of simulated mass
-        to mass in the MW (M31) GCS, i.e. the logarithm of the mass \DIFdelbeginFL \DIFdelFL{excess}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{ratio}\DIFaddendFL . The
-        \DIFdelbeginFL \DIFdelFL{color-coded values are also shown }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{number }\DIFaddendFL in each bin \DIFaddbeginFL \DIFaddFL{shows the color-coded value that is plotted, and the
-        (median) star particle count is given in parenthesis}\DIFaddendFL . Note that the three 
-        bins in the upper right corner are left blank because the observations
-        have zero mass there\DIFdelbeginFL \DIFdelFL{, and that the numbers indicate how much (median) mass is
+        to mass in the MW (M31) GCS, i.e. the logarithm of the mass \DIFaddbeginFL \DIFaddFL{ratio, minus
+        the median value. This way red indicates regions of with a higher mass
+        }\DIFaddendFL excess \DIFaddbeginFL \DIFaddFL{than the median, conversely blue highlights bins with a lower than
+        median mass ratio}\DIFaddendFL . The \DIFdelbeginFL \DIFdelFL{color-coded values are also shown }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{number }\DIFaddendFL in each bin \DIFaddbeginFL \DIFaddFL{shows the color-coded value 
+        that is plotted, and the (median) star particle count is given in 
+        parenthesis}\DIFaddendFL . Note that the three bins in the upper right corner are \DIFdelbeginFL \DIFdelFL{left blank }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{white
+        }\DIFaddendFL because the observations have zero mass there\DIFdelbeginFL \DIFdelFL{, and that the numbers indicate how much (median) mass is
         produced by the simulations in those bins}\DIFdelendFL .
         \label{fig:Au-FeHRgc-ratio}
     }
