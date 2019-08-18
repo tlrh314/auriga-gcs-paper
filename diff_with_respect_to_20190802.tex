@@ -1,7 +1,7 @@
 % mnras_template.tex
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL AurigaGCS_20190802.tex   Wed Aug 14 10:45:39 2019
-%DIF ADD AurigaGCS.tex            Sun Aug 18 16:11:07 2019
+%DIF ADD AurigaGCS.tex            Sun Aug 18 16:48:32 2019
 %
 % LaTeX template for creating an MNRAS paper
 %
@@ -190,7 +190,7 @@ catalogues of observations of the Milky Way (MW) and Andromeda (M31) globular
 cluster populations available in the literature. We find that the Auriga 
 simulations do produce sufficient mass at radii and metallicities that are 
 typical for the MW globular cluster system (GCS), although we observe a varying 
-mass-excess for different \DIFdelbegin \DIFdel{$R_{\text{GC}}$}\DIFdelend \DIFaddbegin \DIFadd{galactocentric radius-metallicity 
+\DIFdelbegin \DIFdel{mass-excess for different $R_{\text{GC}}$}\DIFdelend \DIFaddbegin \DIFadd{mass-ratio for different galactocentric radius-metallicity 
 ($R_{\text{gal}}$}\DIFaddend -[Fe/H]\DIFdelbegin \DIFdel{bins}\DIFdelend \DIFaddbegin \DIFadd{) bins of simulated GC candidates
 relative to the observed mass in the MW and M31 GC systems}\DIFaddend . This implies different 
 values for the combined product of the bound cluster formation efficiency and 
@@ -725,8 +725,9 @@ while still producing sufficient mass at the right metallicities. In particular,
 the cluster formation efficiency would have to decrease with decreasing 
 metallicity for Auriga GC candidates to produce a population of GC candidates 
 that is consistent with the MW. For the GC candidates in M31 we find a constant 
-mass excess up to $-0.9$, above which the simulations produce a higher mass excess 
-with increasing metallicity. If dynamical evolution is not expected to more 
+mass \DIFdelbegin \DIFdel{excess }\DIFdelend \DIFaddbegin \DIFadd{ratio }\DIFaddend up to $-0.9$, above which the simulations produce a higher mass \DIFdelbegin \DIFdel{excess 
+}\DIFdelend \DIFaddbegin \DIFadd{ratio 
+}\DIFaddend with increasing metallicity. If dynamical evolution is not expected to more 
 efficiently disrupt GCs of higher metallicity, then we would find that the 
 efficiency to form bound star clusters would have to decrease with increasing 
 metallicity.
@@ -793,8 +794,8 @@ particles that is not present for the GC candidates, indicating that the
 stellar disc is no longer present when applying the latter selection criterion.
 Furthermore, we find that the dominant contribution to the total mass in GC
 candidates changes from those formed {\it in~situ} to the accreted population around
-$10$~kpc. Again we show the mass excess of the simulations compared to the Milky
-Way and Andromeda GCS. We find a decreasing mass excess with increasing radius
+$10$~kpc. Again we show the mass \DIFdelbegin \DIFdel{excess }\DIFdelend \DIFaddbegin \DIFadd{ratio }\DIFaddend of the simulations compared to the Milky
+Way and Andromeda GCS. We find a decreasing mass \DIFdelbegin \DIFdel{excess }\DIFdelend \DIFaddbegin \DIFadd{ratio }\DIFaddend with increasing radius
 in the range $0.2$ to ${\sim}5$ kpc, followed by an increase attributed
 to the accreted subpopulation. For the Milky Way we notice that significantly
 fewer GCs are found beyond $40$~kpc than for M31, and that accreted GC candidates
@@ -811,9 +812,9 @@ we sum the total simulated mass in each bin (for an individual Auriga simulation
 then we calculate the median over all thirty Auriga L4 haloes (in each bin, see
 Figure~\ref{fig:Au-FeHRgc} which can be compared to
 Figure~\ref{fig:observations_FeHRgc}). Finally, we divide these value by the total
-mass in the MW (M31) GCS to obtain the median mass excess produced by the star
+mass in the MW (M31) GCS to obtain the median mass \DIFdelbegin \DIFdel{excess }\DIFdelend \DIFaddbegin \DIFadd{ratio }\DIFaddend produced by the star
 formation model implemented in the Auriga simulations. See the top (bottom) panel
-of Figure~\ref{fig:Au-FeHRgc-ratio} for mass excess with respect to the MW (M31) GCS.
+of Figure~\ref{fig:Au-FeHRgc-ratio} for mass \DIFdelbegin \DIFdel{excess }\DIFdelend \DIFaddbegin \DIFadd{ratio }\DIFaddend with respect to the MW (M31) GCS.
 
 \begin{figure}
     \includegraphics[width=0.49\textwidth]
@@ -835,7 +836,7 @@ metallicities in the three innermost radial bins. In addition, Auriga produces
 fewer high-metallicity GCs at large radii, similar to the MW and M31 GC systems. 
 However, the three bins in the upper right corner are populated in the Auriga
 simulations, in contrast to the observations. The top panel of 
-Figure~\ref{fig:Au-FeHRgc-ratio} shows that the mass excess for Auriga GCs within
+Figure~\ref{fig:Au-FeHRgc-ratio} shows that the mass \DIFdelbegin \DIFdel{excess }\DIFdelend \DIFaddbegin \DIFadd{ratio }\DIFaddend for Auriga GCs within
 the Solar radius decreases with decreasing metallicity. This means that either
 the formation efficiency should increase with decreasing metallicity, or that 
 the lowest-metallicity GCs in the Auriga simulations are less strongly affected
@@ -845,7 +846,7 @@ in the Milky Way. Moreover, either a lower formation efficiency is required at
 large radii, or stronger disruption. Disruption of star clusters is expected to
 be more efficient at smaller radii due to higher tidal forces in the innermost
 region for GCs on orbits that pass through the disk, or with pericenters close 
-to the bar or bulge. Compared to Andromeda, the mass excess (bottom panel of 
+to the bar or bulge. Compared to Andromeda, the mass \DIFdelbegin \DIFdel{excess }\DIFdelend \DIFaddbegin \DIFadd{ratio }\DIFaddend (bottom panel of 
 Figure~\ref{fig:Au-FeHRgc-ratio}) shows a less clear trend than for the Milky Way,
 which suggests that both galaxies have diverse GC formation histories.
 Most bins show mass surplus factors of few tens, meaning that high formation 
@@ -855,11 +856,12 @@ simulations to yield a GC system consistent with that of the Andromeda galaxy.
 \begin{figure}
     \includegraphics[width=0.49\textwidth]
         {{Au4-median_RgcFeH_HistogramMassWeighted_MW_iold-trim}.png}
-    \includegraphics[width=0.49\textwidth]
+    \DIFaddbeginFL \centering \DIFaddFL{\textcolor{lightgray}{\rule[2mm]{\columnwidth}{0.05mm}}
+    }\DIFaddendFL \includegraphics[width=0.49\textwidth]
         {{Au4-median_RgcFeH_HistogramMassWeighted_M31_iold-trim}.png}
     \caption{
         The top (bottom) panel shows the logarithm of the ratio of simulated mass
-        to mass in the MW (M31) GCS, i.e. the logarithm of the mass excess. The
+        to mass in the MW (M31) GCS, i.e. the logarithm of the mass \DIFdelbeginFL \DIFdelFL{excess}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{ratio}\DIFaddendFL . The
         \DIFdelbeginFL \DIFdelFL{color-coded values are also shown }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{number }\DIFaddendFL in each bin \DIFaddbeginFL \DIFaddFL{shows the color-coded value that is plotted, and the
         (median) star particle count is given in parenthesis}\DIFaddendFL . Note that the three 
         bins in the upper right corner are left blank because the observations
