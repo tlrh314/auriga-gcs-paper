@@ -1,7 +1,7 @@
 % mnras_template.tex
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL AurigaGCS_20190802.tex   Sun Aug 18 18:21:19 2019
-%DIF ADD AurigaGCS.tex            Mon Aug 19 08:34:49 2019
+%DIF ADD AurigaGCS.tex            Mon Aug 19 10:02:31 2019
 %
 % LaTeX template for creating an MNRAS paper
 %
@@ -398,8 +398,8 @@ and of the Andromeda (M31) GCS in Sec.~\ref{sec:andromeda}
 \label{sec:milkyway}
 \citet[][2010 edition; hereafter H96e10]{1996AJ....112.1487H} provides a
 catalogue\footnote{See \url{https://www.physics.mcmaster.ca/Fac_Harris/mwgc.dat}}
-of the Milky Way globular cluster system that contains properties of
-157 GCs. The authors initially estimated the size of the MW GCS to be 180~$\pm$~10,
+of the Milky Way globular cluster system that contains properties of 157 GCs. 
+The authors initially estimated the \DIFdelbegin \DIFdel{size of }\DIFdelend \DIFaddbegin \DIFadd{number of GCs in }\DIFaddend the MW GCS to be 180~$\pm$~10,
 thus, their catalogue to be ${\sim}$85\% complete. However, an additional 59 GCs
 are claimed to have been discovered by various authors. The total number of GCs
 in the MW might add up to 216 with recent estimates now anticipating an additional 
@@ -412,7 +412,7 @@ center, $Y$ in direction of Galactic rotation, and $Z$ toward the North Galactic
 Pole. We calculate the galactocentric radius \DIFdelbegin \DIFdel{$R_{\text{GC}}=\sqrt{(X-R_\odot)^2
 + Y^2 + Z^2}$}\DIFdelend \DIFaddbegin \DIFadd{$R_{\text{gal}}=\sqrt{(X-R_\odot)^2
 + Y^2 + Z^2}$}\DIFaddend , assuming the solar radius $R_\odot=8$~kpc.}, and absolute
-magnitude in the V-band $M_V$. We use the latter to calculate mass-estimates by
+magnitude in the \DIFdelbegin \DIFdel{V-band }\DIFdelend \DIFaddbegin \DIFadd{V~band }\DIFaddend $M_V$. We use the latter to calculate mass-estimates by
 assuming $M_{V,\odot}=4.83$ and a mass to light ratio $M/L_V = 1.7$~M/L$_{\odot}$,
 the mean for MW clusters \citep{2005ApJS..161..304M}. We supplement the catalogue
 with age-estimates from isochrone fits to stars near the main-sequence turnoff 
@@ -426,7 +426,7 @@ in 55 GCs \citep[][hereafter V13]{2013ApJ...775..134V}.
 
 \subsection{Andromeda}
 \label{sec:andromeda}
-The fifth revision of the revised bologna catalogue (RBC~5, last updated
+The fifth revision of the revised \DIFdelbegin \DIFdel{bologna }\DIFdelend \DIFaddbegin \DIFadd{Bologna }\DIFaddend catalogue (RBC~5, last updated
 August, 2012) is the latest edition of three decades of systematically
 collecting integrated properties of the globular cluster system of the
 Andromeda galaxy \citep[][and references therein]{2004A&A...416..917G}. One
@@ -442,9 +442,9 @@ Survey \citep[PAndAS, ][hereafter H14]{2014MNRAS.442.2165H}, but see also
 discovery of 59 new GCs and publishes updates to RBC~5. The work of H14 is
 incorporated in the latest public release\footnote{Last revised 23 Sep 2015, see
 \url{https://www.cfa.harvard.edu/oir/eg/m31clusters/M31_Hectospec.html}}
-of the C11 dataset, further revised by CR16. It seems that CR16 is the most
+of the C11 dataset, further revised by CR16. \DIFdelbegin \DIFdel{It seems that }\DIFdelend \DIFaddbegin \DIFadd{We use }\DIFaddend CR16 \DIFaddbegin \DIFadd{because it }\DIFaddend is the most
 recent aggregated dataset of M31's GCS that contains properties of interest
-for our study as it contains GCs in the inner region and in the outer halo. The
+for our study \DIFdelbegin \DIFdel{as it contains }\DIFdelend \DIFaddbegin \DIFadd{and it includes }\DIFaddend GCs in the inner region and in the outer halo. The
 relevant fields in the CR16 dataset that we use are the age, metallicity, and the
 mass-estimate\footnote{The authors assumed $M/L_V = 2$ independent of [Fe/H]}.
 Radii are calculated from RA and DEC, further discussed in Sec.~\ref{sec:Rgc}.
@@ -460,7 +460,7 @@ of $4.8$~Gyr. Based on these data, we find that the age distributions of the MW
 and M31 GCS's are not statistically consistent. Moreover, the Milky Way appears 
 to host a globular cluster system that is somewhat older than the Andromeda galaxy,
 which is somewhat surprising given that M31 is generally considered to be earlier
-type than the MW meaning that an older stellar population would naively be expected.
+type than the MW meaning that an older stellar population would \DIFdelbegin \DIFdel{naively be }\DIFdelend \DIFaddbegin \DIFadd{be naively }\DIFaddend expected.
 However, we do caution that both data sets are incomplete and the age 
 measurements have large uncertainties (of $1-2$~Gyr). On the other hand, the 
 magnitude of the uncertainty is insufficient to explain the low-age tail in M31.
@@ -470,7 +470,7 @@ magnitude of the uncertainty is insufficient to explain the low-age tail in M31.
 The bottom panel of Figure~\ref{fig:MW-M31-age-Rgc} shows the radial distribution
 of the MW and M31 GCS. Both quantities are readily available in H96e10 (assuming
 $R_{\odot}=8.0$~kpc), but the galactocentric radius of GCs in M31 is not available
-in CR16. Therefore we follow \citet[][Sec.~4.1]{2019arXiv190111229W} to calculate
+in CR16. Therefore\DIFaddbegin \DIFadd{, }\DIFaddend we follow \citet[][Sec.~4.1]{2019arXiv190111229W} to calculate
 the projected radius $R_{\text{proj}}$ from the observed positions, adopting M31's
 central position from the NASA Extragalactic 
 Database\footnote{\url{https://ned.ipac.caltech.edu/}} $(\alpha_0, \, \delta_0) =
@@ -482,14 +482,16 @@ We calculate \DIFdelbegin \DIFdel{$R_{\text{GC}}$ }\DIFdelend \DIFaddbegin \DIFa
 The solid lines show the distributions using all available data (because the
 sky coordinates are known for each GC), while the subset for which age-estimates
 are available is indicated using dotted lines. The latter shows a narrower range
-of radii than the full data set: it appears that age-estimates are neither
-available for the innermost ($<1$~kpc) GCs, nor for those beyond roughly twenty
+of radii than the full data set: it appears that \DIFaddbegin \DIFadd{few }\DIFaddend age-estimates are \DIFdelbegin \DIFdel{neither
+}\DIFdelend available 
+for the innermost ($<1$~kpc) GCs, \DIFdelbegin \DIFdel{nor }\DIFdelend \DIFaddbegin \DIFadd{and none }\DIFaddend for those beyond roughly twenty
 kpc (the halo GCs). We compare both distributions of the full data set (solid 
 lines) and find that the Milky Way has more GCs in the range $1-4$~kpc than M31
 (when accounting for the larger number of total GCs in M31). Interestingly, both
 distributions show a similar trend for \DIFdelbegin \DIFdel{$R_{\text{GC}} > 4$}\DIFdelend \DIFaddbegin \DIFadd{$R_{\text{gal}} > 4$}\DIFaddend ~kpc and host a 
-subpopulation of halo GCs. However, both radial distributions are not 
-statistically consistent due to substantial differences at intermediate radii.
+subpopulation of halo GCs. However, \DIFdelbegin \DIFdel{both }\DIFdelend \DIFaddbegin \DIFadd{the two }\DIFaddend radial distributions are not statistically
+consistent \DIFaddbegin \DIFadd{with being drawn from the same underlying distribution }\DIFaddend due to substantial 
+differences at intermediate radii.
 
 \begin{figure}
     \includegraphics[width=\columnwidth]{{MW_M31_Age_Histogram-trim}.png}
@@ -518,9 +520,8 @@ would be expected when accounting for the fact that Andromeda hosts a larger GC
 system than the MW. Finally, given that both marginalized (i.e. the metallicity 
 and radial) distributions are not statistically consistent, we find that the 
 two-dimensional distributions are also not consistent. More generally, the GC
-systems of the Milky Way and that of Andromeda both differ significantly. We 
-compare these observations to the Auriga simulations later on in 
-Sec.~\ref{sec:results_FeHRgc}.
+\DIFdelbegin \DIFdel{systems of the Milky Way and that of Andromeda both differ significantly}\DIFdelend \DIFaddbegin \DIFadd{system of the MW differs significantly from that of M31}\DIFaddend . We compare these 
+observations to the Auriga simulations later on in Sec.~\ref{sec:results_FeHRgc}.
 
 \begin{figure}
     \includegraphics[width=\columnwidth]
@@ -602,7 +603,7 @@ in comparison to the MW and M31 [Fe/H] distributions.
 \DIFdelend \DIFaddbegin \end{figure}
 \DIFaddend We select \mbox{Au4-10}\footnote{The nomenclature is `Au' for Auriga, followed by the
 resolution level (4) and halo number (10, indicating which set of initial
-conditions was used the run).}, \mbox{Au4-21}, and \mbox{Au4-4} to show the
+conditions was used\DIFdelbegin \DIFdel{the run}\DIFdelend ).}, \mbox{Au4-21}, and \mbox{Au4-4} to show the
 distributions of three individual simulation runs that we consider representative
 for specific behaviour, and to highlight that different runs could give rise to 
 different distributions. We plot the age-selected GC candidates in green, those
