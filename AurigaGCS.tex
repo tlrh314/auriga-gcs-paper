@@ -102,32 +102,29 @@ $^{4}$ Department of Physics \& Astronomy, University of Bologna, via Gobetti 93
 % Abstract of the paper
 \begin{abstract}
 We investigate whether the galaxy formation model used for the Auriga simulations
-can produce a realistic globular cluster (GC) population at redshift zero. We
-compare properties of the simulated star particles in the Auriga haloes with
-catalogues of observations of the Milky Way (MW) and Andromeda (M31) globular
-cluster populations available in the literature. We find that the Auriga 
-simulations do produce sufficient mass at radii and metallicities that are 
-typical for the MW globular cluster system (GCS), although we observe a varying 
-mass-ratio for different galactocentric radius-metallicity 
-($R_{\text{gal}}$-[Fe/H]) bins of simulated GC candidates
-relative to the observed mass in the MW and M31 GC systems. This implies different 
-values for the combined product of the bound cluster formation efficiency and 
-the globular cluster disruption rate. Furthermore we test whether any of the 
+can produce a realistic globular cluster (GC) population. We compare statistics 
+of GC candidate star particles in the Auriga haloes with catalogues of the Milky 
+Way (MW) and Andromeda (M31) globular cluster populations. We find that the Auriga 
+simulations do produce sufficient stellar mass for GC candidates at radii and 
+metallicities that are typical for the MW GC system (GCS), although we observe a 
+varying mass-ratio for different galactocentric radius-metallicity 
+($R_{\text{gal}}$-[Fe/H]) bins of simulated GC candidates relative to the 
+observed mass in the MW and M31 GC systems.
+This implies different values for the combined product of the bound cluster 
+formation efficiency and the GC disruption rate. Furthermore we test whether any of the 
 Auriga galaxies has a metallicity and radial distribution that is consistent with 
 the MW or M31 GCS. For any one of the Auriga haloes we reject the null hypothesis
 that the observed and simulated metallicities of GCs (GC candidates) are drawn
 from the same distribution at $\geq98.32$~\% confidence level, for the GCS of 
-the Milky Way as well as that of the Andromeda galaxy. The same holds true for 
-the distribution of $R_{\text{gal}}$ . Overall, the Auriga simulations produce 
-old star particles with higher metallicities than the MW and M31 GCS and at 
-larger radii. The formation efficiency would have to linearly decrease with 
-increasing metallicity for the Auriga GC candidates to be consistent with the 
-MW GCS, if cluster disruption is equally efficient regardless of metallicity.
-In addition, the number of GCs relative to field stars would have to be smaller
-for higher metallicity star particles at large radii than for those with lower 
-metallicity at smaller radii, assuming GC disruption is more efficient in the
-inner regions of the Galaxy.
-
+the MW and M31. The same holds true for the distribution of $R_{\text{gal}}$.
+Overall, the Auriga simulations produce old star particles with higher metallicities 
+than the MW and M31 GCS and at larger radii. This implies that the bound cluster
+formation efficiency would have to decrease with increasing metallicity for the 
+Auriga GC candidates to be consistent with the MW GCS, if GC disruption is equally 
+efficient regardless of metallicity. In addition, the number of GCs relative to
+field stars would have to be smaller for higher metallicity star particles at
+large radii than for those with lower metallicity at smaller radii, assuming GC 
+disruption is more efficient in the inner regions of the Galaxy.
 \end{abstract}
 
 % Select between one and six entries from the list of approved keywords.
@@ -141,10 +138,10 @@ methods: numerical -- galaxies: formation -- galaxies: star clusters: general.
 %%%%%%%%%%%%%%%%% BODY OF PAPER %%%%%%%%%%%%%%%%%%
 
 \section{Introduction}
-Globular clusters (GC)s are old, bright, ubiquitous, and various properties of
+Globular clusters (GC)s are old, bright, and ubiquitous. Various properties of
 GC systems show correlations with their host galaxies. GC systems are believed to
-retain information about the galactic (gas) conditions at times of formation,
-thus, could offer unique insight into the (chemodynamical) evolution of their 
+retain information about the galactic (gas) conditions at their times of formation.
+Thus they could offer a unique insight into the (chemodynamical) evolution of their 
 parent galaxies, if the formation and evolution of GCs- and GC systems themselves 
 is adequately understood. However, despite decades of research (the extensive 
 literature on GCs is summarised in several books and review articles, e.g.~\citealt{
@@ -157,9 +154,9 @@ and \citet{1984ApJ...277..470P} argue that GCs form as the earliest bound
 structures in the Universe (i.e. prior to formation of the main galaxy), 
 noting that the Jeans length and mass shortly after recombination is consistent
 with typical GC masses and sizes. \citet{2005MNRAS.364..367D} and \citet{
-2009ApJ...706L.192B} argue that (the blue subpopulations of) GCs form in biased 
-dark matter halos at high redshift. Other recent hypotheses of GC formation prior 
-to collapse of the proto-galaxy include formation in colliding supershells 
+2009ApJ...706L.192B} argue that (the blue subpopulations of) GCs form in radially
+biased dark matter halos at high redshift. Other recent hypotheses of GC formation 
+prior to collapse of the proto-galaxy include formation in colliding supershells 
 \citep{2017Ap&SS.362..183R}, in supersonically induced gaseous objects
 \citep{2019arXiv190408941C}, or in high-speed collisions of dark matter subhaloes
 \citep{2019arXiv190508951M}. \citet{2017MNRAS.472.3120B} suggests
@@ -169,55 +166,55 @@ the cosmic filament before or during collapse.
 Other models also date GCs formation during formation of the proto-galaxy itself,
 for example as a result of thermal instabilities in hot gas-rich haloes 
 (\citealt{1985ApJ...298...18F}, also see the discussions in \citealt{
-1990ApJ...363..488K}). Alternative formation trigggers are also explored, such as 
+1990ApJ...363..488K}). Alternative formation triggers are also explored, such as 
 (other causes of) shock compression, or cloud-cloud colissions \citep[e.g.][]{
 1980glcl.conf..301G, 1992ApJ...400..265M, 1994ApJ...429..177H, 1995ApJ...442..618V,
 1996ASPC...92..241L, 2001ApJ...560..592C}. 
 
-Yet another hypothesis is that star cluster formation is triggered by (major) 
+Yet another hypothesis is that star cluster formation is triggered by major 
 gas-rich (spiral) galaxy mergers \citep{1987nngp.proc...18S, 1992ApJ...384...50A},
 which is naturally expected within the framework of hierarchical assembly. One
 testable prediction of this scenario is the formation of young clusters in
 interacting and merging galaxies, which has been observed and are found to show 
-remarkable similarities with globulars in the Milky Way \citep[e.g.][]{
+remarkable similarities with GCs in the Milky Way \citep[e.g.][]{
 1995AJ....109..960W, 1996AJ....112..416H, 1999AJ....118..752Z, 1999AJ....118.1551W}.
 Moreover, modelling efforts of this framework yield GC (sub)populations consistent 
 with various observables \citep[e.g.][]{2010ApJ...718.1266M, 2018MNRAS.480.2343C}, 
 and the recent numerical simulation of an isolated dwarf-dwarf merger executed at 
-very high resolution (baryonic mass $m_b \sim$~4M\Sun; softening $\epsilon = 0.1$) 
-produce star clusters that could be globular progenitors \citep{
+very high resolution (baryonic mass $m_b \sim$~4M\Sun; softening $\epsilon = 0.1$~pc) 
+produces star clusters that could be globular progenitors \citep{
 2019arXiv190509840L}.
 
 As for the formation timeline, the scenarios (and flavours thereof) of \citet{
 1985ApJ...298...18F} and \citet{1992ApJ...384...50A} are intertwined because
-accretion and mergers continuously occurs trough out hierarchical build-up of
+accretion and mergers continuously occurs during the hierarchical build-up of
 galaxies. Various (other) hierarchical formation channels thus combine different
 aspects of the aforementioned paradigms, such as GC formation in (small) galactic
 disks before they are accreted onto an assembling galaxy \citep[e.g.][]{
 2000ApJ...533..869C, 2002ApJ...567..853C, 2002MNRAS.333..383B, 2003egcs.conf..224G}. 
-We refer to \citet{2001astro.ph..8034G} for a scoreboard of the aforementioned 
-paradigms compared to observations of the Milky Way globular cluster system.
+We refer to \citet{2001astro.ph..8034G} for a scoreboard of GC formation models 
+compared to observations of the Milky Way globular cluster system.
 
-An idea that has recently been studied in detail is the hypothesis that the physical 
-processes responsible for the formation of young massive clusters \citep[YMCs, 
-see][for a review]{2010ARA&A..48..431P}, as observable in detail in the local 
-Universe in great
-, also governs GC formation at high redshifts. In this framework, differences
-between both classes of objects are caused by nearly a Hubble time of (dynamical)
-evolution \citep[e.g.][]{1987degc.book.....S}. This picture is based on observed 
-similarities between YMCs and GCs \citep[e.g.][]{1992AJ....103..691H,1999AJ....118.1551W}
-and strengthened by observations of gravitationally lensed objects at high redshifts
-($z = 2-6)$. These sources have properties reminiscent of (local) YMCs and may be
-GC progenitors at times of formation \citep{2017MNRAS.467.4304V,2017ApJ...843L..21J}.
-The modelling work by \citet{2011MNRAS.414.1339K,2012MNRAS.421.1927K,2015MNRAS.454.1658K} 
-is now incorporated into cosmological zoom simulations and shows promising results
+An idea that has recently been studied extensively is the hypothesis that the formation
+mechanisms of young massive clusters \citep[YMCs, see][for a review]{2010ARA&A..48..431P} 
+and GCs are the same. The proximity of YMCs in the local Universe allows to study these 
+processes with a level of detail that cannot be achieved for GCs at high redshifts. In 
+this framework, differences between both classes of objects are caused by nearly a 
+Hubble time of (dynamical) evolution \citep[e.g.][]{1987degc.book.....S}. This picture 
+is based on observed similarities between YMCs and GCs
+\citep[e.g.][]{1992AJ....103..691H,1999AJ....118.1551W} and strengthened by observations
+of gravitationally lensed objects at high redshifts ($z = 2-6)$. These sources have 
+properties reminiscent of (local) YMCs and may be GC progenitors at times of formation 
+\citep{2017MNRAS.467.4304V,2017ApJ...843L..21J}. The modelling work by 
+\citet{2011MNRAS.414.1339K,2012MNRAS.421.1927K,2015MNRAS.454.1658K} is now 
+incorporated into cosmological zoom simulations and shows promising results
 \citep{2018MNRAS.475.4309P,2019MNRAS.486.3134K}.
 
-Simulation resolutions have reached the mass range populated by GCs, and the
-gravitational force softening can be as low several parsec. A number of groups 
-can thus incorporate formation of (globular) star clusters into their 
-high-resolution hydrodynamical simulations. \citet{2016ApJ...831..204R} 
-run parsec scale simulations of the high-redshift universe 
+The (mass) resolution of cosmological zoom simulations has reached the mass range 
+populated by GCs, and the gravitational force softening can be as low several 
+parsec. A number of groups can thus incorporate formation of (globular) star 
+clusters into their high-resolution hydrodynamical simulations. \citet{2016ApJ...831..204R} 
+ran parsec scale simulations of the high-redshift universe 
 prior to reionization (the simulations stop at $z=9$), \citet{2017ApJ...834...69L} 
 implement a new subgrid model for star (cluster) formation and run simulations 
 that reach $z=3.3$, and the run of \citet{2017MNRAS.465.3622R} reaches $z=0.5$. 
@@ -229,10 +226,9 @@ simulations \citep{2010ApJ...718.1266M,2014ApJ...796...10L,2018MNRAS.480.2343C,
 \citet{2019MNRAS.482.4528E}.
 
 In this work we use state of the art simulations that produce realistic spiral 
-galaxies at redshift zero for which several global properties are consistent with 
-the observations. The simulations yield realistic Milky Way analogues, and real
-galaxies host globular cluster systems. The question thus naturally arises whether 
-the star formation histories of the simulations (also) give rise to a GC system 
+galaxies (Milky Way analogues) at redshift zero for which several global properties 
+are consistent with the observations. The question thus naturally arises whether 
+the star formation histories of the simulations give rise to a GC system 
 similar to the Milky Way and/or Andromeda globular cluster systems. In particular, 
 we use the Auriga suite of cosmological zoom simulations 
 (\citealt{2017MNRAS.467..179G}, and described in Sec.~\ref{sec:auriga}) to
@@ -268,7 +264,7 @@ density, the stellar mass to halo mass relation, and galaxy luminosity functions
 
 The sub-grid includes primordial and metal-line cooling with self-shielding
 corrections. Reionization is completed at redshift six by a time-varying
-spatially uniform UV background \citep{2009ApJ...703.1416F, 2013MNRAS.436.3031V}
+spatially uniform UV background \citep{2009ApJ...703.1416F, 2013MNRAS.436.3031V}.
 The interstellar medium is described by an equation of state for a two-phase medium
 in pressure equilibrium \citep{2003MNRAS.339..289S} with stochastic star formation
 in thermally unstable gas with a density threshold of $n = 0.13 \text{cm}^{-3}$,
