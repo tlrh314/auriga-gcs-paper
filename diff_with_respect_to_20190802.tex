@@ -1,7 +1,7 @@
 % mnras_template.tex
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL AurigaGCS_20190802.tex   Sun Aug 18 18:21:19 2019
-%DIF ADD AurigaGCS.tex            Mon Aug 19 10:02:31 2019
+%DIF ADD AurigaGCS.tex            Mon Aug 19 12:48:41 2019
 %
 % LaTeX template for creating an MNRAS paper
 %
@@ -59,7 +59,11 @@
 %\newcommand{\pcm}{\,cm$^{-2}$}    % per cm-squared
 \newcommand{\Sun}[0]{\ensuremath{_{\odot}}}
 \renewcommand{\deg}{\ensuremath{^{\circ}}}
-
+%DIF 59c59
+%DIF < 
+%DIF -------
+\defcitealias{2017MNRAS.467..179G}{G17} %DIF > 
+%DIF -------
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -324,9 +328,15 @@ are consistent with the observations. The \DIFdelbegin \DIFdel{simulations yield
 galaxies host globular cluster systems. The }\DIFdelend question thus naturally arises whether 
 the star formation histories of the simulations \DIFdelbegin \DIFdel{(also) }\DIFdelend give rise to a GC system 
 similar to the Milky Way and/or Andromeda globular cluster systems. In particular, 
-we use the Auriga suite of cosmological zoom simulations 
-(\citealt{2017MNRAS.467..179G}, and described in Sec.~\ref{sec:auriga}) to
-investigate whether the star formation model implemented produces metallicity, 
+we use the Auriga \DIFdelbegin \DIFdel{suite of cosmological zoom simulations (\mbox{%DIFAUXCMD
+\citealt{2017MNRAS.467..179G}}\hspace{0pt}%DIFAUXCMD
+, 
+and }\DIFdelend \DIFaddbegin \DIFadd{simulations \mbox{%DIFAUXCMD
+\citep[][hereafter G17]{2017MNRAS.467..179G}}\hspace{0pt}%DIFAUXCMD
+, 
+further }\DIFaddend described in Sec.~\ref{sec:auriga}\DIFdelbegin \DIFdel{) to
+}\DIFdelend \DIFaddbegin \DIFadd{. We }\DIFaddend investigate whether the star 
+formation model implemented produces metallicity, 
 radial, and metallicity-radial distributions that are consistent with the MW 
 and/or M31 GC systems, and whether the model produces enough stellar mass with
 the right properties to allow for formation efficiencies lower than unity and
@@ -343,50 +353,117 @@ to come to our conclusions in section~\ref{sec:conclusions}.
 
 \section{The Auriga simulations}
 \label{sec:auriga}
-We use the Auriga simulations \citep[][hereafter G17]{2017MNRAS.467..179G}, a
-suite of high-resolution cosmological zoom simulations of Milky Way-mass
-selected initial conditions. The simulations are performed with the \textsc{arepo} 
-\citep{2010MNRAS.401..791S, 2016MNRAS.455.1134P} code that solves the 
-magnetohydrodynamical equations on a moving mesh. The galaxy formation model 
+We use the Auriga simulations \DIFdelbegin \DIFdel{\mbox{%DIFAUXCMD
+\citep[][hereafter G17]{2017MNRAS.467..179G}}\hspace{0pt}%DIFAUXCMD
+}\DIFdelend \DIFaddbegin \DIFadd{\mbox{%DIFAUXCMD
+\citepalias{2017MNRAS.467..179G}}\hspace{0pt}%DIFAUXCMD
+}\DIFaddend , a suite of 
+high-resolution cosmological zoom simulations\DIFdelbegin \DIFdel{of }\DIFdelend \DIFaddbegin \DIFadd{. The }\DIFaddend Milky Way-mass
+selected initial conditions \DIFaddbegin \DIFadd{were selected from the \mbox{\textsc{eagle}} DM only 
+box, see \mbox{%DIFAUXCMD
+\citetalias{2017MNRAS.467..179G} }\hspace{0pt}%DIFAUXCMD
+for details}\DIFaddend . The simulations are performed with the \textsc{arepo} 
+\DIFdelbegin \DIFdel{\mbox{%DIFAUXCMD
+\citep{2010MNRAS.401..791S, 2016MNRAS.455.1134P} }\hspace{0pt}%DIFAUXCMD
+code }\DIFdelend \DIFaddbegin \DIFadd{code \mbox{%DIFAUXCMD
+\citep{2010MNRAS.401..791S, 2016MNRAS.455.1134P} }\hspace{0pt}%DIFAUXCMD
+}\DIFaddend that solves the 
+magnetohydrodynamical equations on a moving mesh. 
+\DIFdelbegin \DIFdel{The galaxy formation model 
 produces realistic spiral galaxies at redshift $z=0$.
+}%DIFDELCMD < 
 
-The interstellar medium is modelled using a sub-grid approach which implements
+%DIFDELCMD < %%%
+\DIFdel{The interstellar medium is modelled using a sub-grid approach which implements
 the physical processes most relevant to galaxy formation and evolution.
-This model was tailored to the \textsc{arepo} code and calibrated to reproduce
+This model was tailored to the }\textsc{\DIFdel{arepo}} %DIFAUXCMD
+\DIFdel{code and calibrated to reproduce
 key observables of galaxies, such as the history of the cosmic star formation rate
 density, the stellar mass to halo mass relation, and galaxy luminosity functions.
+}\DIFdelend 
 
-The sub-grid includes primordial and metal-line cooling with self-shielding
-corrections. Reionization is completed at redshift six by a time-varying
-spatially uniform UV background \citep{2009ApJ...703.1416F, 2013MNRAS.436.3031V}\DIFaddbegin \DIFadd{.
-}\DIFaddend The interstellar medium is described by an equation of state for a two-phase medium
-in pressure equilibrium \citep{2003MNRAS.339..289S} with stochastic star formation
-in thermally unstable gas with a density threshold of $n = 0.13 \text{cm}^{-3}$,
-and consecutive stellar evolution is accounted for. Stars provide feedback by
-stellar winds \citep{2014MNRAS.437.1750M, 2017MNRAS.467..179G}, and further
-enrich the ISM with metals from SNIa, SNII, and AGB stars \citep{2013MNRAS.436.3031V}.
-The formation of black holes is modelled which results in feedback from active
-galactic nuclei \citep{2005MNRAS.361..776S, 2014MNRAS.437.1750M, 2017MNRAS.467..179G}.
-Finally, the simulations follow the evolution of a magnetic field of $10^{-14}$
-(comoving)~G seeded at $z = 127$ \citep{2013MNRAS.432..176P, 2014ApJ...783L..20P}.
-See G17 for further details of the numerical setup as well as the galaxy formation
-model.
+The \DIFdelbegin \DIFdel{sub-grid }\DIFdelend \DIFaddbegin \DIFadd{galaxy formation model }\DIFaddend includes primordial and metal-line cooling with 
+self-shielding corrections. Reionization is completed at redshift six by a
+time-varying spatially uniform UV background \citep{2009ApJ...703.1416F, 
+2013MNRAS.436.3031V}\DIFaddbegin \DIFadd{. }\DIFaddend The interstellar medium \DIFaddbegin \DIFadd{(ISM) }\DIFaddend is described by an equation of 
+state for a two-phase medium in pressure equilibrium \citep{2003MNRAS.339..289S}\DIFdelbegin \DIFdel{with stochastic star formation}\DIFdelend \DIFaddbegin \DIFadd{: 
+cold clouds embedded in a hot ambient medium, whose mass and energy densities
+are described by processes important for star formation, such as the condensation 
+of cold clouds and the photoevaporation of clouds. Stars form stocastically }\DIFaddend in 
+thermally unstable gas with a density threshold of \DIFdelbegin \DIFdel{$n = 0.13 \text{cm}^{-3}$}\DIFdelend \DIFaddbegin \DIFadd{$n = 0.13 \, \text{cm}^{-3}$}\DIFaddend ,
+and consecutive stellar evolution is accounted for. \DIFdelbegin \DIFdel{Stars provide feedback by
+stellar winds \mbox{%DIFAUXCMD
+\citep{2014MNRAS.437.1750M, 2017MNRAS.467..179G}}\hspace{0pt}%DIFAUXCMD
+, and further
+}\DIFdelend \DIFaddbegin \DIFadd{The channel for energetic
+stellar feedback is from non-local SNII, which is modelled with wind particles
+(\mbox{%DIFAUXCMD
+\citealt{2014MNRAS.437.1750M}}\hspace{0pt}%DIFAUXCMD
+; \mbox{%DIFAUXCMD
+\citetalias{2017MNRAS.467..179G}}\hspace{0pt}%DIFAUXCMD
+). Galactic 
+winds }\DIFaddend enrich the ISM
+with metals from SNIa, SNII, and AGB stars \citep{2013MNRAS.436.3031V}. \DIFdelbegin \DIFdel{The formation of black holes is modelled which results in feedback from }\DIFdelend \DIFaddbegin \DIFadd{Supermassive
+black holes grow via Bondi–Hoyle–Lyttleton accretion \mbox{%DIFAUXCMD
+\citep{1944MNRAS.104..273B,
+1952MNRAS.112..195B}}\hspace{0pt}%DIFAUXCMD
+, and feedback from the }\DIFaddend active galactic nuclei \DIFdelbegin \DIFdel{\mbox{%DIFAUXCMD
+\citep{2005MNRAS.361..776S, 2014MNRAS.437.1750M, 2017MNRAS.467..179G}}\hspace{0pt}%DIFAUXCMD
+}\DIFdelend \DIFaddbegin \DIFadd{has a low-accretion
+and high-accretion mode (radio and quasar) (\mbox{%DIFAUXCMD
+\citealt{2005MNRAS.361..776S, 
+2014MNRAS.437.1750M}}\hspace{0pt}%DIFAUXCMD
+; \mbox{%DIFAUXCMD
+\citetalias{2017MNRAS.467..179G}}\hspace{0pt}%DIFAUXCMD
+)}\DIFaddend . Finally, the simulations 
+follow the evolution of a magnetic field of $10^{-14}$ (comoving)~G seeded at 
+$z = 127$ \citep{2013MNRAS.432..176P, 2014ApJ...783L..20P}.
+\DIFdelbegin \DIFdel{See G17 for further details of the numerical setup as well as the }\DIFdelend \DIFaddbegin 
 
-The Auriga suite has a fiducial resolution level L4, accompanied by the lower
-(higher) level L5 (L3) that is available for selected initial condition runs.
-The baryonic mass resolution in order of increasing level is $m_b$~=~[$4 \times 10^5$,
-$5 \times 10^4$, $6 \times 10^3$]~M\Sun \, with gravitational softening of
-collissionless particles $\epsilon$~=~[$738, 369, 184$]~pc. The mass resolution
-of the Auriga simulations is thus close to the characteristic peak mass of the
-lognormal GC mass distribution of $10^{5}$~M\Sun \citep{1991ARA&A..29..543H},
-although the gravitational softening is two orders of magnitudes larger than
-typical GC radii. High-density gaseous regions are thus not expected to produce
-surviving stellar clumps with masses and radii consistent with GCs because
-such objects would numerically disperse, even in the highest-resolution runs.
-On the other hand, we can investigate (statistical) properties of age-selected
-GC candidates because each star particle represents a single stellar population
-with a total mass that could be consistent with one globular cluster. This means
-that their formation sites and that of a real-world GC may be consistent.
+\DIFadd{This model was tailored to the }\textsc{\DIFadd{arepo}} \DIFadd{code and calibrated to reproduce
+key observables of galaxies, such as the history of the cosmic star formation rate
+density, the stellar mass to halo mass relation, and galaxy luminosity functions.
+The }\DIFaddend galaxy formation model \DIFaddbegin \DIFadd{produces realistic spiral galaxies at redshift $z=0$.
+Moreover, Auriga reproduces the HI disc properties \mbox{%DIFAUXCMD
+\citep{2017MNRAS.466.3859M}}\hspace{0pt}%DIFAUXCMD
+,
+the chemical thin/thick disc \mbox{%DIFAUXCMD
+\citep{2018MNRAS.474.3629G}}\hspace{0pt}%DIFAUXCMD
+, the diversity in 
+accreted stellar halo properties found in observations \mbox{%DIFAUXCMD
+\citep{2019MNRAS.485.2589M}}\hspace{0pt}%DIFAUXCMD
+,
+and the }\textit{\DIFadd{Gaia}} \DIFadd{Sausage \mbox{%DIFAUXCMD
+\citep{2019MNRAS.484.4471F}}\hspace{0pt}%DIFAUXCMD
+. These last two 
+bolster the point that the simulations are similar (and detailed) enough to the 
+MW to reproduce major, distinct features of the Galaxy, and so looking for the 
+GC population properties and comparing them to the MW/M31 is all the more relevant}\DIFaddend . 
+
+The Auriga suite has a fiducial \DIFdelbegin \DIFdel{resolution level }\DIFdelend \DIFaddbegin \DIFadd{baryonic mass resolution $m_b$~=~$5 \times 10^4$~M}\Sun\DIFadd{,
+with gravitational softening of collissionless particles $\epsilon$~=~369~pc.
+Simulations at this resolution are referred to as level 4 (}\DIFaddend L4\DIFdelbegin \DIFdel{, accompanied }\DIFdelend \DIFaddbegin \DIFadd{). Selected
+initial condition runs are acompanied }\DIFaddend by the lower (higher) \DIFaddbegin \DIFadd{resolution }\DIFaddend level L5 (L3)\DIFdelbegin \DIFdel{that is available for selected initial condition runs.
+The baryonic mass resolution in order of increasing level }\DIFdelend \DIFaddbegin \DIFadd{.
+The resolution for these levels }\DIFaddend is $m_b$~=~\DIFdelbegin %DIFDELCMD < [%%%
+\DIFdelend $4 \times 10^5$\DIFdelbegin \DIFdel{,
+$5 \times 10^4$, }\DIFdelend \DIFaddbegin \DIFadd{~M}\Sun \DIFadd{\, with 
+$\epsilon$~=~738~pc, and $m_b$~=~}\DIFaddend $6 \times 10^3$\DIFdelbegin %DIFDELCMD < ]%%%
+\DIFdelend ~M\Sun \, with \DIFdelbegin \DIFdel{gravitational softening of
+collissionless particles }\DIFdelend $\epsilon$~=~\DIFdelbegin %DIFDELCMD < [%%%
+\DIFdel{$738, 369, 184$}%DIFDELCMD < ]%%%
+\DIFdel{~pc}\DIFdelend \DIFaddbegin \DIFadd{184~pc,
+respectively}\DIFaddend . The mass resolution of the Auriga simulations is thus close to the 
+characteristic peak mass of the lognormal GC mass distribution of $10^{5}$~M\Sun 
+\citep{1991ARA&A..29..543H}, although the gravitational softening is two orders 
+of magnitudes larger than typical GC radii \DIFaddbegin \DIFadd{of several parsec}\DIFaddend . High-density gaseous 
+regions are thus not expected to produce surviving stellar clumps with masses and 
+radii consistent with GCs because such objects would numerically disperse, even 
+in the highest-resolution runs. On the other hand, we can investigate (statistical) 
+properties of age-selected GC candidates because each star particle represents a
+single stellar population with a total mass that could be consistent with one 
+globular cluster. This means that their formation sites and that of a real-world 
+GC may be consistent.
 
 \section{Observational data}
 \label{sec:observations}
@@ -581,7 +658,7 @@ in comparison to the MW and M31 [Fe/H] distributions.
     \DIFaddendFL \caption{
         \DIFdelbeginFL \emph{\DIFdelFL{Left:}} %DIFAUXCMD
 \DIFdelendFL \DIFaddbeginFL \emph{\DIFaddFL{Top}}\DIFaddFL{: }\DIFaddendFL Metallicity distribution of \DIFdelbeginFL \DIFdelFL{Au4-10 }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{the MW and M31 GCS. The solid 
-        purple }\DIFaddendFL (\DIFdelbeginFL \DIFdelFL{bottom panel}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{magenta) line shows the GC system of the MW (M31}\DIFaddendFL )\DIFaddbeginFL \DIFaddFL{, and we 
+        purple }\DIFaddendFL (\DIFdelbeginFL \DIFdelFL{bottom panel}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{magenta}\DIFaddendFL ) \DIFaddbeginFL \DIFaddFL{line shows the GC system of the MW (M31), and we 
         indicate the mean value with an arrow at the bottom of the x-axis}\DIFaddendFL . We
         \DIFaddbeginFL \DIFaddFL{overplot a double Gaussian for the MW GCS using purple dotted lines, taking
         the mean and dispersion from \mbox{%DIFAUXCMD
@@ -885,10 +962,12 @@ simulations to yield a GC system consistent with that of the Andromeda galaxy.
 
 
 \section{Discussion}
-% ``The Auriga Stellar Haloes: Connecting stellar population properties with
-% accretion and merging history'' \citet{2018arXiv180407798M}
+%DIF <  ``The Auriga Stellar Haloes: Connecting stellar population properties with
+%DIF <  accretion and merging history'' \citet{2018arXiv180407798M}
+\DIFdelbegin %DIFDELCMD < 
 
-\label{sec:discussion}
+%DIFDELCMD < %%%
+\DIFdelend \label{sec:discussion}
 \subsection{Metallicity distribution}
 \label{sec:discussion_FeH}
 Globular clusters are ${\sim}0.5$ dex more metal-poor than spheroid stars observed 
