@@ -716,16 +716,6 @@ and radius in the following section.
 \subsection{Total mass in metallicity-radial space}
 \label{sec:results_FeHRgc}
 
-We investigate whether the Auriga simulations still produce sufficient mass when
-the GC candidates are two-dimensionally binned in [Fe/H] and $R_\text{gal}$. First
-we sum the total simulated mass in each bin (for an individual Auriga simulation),
-then we calculate the median over all thirty Auriga L4 haloes (in each bin, see
-Figure~\ref{fig:Au-FeHRgc} which can be compared to
-Figure~\ref{fig:observations_FeHRgc}). Finally, we divide these value by the total
-mass in the MW (M31) GCS to obtain the median mass ratio produced by the star
-formation model implemented in the Auriga simulations. See the top (bottom) panel
-of Figure~\ref{fig:Au-FeHRgc-ratio} for mass ratio with respect to the MW (M31) GCS.
-
 \begin{figure}
     \includegraphics[width=0.49\textwidth]
         {{Au4-median_RgcFeH_HistogramMassWeighted_iold-trim}.png}
@@ -740,11 +730,40 @@ of Figure~\ref{fig:Au-FeHRgc-ratio} for mass ratio with respect to the MW (M31) 
     }
 \end{figure}
 
-We notice in Figure~\ref{fig:Au-FeHRgc} that the Auriga simulations, on average,
-produce fewer GCs in the lowest metallicity bins ($-2.5$ to $-1.5$) than at higher 
-metallicities in the three innermost radial bins. In addition, Auriga produces 
-fewer high-metallicity GCs at large radii, similar to the MW and M31 GC systems. 
-The top panel of Figure~\ref{fig:Au-FeHRgc-ratio} shows that the mass ratio for 
+We investigate whether the Auriga simulations still produce sufficient mass when
+the GC candidates are two-dimensionally binned in [Fe/H] and $R_\text{gal}$. First
+we sum the total mass of GC candidates in each bin (for an individual Auriga 
+simulation), then we calculate the median total mass in each bin over all 
+thirty Auriga L4 haloes. The result is shown in Figure~\ref{fig:Au-FeHRgc} (which 
+can be compared to the observed total GC mass shown in 
+Figure~\ref{fig:observations_FeHRgc}). We notice that the Auriga simulations, 
+on average, produce fewer GCs in the lowest metallicity bins ($-2.5$ to $-1.5$) 
+than at higher metallicities in the three innermost radial bins. In addition, 
+Auriga produces fewer high-metallicity GCs at large radii, similar to the MW 
+and M31 GC systems. 
+
+To ease the comparison between the simulations and observations we take the ratio
+of the total mass of GC candidates in Auriga to the total GC mass in the MW 
+(and M31). We use a diverging colour map centered around the overall median of the 
+mass ratio (i.e. we subtract the median of these twenty-five bins from the value 
+in each bin). We show this in the top (bottom) panel of Figure~\ref{fig:Au-FeHRgc-ratio}.
+Note that the data in three top right bins is masked because the mass ratio cannot 
+be calculated due to zero mass in the observations (therefore the bins are white).
+If the product of the bound cluster formation efficiency and consecutive GC 
+disruption over a Hubble time would be constant, then the value in each bin would
+have been zero. The red and blue bins indicate deviations from such as scenario and
+indicate a higher and lower than average mass excess. In particular, the median 
+value used to shift the mass ratio is $2.68$ and $1.69$ dex for the MW and M31, 
+respectively. This means that the overall `mass budget' that the simulations `can 
+afford to lose' is roughly a factor $480$ and $50$ for the MW and M31, respectively. 
+The lowest mass surplus for both galaxies is the the bin where $-2.5 <$ [Fe/H] 
+$< -1.5$ and $3 < R_{\text{gal}}/\text{kpc} < 8$, for which the simulations produce 
+a factor $10^{2.68}/10^{1.33} \approx 22$ and $10^{1.69}/10^{0.75} \approx 9$ 
+more mass in GC candidates than what is observed in the MW and M31 respectively.
+The highest factor for the MW is $2.1 \times 10^{5}$, and $1.1 \times 10^{3}$
+for M31.
+
+The top panel of Figure~\ref{fig:Au-FeHRgc-ratio} shows that mass excess for
 Auriga GCs within the Solar radius decreases with decreasing metallicity. This
 means that either the formation efficiency should increase with decreasing metallicity,
 or that the lowest-metallicity GCs in the Auriga simulations are less strongly affected
@@ -788,65 +807,68 @@ simulations to yield a GC system consistent with that of the Andromeda galaxy.
 \label{sec:discussion_FeH}
 Globular clusters are ${\sim}0.5$ dex more metal-poor than spheroid stars observed 
 at the same radius for almost all galaxies \citep{1991ARA&A..29..543H}. Our 
-selection function (age cut) does lower the mean metallicity by $0.5$ dex, but
-we still find that the metallicity distributions of GC candidates in the Auriga
-simulations are more metal-rich than the MW (M31) GCS. Although the (old) star
-particles represent single stellar populations with a mass (resolution) consistent 
-with that of GCs, they are in fact statistical tracers of the stellar population 
-of the galaxy as a whole. Therefore only a (small) fraction of the star particles 
-may represent plausible formation sites of GCs, whereas the majority represents 
-(halo) field stars - the disk component effectively falls outside our selection 
-of star particles due to the age cut. It is implausible that all halo stars 
-come from disrupted GCs because GC systems that survive down to redshift zero 
-are generally few orders of magnitude less massive than galactic stellar haloes.
+selection function (age cut) does lower the mean metallicity of GC candidates by 
+$0.5$ dex with respect to all star particles, but we still find that the GC 
+candidates in the Auriga simulations are more metal-rich than the MW and M31 GCSs. 
+Although the (old) star particles represent single stellar populations with a mass 
+(resolution) consistent with that of GCs, they are in fact statistical tracers 
+of the stellar population of the galaxy as a whole. Therefore only a (small) 
+fraction of the star particles may represent plausible formation sites of GCs, 
+whereas the majority represents (halo) field stars - the disk component effectively 
+falls outside our selection of star particles due to the age cut. It is implausible 
+that all halo stars come from disrupted GCs because the total mass in GC systems 
+at redshift zero is generally a few orders of magnitude lower than the total 
+mass of stellar haloes of galaxies. If stellar haloes solely consist of disrupted
+GCs, then the GC disruption rate would have to be considerably higher than expected
+from theoretical models. Overall, our set of GC candidates most likely contains
+an overabundance of regular stars. It could be that the resulting metallicity
+distribution is then biased towards higher values than what is observed for real 
+GCs. An alternative explanation could overmixing of metals at early times.
+
 
 In general, the colour (metallicity) distribution of most GC systems is bimodal 
 with typical separating value [Fe/H]$\sim -1$ \citep{1985ApJ...293..424Z,
 1999AJ....118.1526G,2001AJ....121.2974L,2006ApJ...639...95P}. Indeed, 
-\citet[][p. 234]{1998gcs..book.....A} and \citet[][p. 38]{Harris2001} find that
-the MW GCS has a bimodal [Fe/H] distribution: the latter fit a double Gaussian 
-which peaks at [Fe/H] = $-1.59$ (metal-poor) and $-0.51$ (metal-rich) and 
-dispersions of $0.34$ and $0.23$. Observations of GCs in M31, however, may be
-best split into three distinct metallicity groups, one found at small radii with 
-[Fe/H] $>-0.4$, one intermediate [Fe/H] group, and a dominant (metal-poor) group 
-with [Fe/H] $< -1.5$ \citep{2016ApJ...824...42C}. The numerical simulation of
-\citet{2017MNRAS.465.3622R} does yield a bimodal metallicity distribution where
-the metal-poor population is dominated by accreted star particles and the metal-rich
-population by {\it in~situ} stars. 
+\citet{1998gcs..book.....A} and \citet{Harris2001} find that the MW GCS has a 
+bimodal [Fe/H] distribution. Observations of GCs in M31, however, may be best 
+split into three distinct metallicity groups \citep{2016ApJ...824...42C}. The 
+numerical simulation of \citet{2017MNRAS.465.3622R} does yield a bimodal 
+metallicity distribution where the metal-poor population is dominated by accreted 
+star particles and the metal-rich population by {\it in~situ} stars. 
 
 We find that none of the Auriga simulations produces a bimodal 
 metallicity distribution for age-selected GC candidates. Interestingly, the 
 cross-over point above (below) which the mass-weighted metallicity distribution
 of GC candidates is dominated by those that have formed {\it in~situ} (were
 accreted) does coincide with the separation between the metal-rich and metal-poor
-populations of GC systems at [Fe/H]~=~$-1$. Moreover, we do find that the mean
-metallicity shifts when we split the GC candidates up according to birth location
-(accreted or {\it in~situ}). In particular, the mean values of the old 
-{\it in~situ} GC candidates are roughly consistent with the metal-rich MW GCs.
+populations of GC systems at [Fe/H]~=~$-1$, as for the MW. Moreover, we do find 
+that the mean metallicity shifts when we split the GC candidates up according 
+to birth location (accreted or {\it in~situ}). In particular, the mean values of 
+the {\it in~situ} GC candidates are roughly consistent with the metal-rich MW GCs.
 However, we also notice that a substantial number of simulations has similar 
 mean values for all GC candidates, and the simulated {\it in~situ} GC candidates 
 have larger dispersions than the metal-rich GCs. Moreover, the offset between 
 the mean of the metal-rich and metal-poor populations in the MW is $1$ dex, a
 factor $2-3$ larger than the offset that we find between the {\it in~situ} and 
 accreted populations. The Auriga simulations therefore do not support the view 
-that the metal-poor GCs could have formed in satellites that have later been 
-accreted whereas the metal-rich GC subpopulation has formed {\it in~situ}. With 
-this statement, however, we do caution that \citet{2019MNRAS.486.3134K} suggests 
+that the metal-poor GCs could have only formed in satellites that have later been 
+accreted whereas the metal-rich GC subpopulation has only formed {\it in~situ}. 
+With this statement, however, we do caution that \citet{2019MNRAS.486.3134K} suggests 
 to reserve the `{\it ex~situ}' classification for accretion after $z=2$, when
 the central galaxy has formed and accretion unambigously contributes to the
-radially extended halo GC population. In fact, our classification appears flawed
-in Au4-1.
+radially extended halo GC population. In fact, our classification might not hold
+for Au4-1.
 
 Finally, we note that \citet{2006ARA&A..44..193B} compares the number of metal-poor 
-GCs to the stellar halo mass and find\footnote{the quantity $T$ is the number of 
-GCs per $10^9$ M\Sun \, of galaxy stellar mass} $T^n_{\text{blue}} \sim 100$, 
+GCs to the stellar halo mass and find\footnote{The quantity $T$ is the number of 
+GCs per $10^9$ M\Sun \, of galaxy stellar mass.} $T^n_{\text{blue}} \sim 100$, 
 while the number of metal-rich GCs compared to the bulge mass yields 
 $T^n_{\text{red}} \sim 5$, and therefore conclude that the formation efficiency
 of metal-poor GCs is twenty times higher than the metal-rich GCs with respect to 
-field stars. We find that gradual linear increase in formation efficiency of GCs
+field stars. We find that a gradual increase in formation efficiency of GCs
 with respect to field stars would be required with decreasing metallicity for
 the GC candidates in the Auriga simulations to yield sufficient total mass to
-be consistent with the Milky Way GCS.
+be consistent with the MW or M31 GCS.
 
 \subsection{Radial distribution}
 \label{sec:discussion_Rgc}
