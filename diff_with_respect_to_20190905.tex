@@ -1,7 +1,7 @@
 % mnras_template.tex
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL AurigaGCS_20190905.tex   Mon Sep  9 14:29:17 2019
-%DIF ADD AurigaGCS.tex            Mon Sep  9 14:30:08 2019
+%DIF ADD AurigaGCS.tex            Wed Nov 20 13:09:28 2019
 %
 % LaTeX template for creating an MNRAS paper
 %
@@ -184,7 +184,8 @@ $^{4}$ Department of Physics \& Astronomy, University of Bologna, via Gobetti 93
 % Abstract of the paper
 \begin{abstract}
 We investigate whether the galaxy and star formation model used for the Auriga
-simulations can produce a realistic GC population. We compare statistics of GC 
+simulations can produce a realistic \DIFdelbegin \DIFdel{GC }\DIFdelend \DIFaddbegin \DIFadd{globular cluster (GC) }\DIFaddend population. 
+We compare statistics of GC 
 candidate star particles in the Auriga haloes with catalogues of the Milky Way 
 (MW) and Andromeda (M31) GC populations. We find that the Auriga simulations do 
 produce sufficient stellar mass for GC candidates at radii and metallicities that 
@@ -234,7 +235,7 @@ structures in the Universe (i.e. prior to formation of the main galaxy),
 noting that the Jeans length and mass shortly after recombination is consistent
 with typical GC masses and sizes. \citet{2005MNRAS.364..367D} and \citet{
 2009ApJ...706L.192B} argue that (the blue subpopulations of) GCs form in radially
-biased dark matter halos at high redshift. Other recent hypotheses of GC formation 
+biased dark matter \DIFaddbegin \DIFadd{(DM) }\DIFaddend halos at high redshift. Other recent hypotheses of GC formation 
 prior to collapse of the proto-galaxy include formation in colliding supershells 
 \citep{2017Ap&SS.362..183R}, in supersonically induced gaseous objects
 \citep{2019arXiv190408941C}, or in high-speed collisions of dark matter subhaloes
@@ -255,7 +256,7 @@ gas-rich (spiral) galaxy mergers \citep{1987nngp.proc...18S, 1992ApJ...384...50A
 which is naturally expected within the framework of hierarchical assembly. One
 testable prediction of this scenario is the formation of young clusters in
 interacting and merging galaxies, which has been observed and are found to show 
-remarkable similarities with GCs in the MW \citep[e.g.][]{
+remarkable similarities with GCs in the \DIFdelbegin \DIFdel{MW }\DIFdelend \DIFaddbegin \DIFadd{Milky Way (MW) }\DIFaddend \citep[e.g.][]{
 1995AJ....109..960W, 1996AJ....112..416H, 1999AJ....118..752Z, 1999AJ....118.1551W}.
 Moreover, modelling efforts of this framework yield GC (sub)populations consistent 
 with various observables \citep[e.g.][]{2010ApJ...718.1266M, 2018MNRAS.480.2343C}, 
@@ -308,9 +309,9 @@ In this work we use state of the art simulations that produce realistic spiral
 galaxies (MW analogues) at redshift zero for which several global properties 
 are consistent with the observations. The question thus naturally arises whether 
 the star formation histories of the simulations give rise to a GCS similar to 
-the MW and/or M31 GCSs. In particular, 
+the MW and/or \DIFaddbegin \DIFadd{Andromeda (}\DIFaddend M31\DIFaddbegin \DIFadd{) }\DIFaddend GCSs. In particular, 
 we use the Auriga simulations \citep[][hereafter G17]{2017MNRAS.467..179G}, 
-further described in Sec.~\ref{sec:auriga}. We investigate whether the star 
+further described in \DIFdelbegin \DIFdel{Sec.}\DIFdelend \DIFaddbegin \DIFadd{Section}\DIFaddend ~\ref{sec:auriga}. We investigate whether the star 
 formation model implemented produces metallicity, 
 radial, and metallicity-radial distributions that are consistent with the MW 
 and/or M31 GCSs, and whether the model produces enough stellar mass with
@@ -345,10 +346,10 @@ are described by processes important for star formation, such as the condensatio
 of cold clouds and the photoevaporation of clouds. Stars form stocastically in 
 thermally unstable gas with a density threshold of $n = 0.13 \, \text{cm}^{-3}$,
 and consecutive stellar evolution is accounted for. The channel for energetic
-stellar feedback is from non-local SNII, which is modelled with wind particles
-(\citealt{2014MNRAS.437.1750M}; \citetalias{2017MNRAS.467..179G}). Galactic 
-winds enrich the ISM
-with metals from SNIa, SNII, and AGB stars \citep{2013MNRAS.436.3031V}. Supermassive
+stellar feedback is from non-local \DIFdelbegin \DIFdel{SNII}\DIFdelend \DIFaddbegin \DIFadd{type II supernovae (SN)}\DIFaddend , which is modelled 
+with wind particles (\citealt{2014MNRAS.437.1750M}; \citetalias{2017MNRAS.467..179G}).
+Galactic winds enrich the ISM with metals from SNIa, SNII, and \DIFdelbegin \DIFdel{AGB }\DIFdelend \DIFaddbegin \DIFadd{asymptotic giant 
+branch (AGB) }\DIFaddend stars \citep{2013MNRAS.436.3031V}. Supermassive
 black holes grow via Bondi–Hoyle–Lyttleton accretion \citep{1944MNRAS.104..273B,
 1952MNRAS.112..195B}, and feedback from the active galactic nuclei has a low-accretion
 and high-accretion mode (radio and quasar) (\citealt{2005MNRAS.361..776S, 
@@ -388,8 +389,8 @@ This means that their formation sites and that of a real-world GC may be consist
 
 \section{Observational data}
 \label{sec:observations}
-We describe the observations of the MW GCS in Sec.~\ref{sec:milkyway},
-and of the M31 GCS in Sec.~\ref{sec:andromeda}
+We describe the observations of the MW GCS in \DIFdelbegin \DIFdel{Sec.}\DIFdelend \DIFaddbegin \DIFadd{Section}\DIFaddend ~\ref{sec:milkyway},
+and of the M31 GCS in \DIFdelbegin \DIFdel{Sec.}\DIFdelend \DIFaddbegin \DIFadd{Section}\DIFaddend ~\ref{sec:andromeda}
 
 
 \subsection{Milky Way}
@@ -467,12 +468,22 @@ The bottom panel of Figure~\ref{fig:MW-M31-age-Rgc} shows the radial distributio
 of the MW and M31 GCS. We divide the radii of M31 by its virial radius\footnote{
 $r_{\text{vir}}$ is the radius in a spherical `top-hat' perturbation model at which
 the average density reaches an overdensity of $\Delta_{\text{vir}}=357$ times the 
-background density, adopting the values and cosmology from \citet{2017MNRAS.464.3825P}}
-$r_{\text{vir,M31}} = 299$~kpc and multiply by $r_{\text{vir,MW}} = 261$~kpc to 
-account for the different intrinsic sizes of both galaxies. Values for 
-R$_{\text{gal}}$ are readily available in H96e10 (assuming $r_{\odot}=8.0$~kpc), but the galactocentric radius of GCs
-in M31 is not available in CR16. Therefore, we follow \citet[][Sec.~4.1]{2019arXiv190111229W} 
-to calculate the projected radius $r_{\text{proj}}$ from the observed positions,
+background density\DIFdelbegin \DIFdel{, adopting the values and cosmology from \mbox{%DIFAUXCMD
+\citet{2017MNRAS.464.3825P}}\hspace{0pt}%DIFAUXCMD
+}\DIFdelend } $r_{\text{vir,M31}} = 299$~kpc and multiply by 
+$r_{\text{vir,MW}} = 261$~kpc to account for the different intrinsic sizes of both 
+galaxies\DIFaddbegin \DIFadd{, adopting the values and cosmology from \mbox{%DIFAUXCMD
+\citet{2017MNRAS.464.3825P}}\hspace{0pt}%DIFAUXCMD
+}\DIFaddend .
+Values for \DIFdelbegin \DIFdel{R$_{\text{gal}}$ }\DIFdelend \DIFaddbegin \DIFadd{$r_{\text{gal}}$ }\DIFaddend are readily available in H96e10 (assuming $r_{\odot}=8.0$~kpc), 
+but the galactocentric radius of GCs in M31 is not available in CR16. Therefore, we 
+follow \DIFdelbegin \DIFdel{\mbox{%DIFAUXCMD
+\citet[][Sec.~4.1]{2019arXiv190111229W} 
+}\hspace{0pt}%DIFAUXCMD
+}\DIFdelend \DIFaddbegin \DIFadd{\mbox{%DIFAUXCMD
+\citet[][section~4.1]{2019arXiv190111229W} 
+}\hspace{0pt}%DIFAUXCMD
+}\DIFaddend to calculate the projected radius $r_{\text{proj}}$ from the observed positions,
 adopting M31's central position from the NASA Extragalactic 
 Database\footnote{\url{https://ned.ipac.caltech.edu/}} $(\alpha_0, \, \delta_0) =
 (0^{\text{h}}42^{\text{m}}44.35^{\text{s}}, \, +41^{\circ}16'08.63")$
@@ -567,8 +578,8 @@ in Sec.~\ref{sec:results_FeHRgc}.
 
 \subsection{Metallicity distribution}
 \label{sec:results_FeH}
-We investigate whether the model implemented in Auriga produces metallicity 
-distributions consistent with the MW and M31 GCSs, and whether
+We investigate whether the \DIFaddbegin \DIFadd{star formation }\DIFaddend model implemented in Auriga produces 
+metallicity distributions consistent with the MW and M31 GCSs, and whether
 the simulations generate sufficient total mass at metallicities typical for the
 MW and M31 GCSs. To visually inspect the former we show the normalized metallicity 
 distribution of three specific Auriga galaxies in Figure~\ref{fig:Au4-10and21_FeH}
@@ -584,7 +595,7 @@ in comparison to the MW and M31 [Fe/H] distributions.
         the mean and dispersion from \citep{Harris2001}.
         \emph{Other panels}: three selected Auriga haloes as indicated in the 
         upper right corner. In each of these three panels we show the GG 
-        candicates in green, and use a green dotted line for all star particles. 
+        \DIFdelbeginFL \DIFdelFL{candicates }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{candidates }\DIFaddendFL in green, and use a green dotted line for all star particles. 
         We split the GC candidates up into two subpopulations, those that have 
         formed {\it in~situ} (blue), and those that have been accreted (red).
         \label{fig:Au4-10and21_FeH}
@@ -596,7 +607,7 @@ conditions was used).}, \mbox{Au4-21}, and \mbox{Au4-4} to show the
 distributions of three individual simulation runs that we consider representative
 for specific behaviour, and to highlight that different runs could give rise to 
 different distributions. We show the age-selected GC candidates as well as the 
-accreted and {\it in~situ} subsets. The top half of the left figure shows the MW 
+accreted and {\it in~situ} subsets. The top \DIFdelbegin \DIFdel{half of the left figure }\DIFdelend \DIFaddbegin \DIFadd{panel of Figure~\ref{fig:Au4-10and21_FeH} }\DIFaddend shows the MW 
 and M31 GCSs, where we overplot a double Gaussian for the MW GCS by 
 adopting literature values of the mean $\mu$ and standard deviation $\sigma$ of 
 the metal-rich and metal-poor subpopulations \citep{Harris2001}.
@@ -632,7 +643,11 @@ distribution.
         were used. The purple (magenta) cross denotes our calculation using all
         MW (M31) observations (which would be appropriate for a unimodal
         distribution). The black solid (open) dots indicate the literature values
-        of a bimodal Gaussian fit to the data \citep[values from][p. 38]{1998gcs..book.....A},
+        of a bimodal Gaussian fit to the data \DIFdelbeginFL \DIFdelFL{\mbox{%DIFAUXCMD
+\citep[values from][p. 38]{1998gcs..book.....A}}\hspace{0pt}%DIFAUXCMD
+}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{\mbox{%DIFAUXCMD
+\citep[values from][page~38]{1998gcs..book.....A}}\hspace{0pt}%DIFAUXCMD
+}\DIFaddendFL ,
         showing the metal-rich (metal-poor) component of the MW.
         \label{fig:FeH_mu_sigma}
     }
@@ -646,11 +661,11 @@ which shows the mean value of all MW (M31) GCs. In addition, we show the metal-r
 these literature values result from individual Gaussian fits to sub sets of the 
 observational data cut at [Fe/H]~$= -1$. We do not include corresponding data 
 points calculated using such an artificial cut for the simulated star particles.
-Having said that, we do find it interesting that the mean metallicities of the 
-{\it in~situ} GC candidates appear roughly consistent with that of the metal-rich 
-population of the MW although the simulations show larger dispersions. The latter 
-could simply be caused by the hard separation of the MW data into two groups, 
-which means the range is smaller and the resulting dispersion lower. With 
+\DIFdelbegin \DIFdel{Having said that, we do find it }\DIFdelend \DIFaddbegin \DIFadd{It is }\DIFaddend interesting that the mean metallicities of the {\it in~situ} GC candidates 
+appear roughly consistent with that of the metal-rich population of the MW \DIFaddbegin \DIFadd{despite 
+the lack of such a metallicity cut, }\DIFaddend although the simulations show larger dispersions. 
+The latter could simply be caused by the hard separation of the MW data into two 
+groups, which means the range is smaller and the resulting dispersion lower. With 
 regard to the M31 GCS, so far no definitive consensus has been reached
 in the literature concerning uni- bi- or trimodality in the [Fe/H] distribution, 
 but CR16 argues that the data, after removal of younger objects due to improved 
@@ -658,7 +673,7 @@ age classification, hints at three populations separated at [Fe/H]~$=-0.4$ and
 [Fe/H]~$ = 1.5$. None of the Auriga sub sets has a mean value that offers much 
 hope that the simulated distribution is consistent with the lowest metallicity 
 group in the M31 GCS. This is also true for the metal-poor population of the 
-MW with a mean value of $-1.6$. The main take-away from this plot, again, is 
+MW with a mean value of $-1.6$. The main \DIFdelbegin \DIFdel{take-away from this plot, again, }\DIFdelend \DIFaddbegin \DIFadd{result of this figure }\DIFaddend is 
 that all Auriga L4 galaxies have metallicity distributions with (much) larger
 mean values than what is observed for the MW and M31 GCS, and that we 
 systematically find lower mean metallicities for the accreted GC candidates
@@ -846,7 +861,7 @@ indicate a higher and lower than average mass excess in the simulations. The med
 value used to shift the mass ratio is $2.68$ and $1.69$ dex for the MW and M31, 
 respectively. This means that the median `mass budget' that the simulations `can 
 afford to lose' is roughly a factor $480$ and $50$ for the MW and M31, respectively. 
-The lowest mass surplus for both galaxies is the the bin where $-2.5 <$ [Fe/H] 
+The lowest mass surplus for both galaxies is the \DIFdelbegin \DIFdel{the }\DIFdelend bin where $-2.5 <$ [Fe/H] 
 $< -1.5$ and $3 < r_{\text{gal}}/\text{kpc} < 8$, for which the simulations produce 
 a factor $10^{2.68}/10^{1.33} \approx 22$ and $10^{1.69}/10^{0.75} \approx 9$ 
 more mass in GC candidates than what is observed in the MW and M31 respectively.
@@ -969,7 +984,7 @@ field stars. We find that a gradual increase in formation efficiency of GCs
 with respect to field stars would be required with decreasing metallicity for
 the GC candidates in the Auriga simulations to yield sufficient total mass to
 be consistent with the MW or M31 GCS. In addition, the metal-poor GC candidates
-would have to experience low mass los rates, especially those within the Solar
+would have to experience low mass \DIFdelbegin \DIFdel{los }\DIFdelend \DIFaddbegin \DIFadd{loss }\DIFaddend rates, especially those within the Solar
 radius.
 
 \subsection{Radial distribution}
@@ -1049,10 +1064,10 @@ our analysis we draw the following conclusions.
 TLRH acknowledges support from the International Max-Planck Research School (IMPRS)
 on Astrophysics. TLRH thanks the Max Planck Computing and Data Facility for
 maintaining the Freya compute cluster, where the simulations were post-processed.
-FM is supported by the program "Rita Levi Montalcini" of the Italian MIUR. \DIFaddbegin \DIFadd{FAG 
+FM is supported by the program "Rita Levi Montalcini" of the Italian MIUR\DIFaddbegin \DIFadd{. FAG 
 acknowledges financial support from CONICYT through the project FONDECYT Regular 
-Nr. 1181264, and funding from the Max Planck Society through a Partner Group grant.
-}\DIFaddend This work has been supported by the European Research Council under ERC-StG grant
+Nr. 1181264, and funding from the Max Planck Society through a Partner Group grant}\DIFaddend .
+This work has been supported by the European Research Council under ERC-StG grant
 EXAGAL- 308037. Part of the simulations of this paper used the SuperMUC system 
 at the Leibniz Computing Centre, Garching, under the project PR85JE of the Gauss 
 Centre for Supercomputing. This work used the DiRAC Data Centric system at Durham
