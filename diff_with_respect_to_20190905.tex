@@ -1,7 +1,7 @@
 % mnras_template.tex
 %DIF LATEXDIFF DIFFERENCE FILE
-%DIF DEL AurigaGCS_20190905.tex   Mon Sep  9 14:29:17 2019
-%DIF ADD AurigaGCS.tex            Wed Nov 20 13:09:28 2019
+%DIF DEL AurigaGCS_20190905.tex   Mon Sep  9 16:29:17 2019
+%DIF ADD AurigaGCS.tex            Wed Dec  4 15:15:33 2019
 %
 % LaTeX template for creating an MNRAS paper
 %
@@ -1050,14 +1050,26 @@ our analysis we draw the following conclusions.
     dominated by accreted star particles at radii beyond $20$~kpc. The GCs in 
     the MW and M31, on the other hand, have a much smaller radial extent.
 
-    \item The cluster formation efficiency would have to increase with decreasing
+    \item \DIFaddbegin \DIFadd{Tidal forces are larger in the inner regions of galaxies than in the
+    outer halo. Therefore, we expect dynamical evolution to more strongly affect 
+    GC candidates at small radii than at large radii. However,
+    we find that the Auriga simulations produce more mass in GC candidates with
+    high metallicities at large radii than with low metallicities at small radii.
+    }\DIFaddend The cluster formation efficiency would have to increase with decreasing
     metallicity for GC candidates in the Auriga simulations to be consistent
-    with the MW GCS, given that we expect dynamical evolution to 
-    more strongly affect GC candidates at smaller radii. This trend of over-production
-    of old star particles that are metal-rich and at large radii compared to 
-    observed GCs is less clear for the M31 GCS.
+    with the MW GCS\DIFdelbegin \DIFdel{, given that we expect dynamical evolution to 
+    more strongly affect GC candidates at smaller radii}\DIFdelend . This trend of over-production of old star particles that 
+    are metal-rich and at large radii compared to observed GCs is less clear for 
+    the M31 GCS.
 
-\end{itemize}
+    \DIFaddbegin \item
+    \DIFadd{Overall, we conclude that the metallicity and radial distribution of age-selected
+    star particles in the Auriga simulations are not consistent with GCS of the 
+    Milky Way or with that of the Andromeda galaxy.
+}
+
+
+\DIFaddend \end{itemize}
 
 
 \section*{Acknowledgements}
