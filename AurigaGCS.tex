@@ -22,6 +22,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Basic setup. Most papers should leave these options alone.
 \documentclass[a4paper,fleqn,usenatbib]{mnras}
+% \hypersetup{draft}
 
 % MNRAS is set in Times font. If you don't have this installed (most LaTeX
 % installations will be fine) or prefer the old Computer Modern fonts, comment
@@ -169,6 +170,7 @@ for example as a result of thermal instabilities in hot gas-rich haloes
 1980glcl.conf..301G, 1992ApJ...400..265M, 1994ApJ...429..177H, 1995ApJ...442..618V,
 1996ASPC...92..241L, 2001ApJ...560..592C}. 
 
+\newpage  % to prevent reference split over two pages which breaks LaTeX
 Yet another hypothesis is that star cluster formation is triggered by major 
 gas-rich (spiral) galaxy mergers \citep{1987nngp.proc...18S, 1992ApJ...384...50A},
 which is naturally expected within the framework of hierarchical assembly. One
@@ -413,7 +415,7 @@ of radii than the full data set: it appears that few age-estimates are available
 for the innermost ($<1$~kpc) GCs, and none for those beyond roughly $20$~kpc
 (the halo GCs). We compare both distributions of the full data set (solid 
 lines) and find that the MW has more GCs in the range $1-4$~kpc than M31
-(when accounting for the larger number of total GCs in M31). Interestingly, both
+when accounting for the larger number of total GCs in M31. Interestingly, both
 distributions show a similar trend for $r_{\text{gal}} > 4$~kpc and host a 
 subpopulation of halo GCs. However, the two radial distributions are not statistically
 consistent with being drawn from the same underlying distribution due to substantial 
@@ -439,8 +441,8 @@ differences at intermediate radii.
 \subsection{Total GC mass in metallicity-radial space} 
 \label{sec:observations_FeHRgc}
 We show the two-dimensional mass-weighted metallicity-radial distribution of the
-MW (M31) GCS in the top (bottom) panel of Figure~\ref{fig:observations_FeHRgc}. 
-The observations indicate that
+MW and the M31 GCS in the top and bottom panel of Figure~\ref{fig:observations_FeHRgc},
+respectively. The observations indicate that
 no GCs with high metallicities are to be expected at large radii (the three bins
 in the upper right corner, both for MW and M31), and relatively few GCs at large
 radii in general ($r_{\text{gal}} > 30$~kpc; right column: $11$ GCs or 7.3\% in
@@ -629,9 +631,9 @@ than for those that have formed {\it in~situ}.
 We now turn to the second goal, which is to see whether sufficient total mass in 
 GC candidates is produced by the Auriga simulations. To answer this question we plot
 a mass-weighted metallicity distribution in Figure~\ref{fig:FeH}. We show the 
-median for all $30$~Auriga L4 haloes and the 25-75 percentile range 
-(shaded regions, which shows the scatter between runs that have different initial 
-conditions, thus, have unique merger histories). We chose to aggregate the data 
+median for all $30$~Auriga L4 haloes and the 25-75 percentile range as shaded regions, 
+which shows the scatter between runs that have different initial 
+conditions, thus, have unique merger histories. We chose to aggregate the data 
 to indicate general trends that we find when the GC candidates are split up into
 the accreted and {\it in situ} subsets, rather than selecting typical examples 
 of individual (simulated) galaxies. Once again we notice that the peak metallicity 
@@ -645,8 +647,8 @@ Auriga galaxies, particularly around [Fe/H]~$=-1$. In addition, M31 does host
 (a handful of) GCs with [Fe/H]~$< -2.5$ as well as GCs with [Fe/H]~$ > 0$ while 
 the MW does not.
 
-We show the ratio of the  simulated to the observed profiles in the middle (bottom) 
-panel. This mass excess can be thought of the `mass budget' that the Auriga GC 
+We show the ratio of the  simulated to the observed profiles in the middle and bottom
+panels. This mass excess can be thought of the `mass budget' that the Auriga GC 
 candidates can `afford to lose' due to a combination of smaller than unity bound
 cluster formation efficiencies combined with a Hubble time of dynamical evolution,
 while still producing sufficient mass at the right metallicities. In particular,
@@ -681,11 +683,12 @@ $r_{\text{vir,Au}}$ and multiply by $r_{\text{vir,MW}}$ to compensate for the di
 intrinsic sizes of the Auriga galaxies. We look for general trends present
 in all Auriga L4 galaxies. Figure~\ref{fig:Rgc_mu_sigma} shows the mean and 
 standard deviation of $\log_{10}(r_{\text{gal}})$ of star particles in all Auriga
-L4 simulations. The purple (magenta) cross again shows the mean of the MW (M31)
-GCs (which are to be compared to the beige crosses), but solid (open) dot now
-shows our calculation of the mean value of the `red' metal-rich (`blue` metal-poor) 
-population. We split the radii up into the metal-rich/metal-poor groups by taking
-a metallicity cut at [Fe/H]~=~-1 as is done in the literature.
+L4 simulations, respectively. The purple and magenta cross again shows the mean 
+of the MW and M31 GCs, which are to be compared to the beige crosses. The solid
+dot now shows our calculation of the mean value of the `red' metal-rich population,
+and the open dot that of the `blue` metal-poor population. We split the radii 
+up into the metal-rich/metal-poor groups by taking a metallicity cut at 
+[Fe/H]~=~-1 as is done in the literature.
 
 We notice that the {\it in~situ} GC candidates are more centrally distributed, 
 whereas the accreted subsets have a larger radial extent. This 
@@ -762,15 +765,15 @@ can be compared to the observed total GC mass shown in
 Figure~\ref{fig:observations_FeHRgc}.
 
 To ease this comparison between the simulations and observations we take the ratio
-of the total mass of GC candidates in Auriga to the total GC mass in the MW 
-(and M31). We use a diverging colour map centered around the overall median of the 
+of the total mass of GC candidates in Auriga to the total GC mass in the observations.
+We use a diverging colour map centered around the overall median of the 
 mass ratio (i.e. we subtract the median of these $25$ bins from the value 
-in each bin). We show this in the top (bottom) panel of Figure~\ref{fig:Au-FeHRgc-ratio}.
-Note that the data in the three top right bins is masked because the mass ratio cannot 
-be calculated due to zero mass in the observations (therefore the bins are white).
+in each bin). We show this in the top and bottom panel of Figure~\ref{fig:Au-FeHRgc-ratio}
+for the MW and M31, respectively. Note that the 3 bins in the top right are empty (white)
+because the mass ratio cannot be calculated due to zero mass in the observations.
 If the product of the bound cluster formation efficiency and consecutive GC 
 disruption over a Hubble time would be constant, then the value in each bin would
-have been zero. The red and blue bins indicate deviations from such a scenario and
+be zero. The red and blue bins indicate deviations from such a scenario and
 indicate a higher and lower than average mass excess in the simulations. The median 
 value used to shift the mass ratio is $2.68$ and $1.69$ dex for the MW and M31, 
 respectively. This means that the median `mass budget' that the simulations `can 
