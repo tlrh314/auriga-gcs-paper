@@ -1,7 +1,7 @@
 % mnras_template.tex
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL AurigaGCS_20190905.tex   Mon Sep  9 16:29:17 2019
-%DIF ADD AurigaGCS.tex            Fri Feb  7 09:38:45 2020
+%DIF ADD AurigaGCS.tex            Mon Apr  6 15:05:26 2020
 %
 % LaTeX template for creating an MNRAS paper
 %
@@ -391,7 +391,13 @@ This means that their formation sites and that of a real-world GC may be consist
 \section{Observational data}
 \label{sec:observations}
 We describe the observations of the MW GCS in \DIFdelbegin \DIFdel{Sec.}\DIFdelend \DIFaddbegin \DIFadd{Section}\DIFaddend ~\ref{sec:milkyway},
-and of the M31 GCS in \DIFdelbegin \DIFdel{Sec.}\DIFdelend \DIFaddbegin \DIFadd{Section}\DIFaddend ~\ref{sec:andromeda}
+and of the M31 GCS in \DIFdelbegin \DIFdel{Sec.~\ref{sec:andromeda}}\DIFdelend \DIFaddbegin \DIFadd{Section~\ref{sec:andromeda}. We discuss the age-estimates
+in Section~\ref{sec:age}, the distribution of galactocentric radius in 
+Section~\ref{sec:Rgc}, and the total mass in 2D bins of metallicity-galactocentric
+radius in Section~\ref{sec:observations_FeHRgc}. We focus on metallicity and
+galactocentric radius because these data are available in the observations and
+in the Auriga simulations.
+}\DIFaddend 
 
 
 \subsection{Milky Way}
@@ -448,7 +454,8 @@ mass-estimate\footnote{The authors assumed $M/L_V = 2$ independent of [Fe/H]}.
 Radii are calculated from RA and DEC, further discussed in Sec.~\ref{sec:Rgc}.
 
 \subsection{Age-estimates}
-The top panel of Figure~\ref{fig:MW-M31-age-Rgc} shows a histogram of the age-estimates
+\DIFaddbegin \label{sec:age}
+\DIFaddend The top panel of Figure~\ref{fig:MW-M31-age-Rgc} shows a histogram of the age-estimates
 of the $55$ MW GCs in V13 and $88$ GCs in M31 for which age-estimates are available
 in CR16. The mean age of the MW GCs in this data set is $11.9 \pm 0.1$~Gyr and the 
 dispersion is $0.8$~Gyr. Furthermore, only one of the 55 GC age-estimates is
@@ -523,7 +530,8 @@ differences at intermediate radii.
     }
 \end{figure}
 
-\subsection{Total GC mass in metallicity-radial space} \label{sec:observations_FeHRgc}
+\subsection{Total GC mass in metallicity-radial space} 
+\label{sec:observations_FeHRgc}
 We show the two-dimensional mass-weighted metallicity-radial distribution of the
 MW (M31) GCS in the top (bottom) panel of Figure~\ref{fig:observations_FeHRgc}. 
 The observations indicate that
@@ -1080,7 +1088,9 @@ our analysis we draw the following conclusions.
 
 
 \section*{Acknowledgements}
-TLRH acknowledges support from the International Max-Planck Research School (IMPRS)
+\DIFaddbegin \DIFadd{We thanks the anonymous referee for a thoughtful and elaborate report that we feel
+greatly improved the manuscript.
+}\DIFaddend TLRH acknowledges support from the International Max-Planck Research School (IMPRS)
 on Astrophysics. TLRH thanks the Max Planck Computing and Data Facility for
 maintaining the Freya compute cluster, where the simulations were post-processed.
 FM is supported by the program "Rita Levi Montalcini" of the Italian MIUR\DIFaddbegin \DIFadd{. FAG 
