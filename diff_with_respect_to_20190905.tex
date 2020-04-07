@@ -1,7 +1,7 @@
 % mnras_template.tex
 %DIF LATEXDIFF DIFFERENCE FILE
-%DIF DEL AurigaGCS_20190905.tex   Fri Sep 27 14:00:43 2019
-%DIF ADD AurigaGCS.tex            Mon Apr  6 21:02:20 2020
+%DIF DEL AurigaGCS_20190905.tex   Mon Sep  9 16:29:17 2019
+%DIF ADD AurigaGCS.tex            Tue Apr  7 14:00:27 2020
 %
 % LaTeX template for creating an MNRAS paper
 %
@@ -111,6 +111,8 @@ $^{4}$ Department of Physics \& Astronomy, University of Bologna, via Gobetti 93
 \providecommand{\DIFaddend}{} %DIF PREAMBLE
 \providecommand{\DIFdelbegin}{} %DIF PREAMBLE
 \providecommand{\DIFdelend}{} %DIF PREAMBLE
+\providecommand{\DIFmodbegin}{} %DIF PREAMBLE
+\providecommand{\DIFmodend}{} %DIF PREAMBLE
 %DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
 \providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
 \providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
@@ -159,6 +161,22 @@ $^{4}$ Department of Physics \& Astronomy, University of Bologna, via Gobetti 93
 \DeclareRobustCommand{\DIFaddendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
 \DeclareRobustCommand{\DIFdelbeginFL}{\DIFOdelbeginFL \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
 \DeclareRobustCommand{\DIFdelendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+%DIF LISTINGS PREAMBLE %DIF PREAMBLE
+\RequirePackage{listings} %DIF PREAMBLE
+\RequirePackage{color} %DIF PREAMBLE
+\lstdefinelanguage{DIFcode}{ %DIF PREAMBLE
+%DIF DIFCODE_UNDERLINE %DIF PREAMBLE
+  moredelim=[il][\color{red}\sout]{\%DIF\ <\ }, %DIF PREAMBLE
+  moredelim=[il][\color{blue}\uwave]{\%DIF\ >\ } %DIF PREAMBLE
+} %DIF PREAMBLE
+\lstdefinestyle{DIFverbatimstyle}{ %DIF PREAMBLE
+	language=DIFcode, %DIF PREAMBLE
+	basicstyle=\ttfamily, %DIF PREAMBLE
+	columns=fullflexible, %DIF PREAMBLE
+	keepspaces=true %DIF PREAMBLE
+} %DIF PREAMBLE
+\lstnewenvironment{DIFverbatim}{\lstset{style=DIFverbatimstyle}}{} %DIF PREAMBLE
+\lstnewenvironment{DIFverbatim*}{\lstset{style=DIFverbatimstyle,showspaces=true}}{} %DIF PREAMBLE
 %DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
 
 \begin{document}
@@ -444,7 +462,7 @@ Radii are calculated from RA and DEC, further discussed in Sec.~\ref{sec:Rgc}.
 \DIFaddend The top panel of Figure~\ref{fig:MW-M31-age-Rgc} shows a histogram of the age-estimates
 of the $55$ MW GCs in V13 and $88$ GCs in M31 for which age-estimates are available
 in CR16. The mean age of the MW GCs in this data set is $11.9 \pm 0.1$~Gyr and the 
-dispersion is $0.8$~Gyr. Furthermore, only one of the 55 GC age-estimates is
+dispersion is $0.8$~Gyr. Furthermore, only \DIFdelbegin \DIFdel{one }\DIFdelend \DIFaddbegin \DIFadd{1 }\DIFaddend of the 55 GC age-estimates is
 below $10$~Gyr. The M31 GCS has a mean age of $11.0 \pm 0.2$~Gyr with a dispersion 
 of $2.2$~Gyr, and $24$ GCs have age-estimates below $10$~Gyr with a minimum age 
 of $4.8$~Gyr. Based on these data, we find that the age distributions of the MW 
@@ -557,7 +575,18 @@ observations to the Auriga simulations later on in Sec.~\ref{sec:results_FeHRgc}
 \label{sec:results}
 We define GC candidates in the Auriga simulations as all star particles older
 than $10$~Gyr based on the age distribution of the MW GCS (top panel of 
-Figure~\ref{fig:MW-M31-age-Rgc}), and following \citet{2017MNRAS.465.3622R}.
+Figure~\ref{fig:MW-M31-age-Rgc}), \DIFdelbegin \DIFdel{and following \mbox{%DIFAUXCMD
+\citet{2017MNRAS.465.3622R}}\hspace{0pt}%DIFAUXCMD
+.
+}\DIFdelend \DIFaddbegin \DIFadd{adopting the definition of 
+\mbox{%DIFAUXCMD
+\citet{2010ARA&A..48..431P} }\hspace{0pt}%DIFAUXCMD
+and following the method of 
+\mbox{%DIFAUXCMD
+\citet{2017MNRAS.465.3622R}}\hspace{0pt}%DIFAUXCMD
+. However, we caution that his definition does exclude 
+1 GC in the MW and 24 in M31 as stated in Section~\ref{sec:age}.
+}\DIFaddend 
 
 Throughout our analysis we compare distributions of age-selected GC 
 candidates (age $>10$~Gyr) with those of all star particles (i.e.
@@ -985,8 +1014,8 @@ radially extended halo GC population. In fact, our classification might not hold
 for Au4-1.
 
 Finally, we note that \citet{2006ARA&A..44..193B} compares the number of metal-poor 
-GCs to the stellar halo mass and find\footnote{The quantity $T$ is the number of 
-GCs per $10^9$ M\Sun \, of galaxy stellar mass.} $T^n_{\text{blue}} \sim 100$, 
+GCs to the stellar halo mass and find\footnote{The \DIFdelbegin \DIFdel{quantity }\DIFdelend \DIFaddbegin \DIFadd{specific frequency }\DIFaddend $T$ is 
+the number of GCs per $10^9$ M\Sun \, of galaxy stellar mass.} $T^n_{\text{blue}} \sim 100$, 
 while the number of metal-rich GCs compared to the bulge mass yields 
 $T^n_{\text{red}} \sim 5$, and therefore conclude that the formation efficiency
 of metal-poor GCs is \DIFdelbegin \DIFdel{twenty }\DIFdelend \DIFaddbegin \DIFadd{20 }\DIFaddend times higher than the metal-rich GCs with respect to 
@@ -1083,8 +1112,7 @@ our analysis we draw the following conclusions.
 
 
 \section*{Acknowledgements}
-\DIFaddbegin \DIFadd{We thank the anonymous referee for a thoughtful and elaborate report that we feel
-greatly improved the manuscript.
+\DIFaddbegin \DIFadd{We thank the anonymous referee for a thoughtful and elaborate report.
 }\DIFaddend TLRH acknowledges support from the International Max-Planck Research School (IMPRS)
 on Astrophysics. TLRH thanks the Max Planck Computing and Data Facility for
 maintaining the Freya compute cluster, where the simulations were post-processed.
