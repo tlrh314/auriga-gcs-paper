@@ -1,7 +1,7 @@
 % mnras_template.tex
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL AurigaGCS_20190905.tex   Wed Apr  8 13:38:38 2020
-%DIF ADD AurigaGCS.tex            Wed Apr  8 16:06:44 2020
+%DIF ADD AurigaGCS.tex            Wed Apr  8 16:28:01 2020
 %
 % LaTeX template for creating an MNRAS paper
 %
@@ -436,36 +436,59 @@ the main-sequence turnoff in 55 GCs \citep[][hereafter V13]{2013ApJ...775..134V}
 
 \subsection{Andromeda}
 \label{sec:andromeda}
-The fifth revision of the revised Bologna catalogue (RBC~5, last updated
+\DIFdelbegin \DIFdel{The fifth revision of the revised Bologna catalogue (RBC~5, last updated
 August, 2012) is the latest edition of three decades of systematically
-collecting integrated properties of the GCS of M31 \citep[][and references therein]{2004A&A...416..917G}. One
-contribution to RBC~5 is the work by \citet[][hereafter C11]{2011AJ....141...61C},
-subsequently updated by \citet[][hereafter CR16]{2016ApJ...824...42C}.
+collecting integrated properties of the GCS of M31 \mbox{%DIFAUXCMD
+\citep[][and references therein]{2004A&A...416..917G}}\hspace{0pt}%DIFAUXCMD
+. One
+contribution to RBC~5 is the work by \mbox{%DIFAUXCMD
+\citet[][hereafter C11]{2011AJ....141...61C} }\hspace{0pt}%DIFAUXCMD
+,
+subsequently updated by \mbox{%DIFAUXCMD
+\citet[][hereafter CR16]{2016ApJ...824...42C}}\hspace{0pt}%DIFAUXCMD
+.
+}%DIFDELCMD < 
 
-C11 and CR16 present a uniform set of spectroscopic observations calibrated
-on the MW GCS of the inner $1.6^\circ~({\sim}21)$~kpc that
-is believed to be 94\% complete. GCs in the outer stellar halo, up to
-$r_{\text{proj}}\sim150$~kpc, are observed in the Pan-Andromeda Archaeological
-Survey \citep[PAndAS, ][hereafter H14]{2014MNRAS.442.2165H}, but see also
-\citet{2014MNRAS.442.2929V} and \citet{2019MNRAS.484.1756M}. H14 presents the
-discovery of 59 new GCs and publishes updates to RBC~5. The work of H14 is
-incorporated in the latest public release\footnote{Last revised 23 Sep 2015, see
-\url{https://www.cfa.harvard.edu/oir/eg/m31clusters/M31_Hectospec.html}}
-of the C11 dataset, further revised by CR16. We use CR16 because it is the most
-recent aggregated dataset of M31's GCS that contains properties of interest
-for our study and it includes GCs in the inner region and in the outer halo. The
-relevant fields in the CR16 dataset that we use are the age, metallicity, and the
-mass-estimate\footnote{The authors assumed $M/L_V = 2$ independent of [Fe/H]}.
-Radii are calculated from RA and DEC, further discussed in Sec.~\ref{sec:Rgc}.
+%DIFDELCMD < %%%
+\DIFdel{C11 and CR16 }\DIFdelend \DIFaddbegin \DIFadd{\mbox{%DIFAUXCMD
+\citet[][hereafter C11]{2011AJ....141...61C} }\hspace{0pt}%DIFAUXCMD
+and \mbox{%DIFAUXCMD
+\citet[][hereafter CR16]{2016ApJ...824...42C}
+}\hspace{0pt}%DIFAUXCMD
+}\DIFaddend present a uniform set of spectroscopic observations \DIFdelbegin \DIFdel{calibrated
+on the MW GCS }\DIFdelend of the inner 
+$1.6^\circ~({\sim}21)$~kpc \DIFaddbegin \DIFadd{of M31 }\DIFaddend that is believed to be 94\% complete. \DIFdelbegin \DIFdel{GCs in }\DIFdelend \DIFaddbegin \DIFadd{In addition,
+}\DIFaddend the outer stellar halo \DIFdelbegin \DIFdel{, }\DIFdelend \DIFaddbegin \DIFadd{of M31 }\DIFaddend up to $r_{\text{proj}}\sim150$~kpc \DIFdelbegin \DIFdel{, are }\DIFdelend \DIFaddbegin \DIFadd{is }\DIFaddend observed in 
+the Pan-Andromeda Archaeological Survey \DIFdelbegin \DIFdel{\mbox{%DIFAUXCMD
+\citep[PAndAS, ][hereafter H14]{2014MNRAS.442.2165H}}\hspace{0pt}%DIFAUXCMD
+, but see also
+\mbox{%DIFAUXCMD
+\citet{2014MNRAS.442.2929V} }\hspace{0pt}%DIFAUXCMD
+and \mbox{%DIFAUXCMD
+\citet{2019MNRAS.484.1756M}}\hspace{0pt}%DIFAUXCMD
+. H14 presents the discovery of 59 new GCs and publishes updates to RBC~5. The }\DIFdelend \DIFaddbegin \DIFadd{\mbox{%DIFAUXCMD
+\citep[PAndAS, ][hereafter H14]{2014MNRAS.442.2165H,
+2014MNRAS.442.2929V, 2019MNRAS.484.1756M}}\hspace{0pt}%DIFAUXCMD
+. In fact, 
+the }\DIFaddend work of H14 is incorporated in the latest public release\footnote{Last 
+revised 23 Sep 2015, see \url{https://www.cfa.harvard.edu/oir/eg/m31clusters/M31_Hectospec.html}}
+of the C11 \DIFdelbegin \DIFdel{dataset, further revised by }\DIFdelend \DIFaddbegin \DIFadd{and }\DIFaddend CR16 \DIFdelbegin \DIFdel{. We use }\DIFdelend \DIFaddbegin \DIFadd{data sets. Therefore we use the latest data set of }\DIFaddend CR16 
+because it is the most recent aggregated dataset of M31's GCS that contains \DIFdelbegin \DIFdel{properties of interest
+for our study and it includes }\DIFdelend GCs 
+in the inner region and in the outer halo. The relevant fields in the CR16 dataset 
+that we use are the age, metallicity, and the mass-estimate\footnote{The authors 
+assumed $M/L_V = 2$ independent of [Fe/H]}. \DIFdelbegin \DIFdel{Radii are calculated from }\DIFdelend \DIFaddbegin \DIFadd{We calculate the galactocentric radii 
+from the observed positions }\DIFaddend RA and DEC, further discussed in Sec.~\ref{sec:Rgc}.
 
 \subsection{Age-estimates}
 \DIFaddbegin \label{sec:age}
 \DIFaddend The top panel of Figure~\ref{fig:MW-M31-age-Rgc} shows a histogram of the age-estimates
 of the $55$ MW GCs in V13 and $88$ GCs in M31 for which age-estimates are available
-in CR16. The mean age of the MW GCs in this data set is $11.9 \pm 0.1$~Gyr and the 
-dispersion is $0.8$~Gyr. Furthermore, only \DIFdelbegin \DIFdel{one }\DIFdelend \DIFaddbegin \DIFadd{1 }\DIFaddend of the 55 GC age-estimates is
-below $10$~Gyr. The M31 GCS has a mean age of $11.0 \pm 0.2$~Gyr with a dispersion 
-of $2.2$~Gyr, and $24$ GCs have age-estimates below $10$~Gyr with a minimum age 
+in CR16. The mean age of the MW GCs in this data set is \DIFdelbegin \DIFdel{$11.9 \pm 0.1$}\DIFdelend \DIFaddbegin \DIFadd{$11.9$}\DIFaddend ~Gyr and the 
+\DIFdelbegin \DIFdel{dispersion }\DIFdelend \DIFaddbegin \DIFadd{standard deviation }\DIFaddend is $0.8$~Gyr. Furthermore, only \DIFdelbegin \DIFdel{one }\DIFdelend \DIFaddbegin \DIFadd{1 }\DIFaddend of the 55 GC age-estimates is
+below $10$~Gyr. The M31 GCS has a mean age of \DIFdelbegin \DIFdel{$11.0 \pm 0.2$}\DIFdelend \DIFaddbegin \DIFadd{$11.0$}\DIFaddend ~Gyr with a \DIFdelbegin \DIFdel{dispersion 
+}\DIFdelend \DIFaddbegin \DIFadd{standard deviation 
+}\DIFaddend of $2.2$~Gyr, and $24$ GCs have age-estimates below $10$~Gyr with a minimum age 
 of $4.8$~Gyr. Based on these data, we find that the age distributions of the MW 
 and M31 GCSs are not statistically consistent. Moreover, the MW appears 
 to host a GCS that is somewhat older than that of M31.
@@ -514,9 +537,10 @@ for the innermost ($<1$~kpc) GCs, and none for those beyond roughly \DIFdelbegin
 lines) and find that the MW has more GCs in the range $1-4$~kpc than M31
 \DIFdelbegin \DIFdel{(}\DIFdelend when accounting for the larger number of total GCs in M31\DIFdelbegin \DIFdel{)}\DIFdelend . Interestingly, both
 distributions show a similar trend for $r_{\text{gal}} > 4$~kpc and host a 
-subpopulation of halo GCs. However, the two radial distributions are not statistically
-consistent with being drawn from the same underlying distribution due to substantial 
-differences at intermediate radii.
+subpopulation of halo GCs. \DIFaddbegin \DIFadd{Our naive expectation would be that the spiral galaxies
+in the Local Group host similar GC systems. }\DIFaddend However, the \DIFdelbegin \DIFdel{two radial distributions }\DIFdelend \DIFaddbegin \DIFadd{radial distributions of
+the GCS of the MW and M31 }\DIFaddend are not statistically consistent with being drawn from 
+the same underlying distribution due to substantial differences at intermediate radii. 
 
 \begin{figure}
     \includegraphics[width=\columnwidth]{{MW_M31_Age_Histogram-trim}.png}
