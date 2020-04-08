@@ -442,7 +442,12 @@ differences at intermediate radii.
 \label{sec:observations_FeHRgc}
 We show the two-dimensional mass-weighted metallicity-radial distribution of the
 MW and the M31 GCS in the top and bottom panel of Figure~\ref{fig:observations_FeHRgc},
-respectively. The observations indicate that
+respectively. Note that the number of GCs is different than in 
+Figure~\ref{fig:MW-M31-age-Rgc} because here we plot [Fe/H] between -2.5 and 0 
+and $r_{\text{gal}}$ between 1 and 250 kpc whereas Figure~\ref{fig:MW-M31-age-Rgc}
+shows the full range of metallicities and radii.
+
+The observations indicate that
 no GCs with high metallicities are to be expected at large radii (the three bins
 in the upper right corner, both for MW and M31), and relatively few GCs at large
 radii in general ($r_{\text{gal}} > 30$~kpc; right column: $11$ GCs or 7.3\% in
@@ -469,7 +474,7 @@ observations to the Auriga simulations later on in Sec.~\ref{sec:results_FeHRgc}
         \emph{Bottom}: Same for M31, showing the 366 GCs in CR16 
         \citep[data from][]{2016ApJ...824...42C}. Radii of M31 are again divided by 
         $r_{\text{vir,M31}}$ and multiplied by $r_{\text{vir,MW}}$. Note that the 
-        range of the colourmap differs in both figures. 
+        range of the colourmap differs in both figures,
         \label{fig:observations_FeHRgc}
     }
 \end{figure}
@@ -479,10 +484,11 @@ observations to the Auriga simulations later on in Sec.~\ref{sec:results_FeHRgc}
 \label{sec:results}
 We define GC candidates in the Auriga simulations as all star particles older
 than $10$~Gyr based on the age distribution of the MW GCS (top panel of 
-Figure~\ref{fig:MW-M31-age-Rgc}), adopting the definition of 
+Figure~\ref{fig:MW-M31-age-Rgc}), adopting the definition of a GC from
 \citet{2010ARA&A..48..431P} and following the method of 
 \citet{2017MNRAS.465.3622R}. However, we caution that his definition does exclude 
-1 GC in the MW and 24 in M31 as stated in Section~\ref{sec:age}.
+1 GC in the MW and 24 in M31 as stated in Section~\ref{sec:age}, and further
+discuss this in Section~\ref{sec:age_min}.
 
 Throughout our analysis we compare distributions of age-selected GC 
 candidates (age $>10$~Gyr) with those of all star particles (i.e.
@@ -939,6 +945,28 @@ $M_{vir}-N_{\text{gal}}$ correlation found by \citet{2019arXiv190100900B}.
 % of massive (M $>10^5$ M\Sun) clusters with [Fe/H]$ <-0.5$ should be observed in
 % MW-mass galaxies at $z=0$. For these reasons, an environmentally independent
 % cluster formation description is not compatible with observations.''
+
+\subsection{Lower age cut in the GC selection function}
+\label{sec:age_min}
+Our method is sensitive to the definition that we adopt to classify GC candidates
+\citep{2010MNRAS.404.1203F}. Therefore we explore how our results change if we 
+include all star particles older than 8 Gyr, and if we further lower the age cut 
+to 6 Gyr. 
+
+We find that including more recently formed star particles in our subset 
+of GC candidates shifts the mean metallicity to higher values. Moreover, the
+total mass in metal-rich ([Fe/H] > -1) GC candidates increases for a lower age 
+threshold and moves closer to the dotted line that shows the distribution of
+all star particles. However, we notice that the Auriga simulations, on average, 
+do not form new stars with a metallicity below [Fe/H] = -1 more recent than 6 Gyr 
+ago: the behaviour of Figure~\ref{fig:FeH} does not change for metallicities
+below [Fe/H] = -1 when we change the age cut to 8 or 6 Gyr. The qualitative behaviour
+of the median distribution of galactocentric radii (Figure~\ref{fig:Rgc}), on 
+the other hand, is unaffected by lowering the age cut other than including
+more star particles (more mass) which leads to a higher normalisation and
+a higher mass ratio with respect to the observed GC systems of the MW and M31.
+The qualitative behavour presented in Figure~\ref{fig:Au-FeHRgc-ratio} does not 
+change when the age cut is lowered to 8 or 6 Gyr.
 
 
 

@@ -1,7 +1,7 @@
 % mnras_template.tex
 %DIF LATEXDIFF DIFFERENCE FILE
-%DIF DEL AurigaGCS_20190905.tex   Tue Apr  7 23:53:17 2020
-%DIF ADD AurigaGCS.tex            Tue Apr  7 23:49:52 2020
+%DIF DEL AurigaGCS_20190905.tex   Wed Apr  8 13:38:38 2020
+%DIF ADD AurigaGCS.tex            Wed Apr  8 14:33:23 2020
 %
 % LaTeX template for creating an MNRAS paper
 %
@@ -111,6 +111,8 @@ $^{4}$ Department of Physics \& Astronomy, University of Bologna, via Gobetti 93
 \providecommand{\DIFaddend}{} %DIF PREAMBLE
 \providecommand{\DIFdelbegin}{} %DIF PREAMBLE
 \providecommand{\DIFdelend}{} %DIF PREAMBLE
+\providecommand{\DIFmodbegin}{} %DIF PREAMBLE
+\providecommand{\DIFmodend}{} %DIF PREAMBLE
 %DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
 \providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
 \providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
@@ -159,6 +161,22 @@ $^{4}$ Department of Physics \& Astronomy, University of Bologna, via Gobetti 93
 \DeclareRobustCommand{\DIFaddendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
 \DeclareRobustCommand{\DIFdelbeginFL}{\DIFOdelbeginFL \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
 \DeclareRobustCommand{\DIFdelendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+%DIF LISTINGS PREAMBLE %DIF PREAMBLE
+\RequirePackage{listings} %DIF PREAMBLE
+\RequirePackage{color} %DIF PREAMBLE
+\lstdefinelanguage{DIFcode}{ %DIF PREAMBLE
+%DIF DIFCODE_UNDERLINE %DIF PREAMBLE
+  moredelim=[il][\color{red}\sout]{\%DIF\ <\ }, %DIF PREAMBLE
+  moredelim=[il][\color{blue}\uwave]{\%DIF\ >\ } %DIF PREAMBLE
+} %DIF PREAMBLE
+\lstdefinestyle{DIFverbatimstyle}{ %DIF PREAMBLE
+	language=DIFcode, %DIF PREAMBLE
+	basicstyle=\ttfamily, %DIF PREAMBLE
+	columns=fullflexible, %DIF PREAMBLE
+	keepspaces=true %DIF PREAMBLE
+} %DIF PREAMBLE
+\lstnewenvironment{DIFverbatim}{\lstset{style=DIFverbatimstyle}}{} %DIF PREAMBLE
+\lstnewenvironment{DIFverbatim*}{\lstset{style=DIFverbatimstyle,showspaces=true}}{} %DIF PREAMBLE
 %DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
 
 \begin{document}
@@ -519,8 +537,15 @@ differences at intermediate radii.
 \subsection{Total GC mass in metallicity-radial space} 
 \label{sec:observations_FeHRgc}
 We show the two-dimensional mass-weighted metallicity-radial distribution of the
-MW \DIFdelbegin \DIFdel{(}\DIFdelend \DIFaddbegin \DIFadd{and the }\DIFaddend M31 \DIFdelbegin \DIFdel{) }\DIFdelend GCS in the top \DIFdelbegin \DIFdel{(bottom ) }\DIFdelend \DIFaddbegin \DIFadd{and bottom }\DIFaddend panel of Figure~\ref{fig:observations_FeHRgc}\DIFaddbegin \DIFadd{,
-respectively}\DIFaddend . The observations indicate that
+MW \DIFdelbegin \DIFdel{(}\DIFdelend \DIFaddbegin \DIFadd{and the }\DIFaddend M31 \DIFdelbegin \DIFdel{) }\DIFdelend GCS in the top \DIFdelbegin \DIFdel{(bottom ) }\DIFdelend \DIFaddbegin \DIFadd{and bottom }\DIFaddend panel of Figure~\ref{fig:observations_FeHRgc}\DIFdelbegin \DIFdel{. 
+}\DIFdelend \DIFaddbegin \DIFadd{,
+respectively. Note that the number of GCs is different than in 
+Figure~\ref{fig:MW-M31-age-Rgc} because here we plot }[\DIFadd{Fe/H}] \DIFadd{between -2.5 and 0 
+and $r_{\text{gal}}$ between 1 and 250 kpc whereas Figure~\ref{fig:MW-M31-age-Rgc}
+shows the full range of metallicities and radii.
+}
+
+\DIFaddend The observations indicate that
 no GCs with high metallicities are to be expected at large radii (the three bins
 in the upper right corner, both for MW and M31), and relatively few GCs at large
 radii in general ($r_{\text{gal}} > 30$~kpc; right column: $11$ GCs or 7.3\% in
@@ -547,8 +572,9 @@ observations to the Auriga simulations later on in Sec.~\ref{sec:results_FeHRgc}
         \emph{Bottom}: Same for M31, showing the 366 GCs in CR16 
         \citep[data from][]{2016ApJ...824...42C}. Radii of M31 are again divided by 
         $r_{\text{vir,M31}}$ and multiplied by $r_{\text{vir,MW}}$. Note that the 
-        range of the colourmap differs in both figures. 
-        \label{fig:observations_FeHRgc}
+        range of the colourmap differs in both figures\DIFdelbeginFL \DIFdelFL{. 
+        }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{,
+        }\DIFaddendFL \label{fig:observations_FeHRgc}
     }
 \end{figure}
 
@@ -560,14 +586,15 @@ than $10$~Gyr based on the age distribution of the MW GCS (top panel of
 Figure~\ref{fig:MW-M31-age-Rgc}), \DIFdelbegin \DIFdel{and following \mbox{%DIFAUXCMD
 \citet{2017MNRAS.465.3622R}}\hspace{0pt}%DIFAUXCMD
 .
-}\DIFdelend \DIFaddbegin \DIFadd{adopting the definition of 
+}\DIFdelend \DIFaddbegin \DIFadd{adopting the definition of a GC from
 \mbox{%DIFAUXCMD
 \citet{2010ARA&A..48..431P} }\hspace{0pt}%DIFAUXCMD
 and following the method of 
 \mbox{%DIFAUXCMD
 \citet{2017MNRAS.465.3622R}}\hspace{0pt}%DIFAUXCMD
 . However, we caution that his definition does exclude 
-1 GC in the MW and 24 in M31 as stated in Section~\ref{sec:age}.
+1 GC in the MW and 24 in M31 as stated in Section~\ref{sec:age}, and further
+discuss this in Section~\ref{sec:age_min}.
 }\DIFaddend 
 
 Throughout our analysis we compare distributions of age-selected GC 
@@ -1040,9 +1067,35 @@ $M_{vir}-N_{\text{gal}}$ correlation found by \citet{2019arXiv190100900B}.
 % MW-mass galaxies at $z=0$. For these reasons, an environmentally independent
 % cluster formation description is not compatible with observations.''
 
+\DIFaddbegin \subsection{Lower age cut in the GC selection function}
+\label{sec:age_min}
+\DIFadd{Our method is sensitive to the definition that we adopt to classify GC candidates
+\mbox{%DIFAUXCMD
+\citep{2010MNRAS.404.1203F}}\hspace{0pt}%DIFAUXCMD
+. Therefore we explore how our results change if we 
+include all star particles older than 8 Gyr, and if we further lower the age cut 
+to 6 Gyr. 
+}
+
+\DIFadd{We find that including more recently formed star particles in our subset 
+of GC candidates shifts the mean metallicity to higher values. Moreover, the
+total mass in metal-rich (}[\DIFadd{Fe/H}] \DIFadd{> -1) GC candidates increases for a lower age 
+threshold and moves closer to the dotted line that shows the distribution of
+all star particles. However, we notice that the Auriga simulations, on average, 
+do not form new stars with a metallicity below }[\DIFadd{Fe/H}] \DIFadd{= -1 more recent than 6 Gyr 
+ago: the behaviour of Figure~\ref{fig:FeH} does not change for metallicities
+below }[\DIFadd{Fe/H}] \DIFadd{= -1 when we change the age cut to 8 or 6 Gyr. The qualitative behaviour
+of the median distribution of galactocentric radii (Figure~\ref{fig:Rgc}), on 
+the other hand, is unaffected by lowering the age cut other than including
+more star particles (more mass) which leads to a higher normalisation and
+a higher mass ratio with respect to the observed GC systems of the MW and M31.
+The qualitative behavour presented in Figure~\ref{fig:Au-FeHRgc-ratio} does not 
+change when the age cut is lowered to 8 or 6 Gyr.
+}
 
 
-\section{Summary and conclusions}
+
+\DIFaddend \section{Summary and conclusions}
 \label{sec:conclusions}
 
 We investigate statistics of age-selected ($>$~10~Gyr) GC candidates in the 
