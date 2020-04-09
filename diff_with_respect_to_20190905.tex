@@ -1,7 +1,7 @@
 % mnras_template.tex
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL AurigaGCS_20190905.tex   Wed Apr  8 13:38:38 2020
-%DIF ADD AurigaGCS.tex            Wed Apr  8 16:28:01 2020
+%DIF ADD AurigaGCS.tex            Thu Apr  9 13:59:24 2020
 %
 % LaTeX template for creating an MNRAS paper
 %
@@ -624,7 +624,12 @@ discuss this in Section~\ref{sec:age_min}.
 
 Throughout our analysis we compare distributions of age-selected GC 
 candidates (age $>10$~Gyr) with those of all star particles (i.e.
-when no additional selection criterion is applied). We further split the GC
+when no additional selection criterion is applied). \DIFaddbegin \DIFadd{The mean number of star 
+particles in the Auriga L4 simulations that we select as GC candidates is 
+$3.1 \cdot 10^5$ (with a mean mass of $1.15 \cdot 10^{10}$ M$_{\odot}$), 
+and the mean number of all star particles is $1.93 \cdot 10^6$ 
+($7.3\cdot10^{10}$ M$_{\odot}$). The subset of GC candidates is thus around 
+15\% of all the stars in the galaxy. }\DIFaddend We further split the GC
 candidates into an {\it in~situ} subset (defined as GC candidates that are 
 bound to the most-massive halo/subhalo in the first snapshot that the particle 
 was recorded), and an accreted subpopulation (those that have formed {\it ex~situ} and 
@@ -657,7 +662,9 @@ in comparison to the MW and M31 [Fe/H] distributions.
         \DIFdelbeginFL \DIFdelFL{candicates }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{candidates }\DIFaddendFL in \DIFdelbeginFL \DIFdelFL{green}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{beige}\DIFaddendFL , and use a \DIFdelbeginFL \DIFdelFL{green }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{beige }\DIFaddendFL dotted line for all star particles. 
         We split the GC candidates up into two subpopulations, those that have 
         formed {\it in~situ} (\DIFdelbeginFL \DIFdelFL{blue}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{brown}\DIFaddendFL ), and those that have been accreted (\DIFdelbeginFL \DIFdelFL{red}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{teal}\DIFaddendFL ).
-        \label{fig:Au4-10and21_FeH}
+        \DIFaddbeginFL \DIFaddFL{The numbers in parenthesis show how many star particles are included 
+        in the subset.
+        }\DIFaddendFL \label{fig:Au4-10and21_FeH}
     }
 \end{figure}
 We select \mbox{Au4-10}\footnote{The nomenclature is `Au' for Auriga, followed by the
@@ -666,7 +673,8 @@ conditions was used).}, \mbox{Au4-21}, and \mbox{Au4-4} to show the
 distributions of three individual simulation runs that we consider representative
 for specific behaviour, and to highlight that different runs could give rise to 
 different distributions. We show the age-selected GC candidates as well as the 
-accreted and {\it in~situ} subsets. The top \DIFdelbegin \DIFdel{half of the left figure }\DIFdelend \DIFaddbegin \DIFadd{panel of Figure~\ref{fig:Au4-10and21_FeH} }\DIFaddend shows the MW 
+accreted and {\it in~situ} subsets. 
+\DIFdelbegin \DIFdel{The top half of the left figure }\DIFdelend \DIFaddbegin \DIFadd{:/The top panel of Figure~\ref{fig:Au4-10and21_FeH} }\DIFaddend shows the MW 
 and M31 GCSs, where we overplot a double Gaussian for the MW GCS by 
 adopting literature values of the mean $\mu$ and standard deviation $\sigma$ of 
 the metal-rich and metal-poor subpopulations \citep{Harris2001}.
