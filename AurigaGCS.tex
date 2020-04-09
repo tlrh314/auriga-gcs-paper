@@ -247,6 +247,11 @@ section~\ref{sec:results}. We discuss our findings in section~\ref{sec:discussio
 to come to our conclusions in section~\ref{sec:conclusions}.
 
 
+TODO: ``\citet{2012MNRAS.426.1475U} shows the great variety in GC metallicity distributions
+present in the sample of early-type galaxies of the SLUGGS survey contradicts
+the classical idea that all the metallicity distributions of GCs should be bimodal.''
+
+
 \section{The Auriga simulations}
 \label{sec:auriga}
 We use the Auriga simulations \citepalias{2017MNRAS.467..179G}, a suite of 
@@ -544,8 +549,10 @@ adopting literature values of the mean $\mu$ and standard deviation $\sigma$ of
 the metal-rich and metal-poor subpopulations \citep{Harris2001}.
 
 We find that the age cut, on average, lowers the mean metallicity $<$[Fe/H]$>$ from 
-$0.0$ to $-0.6$. Furthermore, accreted GC candidates generally have lower mean 
-metallicities than the {\it in~situ} subset with differences of roughly
+$0.0$ to $-0.6$. This reflects the enrichment history of the galaxy because the
+age cut neglects the more metal-rich stellar population which shifts the mean
+metallicity towards lower values. Furthermore, accreted GC candidates generally have
+lower mean metallicities than the {\it in~situ} subset with differences of roughly
 ${\sim}0.3$~dex for the majority of the simulation runs. This behaviour can be 
 seen in \mbox{Au4-21}, while a slightly larger difference of ${\sim}0.5$~dex is 
 seen for \mbox{Au4-10} (as plotted), \mbox{Au4-16}, \mbox{Au4-17}, \mbox{Au4-18} 
@@ -673,7 +680,10 @@ mass ratio up to [Fe/H]=$-0.9$, above which the simulations produce a higher mas
 with increasing metallicity. If dynamical evolution is not expected to more 
 efficiently disrupt GCs of higher metallicity, then we would find that the 
 efficiency to form bound star clusters would have to decrease with increasing 
-metallicity.
+metallicity. This trend could be consistent with the cluster formation efficiency 
+model of \citet{2012MNRAS.426.3008K} as lower metallicity star particles formed 
+at earlier times when the bound cluster formation efficiencies are higher due
+to higher pressure birth environments.
 
 
 \subsection{Radial distribution}
@@ -776,7 +786,10 @@ we sum the total mass of GC candidates in each bin (for an individual Auriga
 simulation), then we calculate the median total mass in each bin over all 
 $30$~Auriga L4 haloes. The result is shown in Figure~\ref{fig:Au-FeHRgc}, which 
 can be compared to the observed total GC mass shown in 
-Figure~\ref{fig:observations_FeHRgc}.
+Figure~\ref{fig:observations_FeHRgc}. We notice that the simulations produce
+relatively little mass in metal-poor GC candidates at small radii and in metal-rich
+GC candidates at large radii. However, there is still few times $10^7$ M$_{\odot}$
+produced by the simulations in the uppermost 3 bins where no observed GCs are found.
 
 To ease this comparison between the simulations and observations we take the ratio
 of the total mass of GC candidates in Auriga to the total GC mass in the observations.
@@ -804,7 +817,8 @@ We now focus on four quadrants of this diagram, split at [Fe/H]~=~-1 (metal-poor
 or metal-rich) and $r_\text{gal}$~=~8~kpc (inside or outside the Solar radius).
 The majority of the mass in Auriga GC candidates is produced in metal-rich star
 particles inside the Solar radius. The total mass is dominated by the {\it in situ} 
-component, for [Fe/H] as well as for $r_\text{gal}$. The total mass excess in 
+component, for [Fe/H] as well as for $r_\text{gal}$ as can be seen in Figure~\ref{fig:FeH}
+and Figure~\ref{fig:Rgc}. The total mass excess in 
 this region increases with decreasing metallicity for the MW and M31, and there
 is a weak trend of decreasing over-production with increasing radius for the
 {\it in situ} subsets but no trend with radius for the accreted GC candidates.
