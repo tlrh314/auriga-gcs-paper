@@ -1,7 +1,7 @@
 % mnras_template.tex
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL AurigaGCS_20190905.tex   Wed Apr  8 13:38:38 2020
-%DIF ADD AurigaGCS.tex            Fri Apr 10 19:28:52 2020
+%DIF ADD AurigaGCS.tex            Fri Apr 10 20:02:45 2020
 %
 % LaTeX template for creating an MNRAS paper
 %
@@ -1078,14 +1078,18 @@ mean values for all GC candidates, and the simulated {\it in~situ} GC candidates
 have larger dispersions than the metal-rich GCs. Moreover, the offset between 
 the mean of the metal-rich and metal-poor populations in the MW is $1$ dex, a
 factor $2-3$ larger than the offset that we find between the {\it in~situ} and 
-accreted populations. The Auriga simulations therefore do not support the view 
+accreted populations. \DIFdelbegin \DIFdel{The Auriga simulations therefore do not support the view 
 that the metal-poor GCs could have only formed in satellites that have later been 
-accreted whereas the metal-rich GC subpopulation has only formed {\it in~situ}. 
-With this statement, however, we do caution that \citet{2019MNRAS.486.3134K} suggests 
+accreted whereas the metal-rich GC subpopulation has only formed }%DIFDELCMD < {\it %%%
+\DIFdel{in~situ}%DIFDELCMD < }%%%
+\DIFdel{. 
+With this statement, however, we do }\DIFdelend \DIFaddbegin \DIFadd{However, we }\DIFaddend caution that \citet{2019MNRAS.486.3134K} suggests 
 to reserve the `{\it ex~situ}' classification for accretion after $z=2$, when
 the central galaxy has formed and accretion unambigously contributes to the
-radially extended halo GC population. In fact, our classification might not hold
-for Au4-1.
+radially extended halo GC population. \DIFdelbegin \DIFdel{In fact, our classification might not hold
+for Au4-1}\DIFdelend \DIFaddbegin \DIFadd{Our classification of accreted GC candidates
+is thus not consistent with the aforementioned definition because our selection
+function mostly includes star particles that have formed before roughly $z=2$}\DIFaddend .
 
 Finally, we note that \citet{2006ARA&A..44..193B} compares the number of metal-poor 
 GCs to the stellar halo mass and find\footnote{The \DIFdelbegin \DIFdel{quantity }\DIFdelend \DIFaddbegin \DIFadd{specific frequency }\DIFaddend $T$ is 
@@ -1112,11 +1116,16 @@ radius $r_{200}$. The Auriga simulations have no problem populating the stellar
 halo up to the virial radius, even with our additional age cut. On the other hand, 
 the MW and M31 have fewer GCs at large radii. We expect tidal disruption to be
 less efficient at larger radii, thus, the formation efficiencies of the accreted 
-GC candidates would have to be lower. Our classification as GC candidates could
-especially be improved for the accreted subset. For example, we could tag only a
-subset of the accreted star particles as GC candidates, where the number
-number of GCs is determined by the satellite halo mass, given the 
-$M_{vir}-N_{\text{gal}}$ correlation found by \citet{2019arXiv190100900B}.
+GC candidates would have to be lower \DIFaddbegin \DIFadd{Alternatively, the fraction of old star 
+particles in our subset of GC candidates may contain considerably more star 
+particles that represent stars in the old stellar halo that have been accreted
+during hierarchical buildup of the galaxy}\DIFaddend . Our classification \DIFdelbegin \DIFdel{as }\DIFdelend \DIFaddbegin \DIFadd{of }\DIFaddend GC candidates 
+could \DIFdelbegin \DIFdel{especially }\DIFdelend be improved for the accreted subset \DIFaddbegin \DIFadd{in particular}\DIFaddend . For example, we could 
+\DIFdelbegin \DIFdel{tag }\DIFdelend \DIFaddbegin \DIFadd{select }\DIFaddend only a subset of the accreted star particles as GC candidates \DIFdelbegin \DIFdel{, }\DIFdelend where the 
+number number of GCs \DIFdelbegin \DIFdel{is }\DIFdelend \DIFaddbegin \DIFadd{would be }\DIFaddend determined by the satellite halo mass, given the 
+$M_{vir}-N_{\text{gal}}$ correlation found by \citet{2019arXiv190100900B}. \DIFaddbegin \DIFadd{However,
+we did not include such an analysis in this study.
+}\DIFaddend 
 
 % Copy-pasted from \citet{2019MNRAS.486.5838R}
 % ``Out of the cluster formation models considered, the `no formation physics' model,
@@ -1147,12 +1156,18 @@ star particles increases to 35\% and 55\% for an age cut of 8 and 6 Gyr, respect
 of GC candidates shifts the mean metallicity to higher values. Moreover, the
 total mass in metal-rich (}[\DIFadd{Fe/H}] \DIFadd{> -1) GC candidates increases for a lower age 
 threshold and moves closer to the dotted line that shows the distribution of
-all star particles. However, we notice that the Auriga simulations, on average, 
-do not form new stars with a metallicity below }[\DIFadd{Fe/H}] \DIFadd{= -1 more recent than 6 Gyr 
-ago: the behaviour of Figure~\ref{fig:FeH} does not change for metallicities
-below }[\DIFadd{Fe/H}] \DIFadd{= -1 when we change the age cut to 8 or 6 Gyr. The qualitative behaviour
-of the median distribution of galactocentric radii (Figure~\ref{fig:Rgc}), on 
-the other hand, is unaffected by lowering the age cut other than including
+all star particles in Figure~\ref{fig:FeH}. However, 
+we notice that the Auriga simulations, on average, do not form new stars with 
+a metallicity below }[\DIFadd{Fe/H}]\DIFadd{~=~-1 more recent than 6 Gyr ago: the behaviour of 
+Figure~\ref{fig:FeH} does not change for metallicities below }[\DIFadd{Fe/H}]\DIFadd{~=~-1 when 
+we change the age cut to 8 or 6 Gyr, and the slope of the masss ratio for 
+metallicities above }[\DIFadd{Fe/H}]\DIFadd{~=~-1 is slightly steeper. In addition, we still find
+that the accreted GC candidates are more metal-poor than those that have formed 
+}{\textit \DIFadd{in situ}}\DIFadd{. 
+}
+
+\DIFadd{The qualitative behaviour of the median distribution of galactocentric radii 
+(Figure~\ref{fig:Rgc}) is unaffected by lowering the age cut other than including
 more star particles (more mass) which leads to a higher normalisation and
 a higher mass ratio with respect to the observed GC systems of the MW and M31.
 The qualitative behavour presented in Figure~\ref{fig:Au-FeHRgc-ratio} does not 
@@ -1165,8 +1180,10 @@ change when the age cut is lowered to 8 or 6 Gyr.
 \label{sec:conclusions}
 
 We investigate statistics of age-selected ($>$~10~Gyr) GC candidates in the 
-Auriga simulations and compare the simulations to the MW and M31 GCSs. Based on
-our analysis we draw the following conclusions.
+Auriga simulations and compare the simulations to the MW and M31 GCSs \DIFaddbegin \DIFadd{to test
+whether the star formation model implemented for the Auriga simulations can give
+rise to metallicity and radial distributions that are consistent with these two
+observed GC systems}\DIFaddend . Based on our analysis we draw the following conclusions.
 
 \begin{itemize}
     \item The star formation model implemented in the Auriga simulations produces
