@@ -142,13 +142,19 @@ GC systems (GCS) show correlations with their host galaxies. GCSs are believed t
 retain information about the galactic (gas) conditions at their times of formation.
 Thus they could offer a unique insight into the (chemodynamical) evolution of their 
 parent galaxies, if the formation and evolution of GCs- and GC systems themselves 
-is adequately understood. However, despite decades of research (the extensive 
-literature on GCs is summarised in several books and review articles, e.g.~\citealt{
+is adequately understood. However, despite decades of research (e.g.~\citealt{
 1991ARA&A..29..543H, Harris2001, 2004Natur.427...31W, 2006ARA&A..44..193B, 
 2012A&ARv..20...50G, 2014CQGra..31x4006K, 2018RSPSA.47470616F}), consensus on an 
-exhaustive picture of the formation of GCs is yet to be reached.
+exhaustive picture of the formation of GCs is yet to be reached. Most galaxies host
+a GCS with a bimodal colour distribution that may reflect a bimodal metallicity 
+distribution which is argued to arise from two distinct formation channels 
+\citep{2006ARA&A..44..193B}. GCs are typically referred to as `blue' or `red' \citep[e.g.][]{
+1985ApJ...293..424Z,1999AJ....118.1526G,2001AJ....121.2974L} where the former class
+is more metal-poor, more radially extended, and showing little to no rotation wheras
+the later is more metal-rich, radially concentrated, and rotating with the galaxy.
 
-The literature offers a wealth of formation scenarios. \citet{1968ApJ...154..891P}
+The literature offers a wealth of formation scenarios, many of which focus on the
+distinct characteristics of the blue or red subpopulation. \citet{1968ApJ...154..891P}
 and \citet{1984ApJ...277..470P} argue that GCs form as the earliest bound
 structures in the Universe (i.e. prior to formation of the main galaxy), 
 noting that the Jeans length and mass shortly after recombination is consistent
@@ -170,7 +176,6 @@ for example as a result of thermal instabilities in hot gas-rich haloes
 1980glcl.conf..301G, 1992ApJ...400..265M, 1994ApJ...429..177H, 1995ApJ...442..618V,
 1996ASPC...92..241L, 2001ApJ...560..592C}. 
 
-\newpage  % to prevent reference split over two pages which breaks LaTeX
 Yet another hypothesis is that star cluster formation is triggered by major 
 gas-rich (spiral) galaxy mergers \citep{1987nngp.proc...18S, 1992ApJ...384...50A},
 which is naturally expected within the framework of hierarchical assembly. One
@@ -232,12 +237,14 @@ the star formation histories of the simulations give rise to a GCS similar to
 the MW and/or Andromeda (M31) GCSs. In particular, 
 we use the Auriga simulations \citep[][hereafter G17]{2017MNRAS.467..179G}, 
 further described in Section~\ref{sec:auriga}. We investigate whether the star 
-formation model implemented produces metallicity, 
-radial, and metallicity-radial distributions that are consistent with the MW 
-and/or M31 GCSs, and whether the model produces enough stellar mass with
-the right properties to allow for formation efficiencies lower than unity and
-the expected (dynamical) mass loss over the cluster lifetime (not modelled 
-explicitly in this study). 
+formation model implemented produces metallicity, radial, and metallicity-radial 
+distributions that are consistent with the MW and/or M31 GCSs, and whether the 
+model produces enough stellar mass with the right properties. Moreover, the simulations
+provide us with the history of the star particles, which allows us to investigate
+the differences between these properties for sub populations that have formed 
+{\it in~situ} versus those that have been accreted. We focus on the metallicity
+and radial distributions because observations of the red and blue GCs show
+distinct differences between these properties.
 
 The plan of the paper is as follows. We summarise the relevant characteristics 
 of the Auriga simulations in section~\ref{sec:auriga}, followed by a summary of 
@@ -468,7 +475,7 @@ observations to the Auriga simulations later on in Sec.~\ref{sec:results_FeHRgc}
     \caption{
         \emph{Top}: Mass-weighted $r_{\text{gal}}$-[Fe/H] distribution of
         151 GCs in the MW \citep[data from][2010 ed.]{1996AJ....112.1487H},
-        color-coded by the \textbf{median} (values also shown in each bin). The 
+        colour-coded by the \textbf{median} (values also shown in each bin). The 
         numbers in parenthesis show how many star particles fall within the bin.
         \emph{Bottom}: Same for M31, showing the 366 GCs in CR16 
         \citep[data from][]{2016ApJ...824...42C}. Radii of M31 are again divided by 
@@ -770,7 +777,7 @@ and radius in the following section.
         {{Au4-median_RgcFeH_HistogramMassWeighted_iold-trim}.png}
     \caption{
         Mass-weighted [Fe/H]-$r_{\text{gal}}$ distribution of all $30$~Auriga
-        L4 haloes. Here we consider only the GC candidates and color-code by the 
+        L4 haloes. Here we consider only the GC candidates and colour-code by the 
         median mass (values also shown in each bin). The numbers in parenthesis 
         show how many star particles fall within the bin. Note that the range of 
         the colourmap differs from both panels in Figure~\ref{fig:observations_FeHRgc} 
@@ -851,7 +858,7 @@ stars particles.
         to mass in the MW (M31) GCS, i.e. the logarithm of the mass ratio, minus
         the median value of these 25 bins. The values are 2.68 and 1.69 dex for 
         the MW and M31, respectively. Red (blue) indicates a higher (lower) overall 
-        mass excess. The number in each bin shows the color-coded value that is 
+        mass excess. The number in each bin shows the colour-coded value that is 
         plotted, and the (median) star particle count is given in parenthesis. 
         Note that the three bins in the upper right corner are white because the 
         observations have zero mass there.
@@ -987,7 +994,7 @@ Figure~\ref{fig:FeH} does not change for metallicities below [Fe/H]~=~-1 when
 we change the age cut to 8 or 6 Gyr, and the slope of the masss ratio for 
 metallicities above [Fe/H]~=~-1 is slightly steeper. In addition, we still find
 that the accreted GC candidates are more metal-poor than those that have formed 
-{\textit in situ}. 
+{\it in~situ}. 
 
 The qualitative behaviour of the median distribution of galactocentric radii 
 (Figure~\ref{fig:Rgc}) is unaffected by lowering the age cut other than including
