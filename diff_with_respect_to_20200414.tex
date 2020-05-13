@@ -1,4 +1,7 @@
 % mnras_template.tex
+%DIF LATEXDIFF DIFFERENCE FILE
+%DIF DEL AurigaGCS_20200414.tex   Wed May 13 15:34:09 2020
+%DIF ADD AurigaGCS.tex            Wed May 13 16:23:00 2020
 %
 % LaTeX template for creating an MNRAS paper
 %
@@ -95,6 +98,85 @@ $^{4}$ Department of Physics \& Astronomy, University of Bologna, via Gobetti 93
 \pubyear{2019}
 
 % Don't change these lines
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF UNDERLINE PREAMBLE %DIF PREAMBLE
+\RequirePackage[normalem]{ulem} %DIF PREAMBLE
+\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{{\protect\color{blue}\uwave{#1}}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{{\protect\color{red}\sout{#1}}}                      %DIF PREAMBLE
+%DIF SAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
+\providecommand{\DIFaddend}{} %DIF PREAMBLE
+\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
+\providecommand{\DIFdelend}{} %DIF PREAMBLE
+\providecommand{\DIFmodbegin}{} %DIF PREAMBLE
+\providecommand{\DIFmodend}{} %DIF PREAMBLE
+%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+\newcommand{\DIFscaledelfig}{0.5}
+%DIF HIGHLIGHTGRAPHICS PREAMBLE %DIF PREAMBLE
+\RequirePackage{settobox} %DIF PREAMBLE
+\RequirePackage{letltxmacro} %DIF PREAMBLE
+\newsavebox{\DIFdelgraphicsbox} %DIF PREAMBLE
+\newlength{\DIFdelgraphicswidth} %DIF PREAMBLE
+\newlength{\DIFdelgraphicsheight} %DIF PREAMBLE
+% store original definition of \includegraphics %DIF PREAMBLE
+\LetLtxMacro{\DIFOincludegraphics}{\includegraphics} %DIF PREAMBLE
+\newcommand{\DIFaddincludegraphics}[2][]{{\color{blue}\fbox{\DIFOincludegraphics[#1]{#2}}}} %DIF PREAMBLE
+\newcommand{\DIFdelincludegraphics}[2][]{% %DIF PREAMBLE
+\sbox{\DIFdelgraphicsbox}{\DIFOincludegraphics[#1]{#2}}% %DIF PREAMBLE
+\settoboxwidth{\DIFdelgraphicswidth}{\DIFdelgraphicsbox} %DIF PREAMBLE
+\settoboxtotalheight{\DIFdelgraphicsheight}{\DIFdelgraphicsbox} %DIF PREAMBLE
+\scalebox{\DIFscaledelfig}{% %DIF PREAMBLE
+\parbox[b]{\DIFdelgraphicswidth}{\usebox{\DIFdelgraphicsbox}\\[-\baselineskip] \rule{\DIFdelgraphicswidth}{0em}}\llap{\resizebox{\DIFdelgraphicswidth}{\DIFdelgraphicsheight}{% %DIF PREAMBLE
+\setlength{\unitlength}{\DIFdelgraphicswidth}% %DIF PREAMBLE
+\begin{picture}(1,1)% %DIF PREAMBLE
+\thicklines\linethickness{2pt} %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,0){\framebox(1,1){}}}% %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,0){\line( 1,1){1}}}% %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,1){\line(1,-1){1}}}% %DIF PREAMBLE
+\end{picture}% %DIF PREAMBLE
+}\hspace*{3pt}}} %DIF PREAMBLE
+} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddbegin}{\DIFaddbegin} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddend}{\DIFaddend} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelbegin}{\DIFdelbegin} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelend}{\DIFdelend} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddbegin}{\DIFOaddbegin \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbegin}{\DIFOdelbegin \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddbeginFL}{\DIFaddbeginFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddendFL}{\DIFaddendFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelbeginFL}{\DIFdelbeginFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelendFL}{\DIFdelendFL} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddbeginFL}{\DIFOaddbeginFL \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbeginFL}{\DIFOdelbeginFL \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+%DIF LISTINGS PREAMBLE %DIF PREAMBLE
+\RequirePackage{listings} %DIF PREAMBLE
+\RequirePackage{color} %DIF PREAMBLE
+\lstdefinelanguage{DIFcode}{ %DIF PREAMBLE
+%DIF DIFCODE_UNDERLINE %DIF PREAMBLE
+  moredelim=[il][\color{red}\sout]{\%DIF\ <\ }, %DIF PREAMBLE
+  moredelim=[il][\color{blue}\uwave]{\%DIF\ >\ } %DIF PREAMBLE
+} %DIF PREAMBLE
+\lstdefinestyle{DIFverbatimstyle}{ %DIF PREAMBLE
+	language=DIFcode, %DIF PREAMBLE
+	basicstyle=\ttfamily, %DIF PREAMBLE
+	columns=fullflexible, %DIF PREAMBLE
+	keepspaces=true %DIF PREAMBLE
+} %DIF PREAMBLE
+\lstnewenvironment{DIFverbatim}{\lstset{style=DIFverbatimstyle}}{} %DIF PREAMBLE
+\lstnewenvironment{DIFverbatim*}{\lstset{style=DIFverbatimstyle,showspaces=true}}{} %DIF PREAMBLE
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
+
 \begin{document}
 \label{firstpage}
 \pagerange{\pageref{firstpage}--\pageref{lastpage}}
@@ -150,8 +232,9 @@ a GCS with a bimodal colour distribution that may reflect a bimodal metallicity
 distribution which is argued to arise from two distinct formation channels 
 \citep{2006ARA&A..44..193B}. GCs are typically referred to as `blue' or `red' \citep[e.g.][]{
 1985ApJ...293..424Z,1999AJ....118.1526G,2001AJ....121.2974L} where the former class
-is more metal-poor, more radially extended, and showing little to no rotation whereas
-the latter is more metal-rich, radially concentrated, and rotating with the galaxy.
+is more metal-poor, more radially extended, and showing little to no rotation \DIFdelbegin \DIFdel{wheras
+the later }\DIFdelend \DIFaddbegin \DIFadd{whereas
+the latter }\DIFaddend is more metal-rich, radially concentrated, and rotating with the galaxy.
 
 The literature offers a wealth of formation scenarios, many of which focus on the
 distinct characteristics of the blue or red subpopulation. \citet{1968ApJ...154..891P}
@@ -176,10 +259,12 @@ for example as a result of thermal instabilities in hot gas-rich haloes
 1980glcl.conf..301G, 1992ApJ...400..265M, 1994ApJ...429..177H, 1995ApJ...442..618V,
 1996ASPC...92..241L, 2001ApJ...560..592C}. 
 
-Yet another hypothesis is that star cluster formation traces periods of high-intensity
-star formation, which can be triggered by major gas-rich (spiral) galaxy mergers 
-\citep{1987nngp.proc...18S, 1992ApJ...384...50A}. Such a scenario is naturally 
-expected within the framework of hierarchical assembly and predicts formation 
+Yet another hypothesis is that star cluster formation \DIFdelbegin \DIFdel{is }\DIFdelend \DIFaddbegin \DIFadd{traces periods of high-intensity
+star formation, which can be }\DIFaddend triggered by major gas-rich (spiral) galaxy mergers 
+\citep{1987nngp.proc...18S, 1992ApJ...384...50A}\DIFdelbegin \DIFdel{,
+which }\DIFdelend \DIFaddbegin \DIFadd{. Such a scenario }\DIFaddend is naturally 
+expected within the framework of hierarchical assembly \DIFdelbegin \DIFdel{. One
+testable prediction of this scenario is the }\DIFdelend \DIFaddbegin \DIFadd{and predicts }\DIFaddend formation 
 of young clusters in interacting and merging galaxies, which has been observed 
 and are found to show remarkable similarities with GCs in the Milky Way (MW) \citep[e.g.][]{
 1995AJ....109..960W, 1996AJ....112..416H, 1999AJ....118..752Z, 1999AJ....118.1551W}.
@@ -216,7 +301,7 @@ incorporated into cosmological zoom simulations and shows promising results
 \citep{2018MNRAS.475.4309P,2019MNRAS.486.3134K}.
 
 The (mass) resolution of cosmological zoom simulations has reached the mass range 
-populated by GCs, and the gravitational force softening can be as low as several 
+populated by GCs, and the gravitational force softening can be as low \DIFaddbegin \DIFadd{as }\DIFaddend several 
 parsec. A number of groups can thus incorporate formation of (globular) star 
 clusters into their high-resolution hydrodynamical simulations. \citet{2016ApJ...831..204R} 
 ran parsec scale simulations of the high-redshift universe 
@@ -384,10 +469,12 @@ and M31 GCSs are not statistically consistent. The MW appears
 to host a GCS that is somewhat older than that of M31.
 This is somewhat surprising given that M31 is generally considered to be earlier
 type than the MW so that an older stellar population would naively be expected.
-On the other hand, the MW could be an outlier as it may have formed and assembled 
-most of its mass earlier than galaxies with a similar mass \citep[e.g.][]{2014ApJ...781L..31S,
-2015A&A...578A..87S,2018MNRAS.477.5072M}.
-In addition, we caution that both data sets are incomplete and the age 
+\DIFdelbegin \DIFdel{However, we do }\DIFdelend \DIFaddbegin \DIFadd{On the other hand, the MW could be an outlier as it may have formed and assembled 
+most of its mass earlier than galaxies with a similar mass \mbox{%DIFAUXCMD
+\citep[e.g.][]{2014ApJ...781L..31S,
+2015A&A...578A..87S,2018MNRAS.477.5072M}}\hspace{0pt}%DIFAUXCMD
+.
+In addition, we }\DIFaddend caution that both data sets are incomplete and the age 
 measurements have large uncertainties (of $1-2$~Gyr). On the other hand, the 
 magnitude of the uncertainty is insufficient to explain the low-age tail in M31.
 
@@ -490,7 +577,7 @@ We define GC candidates in the Auriga simulations as all star particles older
 than $10$~Gyr based on the age distribution of the MW GCS (top panel of 
 Figure~\ref{fig:MW-M31-age-Rgc}), adopting the definition of a GC from
 \citet{2010ARA&A..48..431P} and following the method of 
-\citet{2017MNRAS.465.3622R}. However, we caution that this definition, although 
+\citet{2017MNRAS.465.3622R}. However, we caution that \DIFdelbegin \DIFdel{his }\DIFdelend \DIFaddbegin \DIFadd{this }\DIFaddend definition, although 
 statistically consistent with the estimated ages of all GCs in the MW, is not 
 consistent with the tail of younger clusters as stated in Section~\ref{sec:age},
 and further discussed in Section~\ref{sec:age_min}.
@@ -542,8 +629,8 @@ in comparison to the MW and M31 [Fe/H] distributions.
     }
 \end{figure}
 We select \mbox{Au4-10}\footnote{The nomenclature is `Au' for Auriga, followed by the
-resolution level 4 and halo number 10, indicating which set of initial
-conditions was used.}, \mbox{Au4-21}, and \mbox{Au4-4} to show the
+resolution level \DIFdelbegin \DIFdel{(}\DIFdelend 4 \DIFdelbegin \DIFdel{) }\DIFdelend and halo number \DIFdelbegin \DIFdel{(}\DIFdelend 10, indicating which set of initial
+conditions was used\DIFdelbegin \DIFdel{)}\DIFdelend .}, \mbox{Au4-21}, and \mbox{Au4-4} to show the
 distributions of three individual simulation runs that we consider representative
 for specific behaviour, and to highlight that different runs give rise to 
 different distributions. We show the age-selected GC candidates as well as the 
@@ -612,7 +699,7 @@ regard to the M31 GCS, so far no definitive consensus has been reached
 in the literature concerning uni- bi- or trimodality in the [Fe/H] distribution, 
 but CR16 argues that the data, after removal of younger objects due to improved 
 age classification, hints at three populations separated at [Fe/H]~$=-0.4$ and 
-[Fe/H]~$ = -1.5$. None of the Auriga subsets has a mean value that offers much 
+[Fe/H]~\DIFdelbegin \DIFdel{$ = 1.5$}\DIFdelend \DIFaddbegin \DIFadd{$ = -1.5$}\DIFaddend . None of the Auriga subsets has a mean value that offers much 
 hope of reconciling the simulated distribution with the lowest metallicity 
 group in the M31 GCS. This is also true for the metal-poor population of the 
 MW with a mean value of $-1.6$. The main result of this figure is 
@@ -965,7 +1052,9 @@ The qualitative behaviour of the median distribution of galactocentric radii
 more star particles (more mass) which leads to a higher normalisation and
 a higher mass ratio with respect to the observed GC systems of the MW and M31.
 The qualitative behaviour presented in Figure~\ref{fig:Au-FeHRgc-ratio} does not 
-change when the age cut is lowered to 8 or 6 Gyr. 
+change when the age cut is lowered to 8 or 6 Gyr\DIFdelbegin \DIFdel{. 
+GC candidates is not affected definition because our selection
+function mostly includes star particles that have formed before roughly $z=2$}\DIFdelend . 
 Overall, reducing the age cut worsens the agreement between the observed GCSs 
 and the candidate GCs in the Auriga galaxies.
 

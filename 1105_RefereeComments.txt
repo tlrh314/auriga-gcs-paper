@@ -1,0 +1,16 @@
+Reviewer's Comments:
+
+The manuscript “The globular cluster system of the Auriga simulations” is interesting, and well-written. The authors have addressed my concerns, and the paper is almost ready for publication. There are only a few minor issues that should be fixed:
+
+Introduction, 4th paragraph, 1st sentence: more generally, this family of models rely on the hypothesis that star cluster formation traces high-intensity star formation episodes, which can be driven by major mergers. The authors should reformulate the sentence to include this more general perspective.
+Sect. 3.3.:  the authors should justify more why is it surprising that the MW hosts an older population of GCs. There is a large body of literature suggesting that the MW is an outlier compared to other galaxies of the same mass and that it formed and assembled its mass very early on - e.g. Snaith+14: https://ui.adsabs.harvard.edu/abs/2014ApJ...781L..31S/abstract, Snaith+15: https://ui.adsabs.harvard.edu/abs/2015A%26A...578A..87S/abstract, Mackereth+18: https://ui.adsabs.harvard.edu/abs/2018MNRAS.477.5072M/abstract 
+
+Introduction, 1st paragraph: typo: whereas -> whereas
+Introduction, 1st paragraph: typo: later -> latter
+Introduction, 7th paragraph: typo: as low several parsec -> as low as several parsec
+Sect. 4, 1st paragraph: typo: his -> this
+Sect. 4, footnote 7: there might be a misplaced parenthesis
+Sect. 4.1, 4th paragraph: when talking about the M31 GCS metallicity distribution, there might be a typo in the metallicities quoted ([Fe/H] = 1.5 should be -1.5)
+Sect. 5.3, 3rd paragraph: the sentence “GC candidates is not affected definition because our selection function …” does not make sense because it mixes singular and plural.
+
+
