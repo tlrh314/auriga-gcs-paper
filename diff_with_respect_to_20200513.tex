@@ -1,7 +1,7 @@
 % mnras_template.tex
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL AurigaGCS_20200513.tex   Tue Jun  2 13:51:59 2020
-%DIF ADD AurigaGCS.tex            Tue Jun  2 13:52:07 2020
+%DIF ADD AurigaGCS.tex            Tue Jun  2 14:05:48 2020
 %
 % LaTeX template for creating an MNRAS paper
 %
@@ -1148,15 +1148,21 @@ National E-infrastructure capital grant ST/K00042X/1, STFC capital grant
 ST/H008519/1 and STFC DiRAC Operations grant ST/K003267/1 and Durham University.
 DiRAC is part of the UK National E-Infrastructure.
 
-The analysis in this work was performed using the Python \citep{python}
-programming language, the IPython \citep{2007CSE.....9c..21P} environment, 
-the NumPy \citep{2011CSE....13b..22V}, SciPy \DIFdelbegin \DIFdel{\mbox{%DIFAUXCMD
+The analysis in this work was performed using the \DIFdelbegin \DIFdel{Python }\DIFdelend \DIFaddbegin \textsc{\DIFadd{python}} \DIFaddend \citep{python}
+programming language, the \DIFdelbegin \DIFdel{IPython }\DIFdelend \DIFaddbegin \textsc{\DIFadd{ipython}} \DIFaddend \citep{2007CSE.....9c..21P} environment, 
+the \DIFdelbegin \DIFdel{NumPy \mbox{%DIFAUXCMD
+\citep{2011CSE....13b..22V}}\hspace{0pt}%DIFAUXCMD
+, SciPy \mbox{%DIFAUXCMD
 \citep{scipy}}\hspace{0pt}%DIFAUXCMD
-}\DIFdelend \DIFaddbegin \DIFadd{\mbox{%DIFAUXCMD
+, and Astropy 
+}\DIFdelend \DIFaddbegin \textsc{\DIFadd{numpy}} \DIFadd{\mbox{%DIFAUXCMD
+\citep{2011CSE....13b..22V}}\hspace{0pt}%DIFAUXCMD
+, }\textsc{\DIFadd{scipy}} \DIFadd{\mbox{%DIFAUXCMD
 \citep{2020SciPy-NMeth}}\hspace{0pt}%DIFAUXCMD
-}\DIFaddend , and Astropy 
-\citep{2013A&A...558A..33A} packages. Plots were created with Matplotlib 
-\citep{2007CSE.....9...90H}, using the perceptually uniform colour maps
+, and }\textsc{\DIFadd{astropy}}
+\DIFaddend \citep{2013A&A...558A..33A} packages. Plots were created with \DIFdelbegin \DIFdel{Matplotlib 
+}\DIFdelend \DIFaddbegin \textsc{\DIFadd{matplotlib}}
+\DIFaddend \citep{2007CSE.....9...90H}, using the perceptually uniform colour maps
 from \citet{2015arXiv150903700K} for two-dimensional plots. This research 
 has made use of NASA's Astrophysics Data System Bibliographic Services.
 
