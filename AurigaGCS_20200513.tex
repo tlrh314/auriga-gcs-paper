@@ -163,8 +163,8 @@ with typical GC masses and sizes. \citet{2005MNRAS.364..367D} and \citet{
 radially biased dark matter (DM) halos at high redshift. Other recent hypotheses 
 of GC formation prior to collapse of the proto-galaxy include formation in colliding 
 supershells \citep{2017Ap&SS.362..183R}, in supersonically induced gaseous objects
-\citep{2019ApJ...878L..23C}, or in high-speed collisions of dark matter subhaloes
-\citep{2020ApJ...890...18M}. \citet{2017MNRAS.472.3120B} suggests
+\citep{2019arXiv190408941C}, or in high-speed collisions of dark matter subhaloes
+\citep{2019arXiv190508951M}. \citet{2017MNRAS.472.3120B} suggests
 that (the blue subpopulation of) GCs could form in high density regions along
 the cosmic filament before or during collapse.
 
@@ -187,7 +187,8 @@ Moreover, modelling efforts of this framework yield GC (sub)populations consiste
 with various observables \citep[e.g.][]{2010ApJ...718.1266M, 2018MNRAS.480.2343C}, 
 and the recent numerical simulation of an isolated dwarf-dwarf merger executed at 
 very high resolution (baryonic mass $m_b \sim$~4M\Sun; softening $\epsilon = 0.1$~pc) 
-produces star clusters that could be GC progenitors \citep{2019ApJ...879L..18L}.
+produces star clusters that could be GC progenitors \citep{
+2019arXiv190509840L}.
 
 As for the formation timeline, the scenarios (and flavours thereof) of \citet{
 1985ApJ...298...18F} and \citet{1992ApJ...384...50A} are intertwined because
@@ -226,7 +227,7 @@ that reach $z=3.3$, and the run of \citet{2017MNRAS.465.3622R} reaches $z=0.5$.
 quickly forms clustered stars that end up tightly bound by the end of the 
 simulation. A somewhat different approach couples semi-analytical models to DM-only
 simulations \citep{2010ApJ...718.1266M,2014ApJ...796...10L,2018MNRAS.480.2343C,
-2019MNRAS.486..331C,2019MNRAS.488.5409C}, also done in the work by 
+2019MNRAS.486..331C,2019arXiv190505199C}, also done in the work by 
 \citet{2019MNRAS.482.4528E}.
 
 In this work we use state of the art simulations that produce realistic spiral 
@@ -401,7 +402,7 @@ $r_{\text{vir,MW}} = 261$~kpc to account for the different intrinsic sizes of th
 galaxies, adopting the values and cosmology from \citet{2017MNRAS.464.3825P}.
 Values for $r_{\text{gal}}$ are readily available in H96e10 (assuming $r_{\odot}=8.0$~kpc), 
 but the galactocentric radius of GCs in M31 is not available in CR16. Therefore, we 
-follow \citet[][section~4.1]{2019A&A...623A..65W} 
+follow \citet[][section~4.1]{2019arXiv190111229W} 
 to calculate the projected radius $r_{\text{proj}}$ from the observed positions,
 adopting M31's central position from the NASA Extragalactic 
 Database\footnote{\url{https://ned.ipac.caltech.edu/}} $(\alpha_0, \, \delta_0) =
@@ -935,7 +936,7 @@ during hierarchical buildup of the galaxy. Our classification of GC candidates
 could be improved for the accreted subset in particular. For example, we could 
 select only a subset of the accreted star particles as GC candidates where the 
 number number of GCs would be determined by the satellite halo mass, given the 
-$M_{vir}-N_{\text{gal}}$ correlation found by \citet{2020AJ....159...56B}. However,
+$M_{vir}-N_{\text{gal}}$ correlation found by \citet{2019arXiv190100900B}. However,
 we did not include such an analysis in this study.
 
 \subsection{Lower age cut in the GC selection function}
@@ -1041,7 +1042,7 @@ DiRAC is part of the UK National E-Infrastructure.
 
 The analysis in this work was performed using the Python \citep{python}
 programming language, the IPython \citep{2007CSE.....9c..21P} environment, 
-the NumPy \citep{2011CSE....13b..22V}, SciPy \citep{2020SciPy-NMeth}, and Astropy 
+the NumPy \citep{2011CSE....13b..22V}, SciPy \citep{scipy}, and Astropy 
 \citep{2013A&A...558A..33A} packages. Plots were created with Matplotlib 
 \citep{2007CSE.....9...90H}, using the perceptually uniform colour maps
 from \citet{2015arXiv150903700K} for two-dimensional plots. This research 
